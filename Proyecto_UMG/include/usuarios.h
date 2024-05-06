@@ -1,38 +1,45 @@
 #ifndef USUARIOS_H
 #define USUARIOS_H
+#include<iostream>
 
-#include <iostream>
-#include <fstream>
-#include <vector>
+using std::string;
 
 class usuarios
 {
-public:
-    usuarios();
-    ~usuarios();
-    bool loginUsuarios();
-    void menuUsuarios();
-    bool buscar(const std::string& user, const std::string& passw);
-    std::string getNombre();
-    void setNombre(const std::string& nombre);
-    void createUser();
-    void readUsers();
-    void updateUser();
-    void deleteUser();
-    void run();
+    public:
+        usuarios();
+        virtual ~usuarios();
+        bool loginUsuarios();
+        void menuUsuarios();
+        bool buscar(string user, string passw);
+        string getNombre();
+        string setNombre(string nombre);
 
-private:
-    struct User {
-        std::string username;
-        std::string password;
-    };
-    std::vector<User> users;
-    void saveToFile();
-    void readFromFile();
+        void insertar();
+        void desplegar();
+        void modificar();
+        void borrar();
 
-    std::string id;
-    std::string name;
-    std::string pass;
+        alumnos(string usu, string contra);
+        string setid(string usu);
+        string getid();
+
+        string setnombre(string contra);
+        string getnombre();
+
+        struct Usuario {
+            char usu[20];
+            char contra[50];
+        };
+
+    protected:
+
+    private:
+		string id;
+		string name;
+		string pass;
+
 };
 
-#endif
+#endif // USUARIOS_H
+

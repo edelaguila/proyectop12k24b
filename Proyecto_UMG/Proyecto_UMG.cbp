@@ -34,8 +34,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Login.h" />
 		<Unit filename="include/usuarios.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Login.cpp" />
 		<Unit filename="src/usuarios.cpp" />
 		<Extensions />
 	</Project>

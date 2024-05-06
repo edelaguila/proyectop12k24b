@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1715015871 source:d:\umg\programacion1\proyecto grupal\proyectop12k24b\proyecto_umg\main.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"usuarios.h"
+
+1715014930 d:\umg\programacion1\proyecto grupal\proyectop12k24b\proyecto_umg\include\usuarios.h
+	<iostream>
+
+1715015890 source:d:\umg\programacion1\proyecto grupal\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+

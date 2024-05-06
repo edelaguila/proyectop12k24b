@@ -1,3 +1,4 @@
+//main creado por Jose Eduardo Gallardo Del Cid 9959-23-106
 #include <iostream>
 #include<fstream>
 #include<stdlib.h>

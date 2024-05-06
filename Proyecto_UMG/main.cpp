@@ -40,8 +40,6 @@ int main()
 void menuGeneral(){
     system("cls");
     int choice;
-
-
 	do
     {
 	system("cls");

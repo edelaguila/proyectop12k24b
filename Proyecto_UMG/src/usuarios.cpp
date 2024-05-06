@@ -28,6 +28,7 @@ bool usuarios::loginUsuarios(){
 
 void usuarios::menuUsuarios(){
 
+
 int choice;
     do {
     char x;
@@ -262,3 +263,5 @@ void usuarios::borrar()
         cout << "No se a podido encontrar el usuario" << endl;
         }
 }
+
+//void usuarios::

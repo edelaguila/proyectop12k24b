@@ -1,3 +1,6 @@
+
+//Creado por Oscar Morales 9959-23-3070
+
 #ifndef USUARIOS_H
 #define USUARIOS_H
 #include<iostream>

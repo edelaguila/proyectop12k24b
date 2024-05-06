@@ -1,6 +1,8 @@
+
+//Creado por Andy Alfonso 9959-23-1494
+
 #ifndef LOGIN_H
 #define LOGIN_H
-
 #include<iostream>
 #include<fstream>
 #include<string>

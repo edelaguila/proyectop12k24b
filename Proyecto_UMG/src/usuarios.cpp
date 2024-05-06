@@ -1,5 +1,5 @@
 
-//Creado por Oscar Morales 9959-23-3070
+//Creado por Andre de Jesus 9959-23-3117
 
 #include "usuarios.h"
 #include<fstream>

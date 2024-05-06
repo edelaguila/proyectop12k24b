@@ -85,92 +85,68 @@ void menuGeneral(){
 	}
     }while(choice!= 7);
 }
-void catalogos(){
-
+void catalogos() {
     int choice;
 
     do {
-	system("cls");
-	cout<<"\t\t\t--------------------------------------------"<<endl;
-	cout<<"\t\t\t|   SISTEMA DE GESTION UMG - CATALOGOS      |"<<endl;
-	cout<<"\t\t\t--------------------------------------------"<<endl;
-	cout<<"\t\t\t 1. Alumnos"<<endl;
-	cout<<"\t\t\t 2. Maestros"<<endl;
-	cout<<"\t\t\t 3. Usuarios del sistema"<<endl;
-	cout<<"\t\t\t 4. Carreras"<<endl;
-	cout<<"\t\t\t 5. Facultades"<<endl;
-	cout<<"\t\t\t 6. Cursos"<<endl;
-	cout<<"\t\t\t 7. Jornadas"<<endl;
-	cout<<"\t\t\t 8. Aulas"<<endl;
-	cout<<"\t\t\t 9. Secciones"<<endl;
-	cout<<"\t\t\t 10. Sedes"<<endl;
-	cout<<"\t\t\t 11. Horarios"<<endl;
-	cout<<"\t\t\t 12. Retornar menu anterior"<<endl;
-    cout<<"\t\t\t --------------------------------------------"<<endl;
-	cout<<"\t\t\t | Opcion a escoger:[1|2|3|4/5/6/7/8/9/10/11]|"<<endl;
-	cout<<"\t\t\t --------------------------------------------"<<endl;
-	cout<<"\t\t\tIngresa tu Opcion: ";
-    cin>>choice;
+        system("cls");
+        cout << "\t\t\t--------------------------------------------" << endl;
+        cout << "\t\t\t|   SISTEMA DE GESTION UMG - CATALOGOS      |" << endl;
+        cout << "\t\t\t--------------------------------------------" << endl;
+        cout << "\t\t\t 1. Alumnos" << endl;
+        cout << "\t\t\t 2. Maestros" << endl;
+        cout << "\t\t\t 3. Usuarios del sistema" << endl;
+        cout << "\t\t\t 4. Carreras" << endl;
+        cout << "\t\t\t 5. Facultades" << endl;
+        cout << "\t\t\t 6. Cursos" << endl;
+        cout << "\t\t\t 7. Jornadas" << endl;
+        cout << "\t\t\t 8. Aulas" << endl;
+        cout << "\t\t\t 9. Secciones" << endl;
+        cout << "\t\t\t 10. Sedes" << endl;
+        cout << "\t\t\t 11. Horarios" << endl;
+        cout << "\t\t\t 12. Retornar menu anterior" << endl;
+        cout << "\t\t\t --------------------------------------------" << endl;
+        cout << "\t\t\t | Opcion a escoger:[1|2|3|4/5/6/7/8/9/10/11]|" << endl;
+        cout << "\t\t\t --------------------------------------------" << endl;
+        cout << "\t\t\tIngresa tu Opcion: ";
+        cin >> choice;
 
-    switch(choice)
-    {
-	case 1:
-	    {
-		break;
-	    }
-    case 2:
-        {
-        break;
-        }
-		break;
-    case 3:
-        {
-		break;
+        switch (choice) {
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3: {
+            usuarios usuario;
+            usuario.menuUsuarios();
+            break;
         }
         case 4:
-        {
-		break;
-        }
+            break;
         case 5:
-        {
-		break;
-        }
+            break;
         case 6:
-        {
-		break;
-        }
+            break;
         case 7:
-        {
-		break;
-        }
+            break;
         case 8:
-        {
-		break;
-        }
+            break;
         case 9:
-        {
-		break;
-        }
+            break;
         case 10:
-        {
-		break;
-        }
+            break;
         case 11:
-        {
-		break;
-        }
+            break;
         case 12:
-        {
-        menuGeneral();
-		break;
+            menuGeneral();
+            break;
+        default:
+            cout << "\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
+            cin.get();
         }
-
-	default:
-		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
-		cin.get();
-	}
-    }while(choice!= 12);
+    } while (choice != 12);
 }
+
 void procesos(){
   //implementacion procesos
 }

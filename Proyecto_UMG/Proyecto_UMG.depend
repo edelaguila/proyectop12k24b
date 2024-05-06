@@ -18,3 +18,22 @@
 	<conio.h>
 	<iostream>
 
+1715019456 source:c:\users\josue\onedrive\escritorio\proyecto 2\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+	"usuarios.h"
+	<cstdlib>
+	<conio.h>
+
+1715019057 c:\users\josue\onedrive\escritorio\proyecto 2\proyectop12k24b\proyecto_umg\include\usuarios.h
+	<iostream>
+	<fstream>
+	<vector>
+
+1715019397 source:c:\users\josue\onedrive\escritorio\proyecto 2\proyectop12k24b\proyecto_umg\main.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"usuarios.h"
+

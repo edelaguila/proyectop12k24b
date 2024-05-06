@@ -23,7 +23,7 @@ usuarios usuarioRegistrado;
 
 int main()
 {
-  bool accesoUsuarios;
+    bool accesoUsuarios;
 
 
     accesoUsuarios=usuarioRegistrado.loginUsuarios();
@@ -34,6 +34,7 @@ int main()
     cout<<"** Hasta la proxima **";
     return 0;
 }
+
 void menuGeneral(){
     system("cls");
     int choice;
@@ -85,7 +86,9 @@ void menuGeneral(){
 	}
     }while(choice!= 7);
 }
+
 void catalogos(){
+
 
     int choice;
 
@@ -125,41 +128,43 @@ void catalogos(){
 		break;
     case 3:
         {
-		break;
+        usuarios usuario;
+        usuario.menuUsuarios();
         }
-        case 4:
+		break;
+    case 4:
         {
 		break;
         }
-        case 5:
+    case 5:
         {
 		break;
         }
-        case 6:
+    case 6:
         {
 		break;
         }
-        case 7:
+    case 7:
         {
 		break;
         }
-        case 8:
+    case 8:
         {
 		break;
         }
-        case 9:
+    case 9:
         {
 		break;
         }
-        case 10:
+    case 10:
         {
 		break;
         }
-        case 11:
+    case 11:
         {
 		break;
         }
-        case 12:
+    case 12:
         {
         menuGeneral();
 		break;
@@ -172,13 +177,15 @@ void catalogos(){
     }while(choice!= 12);
 }
 void procesos(){
+
   //implementacion procesos
 }
 void reportes(){
+
    //implementacion reportes
 }
-
 void ayuda(){
+
     //implementacion ayuda
 }
 void seguridad(){

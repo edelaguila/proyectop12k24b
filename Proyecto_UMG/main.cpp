@@ -6,6 +6,8 @@
 #include<conio.h>
 #include<iomanip>
 #include "usuarios.h"
+#include <alumnos.h>
+#include <maestros.h>
 
 
 
@@ -119,11 +121,14 @@ void catalogos(){
     {
 	case 1:
 	    {
-		break;
+        alumnos Ralumnos;
+        Ralumnos.menu();
 	    }
+		break;
     case 2:
         {
-        break;
+        maestros maestro;
+        maestro.menu();
         }
 		break;
     case 3:

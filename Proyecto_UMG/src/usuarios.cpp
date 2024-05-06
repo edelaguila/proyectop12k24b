@@ -22,12 +22,10 @@ usuarios::~usuarios()
     //dtor
 }
 
-bool usuarios::loginUsuarios(){
 
-}
+
 
 void usuarios::menuUsuarios(){
-
 
 int choice;
     do {
@@ -263,5 +261,3 @@ void usuarios::borrar()
         cout << "No se a podido encontrar el usuario" << endl;
         }
 }
-
-//void usuarios::

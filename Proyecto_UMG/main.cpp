@@ -7,6 +7,7 @@
 #include "usuarios.h"
 #include "Login.h"
 #include "aulas.h"
+#include "secciones.h"
 
 using namespace std;
 
@@ -152,6 +153,9 @@ void catalogos()
             break;
         case 9:
             // Implementación para Secciones
+            SeccionesCrud inicio9;
+            inicio9.CrudSeccion();
+
             break;
         case 10:
             // Implementación para Sedes

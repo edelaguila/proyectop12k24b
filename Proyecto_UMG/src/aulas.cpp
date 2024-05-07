@@ -1,3 +1,4 @@
+//Creado por Rocio Guisell Lopez espinoza 9959-23-740
 #include "aulas.h"
 
 #include <fstream>
@@ -82,7 +83,7 @@ void AulasCRUD::ModificarAula() {
     cout << "Ingrese el codigo de la aula a modificar: ";
     cin >> codigo;
 
-    fstream archivo("aulas.bin", ios::binary | ios::in | ios::out);
+    fstream archivo("aulas.dat", ios::binary | ios::in | ios::out);
     if (!archivo) {
         cout << "No hay aulas registradas." << endl;
         return;

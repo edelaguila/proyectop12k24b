@@ -6,6 +6,7 @@
 #include <conio.h>
 #include "usuarios.h"
 #include "Login.h"
+#include "aulas.h"
 
 using namespace std;
 
@@ -144,6 +145,10 @@ void catalogos()
             break;
         case 8:
             // Implementación para Aulas
+
+            AulasCRUD inicio;
+            inicio.CrudAula();
+
             break;
         case 9:
             // Implementación para Secciones

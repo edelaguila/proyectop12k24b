@@ -158,3 +158,18 @@
 	<conio.h>
 	<iostream>
 
+1715192655 source:d:\umg\semestre 3\programacion 1\proyecto\proyectop12k24b\proyecto_umg\src\cursoss.cpp
+	"Cursoss.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715192655 d:\umg\semestre 3\programacion 1\proyecto\proyectop12k24b\proyecto_umg\include\cursoss.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+

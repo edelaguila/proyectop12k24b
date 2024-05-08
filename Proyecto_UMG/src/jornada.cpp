@@ -9,9 +9,11 @@ using namespace std;
 
 void JornadaCRUD::CrudJornada() {
 int choice;
-    //int x;
+
     do {
+	//limpiar pantalla
 	system("cls");
+	//menu de opciones
 	cout<<"\t\t\t--------------------------------------------"<<endl;
 	cout<<"\t\t\t|   SISTEMA DE GESTION UMG - Jornada        |"<<endl;
 	cout<<"\t\t\t--------------------------------------------"<<endl;
@@ -54,13 +56,15 @@ int choice;
 }
 
 
-
+//Funcion que nos permite ingresar nuevos datos
 void JornadaCRUD::Ingresar() {
 
+	//limpia la consola
    system("cls");
     cout<<"\n------------------------------------------------------------------------------------------------------------------------"<<endl;
     cout<<"\n-------------------------------------------------Agregar Jornada--------------------------------------------"<<endl;
     Jornada Jornada;
+    //se ingresa los datos y se guardan en variables
     cout << "Ingrese el codigo de la Jornada: ";
     cin >> Jornada.codigo;
     cin.ignore();
@@ -68,7 +72,8 @@ void JornadaCRUD::Ingresar() {
     cout << "Ingrese el nombre de la Jornada: ";
     cin.getline(Jornada.nombre, 50);
 
-
+	//Se crea el objeto archivo para abrir el archivo en binario
+	//si el archivo no esta existe, se crea uno nuevo
     ofstream archivo("Jornadas.DAT", ios::binary | ios::app);
     archivo.write(reinterpret_cast<const char*>(&Jornada), sizeof(Jornada));
     archivo.close();
@@ -76,37 +81,42 @@ void JornadaCRUD::Ingresar() {
     cout << "Jornada agregada exitosamente!" << endl;
 }
 
+//Funcion que nos permite modificar registros
 void JornadaCRUD::Modificar() {
     int codigo;
+
+    //ingresar el codigo del dato a modificar
     cout << "Ingrese el codigo de la Jornada a modificar: ";
     cin >> codigo;
-
+//abrir el archivo en modo lectura y escribir en binario
     fstream archivo("Jornadas.DAT", ios::binary | ios::in | ios::out);
+//verificar si el archivo se pudo abrir correctamente
     if (!archivo) {
         cout << "No hay Jornadas registradas." << endl;
         return;
     }
 
     Jornada Jornada;
+    //variable booleana que se usara para indicar si se encontro el codigo que se ingreso
     bool encontrada = false;
+    //lee de forma repetida cada registro del archivo hasta que no haya mas registros
     while (archivo.read(reinterpret_cast<char*>(&Jornada), sizeof(Jornada))) {
+		//compara el codigo del archivo con el ingresado para determinar si se ha encontrado o no
         if (Jornada.codigo == codigo) {
             cout << "Ingrese el nuevo nombre de la Jornada: ";
             cin.ignore();
             cin.getline(Jornada.nombre, 50);
 
-
-
             archivo.seekp(-static_cast<int>(sizeof(Jornada)), ios::cur);
+            //modifica el archivo, sobreescribiendo el registro original
             archivo.write(reinterpret_cast<const char*>(&Jornada), sizeof(Jornada));
-
+			//establece como verdadera la variable, para indicar que se ha encontrado la jornada que se desea modificar
             encontrada = true;
             break;
         }
     }
-
+//se cierra el archivo
     archivo.close();
-
     if (!encontrada) {
         cout << "No se encontró la Jornada con el codigo ingresado." << endl;
     } else {
@@ -114,17 +124,21 @@ void JornadaCRUD::Modificar() {
     }
 
 }
-
+//Funcion para borrar los registros
 void JornadaCRUD::Borrar() {
     int codigo;
+    //se ingresa el codigo del registro a eliminar
     cout << "Ingrese el codigo de la Jornada a eliminar: ";
     cin >> codigo;
-
+//abre el archivo en modo de lectura binario y lee los datos del archivo
     ifstream archivo("Jornadas.DAT", ios::binary);
+   //verifica si el archivo se pudo abrir correctamente
     if (!archivo) {
         cout << "No hay Jornadas registradas." << endl;
 
     }
+//abre un nuevo archivo temporal en modo de escritura binaria
+//el archivo temporal se utilizara para escribir los datos del archivo original exepto los que se desea eliminar
 
     ofstream archivoTmp("Jornadas_tmp.DAT", ios::binary);
     Jornada Jornada;
@@ -139,7 +153,8 @@ void JornadaCRUD::Borrar() {
 
     archivo.close();
     archivoTmp.close();
-
+//elimina el archivo original y renombra el archivo temporal
+//esto reemplaza el archivo origial con el archivo nuevo que no contiene el registro eliminado
     remove("Jornadas.DAT");
     rename("Jornadas_tmp.DAT", "Jornadas.DAT");
 
@@ -152,9 +167,11 @@ void JornadaCRUD::Borrar() {
 
 }
 
+//Funcion para desplegar todos los registros
 void JornadaCRUD::Desplegar() {
     system("cls");
     cout<<"-----------------Despliegue de Jornadas registradas---------------------"<<endl;
+      //abre el archivo en modo lectura binaria y lee los datos del archivo
     ifstream archivo("Jornadas.DAT", ios::binary);
     if (!archivo) {
         cout << "No hay Jornadas registradas." << endl;
@@ -162,7 +179,11 @@ void JornadaCRUD::Desplegar() {
     }
 
     Jornada Jornada;
+        //lee de forma repetida cada registro del archivo hasta que no haya mas registros
+
     while (archivo.read(reinterpret_cast<char*>(&Jornada), sizeof(Jornada))) {
+			//Imprime los registros leidos del archivo
+
         cout << "Codigo: " << Jornada.codigo << endl;
         cout << "Nombre: " << Jornada.nombre << endl;
         cout << "-----------------------------" << endl;

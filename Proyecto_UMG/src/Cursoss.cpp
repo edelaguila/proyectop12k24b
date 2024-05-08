@@ -9,9 +9,11 @@ using namespace std;
 
 void CursosCRUD::CrudCursos() {
 int choice;
-    //int x;
+
     do {
+	//limpiar pantalla
 	system("cls");
+	//menu de opciones
 	cout<<"\t\t\t--------------------------------------------"<<endl;
 	cout<<"\t\t\t|   SISTEMA DE GESTION UMG - Cursos      |"<<endl;
 	cout<<"\t\t\t--------------------------------------------"<<endl;
@@ -54,6 +56,7 @@ int choice;
 }
 
 
+//Funcion que nos permite ingresar nuevos datos
 
 void CursosCRUD::IngresarCa() {
 
@@ -61,6 +64,9 @@ void CursosCRUD::IngresarCa() {
     cout<<"\n------------------------------------------------------------------------------------------------------------------------"<<endl;
     cout<<"\n-------------------------------------------------Agregar Cursos--------------------------------------------"<<endl;
     Curso Curso;
+
+        //se ingresa los datos y se guardan en variables
+
     cout << "Ingrese el codigo de la Cursos: ";
     cin >> Curso.codigo;
     cin.ignore();
@@ -73,6 +79,8 @@ void CursosCRUD::IngresarCa() {
 
     cout <<"Ingrese los Prerequisitos del Curso: ";
     cin.getline (Curso.requisitos,50);
+	//Se crea el objeto archivo para abrir el archivo en binario
+	//si el archivo no esta existe, se crea uno nuevo
 
 
     ofstream archivo("Cursoss.DAT", ios::binary | ios::app);
@@ -81,21 +89,28 @@ void CursosCRUD::IngresarCa() {
 
     cout << "Cursos agregada exitosamente!" << endl;
 }
+//Funcion que nos permite modificar registros
 
 void CursosCRUD::ModificarCa() {
     int codigo;
+    //ingresar el codigo del dato a modificar
     cout << "Ingrese el codigo del curso a modificar: ";
     cin >> codigo;
+//abrir el archivo en modo lectura y escribir en binario
 
     fstream archivo("Cursoss.DAT", ios::binary | ios::in | ios::out);
+    //verificar si el archivo se pudo abrir correctamente
     if (!archivo) {
         cout << "No hay Cursoss registradas." << endl;
         return;
     }
 
     Curso Curso;
+    //variable booleana que se usara para indicar si se encontro el codigo que se ingreso
     bool encontrada = false;
+    //lee de forma repetida cada registro del archivo hasta que no haya mas registros
     while (archivo.read(reinterpret_cast<char*>(&Curso), sizeof(Curso))) {
+        //compara el codigo del archivo con el ingresado para determinar si se ha encontrado o no
         if (Curso.codigo == codigo) {
             cout << "Ingrese el nuevo nombre del Cursos: ";
             cin.ignore();
@@ -107,15 +122,15 @@ void CursosCRUD::ModificarCa() {
             cout <<"Ingrese los nuevos Prerequisitos del Curso";
             cin.getline(Curso.requisitos, 50);
 
-
             archivo.seekp(-static_cast<int>(sizeof(Curso)), ios::cur);
+            //modifica el archivo, sobreescribiendo el registro original
             archivo.write(reinterpret_cast<const char*>(&Curso), sizeof(Curso));
-
+			//establece como verdadera la variable, para indicar que se ha encontrado la jornada que se desea modificar
             encontrada = true;
             break;
         }
     }
-
+//se cierra el archivo
     archivo.close();
 
     if (!encontrada) {
@@ -125,18 +140,22 @@ void CursosCRUD::ModificarCa() {
     }
 
 }
-
+//funcion para borrar los resgistros
 void CursosCRUD::BorrarCa() {
     int codigo;
+    //se ingresa el codigo del registro a eliminar
     cout << "Ingrese el codigo de la Cursos a eliminar: ";
     cin >> codigo;
+    //abre el archivo en modo de lectura binario y lee los datos del archivo
 
     ifstream archivo("Cursoss.DAT", ios::binary);
+    //verifica si el archivo se pudo abrir correctamente
     if (!archivo) {
         cout << "No hay Cursoss registradas." << endl;
 
     }
-
+//abre un nuevo archivo temporal en modo de escritura binaria
+//el archivo temporal se utilizara para escribir los datos del archivo original exepto los que se desea eliminar
     ofstream archivoTmp("Cursoss_tmp.DAT", ios::binary);
     Curso Curso;
     bool eliminada = false;
@@ -150,7 +169,8 @@ void CursosCRUD::BorrarCa() {
 
     archivo.close();
     archivoTmp.close();
-
+//elimina el archivo original y renombra el archivo temporal
+//esto reemplaza el archivo origial con el archivo nuevo que no contiene el registro eliminado
     remove("Cursoss.DAT");
     rename("Cursoss_tmp.DAT", "Cursoss.DAT");
 
@@ -162,10 +182,12 @@ void CursosCRUD::BorrarCa() {
     }
 
 }
+//Funcion para desplegar todos los registros
 
 void CursosCRUD::DesplegarCa() {
     system("cls");
     cout<<"-----------------Despliegue de Cursoss registradas---------------------"<<endl;
+   //abre el archivo en modo lectura binaria y lee los datos del archivo
     ifstream archivo("Cursoss.DAT", ios::binary);
     if (!archivo) {
         cout << "No hay Cursoss registradas." << endl;
@@ -173,7 +195,9 @@ void CursosCRUD::DesplegarCa() {
     }
 
     Curso Curso;
+    //lee de forma repetida cada registro del archivo hasta que no haya mas registros
     while (archivo.read(reinterpret_cast<char*>(&Curso), sizeof(Curso))) {
+		//Imprime los registros leidos del archivo
         cout << "Codigo: " << Curso.codigo << endl;
         cout << "Nombre: " << Curso.nombre << endl;
         cout << "Creditos: " << Curso.Creditos << endl;

@@ -1,3 +1,5 @@
+//Elaborado por: Alisson Rocio Lopez Ortiz 9959 - 23 - 7225
+
 #include "Cursoss.h"
 #include <fstream>
 #include <iostream>

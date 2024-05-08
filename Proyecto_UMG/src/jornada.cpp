@@ -1,3 +1,5 @@
+//Elaborado por: Maria Florencia Ariaga Chiroy 9959 - 23 - 6741
+
 #include "jornada.h"
 #include <fstream>
 #include <iostream>

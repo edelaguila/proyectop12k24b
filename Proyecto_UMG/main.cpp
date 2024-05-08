@@ -6,6 +6,7 @@
 #include <conio.h>
 #include "usuarios.h"
 #include "Login.h"
+#include "Sedes.h"
 
 using namespace std;
 
@@ -149,7 +150,8 @@ void catalogos()
             // Implementación para Secciones
             break;
         case 10:
-            // Implementación para Sedes
+            Sedes sede;
+            sede.menu();
             break;
         case 11:
             // Implementación para Horarios

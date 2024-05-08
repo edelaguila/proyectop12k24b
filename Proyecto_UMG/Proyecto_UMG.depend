@@ -68,3 +68,48 @@
 	<fstream>
 	<string>
 
+1715146106 source:c:\users\admi\onedrive\documentos\carpeta para git\didactica2k24\proyectos\proyectop12k24b\proyecto_umg\main.cpp
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	"usuarios.h"
+	"Login.h"
+	"Sedes.h"
+
+1715144606 c:\users\admi\onedrive\documentos\carpeta para git\didactica2k24\proyectos\proyectop12k24b\proyecto_umg\include\usuarios.h
+	<iostream>
+
+1715144606 c:\users\admi\onedrive\documentos\carpeta para git\didactica2k24\proyectos\proyectop12k24b\proyecto_umg\include\login.h
+	<iostream>
+	<fstream>
+	<string>
+
+1715144606 source:c:\users\admi\onedrive\documentos\carpeta para git\didactica2k24\proyectos\proyectop12k24b\proyecto_umg\src\login.cpp
+	"Login.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715144606 source:c:\users\admi\onedrive\documentos\carpeta para git\didactica2k24\proyectos\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+
+1715146477 source:c:\users\admi\onedrive\documentos\carpeta para git\didactica2k24\proyectos\proyectop12k24b\proyecto_umg\src\sedes.cpp
+	"Sedes.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<iomanip>
+	<sstream>
+	<cstring>
+
+1715145785 c:\users\admi\onedrive\documentos\carpeta para git\didactica2k24\proyectos\proyectop12k24b\proyecto_umg\include\sedes.h
+	<iostream>
+

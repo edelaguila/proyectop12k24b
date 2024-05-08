@@ -6,12 +6,7 @@
 #include <conio.h>
 #include "usuarios.h"
 #include "Login.h"
-<<<<<<< HEAD
-#include "aulas.h"
-#include "secciones.h"
-=======
 #include "Bitacora.h"
->>>>>>> 5863dc7e6bb74938d3e741cea468fd2394de25a4
 
 using namespace std;
 
@@ -33,7 +28,7 @@ int main()
     // Creamos un bool que verifique y despliegue el metodo VerificarUsuario
     bool UsuarioCorrecto = ingreso.VerificarUsuario();
 
-    // Luego de ingresar con usuario y contraseï¿½a se nos despliega otro menu
+    // Luego de ingresar con usuario y contraseña se nos despliega otro menu
     if (UsuarioCorrecto)
     {
         menuGeneral();
@@ -124,10 +119,10 @@ void catalogos()
         switch (choice)
         {
         case 1:
-            // Implementaciï¿½n para Alumnos
+            // Implementación para Alumnos
             break;
         case 2:
-            // Implementaciï¿½n para Maestros
+            // Implementación para Maestros
             break;
         case 3:
         {
@@ -136,35 +131,28 @@ void catalogos()
             break;
         }
         case 4:
-            // Implementaciï¿½n para Carreras
+            // Implementación para Carreras
             break;
         case 5:
-            // Implementaciï¿½n para Facultades
+            // Implementación para Facultades
             break;
         case 6:
-            // Implementaciï¿½n para Cursos
+            // Implementación para Cursos
             break;
         case 7:
-            // Implementaciï¿½n para Jornadas
+            // Implementación para Jornadas
             break;
         case 8:
-            // Implementaciï¿½n para Aulas
-
-            AulasCRUD inicio;
-            inicio.CrudAula();
-
+            // Implementación para Aulas
             break;
         case 9:
-            // Implementaciï¿½n para Secciones
-            SeccionesCrud inicio9;
-            inicio9.CrudSeccion();
-
+            // Implementación para Secciones
             break;
         case 10:
-            // Implementaciï¿½n para Sedes
+            // Implementación para Sedes
             break;
         case 11:
-            // Implementaciï¿½n para Horarios
+            // Implementación para Horarios
             break;
         case 12:
             menuGeneral();
@@ -179,26 +167,22 @@ void catalogos()
 
 void procesos()
 {
-    // Implementaciï¿½n de procesos
+    // Implementación de procesos
 }
 
 void reportes()
 {
-    // Implementaciï¿½n de reportes
+    // Implementación de reportes
 }
 
 void ayuda()
 {
-    // Implementaciï¿½n de ayuda
+    // Implementación de ayuda
 }
 
 void seguridad()
 {
-<<<<<<< HEAD
-    // Implementaciï¿½n de seguridad
-=======
     // Implementación de seguridad
     Bitacora Auditoria;
     Auditoria.visualizarBitacora();
->>>>>>> 5863dc7e6bb74938d3e741cea468fd2394de25a4
 }

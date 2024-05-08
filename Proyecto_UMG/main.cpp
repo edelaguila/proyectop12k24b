@@ -31,7 +31,7 @@ int main()
     // Creamos un bool que verifique y despliegue el metodo VerificarUsuario
     bool UsuarioCorrecto = ingreso.VerificarUsuario();
 
-    // Luego de ingresar con usuario y contraseña se nos despliega otro menu
+    // Luego de ingresar con usuario y contraseï¿½a se nos despliega otro menu
     if (UsuarioCorrecto)
     {
         menuGeneral();
@@ -121,10 +121,10 @@ void catalogos()
         switch (choice)
         {
         case 1:
-            // Implementación para Alumnos
+            // Implementaciï¿½n para Alumnos
             break;
         case 2:
-            // Implementación para Maestros
+            // Implementaciï¿½n para Maestros
             break;
         case 3:
         {
@@ -133,35 +133,35 @@ void catalogos()
             break;
         }
         case 4:
-            // Implementación para Carreras
+            // Implementaciï¿½n para Carreras
             break;
         case 5:
-            // Implementación para Facultades
+            // Implementaciï¿½n para Facultades
             break;
         case 6:
-            // Implementación para Cursos
+            // Implementaciï¿½n para Cursos
             break;
         case 7:
-            // Implementación para Jornadas
+            // Implementaciï¿½n para Jornadas
             break;
         case 8:
-            // Implementación para Aulas
+            // Implementaciï¿½n para Aulas
 
             AulasCRUD inicio;
             inicio.CrudAula();
 
             break;
         case 9:
-            // Implementación para Secciones
+            // Implementaciï¿½n para Secciones
             SeccionesCrud inicio9;
             inicio9.CrudSeccion();
 
             break;
         case 10:
-            // Implementación para Sedes
+            // Implementaciï¿½n para Sedes
             break;
         case 11:
-            // Implementación para Horarios
+            // Implementaciï¿½n para Horarios
             break;
         case 12:
             menuGeneral();
@@ -176,20 +176,20 @@ void catalogos()
 
 void procesos()
 {
-    // Implementación de procesos
+    // Implementaciï¿½n de procesos
 }
 
 void reportes()
 {
-    // Implementación de reportes
+    // Implementaciï¿½n de reportes
 }
 
 void ayuda()
 {
-    // Implementación de ayuda
+    // Implementaciï¿½n de ayuda
 }
 
 void seguridad()
 {
-    // Implementación de seguridad
+    // Implementaciï¿½n de seguridad
 }

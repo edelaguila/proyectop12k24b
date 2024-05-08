@@ -136,3 +136,83 @@
 	<conio.h>
 	<iomanip>
 
+1715125494 source:c:\users\50259\onedrive\proyectop12k24b\proyectop12k24b\proyecto_umg\main.cpp
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	"usuarios.h"
+	"Login.h"
+	"aulas.h"
+	"secciones.h"
+	"notas.h"
+
+1715119626 c:\users\50259\onedrive\proyectop12k24b\proyectop12k24b\proyecto_umg\include\usuarios.h
+	<iostream>
+
+1715119626 c:\users\50259\onedrive\proyectop12k24b\proyectop12k24b\proyecto_umg\include\login.h
+	<iostream>
+	<fstream>
+	<string>
+
+1715119626 c:\users\50259\onedrive\proyectop12k24b\proyectop12k24b\proyecto_umg\include\aulas.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715119626 c:\users\50259\onedrive\proyectop12k24b\proyectop12k24b\proyecto_umg\include\secciones.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715119626 source:c:\users\50259\onedrive\proyectop12k24b\proyectop12k24b\proyecto_umg\src\aulas.cpp
+	"aulas.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715119626 source:c:\users\50259\onedrive\proyectop12k24b\proyectop12k24b\proyecto_umg\src\login.cpp
+	"Login.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715119626 source:c:\users\50259\onedrive\proyectop12k24b\proyectop12k24b\proyecto_umg\src\secciones.cpp
+	"secciones.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715119626 source:c:\users\50259\onedrive\proyectop12k24b\proyectop12k24b\proyecto_umg\src\seguridad.cpp
+	"seguridad.h"
+
+1715119626 c:\users\50259\onedrive\proyectop12k24b\proyectop12k24b\proyecto_umg\include\seguridad.h
+
+1715125494 source:c:\users\50259\onedrive\proyectop12k24b\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+
+1715126660 source:c:\users\50259\onedrive\proyectop12k24b\proyectop12k24b\proyecto_umg\src\notas.cpp
+	"notas.h"
+	<fstream>
+	<iostream>
+	<cstdlib>
+	<conio.h>
+
+1715126846 c:\users\50259\onedrive\proyectop12k24b\proyectop12k24b\proyecto_umg\include\notas.h
+	<fstream>
+	<iostream>
+

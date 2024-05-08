@@ -1,4 +1,5 @@
 //Creado por Rocio Guisell Lopez espinoza 9959-23-740
+
 #include "secciones.h"
 
 #include <fstream>

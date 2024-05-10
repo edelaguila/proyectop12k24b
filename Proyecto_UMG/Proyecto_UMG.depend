@@ -113,3 +113,61 @@
 	<stdlib.h>
 	<iomanip>
 
+1715313189 source:c:\users\admi\onedrive\documentos\carpeta para git\didactica2k24\proyectos\proyectop12k24b\proyecto_umg\main.cpp
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	"usuarios.h"
+	"Login.h"
+	"Bitacora.h"
+
+1715313189 c:\users\admi\onedrive\documentos\carpeta para git\didactica2k24\proyectos\proyectop12k24b\proyecto_umg\include\usuarios.h
+	<iostream>
+
+1715313189 c:\users\admi\onedrive\documentos\carpeta para git\didactica2k24\proyectos\proyectop12k24b\proyecto_umg\include\login.h
+	<iostream>
+	<fstream>
+	<string>
+
+1715313189 c:\users\admi\onedrive\documentos\carpeta para git\didactica2k24\proyectos\proyectop12k24b\proyecto_umg\include\bitacora.h
+	<iostream>
+
+1715313189 source:c:\users\admi\onedrive\documentos\carpeta para git\didactica2k24\proyectos\proyectop12k24b\proyecto_umg\src\bitacora.cpp
+	"Bitacora.h"
+	<iostream>
+	<fstream>
+	<conio.h>
+	<ctime>
+	<stdlib.h>
+	<iomanip>
+
+1715313189 source:c:\users\admi\onedrive\documentos\carpeta para git\didactica2k24\proyectos\proyectop12k24b\proyecto_umg\src\login.cpp
+	"Login.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Bitacora.h"
+
+1715313866 source:c:\users\admi\onedrive\documentos\carpeta para git\didactica2k24\proyectos\proyectop12k24b\proyecto_umg\src\sedes.cpp
+	"Sedes.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<iomanip>
+	<sstream>
+	<cstring>
+
+1715313866 c:\users\admi\onedrive\documentos\carpeta para git\didactica2k24\proyectos\proyectop12k24b\proyecto_umg\include\sedes.h
+	<iostream>
+
+1715313189 source:c:\users\admi\onedrive\documentos\carpeta para git\didactica2k24\proyectos\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+

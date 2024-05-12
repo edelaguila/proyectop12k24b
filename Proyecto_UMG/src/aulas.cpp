@@ -54,25 +54,25 @@ void AulasCRUD::CrudAula()
 	case 1:
         IngresarAula();
         //registro de bitacora ingreso
-        Auditoria.ingresoBitacora(user,codigoPrograma,"CCU");//CCU = Create Cursos
+        Auditoria.ingresoBitacora(user,codigoPrograma,"CUA");//CAU = Create aulas
 
 		break;
     case 2:
         ModificarAula();
 		//registro de bitacora Modificar
-        Auditoria.ingresoBitacora(user,codigoPrograma,"UCU");//UCU = Update Cursos
+        Auditoria.ingresoBitacora(user,codigoPrograma,"UAU");//UAU = Update aulas
 
 		break;
     case 3:
         BorrarAula();
 		//registro de bitacora borrar
-        Auditoria.ingresoBitacora(user,codigoPrograma,"DCU");//DCU = Delete Cursos
+        Auditoria.ingresoBitacora(user,codigoPrograma,"DAU");//DAU = Delete aulas
 
 		break;
     case 4:
         DesplegarAula();
 		//registro de bitacora despliegle
-        Auditoria.ingresoBitacora(user,codigoPrograma,"RCU");//RCU = Read Cursos
+        Auditoria.ingresoBitacora(user,codigoPrograma,"RCU");//RCU = Read aulas
         break;
     case 5:
 		break;

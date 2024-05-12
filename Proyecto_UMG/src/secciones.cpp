@@ -52,28 +52,28 @@ void SeccionesCrud::CrudSeccion()
         // Si la opci�n es 1, llama a la funci�n IngresarSeccion
         IngresarSeccion();
         //registro de bitacora ingreso
-        Auditoria.ingresoBitacora(user,codigoPrograma,"CCU");//CCU = Create Cursos
+        Auditoria.ingresoBitacora(user,codigoPrograma,"CSE");//CSE = Create Secciones
 
 		break;
     case 2:
         // Si la opci�n es 2, llama a la funci�n ModificarSeccion
         ModificarSeccion();
         //registro de bitacora Modificar
-        Auditoria.ingresoBitacora(user,codigoPrograma,"UCU");//UCU = Update Cursos
+        Auditoria.ingresoBitacora(user,codigoPrograma,"USE");//USE = Update Secciones
 
         break;
     case 3:
         // Si la opci�n es 3, llama a la funci�n BorrarSeccion
         BorrarSeccion();
         //registro de bitacora borrar
-        Auditoria.ingresoBitacora(user,codigoPrograma,"DCU");//DCU = Delete Cursos
+        Auditoria.ingresoBitacora(user,codigoPrograma,"DSE");//DSE = Delete Secciones
 
 		break;
     case 4:
         // Si la opci�n es 4, llama a la funci�n DesplegarSeccion
         DesplegarSeccion();
         //registro de bitacora despliegle
-        Auditoria.ingresoBitacora(user,codigoPrograma,"RCU");//RCU = Read Cursos
+        Auditoria.ingresoBitacora(user,codigoPrograma,"RSE");//RSE = Read Secciones
         break;
     case 5:
         // Si la opci�n es 5, sale del bucle

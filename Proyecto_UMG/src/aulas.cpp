@@ -70,6 +70,7 @@ void AulasCRUD::CrudAula()
 
 		break;
     case 4:
+
         DesplegarAula();
 		//registro de bitacora despliegle
         Auditoria.ingresoBitacora(user,codigoPrograma,"RAU");//RCU = Read aulas

@@ -1,5 +1,5 @@
 
-//creado por Oscar Morales 9959-23-3070
+                                                                //creado por Oscar Morales 9959-23-3070
 
 //Incluyendo las librerias a utilizar
 #include<iostream>
@@ -13,7 +13,6 @@
 
 //incluyendo el encabezado alumnos
 #include "alumnos.h"
-
 //Incluyendo el encabezado de bitacora
 #include "Bitacora.h"
 
@@ -171,8 +170,11 @@ string alumnos::getanoingre()
 //Funcion menu donde muestra el sistema de gestion de alumnos
 void alumnos::menu()
 {
+//Implementando la bitacora
+//Declarando variable string con el codigo programa
 string codigoPrograma="2322";
 Bitacora Auditoria;
+//Declarando 2 variables string con el codigo programa
 string user, contrasena;
 Auditoria.ingresoBitacora(user,codigoPrograma,"ALM");
 
@@ -294,19 +296,13 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMI");
     cout<<"       -> Ingrese el nombre del estudiante:  ";
     cin.getline(alumno.nombre, 50);
 
-
-    //Mensaje para ingresar el genero del alumno
-    cout<<"       -> Ingrese el Genero del estudiante: ";
-    cin.getline(alumno.Genero, 10);
-
-
     //Mensaje para ingresar el DPI del alumno
-    cout<<"       -> Ingrese la DPI del estudiante: ";
+    cout<<"       -> Ingrese el email del estudiante: ";
     cin.getline(alumno.DPI, 20);
 
 
     //Mensaje para ingresar la nacionalidad del alumno
-    cout<<"       -> Ingrese la nacionalidad del estudiante: ";
+    cout<<"       -> Ingrese la estatus del estudiante: ";
     cin.getline(alumno.nacionalidad, 100);
 
 
@@ -318,21 +314,6 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMI");
     //Mensaje para ingresar el telefono del alumno
     cout<<"       -> Ingrese el telefono del estudiante: ";
     cin.getline(alumno.telefono, 15);
-
-
-    //Mensaje para ingresar el estado civil del alumno
-    cout<<"       -> Ingrese el estado civil del estudiante: ";
-    cin.getline(alumno.civil, 20);
-
-
-    //Mensaje para ingresar la fecha de nacimiento del alumno
-    cout<<"       -> Ingrese la fecha de nacimiento del estudiante: ";
-    cin.getline(alumno.fechanaci, 20);
-
-
-    //Mensaje para ingresar el año de ingreso del alumno
-    cout<<"       -> Ingrese el ano de ingreso del estudiante: ";
-    cin.getline(alumno.anoingre, 10);
 
     cout<<"+---------------------------------------------------------+"<< endl;
 
@@ -377,14 +358,10 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMD");
         //Se muestra los detalles del estudiante
         cout << "                        Mostrando -> ID del estudiante: " << alumno.id << endl;
         cout << "                        Mostrando -> Nombre del estudiante: " << alumno.nombre << endl;
-        cout << "                        Mostrando -> Genero: " << alumno.Genero << endl;
-        cout << "                        Mostrando -> DPI : " << alumno.DPI << endl;
+        cout << "                        Mostrando -> email del estudiante : " << alumno.DPI << endl;
+        cout << "                        Mostrando -> Estatus del estudiante: " << alumno.nacionalidad << endl;
         cout << "                        Mostrando -> Direccion: " << alumno.direccion << endl;
-        cout << "                        Mostrando -> Nacionalidad: " << alumno.nacionalidad << endl;
         cout << "                        Mostrando -> Telefono: " << alumno.telefono << endl;
-        cout << "                        Mostrando -> Estado Civil: " << alumno.civil << endl;
-        cout << "                        Mostrando -> Fecha de nacimiento: " << alumno.fechanaci << endl;
-        cout << "                        Mostrando -> Ano de ingreso: " << alumno.anoingre << endl;
         cout << "+---------------------------------------------------------------------------------+" << endl;
     }
     archivo.close(); //cierra el archivo
@@ -440,22 +417,15 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMM");
             cin >> alumno.id;
             cout << "Ingrese el nuevo nombre del estudiante: ";
             cin >> alumno.nombre;
-            cout << "Ingrese el nuevo Genero del estudiante: ";
-            cin >> alumno.Genero;
-            cout << "Ingrese la nueva DPI del estudiante: ";
+            cout << "Ingrese el nuevo email del estudiante: ";
             cin >> alumno.DPI;
-            cout << "Ingrese la nueva nacionalidad del estudiante: ";
+            cout << "Ingrese el nuevo estatus del estudiante: ";
             cin >> alumno.nacionalidad;
             cout << "Ingrese la nueva direccion del estudiante: ";
             cin >> alumno.direccion;
             cout << "Ingrese el nuevo Telefono del estuantes: ";
             cin >> alumno.telefono;
-            cout << "Ingrese el nuevo estado civil del estudiante: ";
-            cin >> alumno.civil;
-            cout << "Ingrese la nueva fecha de nacimiento del estudiante: ";
-            cin >> alumno.fechanaci;
-            cout << "Ingrese el nuevo ano de ingreso del estudiante: ";
-            cin >> alumno.anoingre;
+
 
             // Posiciona el puntero de escritura al inicio del registro que se está modificando
             archivo.seekp(-static_cast<int>(sizeof(Alumno)), ios::cur);

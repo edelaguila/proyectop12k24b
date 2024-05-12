@@ -10,11 +10,22 @@
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
+
+
+//implementacion de bitacora
+
+#include "Bitacora.h"
+
 using namespace std;
 
 //Definir la función principal del CRUD
 void AulasCRUD::CrudAula()
 {
+ //implementacion de variables para bitacora
+    string codigoPrograma= "5000";
+    Bitacora Auditoria;
+    string user ="admin";
+
     int opcion;
     do
     {
@@ -42,16 +53,27 @@ void AulasCRUD::CrudAula()
     {
 	case 1:
         IngresarAula();
+        //registro de bitacora ingreso
+        Auditoria.ingresoBitacora(user,codigoPrograma,"CCU");//CCU = Create Cursos
+
 		break;
     case 2:
         ModificarAula();
+		//registro de bitacora Modificar
+        Auditoria.ingresoBitacora(user,codigoPrograma,"UCU");//UCU = Update Cursos
+
 		break;
     case 3:
         BorrarAula();
+		//registro de bitacora borrar
+        Auditoria.ingresoBitacora(user,codigoPrograma,"DCU");//DCU = Delete Cursos
+
 		break;
     case 4:
         DesplegarAula();
-		break;
+		//registro de bitacora despliegle
+        Auditoria.ingresoBitacora(user,codigoPrograma,"RCU");//RCU = Read Cursos
+        break;
     case 5:
 		break;
 	default:

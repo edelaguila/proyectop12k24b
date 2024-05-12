@@ -1005,3 +1005,170 @@
 	"Bitacora.h"
 	"maestros.h"
 
+1715547953 source:d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\src\alumnos.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	"alumnos.h"
+	"Bitacora.h"
+
+1715547454 d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\include\alumnos.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715547454 source:d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\src\aulas.cpp
+	"aulas.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715547454 d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\include\aulas.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715547454 source:d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\src\bitacora.cpp
+	"Bitacora.h"
+	<iostream>
+	<fstream>
+	<conio.h>
+	<ctime>
+	<stdlib.h>
+	<iomanip>
+
+1715547454 d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\include\bitacora.h
+	<iostream>
+
+1715547454 source:d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\src\carrera.cpp
+	"Carrera.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715547454 d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\include\carrera.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715547454 source:d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\src\cursoss.cpp
+	"Cursoss.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715547454 d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\include\cursoss.h
+
+1715547454 source:d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\src\facultad.cpp
+	"facultad.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715547454 d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\include\facultad.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715547454 source:d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\src\jornada.cpp
+	"jornada.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715547454 d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\include\jornada.h
+
+1715547454 source:d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\src\login.cpp
+	"Login.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Bitacora.h"
+
+1715547454 d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\include\login.h
+	<iostream>
+	<fstream>
+	<string>
+
+1715547454 source:d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\src\maestros.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	"maestros.h"
+	"Bitacora.h"
+
+1715547454 d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715547454 source:d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\src\secciones.cpp
+	"secciones.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715547454 d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\include\secciones.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715547454 source:d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+
+1715547454 d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\include\usuarios.h
+	<iostream>
+
+1715547702 source:d:\umg\programacion l\proyecto final definitivo\proyectop12k24b\proyecto_umg\main.cpp
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	"usuarios.h"
+	"Login.h"
+	"Bitacora.h"
+	"maestros.h"
+	"alumnos.h"
+

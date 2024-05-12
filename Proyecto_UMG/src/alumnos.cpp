@@ -14,6 +14,8 @@
 //incluyendo el encabezado alumnos
 #include "alumnos.h"
 
+//Incluyendo el encabezado de bitacora
+#include "Bitacora.h"
 
 using namespace std;
 
@@ -169,6 +171,10 @@ string alumnos::getanoingre()
 //Funcion menu donde muestra el sistema de gestion de alumnos
 void alumnos::menu()
 {
+string codigoPrograma="2322";
+Bitacora Auditoria;
+string user, contrasena;
+Auditoria.ingresoBitacora(user,codigoPrograma,"ALM");
 
     //Definiendo Variable int
     int opcion;
@@ -249,6 +255,10 @@ void alumnos::menu()
 //Funcion para insertar un estudiando
 void alumnos::insertar()
 {
+string codigoPrograma="2350";
+Bitacora Auditoria;
+string user, contrasena;
+Auditoria.ingresoBitacora(user,codigoPrograma,"ALMI");
     //Limpiando pantalla
     system("cls");
 
@@ -335,6 +345,10 @@ void alumnos::insertar()
 //Funcion para desplegar los alumnos ya registrados
 void alumnos::desplegar()
 {
+string codigoPrograma="2370";
+Bitacora Auditoria;
+string user, contrasena;
+Auditoria.ingresoBitacora(user,codigoPrograma,"ALMD");
 
     //Limpiando pantalla
     system("cls");
@@ -384,6 +398,11 @@ void alumnos::desplegar()
 //Funcion para modificar los alumnos ya registrados
 void alumnos::modificar()
 {
+string codigoPrograma="2380";
+Bitacora Auditoria;
+string user, contrasena;
+Auditoria.ingresoBitacora(user,codigoPrograma,"ALMM");
+
     //Limpiando pantalla
 	system("cls");
 	//Declarando variables tipo fstream y string
@@ -462,6 +481,11 @@ void alumnos::modificar()
 //funcion para borrarr a las alumnos registradas
 void alumnos::borrar()
 {
+string codigoPrograma="2400";
+Bitacora Auditoria;
+string user, contrasena;
+Auditoria.ingresoBitacora(user,codigoPrograma,"ALMB");
+
     //Limpia pantalla
 	system("cls");
 	//declara una variable string

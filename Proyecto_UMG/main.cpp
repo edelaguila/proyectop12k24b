@@ -8,6 +8,8 @@
 #include "Login.h"
 #include "Bitacora.h"
 #include "maestros.h"
+#include "alumnos.h"
+
 
 using namespace std;
 
@@ -73,11 +75,11 @@ void menuGeneral()
             reportes();
             break;
         case 4:
-             /*{
+             {
                 Bitacora Bitacora;
            Bitacora.visualizarBitacora();
             break;
-        }*/
+        }
             seguridad();
             break;
         case 5:
@@ -125,8 +127,13 @@ void catalogos()
         switch (choice)
         {
         case 1:
-            // Implementación para Alumnos
+        {
+            alumnos alumnos;
+            alumnos.menu();
             break;
+        }
+
+
         case 2:
          /*{
         maestros maestro;

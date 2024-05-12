@@ -169,6 +169,7 @@ string alumnos::getanoingre()
 //Funcion menu donde muestra el sistema de gestion de alumnos
 void alumnos::menu()
 {
+
     //Definiendo Variable int
     int opcion;
     //Definiendo Variable char

@@ -12,9 +12,8 @@
 
 //incluyendo el encabezado maestros
 #include "maestros.h"
-
+#include "Bitacora.h"
 using namespace std;
-
 //Constructor maestros y sus parametros
 
 maestros::maestros(string id, string nombre, string telefono, string DPI, string direccion, string Genero, string nacionalidad, string civil, string fechanaci, string anoingre)
@@ -169,6 +168,10 @@ string maestros::getanoingre()
 //Funcion menu donde muestra el sistema de gestion de alumnos
 void maestros::menu()
 {
+ string codigoPrograma="2999";
+ Bitacora Auditoria;
+string user, contrasena;
+            Auditoria.ingresoBitacora(user,codigoPrograma,"MST");
     //Definiendo Variable int
     int opcion;
     //Definiendo Variable char
@@ -347,7 +350,6 @@ void maestros::desplegar()
     //Mostrando el encabezado de la tabla de detalles del estudiante
     ifstream archivo("Maestros.dat", ios::binary | ios::app);
     if (!archivo) {
-
             //Si no encuentra informacion muestra el siguiente mensaje
         cout << "Error, no se encuentra informacion...";
         return;

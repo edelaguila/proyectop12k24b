@@ -19,6 +19,10 @@ void Bitacora::ingresoBitacora(string nombre, string aplicacion, string accion)
 }
 void Bitacora::visualizarBitacora()
 {
+    string codigoPrograma="1969";
+ Bitacora Auditoria;
+string user, contrasena;
+            Auditoria.ingresoBitacora(user,codigoPrograma,"BIT");
     system("cls");
     cout<<"\n-------------------------Tabla de Detalles de Bitacora - 1000 -------------------------"<<endl;
 
@@ -26,7 +30,7 @@ void Bitacora::visualizarBitacora()
 	string texto;
 	int total=0;
 	file.open("Bitacora.dat",ios::binary | ios::in);
-	cout<<"\nNombre" <<setw(22)<< "Aplicacion" <<setw(12)<< "Accion" <<setw(20)<< "Fecha\n\n";
+	cout<<"Nombre" <<setw(22)<< "Aplicacion" <<setw(12)<< "Accion" <<setw(20)<< "Fecha";
 	file >> nombre >> aplicacion >> accion >> date_time;
 
     while(!file.eof())

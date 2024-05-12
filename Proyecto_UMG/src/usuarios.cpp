@@ -1,4 +1,6 @@
 
+//Creado por Andre de Jesus 9959-23-3117
+
 #include "usuarios.h"
 #include<fstream>
 #include<cstdlib>
@@ -19,13 +21,15 @@ usuarios::~usuarios()
 {
     //dtor
 }
-bool usuarios::loginUsuarios(){
 
-}
+
+
+
 void usuarios::menuUsuarios(){
+
 int choice;
-    //int x;
     do {
+    char x;
 	system("cls");
 	cout<<"\t\t\t-------------------------------------------------------"<<endl;
 	cout<<"\t\t\t |   SISTEMA GESTION DE SEGURIDAD - Catalogos Usuarios |"<<endl;
@@ -44,21 +48,21 @@ int choice;
     switch(choice)
     {
     case 1:
-    	/*do
+    	do
     	{
-    		catalogos();
-    		cout<<"\n\t\t\t Agrega otra persona(Y,N): ";
+    		insertar();
+    		cout<<"\n\t\t\t Agrega otra persona(s,n): ";
     		cin>>x;
-		}while(x=='y'||x=='Y');*/
+		}while(x=='s'||x=='S');
 		break;
 	case 2:
-		//display();
+		desplegar();
 		break;
 	case 3:
-		//modify();
+		modificar();
 		break;
 	case 4:
-		//search();
+		borrar();
 		break;
 	case 5:
 		break;
@@ -69,8 +73,9 @@ int choice;
 	//getch();
     }while(choice!= 5);
 }
-bool usuarios::buscar(string user, string passw )
+bool usuarios::buscar(string user, string passw)
 {
+
 	system("cls");
 	fstream file;
 	int found=0;
@@ -105,9 +110,154 @@ bool usuarios::buscar(string user, string passw )
 }
 string usuarios::getNombre()
 {
+
     return name;
 }
 string usuarios::setNombre(string nombre)
 {
     name=nombre;
+}
+
+void usuarios::insertar()
+{
+    system("cls");
+    cout<<"+---------------------------------------------------------+"<< endl;
+    cout<<"|                Agregar detalles del Usuario             |"<< endl;
+    cout<<"+---------------------------------------------------------+"<< endl;
+
+    Usuario usuario;
+
+    cout<<"       -> Ingrese el nombre del estudiante:  ";
+    cin >> usuario.usu;
+
+    cout<<"       -> Ingrese la contrasena del estudiante: ";
+    cin >> usuario.contra;
+
+    cout<<"+---------------------------------------------------------+"<< endl;
+
+    ofstream archivo("Usuario.dat", ios::binary | ios::app);
+    archivo.write(reinterpret_cast<const char*>(&usuario), sizeof(usuario));
+    archivo.close();
+
+}
+
+void usuarios::desplegar()
+{
+    system("cls");
+
+    cout << "+---------------------------------------------------------------------------------+" << endl;
+    cout << "+                            Tabla de Detalles del Usuario                        +" << endl;
+    cout << "+---------------------------------------------------------------------------------+" << endl;
+    ifstream archivo("Usuario.dat", ios::binary | ios::app);
+    if (!archivo) {
+        cout << "Error, no se encuentra informacion...";
+        return;
+    }
+    Usuario usuario;
+    while (archivo.read(reinterpret_cast<char*>(&usuario), sizeof(usuario))) {
+
+        cout << "                        Mostrando -> ID del estudiante: " << usuario.usu << endl;
+        cout << "                        Mostrando -> Nombre del estudiante: " << usuario.contra << endl;
+        cout << "+---------------------------------------------------------------------------------+" << endl;
+    }
+    archivo.close();
+
+    cout << "Presione Enter Para Continuar";
+    cin.ignore();
+    cin.get();
+}
+
+void usuarios::modificar()
+{
+	system("cls");
+    fstream archivo;
+    string idPersona;
+    bool encontrado = false;
+
+    cout << "+---------------------------------------------------------------------------------+" << endl;
+    cout << "+                       Modificar Detalles del estudiante                         +" << endl;
+    cout << "+---------------------------------------------------------------------------------+" << endl;
+
+    archivo.open("Usuario.dat", ios::binary | ios::in | ios::out);
+    if (!archivo) {
+        cout << "Error, no se encuentra informacion...";
+        return;
+    }
+
+    cout << "Ingrese el ID de la persona que desea modificar: ";
+    cin >> idPersona;
+
+    Usuario usuario;
+    while (archivo.read(reinterpret_cast<char*>(&usuario), sizeof(Usuario))) {
+        if (usuario.usu == idPersona) {
+            encontrado = true;
+            cout << "Ingrese el nuevo nombre del usuario: ";
+            cin >> usuario.usu;
+            cout << "Ingrese la nueva contrasena del usuario: ";
+            cin >> usuario.contra;
+
+            archivo.seekp(-static_cast<int>(sizeof(Usuario)), ios::cur);
+
+
+            archivo.write(reinterpret_cast<char*>(&usuario), sizeof(Usuario));
+            break;
+        }
+    }
+    archivo.close();
+
+    if (!encontrado) {
+        cout << "No se encontró un usuario con el nombre proporcionado." << endl;
+    }
+    cout << "Presione Enter Para Continuar";
+    cin.ignore();
+    cin.get();
+}
+
+void usuarios::borrar()
+{
+	system("cls");
+	string idPersona;
+    cout<<"+---------------------------------------------------------------------------------+"<<endl;
+	cout<<"+                             Eliminar estudiante                                 +"<<endl;
+    cout<<"+---------------------------------------------------------------------------------+"<<endl;
+
+    ifstream archivo("Usuario.dat", ios::binary);
+	if(!archivo)
+	{
+		cout<<"Error, no se encuentra informacion...";
+		return;
+	}
+	ofstream archivo2("Usuario2.dat", ios::binary);
+	Usuario usuario;
+
+    cout<<"-> Ingrese el nombre del usuario que desea eliminar: ";
+    cin>>idPersona;
+    bool resta = false;
+    //cout<<"+---------------------------------------------------------------------------------+"<<endl;
+		while(archivo.read(reinterpret_cast<char*>(&usuario), sizeof(Usuario)))
+		{
+			if(usuario.usu != idPersona)
+			{
+				archivo2.write(reinterpret_cast<const char*>(&usuario), sizeof(Usuario));
+			}
+			else
+			{
+			    resta = true;
+			}
+
+		}
+
+		archivo.close();
+		archivo2.close();
+		remove("Usuario.dat");
+		rename("Usuario2.dat","Usuario.dat");
+
+		if (resta)
+        {
+        cout << "Usuario eliminado con exito." << endl;
+        }
+        else
+        {
+        cout << "No se a podido encontrar el usuario" << endl;
+        }
 }

@@ -168,7 +168,7 @@ string maestros::getanoingre()
 //Funcion menu donde muestra el sistema de gestion de alumnos
 void maestros::menu()
 {
- string codigoPrograma="2999";
+ string codigoPrograma="2533";
  Bitacora Auditoria;
 string user, contrasena;
             Auditoria.ingresoBitacora(user,codigoPrograma,"MST");
@@ -261,6 +261,10 @@ string user, contrasena;
 //Funcion para insertar un maestro
 void maestros::insertar()
 {
+    string codigoPrograma="2534";
+ Bitacora Auditoria;
+string user, contrasena;
+            Auditoria.ingresoBitacora(user,codigoPrograma,"MSTI");
     //Limpiando pantalla
     system("cls");
 
@@ -339,6 +343,10 @@ void maestros::insertar()
 //Funcion para desplegar los alumnos ya registrados
 void maestros::desplegar()
 {
+    string codigoPrograma="2612";
+ Bitacora Auditoria;
+string user, contrasena;
+            Auditoria.ingresoBitacora(user,codigoPrograma,"MSTD");
     //Limpiando pantalla
 	system("cls");
 
@@ -382,6 +390,10 @@ void maestros::desplegar()
 //Funcion para modificar los maestros ya registrados
 void maestros::modificar()
 {
+    string codigoPrograma="2789";
+ Bitacora Auditoria;
+string user, contrasena;
+            Auditoria.ingresoBitacora(user,codigoPrograma,"MSTM");
     //Limpiando pantalla
 	system("cls");
 	//Declarando variables tipo fstream y string
@@ -466,6 +478,10 @@ void maestros::modificar()
 //funcion para borrarr a las maestros registradas
 void maestros::borrar()
 {
+    string codigoPrograma="2802";
+ Bitacora Auditoria;
+string user, contrasena;
+            Auditoria.ingresoBitacora(user,codigoPrograma,"MSTB");
     //Limpia pantalla
     system("cls");
 

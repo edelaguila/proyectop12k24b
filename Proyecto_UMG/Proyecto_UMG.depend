@@ -840,7 +840,7 @@
 	<conio.h>
 	<iomanip>
 
-1715535338 source:d:\proyecto u\proyectop12k24b\proyecto_umg\src\alumnos.cpp
+1715543903 source:d:\proyecto u\proyectop12k24b\proyecto_umg\src\alumnos.cpp
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -952,7 +952,7 @@
 	<fstream>
 	<string>
 
-1715543123 source:d:\proyecto u\proyectop12k24b\proyecto_umg\src\maestros.cpp
+1715546331 source:d:\proyecto u\proyectop12k24b\proyecto_umg\src\maestros.cpp
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -996,7 +996,7 @@
 1715535338 d:\proyecto u\proyectop12k24b\proyecto_umg\include\usuarios.h
 	<iostream>
 
-1715543557 source:d:\proyecto u\proyectop12k24b\proyecto_umg\main.cpp
+1715546609 source:d:\proyecto u\proyectop12k24b\proyecto_umg\main.cpp
 	<iostream>
 	<cstdlib>
 	<conio.h>

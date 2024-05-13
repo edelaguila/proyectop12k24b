@@ -10,7 +10,6 @@
 #include<iomanip>
 #include<string>
 
-
 //incluyendo el encabezado alumnos
 #include "alumnos.h"
 //Incluyendo el encabezado de bitacora
@@ -170,6 +169,7 @@ string alumnos::getanoingre()
 //Funcion menu donde muestra el sistema de gestion de alumnos
 void alumnos::menu()
 {
+
 //Implementando la bitacora
 //Declarando variable string con el codigo programa
 string codigoPrograma="2322";
@@ -177,6 +177,7 @@ Bitacora Auditoria;
 //Declarando 2 variables string con el codigo programa
 string user, contrasena;
 Auditoria.ingresoBitacora(user,codigoPrograma,"ALM");
+
 
     //Definiendo Variable int
     int opcion;
@@ -257,10 +258,16 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALM");
 //Funcion para insertar un estudiando
 void alumnos::insertar()
 {
+
+//Implementando la bitacora
+//Declarando variable string con el codigo programa
 string codigoPrograma="2350";
 Bitacora Auditoria;
+//Declarando 2 variables string con el codigo programa
 string user, contrasena;
 Auditoria.ingresoBitacora(user,codigoPrograma,"ALMI");
+
+
     //Limpiando pantalla
     system("cls");
 
@@ -375,6 +382,7 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMD");
 //Funcion para modificar los alumnos ya registrados
 void alumnos::modificar()
 {
+//Declarando 2 variables string con el codigo programa
 string codigoPrograma="2380";
 Bitacora Auditoria;
 string user, contrasena;

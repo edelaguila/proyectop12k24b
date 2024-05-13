@@ -22,12 +22,11 @@ usuarios::~usuarios()
     //dtor
 }
 
-
-
-
 void usuarios::menuUsuarios(){
-    string codigoPrograma="2834";
- Bitacora Auditoria;
+
+
+string codigoPrograma="2834";
+Bitacora Auditoria;
 string user, contrasena;
             Auditoria.ingresoBitacora(user,codigoPrograma,"USER");
 

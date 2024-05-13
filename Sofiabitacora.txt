@@ -1,0 +1,184 @@
+commit 009f852b2759e32edd0997b4e0382d13fc47e69a
+Author: Evelyn Andrade <eandradel2@miumg.edu.gt>
+Date:   Sun May 12 21:06:07 2024 -0600
+
+    Bitacora Facultad
+
+commit 0aef328f744d8fc0be7ed0e3e894bc18efbf25b4
+Merge: 099c5c6 2d0fef3
+Author: Isabel Melendez <lmelendezp@miumg.edu.gt>
+Date:   Sun May 12 20:46:33 2024 -0600
+
+    Subiendo archivo bitacora
+
+commit 2d0fef3ab63646ff0a45cef1d84634f20d0fc61a
+Author: CarlosDCR1 <ccalderonr2@miumg.edu.gt>
+Date:   Sun May 12 20:44:11 2024 -0600
+
+    Bitacora Carrera
+
+commit 099c5c6428926170d27237058df6826e5f175b42
+Merge: 4ba7ab0 5781712
+Author: Isabel Melendez <lmelendezp@miumg.edu.gt>
+Date:   Sun May 12 20:38:28 2024 -0600
+
+    Bitacora Carreras
+
+commit 4ba7ab006884d4351e9aba25eec38acad10502d8
+Author: Isabel Melendez <lmelendezp@miumg.edu.gt>
+Date:   Sun May 12 20:36:14 2024 -0600
+
+    Cambios
+
+commit 5781712dbd0995a4f9edc9f744c149242f0ac8d6
+Author: CarlosDCR1 <ccalderonr2@miumg.edu.gt>
+Date:   Sun May 12 20:30:39 2024 -0600
+
+    Subiendo Bitacora Carreras
+
+commit b436d5e088031a0d102d2a64fb414dadc3c264fa
+Author: Evelyn Andrade <eandradel2@miumg.edu.gt>
+Date:   Thu May 9 18:51:52 2024 -0600
+
+    borrando prueba
+
+commit a9c329d602fa4f28046967681eef44a6a50c3c50
+Author: Evelyn Andrade <eandradel2@miumg.edu.gt>
+Date:   Thu May 9 18:46:24 2024 -0600
+
+    prueba
+
+commit 28dfcfd5af95055b5e0238d548dd6d3712f7410b
+Author: Isabel Melendez <lmelendezp@miumg.edu.gt>
+Date:   Wed May 8 17:08:48 2024 -0600
+
+    Agregando CRUD Carreras y Facultades
+
+commit 5863dc7e6bb74938d3e741cea468fd2394de25a4
+Author: Esduardo Del Aguila <daguilae@yahoo.com>
+Date:   Wed May 8 09:54:08 2024 -0600
+
+    restaurando el proyecto universitario
+
+commit af8baaaf4b0fae12c18952f1b649fec6333d131f
+Author: Esduardo Del Aguila <daguilae@yahoo.com>
+Date:   Wed May 8 09:50:39 2024 -0600
+
+    borrando el proyecto temporalmente
+
+commit f887e368f25689ccd380c85bba75a2c7ebf4b1b0
+Author: Esduardo Del Aguila <daguilae@yahoo.com>
+Date:   Wed May 8 09:45:33 2024 -0600
+
+    restaurando el gitignore
+
+commit 606d4be3ea8fd4d00dcfc346e09d5e494805cb36
+Author: Esduardo Del Aguila <daguilae@yahoo.com>
+Date:   Wed May 8 09:31:22 2024 -0600
+
+    Agregando funcionabilidad a la bitacora de seguridad
+
+commit ae5122658cc9a446be38a6db5fecaf29df2de111
+Merge: 3633bf0 1c9937e
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 6 17:15:40 2024 -0600
+
+    Merge pull request #2 from OscarMorales18/main
+    
+    Esqueleto Menu General UMG
+
+commit 1c9937e72161709b916b405756ebedb025e9a6a6
+Author: Oscar Morales <omoralesl7@miumg.edu.gt>
+Date:   Mon May 6 16:53:42 2024 -0600
+
+    Menu General UMG
+
+commit 5b590cfb346b9d80ce470a9d917dd760f48228a0
+Author: Oscar Morales <omoralesl7@miumg.edu.gt>
+Date:   Mon May 6 16:45:04 2024 -0600
+
+    Menu General UMG
+
+commit f6f044280d88705f71834e27d49506da188f690a
+Author: Oscar Morales <omoralesl7@miumg.edu.gt>
+Date:   Mon May 6 16:41:21 2024 -0600
+
+    login de usuarios actu
+
+commit af8aacfea8841f7cc2a2b99d3bf2149927fafdef
+Author: Oscar Morales <omoralesl7@miumg.edu.gt>
+Date:   Mon May 6 15:26:07 2024 -0600
+
+    Actualizacion del programa
+
+commit c07752a5bbf9b4ba2583a274d4494c5c6028ccc7
+Merge: 3258f07 2a6ba23
+Author: Oscar Morales <omoralesl7@miumg.edu.gt>
+Date:   Mon May 6 13:28:32 2024 -0600
+
+    Merge branch 'Oscar-3070' of https://github.com/OscarMorales18/proyectop12k24b
+
+commit 3258f07cc5cf995e51d1d6a582ae4a42e118403b
+Author: Oscar Morales <omoralesl7@miumg.edu.gt>
+Date:   Mon May 6 13:27:45 2024 -0600
+
+    Actualizacion del main
+
+commit 9ff2189007fdcfe0ddb0ae48a463cbad5276306d
+Author: José Eduardo Gallardo Del Cid <jgallardod@miumg.edu.gt>
+Date:   Mon May 6 11:33:29 2024 -0600
+
+    cambios en main
+
+commit 2a6ba2376adcab1cc4118d0eef13c1f323dbb209
+Merge: f9a37b1 5a573e6
+Author: Oscar Morales <omoralesl7@miumg.edu.gt>
+Date:   Mon May 6 11:21:07 2024 -0600
+
+    Merge branch 'Jose-106' of https://github.com/OscarMorales18/proyectop12k24b into Oscar-3070
+
+commit f9a37b1505b4d194ed5353008b64c3b1d018519d
+Merge: 9b43476 3633bf0
+Author: Oscar Morales <omoralesl7@miumg.edu.gt>
+Date:   Mon May 6 11:20:41 2024 -0600
+
+    Merge branch 'main' of https://github.com/OscarMorales18/proyectop12k24b into Oscar-3070
+
+commit 5a573e68e00991139d250df70c9965de594a365e
+Author: José Eduardo Gallardo Del Cid <jgallardod@miumg.edu.gt>
+Date:   Mon May 6 11:20:10 2024 -0600
+
+    agregando esqueleto menu general y catalogos
+
+commit 9b434767bf4f11a50626d59485bf5b78ddb11ddf
+Author: Oscar Morales <omoralesl7@miumg.edu.gt>
+Date:   Mon May 6 11:01:26 2024 -0600
+
+    Prueba txt Oscar Morales
+
+commit 3633bf0415034a6432c63cdc67b06a11d122656d
+Merge: f4d42a2 d1c9eb8
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 6 09:53:55 2024 -0600
+
+    Merge pull request #1 from daguilae/main
+    
+    Update README.md
+
+commit d1c9eb8b25c269186869ea11eb93c77c6bfb1a86
+Author: daguilae <daguilae@hotmail.com>
+Date:   Mon May 6 09:49:12 2024 -0600
+
+    Update README.md
+
+commit f4d42a26e67acd45c391a19ec1b4c986464287fd
+Author: Esduardo Del Aguila <daguilae@yahoo.com>
+Date:   Mon May 6 08:57:38 2024 -0600
+
+    agregando archivo gitignore
+
+commit 98c7eddf6c82a1f1e96357173e29830cc3d2d23d
+Author: edelaguila <54811781+edelaguila@users.noreply.github.com>
+Date:   Mon May 6 08:45:27 2024 -0600
+
+    Initial commit

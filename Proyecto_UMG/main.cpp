@@ -75,11 +75,12 @@ void menuGeneral()
             reportes();
             break;
         case 4:
-             {
-                Bitacora Bitacora;
+        {
+
+           /*Bitacora Bitacora;
            Bitacora.visualizarBitacora();
             break;
-        }
+        */}
             seguridad();
             break;
         case 5:
@@ -128,20 +129,15 @@ void catalogos()
         {
         case 1:
         {
-            alumnos alumnos;
-            alumnos.menu();
             break;
         }
-
-
         case 2:
-         /*{
-        maestros maestro;
-        maestro.menu();
+         {
             break;
-        }*/
+        }
         case 3:
         {
+
             usuarios usuario;
             usuario.menuUsuarios();
             break;

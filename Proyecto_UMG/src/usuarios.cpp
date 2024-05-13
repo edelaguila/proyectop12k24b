@@ -8,7 +8,7 @@
 #include<iostream>
 #define USER "usuario"
 #define PASS "1234"
-
+#include "Bitacora.h"
 using namespace std;
 
 
@@ -22,10 +22,13 @@ usuarios::~usuarios()
     //dtor
 }
 
-
-
-
 void usuarios::menuUsuarios(){
+
+
+string codigoPrograma="2834";
+Bitacora Auditoria;
+string user, contrasena;
+            Auditoria.ingresoBitacora(user,codigoPrograma,"USER");
 
 int choice;
     do {
@@ -120,6 +123,10 @@ string usuarios::setNombre(string nombre)
 
 void usuarios::insertar()
 {
+    string codigoPrograma="2899";
+ Bitacora Auditoria;
+string user, contrasena;
+            Auditoria.ingresoBitacora(user,codigoPrograma,"USERI");
     system("cls");
     cout<<"+---------------------------------------------------------+"<< endl;
     cout<<"|                Agregar detalles del Usuario             |"<< endl;
@@ -143,6 +150,10 @@ void usuarios::insertar()
 
 void usuarios::desplegar()
 {
+    string codigoPrograma="2900";
+ Bitacora Auditoria;
+string user, contrasena;
+            Auditoria.ingresoBitacora(user,codigoPrograma,"USERD");
     system("cls");
 
     cout << "+---------------------------------------------------------------------------------+" << endl;
@@ -169,6 +180,10 @@ void usuarios::desplegar()
 
 void usuarios::modificar()
 {
+    string codigoPrograma="2962";
+ Bitacora Auditoria;
+string user, contrasena;
+            Auditoria.ingresoBitacora(user,codigoPrograma,"USERM");
 	system("cls");
     fstream archivo;
     string idPersona;
@@ -215,6 +230,10 @@ void usuarios::modificar()
 
 void usuarios::borrar()
 {
+    string codigoPrograma="2999";
+ Bitacora Auditoria;
+string user, contrasena;
+            Auditoria.ingresoBitacora(user,codigoPrograma,"USERB");
 	system("cls");
 	string idPersona;
     cout<<"+---------------------------------------------------------------------------------+"<<endl;

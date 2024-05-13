@@ -168,10 +168,14 @@ string maestros::getanoingre()
 //Funcion menu donde muestra el sistema de gestion de alumnos
 void maestros::menu()
 {
- string codigoPrograma="2533";
- Bitacora Auditoria;
+//Implementando la bitacora
+string codigoPrograma="2533";
+
+Bitacora Auditoria;
+//Declarando variable string con el codigo programa
 string user, contrasena;
             Auditoria.ingresoBitacora(user,codigoPrograma,"MST");
+
     //Definiendo Variable int
     int opcion;
     //Definiendo Variable char
@@ -261,10 +265,10 @@ string user, contrasena;
 //Funcion para insertar un maestro
 void maestros::insertar()
 {
-    string codigoPrograma="2534";
- Bitacora Auditoria;
+string codigoPrograma="2534";
+Bitacora Auditoria;
 string user, contrasena;
-            Auditoria.ingresoBitacora(user,codigoPrograma,"MSTI");
+Auditoria.ingresoBitacora(user,codigoPrograma,"MSTI");
     //Limpiando pantalla
     system("cls");
 
@@ -292,24 +296,20 @@ string user, contrasena;
     }
     maestro.id[idString.length()] = '\0';
 
-    //Mensaje generando carnet
-    cout<<"       -> Generando carnet del maestro: " << maestro.id<<endl;
+    //Mensaje generando codigo
+    cout<<"       -> Generando codigo del maestro: " << maestro.id<<endl;
     cin.ignore();
 
     //Mensaje para ingresar el nombre del maestro
     cout<<"       -> Ingrese el nombre del maestro:  ";
     cin.getline(maestro.nombre, 50);
 
-    //Mensaje para ingresar el genero del maestro
-    cout<<"       -> Ingrese el Genero del maestro: ";
-    cin.getline(maestro.Genero, 10);
-
-    //Mensaje para ingresar el DPI del maestro
-    cout<<"       -> Ingrese la DPI del maestro: ";
+    //Mensaje para ingresar el email del maestro
+    cout<<"       -> Ingrese el email del maestro: ";
     cin.getline(maestro.DPI, 20);
 
-    //Mensaje para ingresar la nacionalidad del maestro
-    cout<<"       -> Ingrese la nacionalidad del maestro: ";
+    //Mensaje para ingresar la estatus del maestro
+    cout<<"       -> Ingrese la estatus del maestro: ";
     cin.getline(maestro.nacionalidad, 100);
 
     //Mensaje para ingresar la direccion del maestro
@@ -319,18 +319,6 @@ string user, contrasena;
     //Mensaje para ingresar el telefono del maestro
     cout<<"       -> Ingrese el telefono del maestro: ";
     cin.getline(maestro.telefono, 15);
-
-    //Mensaje para ingresar el estado civil del maestro
-    cout<<"       -> Ingrese el estado civil del maestro: ";
-    cin.getline(maestro.civil, 20);
-
-    //Mensaje para ingresar la fecha de nacimiento del maestro
-    cout<<"       -> Ingrese la fecha de nacimiento del maestro: ";
-    cin.getline(maestro.fechanaci, 20);
-
-    //Mensaje para ingresar el año de ingreso del maestro
-    cout<<"       -> Ingrese el ano de ingreso del maestro: ";
-    cin.getline(maestro.anoingre, 10);
 
     cout<<"+---------------------------------------------------------+"<< endl;
 
@@ -367,16 +355,12 @@ string user, contrasena;
     //Ciclo while para leer los datos del archivo binario  y los almacenan en un objeto alumno llamado alumno y repite este procedimiento hasta que se acaben los datos por leer
     while (archivo.read(reinterpret_cast<char*>(&maestro), sizeof(Maestro))) {
         //Se muestra los detalles del estudiante
-        cout << "                        Mostrando -> ID del Maestro: " << maestro.id << endl;
+        cout << "                        Mostrando -> Codigo del Maestro: " << maestro.id << endl;
         cout << "                        Mostrando -> Nombre del Maestro: " << maestro.nombre << endl;
-        cout << "                        Mostrando -> Genero: " << maestro.Genero << endl;
-        cout << "                        Mostrando -> DPI : " << maestro.DPI << endl;
+        cout << "                        Mostrando -> Email del maestro : " << maestro.DPI << endl;
+        cout << "                        Mostrando -> Estatus del maestro: " << maestro.nacionalidad << endl;
         cout << "                        Mostrando -> Direccion: " << maestro.direccion << endl;
-        cout << "                        Mostrando -> Nacionalidad: " << maestro.nacionalidad << endl;
         cout << "                        Mostrando -> Telefono: " << maestro.telefono << endl;
-        cout << "                        Mostrando -> Estado Civil: " << maestro.civil << endl;
-        cout << "                        Mostrando -> Fecha de nacimiento: " << maestro.fechanaci << endl;
-        cout << "                        Mostrando -> Ano de ingreso: " << maestro.anoingre << endl;
         cout << "+---------------------------------------------------------------------------------+" << endl;
     }
     archivo.close(); //cierra el archivo
@@ -433,26 +417,18 @@ string user, contrasena;
             encontrado = true;
 
             //Muestra mensajes para poder ingresar los detalles para poder modificar del alumnno
-            cout << "Ingrese el nuevo ID del Maestro: ";
+            cout << "Ingrese el nuevo codigo del Maestro: ";
             cin >> maestro.id;
             cout << "Ingrese el nuevo nombre del Maestro: ";
             cin >> maestro.nombre;
-            cout << "Ingrese el nuevo Genero del Maestro: ";
-            cin >> maestro.Genero;
-            cout << "Ingrese la nueva DPI del Maestro: ";
+            cout << "Ingrese el nuevo email del Maestro: ";
             cin >> maestro.DPI;
-            cout << "Ingrese la nueva nacionalidad del Maestro: ";
+            cout << "Ingrese el nuevo estatus del Maestro: ";
             cin >> maestro.nacionalidad;
             cout << "Ingrese la nueva direccion del Maestro: ";
             cin >> maestro.direccion;
             cout << "Ingrese el nuevo Telefono del Maestro: ";
             cin >> maestro.telefono;
-            cout << "Ingrese el nuevo estado civil del Maestro: ";
-            cin >> maestro.civil;
-            cout << "Ingrese la nueva fecha de nacimiento del Maestro: ";
-            cin >> maestro.fechanaci;
-            cout << "Ingrese el nuevo ano de ingreso del Maestro: ";
-            cin >> maestro.anoingre;
 
             //Muestra mensajes para poder ingresar los detalles para poder modificar del alumnno
             archivo.seekp(-static_cast<int>(sizeof(Maestro)), ios::cur);

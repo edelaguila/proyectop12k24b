@@ -129,17 +129,10 @@ void catalogos()
         {
         case 1:
         {
-            alumnos alumnos;
-            alumnos.menu();
             break;
         }
-
-
         case 2:
          {
-        //Llamamos a l
-        maestros maestro;
-        maestro.menu();
             break;
         }
         case 3:

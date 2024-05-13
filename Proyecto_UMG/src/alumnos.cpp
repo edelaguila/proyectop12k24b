@@ -1,5 +1,5 @@
 
-                                                                //creado por Oscar Morales 9959-23-3070
+//creado por Oscar Morales 9959-23-3070
 
 //Incluyendo las librerias a utilizar
 #include<iostream>

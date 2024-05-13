@@ -77,10 +77,10 @@ void menuGeneral()
         case 4:
         {
 
-           /*Bitacora Bitacora;
+           Bitacora Bitacora;
            Bitacora.visualizarBitacora();
             break;
-        */}
+        }
             seguridad();
             break;
         case 5:
@@ -133,6 +133,8 @@ void catalogos()
         }
         case 2:
          {
+            maestros maestro;
+            maestro.menu();
             break;
         }
         case 3:

@@ -113,7 +113,11 @@
 	<stdlib.h>
 	<iomanip>
 
+<<<<<<< HEAD
 1715209198 source:c:\users\melen\onedrive\escritorio\1er semestre umg 2024\repositorio oficial proyecto\proyectop12k24b\proyecto_umg\main.cpp
+=======
+1715301329 source:c:\users\calde\desktop\umg\progra1\sistema final\proyectop12k24b\proyecto_umg\main.cpp
+>>>>>>> 2d0fef3ab63646ff0a45cef1d84634f20d0fc61a
 	<iostream>
 	<cstdlib>
 	<conio.h>
@@ -121,18 +125,32 @@
 	"Login.h"
 	"Bitacora.h"
 
+<<<<<<< HEAD
 1715209198 c:\users\melen\onedrive\escritorio\1er semestre umg 2024\repositorio oficial proyecto\proyectop12k24b\proyecto_umg\include\usuarios.h
 	<iostream>
 
 1715209198 c:\users\melen\onedrive\escritorio\1er semestre umg 2024\repositorio oficial proyecto\proyectop12k24b\proyecto_umg\include\login.h
+=======
+1715301329 c:\users\calde\desktop\umg\progra1\sistema final\proyectop12k24b\proyecto_umg\include\usuarios.h
+	<iostream>
+
+1715301329 c:\users\calde\desktop\umg\progra1\sistema final\proyectop12k24b\proyecto_umg\include\login.h
+>>>>>>> 2d0fef3ab63646ff0a45cef1d84634f20d0fc61a
 	<iostream>
 	<fstream>
 	<string>
 
+<<<<<<< HEAD
 1715209198 c:\users\melen\onedrive\escritorio\1er semestre umg 2024\repositorio oficial proyecto\proyectop12k24b\proyecto_umg\include\bitacora.h
 	<iostream>
 
 1715209198 source:c:\users\melen\onedrive\escritorio\1er semestre umg 2024\repositorio oficial proyecto\proyectop12k24b\proyecto_umg\src\bitacora.cpp
+=======
+1715301329 c:\users\calde\desktop\umg\progra1\sistema final\proyectop12k24b\proyecto_umg\include\bitacora.h
+	<iostream>
+
+1715301329 source:c:\users\calde\desktop\umg\progra1\sistema final\proyectop12k24b\proyecto_umg\src\bitacora.cpp
+>>>>>>> 2d0fef3ab63646ff0a45cef1d84634f20d0fc61a
 	"Bitacora.h"
 	<iostream>
 	<fstream>
@@ -141,7 +159,44 @@
 	<stdlib.h>
 	<iomanip>
 
+<<<<<<< HEAD
 1715209198 source:c:\users\melen\onedrive\escritorio\1er semestre umg 2024\repositorio oficial proyecto\proyectop12k24b\proyecto_umg\src\login.cpp
+=======
+1715567257 source:c:\users\calde\desktop\umg\progra1\sistema final\proyectop12k24b\proyecto_umg\src\carrera.cpp
+	"Carrera.h"
+	"usuarios.h"
+	"Login.h"
+	"Bitacora.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715301329 c:\users\calde\desktop\umg\progra1\sistema final\proyectop12k24b\proyecto_umg\include\carrera.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715301329 source:c:\users\calde\desktop\umg\progra1\sistema final\proyectop12k24b\proyecto_umg\src\facultad.cpp
+	"facultad.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715301329 c:\users\calde\desktop\umg\progra1\sistema final\proyectop12k24b\proyecto_umg\include\facultad.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715301329 source:c:\users\calde\desktop\umg\progra1\sistema final\proyectop12k24b\proyecto_umg\src\login.cpp
+>>>>>>> 2d0fef3ab63646ff0a45cef1d84634f20d0fc61a
 	"Login.h"
 	<iostream>
 	<fstream>
@@ -151,13 +206,18 @@
 	<iomanip>
 	"Bitacora.h"
 
+<<<<<<< HEAD
 1715209198 source:c:\users\melen\onedrive\escritorio\1er semestre umg 2024\repositorio oficial proyecto\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+=======
+1715301329 source:c:\users\calde\desktop\umg\progra1\sistema final\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+>>>>>>> 2d0fef3ab63646ff0a45cef1d84634f20d0fc61a
 	"usuarios.h"
 	<fstream>
 	<cstdlib>
 	<conio.h>
 	<iostream>
 
+<<<<<<< HEAD
 1715209774 source:c:\users\melen\onedrive\escritorio\1er semestre umg 2024\repositorio oficial proyecto\proyectop12k24b\proyecto_umg\src\carrera.cpp
 	"Carrera.h"
 	<fstream>
@@ -188,3 +248,5 @@
 	<conio.h>
 	<iomanip>
 
+=======
+>>>>>>> 2d0fef3ab63646ff0a45cef1d84634f20d0fc61a

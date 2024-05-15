@@ -18,17 +18,17 @@
 	<conio.h>
 	<iostream>
 
-1715023362 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+1715023362 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programaciÃ³n i\programas exportados de github\proyectop12k24b\proyecto_umg\src\usuarios.cpp
 	"usuarios.h"
 	<fstream>
 	<cstdlib>
 	<conio.h>
 	<iostream>
 
-1715022987 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\usuarios.h
+1715022987 c:\users\oskar\onedrive\escritorio\tercer semestre\programaciÃ³n i\programas exportados de github\proyectop12k24b\proyecto_umg\include\usuarios.h
 	<iostream>
 
-1715021907 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\main.cpp
+1715021907 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programaciÃ³n i\programas exportados de github\proyectop12k24b\proyecto_umg\main.cpp
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -112,4 +112,51 @@
 	<ctime>
 	<stdlib.h>
 	<iomanip>
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	"usuarios.h"
+	"Login.h"
+	"Bitacora.h"
+
+	<iostream>
+	<fstream>
+	<string>
+	"Bitacora.h"
+	<iostream>
+	<fstream>
+	<conio.h>
+	<ctime>
+	<stdlib.h>
+	<iomanip>
+
+
+	"Login.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Bitacora.h"
+
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
 

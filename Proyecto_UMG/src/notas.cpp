@@ -1,36 +1,36 @@
 //Creado por Diana Mishel Loeiza Ramírez 9959-23-3457 //proceso notas// implementacion de bitacora
 #include "notas.h" // Incluye el archivo de encabezado "notas.h"
 #include "Bitacora.h" // Incluye el archivo de encabezado "Bitacora.h"
-#include <fstream> // Incluye la biblioteca para manejar archivos  
+#include <fstream> // Incluye la biblioteca para manejar archivos
 #include <iostream> // Incluye la biblioteca estándar de entrada y salida
 #include <cstdlib> // Incluye la biblioteca estándar de C para funciones de sistema
 #include <conio.h> // Incluye la biblioteca para funciones de entrada y salida del sistema en Windows
 
 using namespace std; // Usa el espacio de nombres estándar de C++
-
-// Definición de la clase Nota  //
-class Nota {
-public:
-    int codigoEstudiante; // Variable para almacenar el código del estudiante
-    string nombreEstudiante; // Variable para almacenar el nombre del estudiante
-    string nombreCurso; // Variable para almacenar el nombre del curso
-    float nota; // Variable para almacenar la nota del estudiante
-};
-
-// Definición de la clase NotaCrud
-class NotaCrud {
-public:
-    // Funciones miembro
-    void CrudNota();
-    void IngresarNota();
-    void ModificarNota();
-    void BorrarNota();
-    void DesplegarNotas();
-
-private:
-    // Funciones privadas
-    void RegistrarBitacora(string usuario, string accion);
-};
+//
+//// Definición de la clase Nota  //
+//class Nota {
+//public:
+//    int codigoEstudiante; // Variable para almacenar el código del estudiante
+//    string nombreEstudiante; // Variable para almacenar el nombre del estudiante
+//    string nombreCurso; // Variable para almacenar el nombre del curso
+//    float nota; // Variable para almacenar la nota del estudiante
+//};
+//
+//// Definición de la clase NotaCrud
+//class NotaCrud {
+//public:
+//    // Funciones miembro
+//    void CrudNota();
+//    void IngresarNota();
+//    void ModificarNota();
+//    void BorrarNota();
+//    void DesplegarNotas();
+//
+//private:
+//    // Funciones privadas
+//    void RegistrarBitacora(string usuario, string accion);
+//};
 
 // Definición de la función miembro de la clase NotaCrud
 void NotaCrud::CrudNota() {
@@ -82,7 +82,7 @@ void NotaCrud::IngresarNota() {
     system("cls"); // Limpia la pantalla de la consola
     cout << "\n------------------------------------------------------------------------------------------------------------------------" << endl;
     cout << "\n-------------------------------------------------Agregar Nota--------------------------------------------" << endl;
-    Nota nota; // Crea un objeto de la clase Nota para almacenar la nueva nota
+    notas nota; // Crea un objeto de la clase Nota para almacenar la nueva nota
     // Solicita al usuario ingresar los datos de la nueva nota
     cout << "Ingrese el código del estudiante: ";
     cin >> nota.codigoEstudiante;
@@ -100,7 +100,7 @@ void NotaCrud::IngresarNota() {
     // Abre el archivo de notas en modo binario y de adjuntar
     ofstream archivo("notas.dat", ios::binary | ios::app);
     // Escribe la nueva nota en el archivo
-    archivo.write(reinterpret_cast<const char*>(&nota), sizeof(Nota));
+    archivo.write(reinterpret_cast<const char*>(&nota), sizeof(notas));
     archivo.close(); // Cierra el archivo
 
     // Registra la acción en la bitácora
@@ -123,17 +123,17 @@ void NotaCrud::ModificarNota() {
         return;
     }
 
-    Nota nota; // Variable para almacenar la nota leída del archivo
+    notas nota; // Variable para almacenar la nota leída del archivo
     bool encontrada = false; // Bandera para indicar si se encontró la nota a modificar
     // Lee todas las notas del archivo
-    while (archivo.read(reinterpret_cast<char*>(&nota), sizeof(Nota))) {
+    while (archivo.read(reinterpret_cast<char*>(&nota), sizeof(notas))) {
         // Si se encuentra la nota con el código ingresado por el usuario
         if (nota.codigoEstudiante == codigo) {
             cout << "Ingrese la nueva nota para el estudiante: ";
             cin >> nota.nota; // Solicita al usuario ingresar la nueva nota
 
-            archivo.seekp(-static_cast<int>(sizeof(Nota)), ios::cur); // Mueve el puntero de escritura al inicio de la nota
-            archivo.write(reinterpret_cast<const char*>(&nota), sizeof(Nota)); // Escribe la nueva nota en el archivo
+            archivo.seekp(-static_cast<int>(sizeof(notas)), ios::cur); // Mueve el puntero de escritura al inicio de la nota
+            archivo.write(reinterpret_cast<const char*>(&nota), sizeof(notas)); // Escribe la nueva nota en el archivo
 
             encontrada = true; // Establece la bandera como verdadera
             break; // Sale del bucle
@@ -169,13 +169,13 @@ void NotaCrud::BorrarNota() {
 
     // Abre un nuevo archivo temporal para escribir las notas excepto la que se desea eliminar
     ofstream archivoTmp("notas_tmp.dat", ios::binary);
-    Nota nota; // Variable para almacenar la nota leída del archivo
+    notas nota; // Variable para almacenar la nota leída del archivo
     bool eliminada = false; // Bandera para indicar si se eliminó la nota
     // Lee todas las notas del archivo
-    while (archivo.read(reinterpret_cast<char*>(&nota), sizeof(Nota))) {
+    while (archivo.read(reinterpret_cast<char*>(&nota), sizeof(notas))) {
         // Si el código del estudiante no coincide con el código ingresado por el usuario
         if (nota.codigoEstudiante != codigo) {
-            archivoTmp.write(reinterpret_cast<const char*>(&nota), sizeof(Nota)); // Escribe la nota en el archivo temporal
+            archivoTmp.write(reinterpret_cast<const char*>(&nota), sizeof(notas)); // Escribe la nota en el archivo temporal
         } else {
             eliminada = true; // Establece la bandera como verdadera
         }
@@ -210,9 +210,9 @@ void NotaCrud::DesplegarNotas() {
         return;
     }
 
-    Nota nota; // Variable para almacenar la nota leída del archivo
+    notas nota; // Variable para almacenar la nota leída del archivo
     // Lee todas las notas del archivo y las muestra en la consola
-    while (archivo.read(reinterpret_cast<char*>(&nota), sizeof(Nota))) {
+    while (archivo.read(reinterpret_cast<char*>(&nota), sizeof(notas))) {
         cout << "Código del estudiante: " << nota.codigoEstudiante << endl;
         cout << "Nombre del estudiante: " << nota.nombreEstudiante << endl;
         cout << "Nombre del curso: " << nota.nombreCurso << endl;
@@ -230,6 +230,6 @@ void NotaCrud::DesplegarNotas() {
 // Definición de la función miembro privada para registrar una acción en la bitácora
 void NotaCrud::RegistrarBitacora(string usuario, string accion) {
     Bitacora registroBitacora;
-    registroBitacora.Registrar(usuario, "proceso notas", accion);
+    //registroBitacora.Registrar(usuario, "proceso notas", accion);
 }
 

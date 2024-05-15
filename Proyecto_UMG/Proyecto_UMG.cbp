@@ -36,12 +36,12 @@
 		</Compiler>
 		<Unit filename="include/Bitacora.h" />
 		<Unit filename="include/Login.h" />
-		<Unit filename="include/jornada.h" />
+
 		<Unit filename="include/usuarios.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Bitacora.cpp" />
 		<Unit filename="src/Login.cpp" />
-		<Unit filename="src/jornada.cpp" />
+
 		<Unit filename="src/usuarios.cpp" />
 		<Extensions />
 	</Project>

@@ -1,7 +1,6 @@
 //Creado por Diana Mishel Loeiza Ramírez 9959-23-3457
 //proceso notas
 // implementacion de bitacora
-// comentarios de funcionalidad
 #include "notas.h" // Inclusión del archivo de cabecera para las definiciones relacionadas con las notas
 #include "Bitacora.h" // Inclusión del archivo de cabecera para las definiciones relacionadas con la bitácora
 #include <fstream> // Inclusión de la biblioteca estándar de manejo de archivos
@@ -17,10 +16,11 @@ void NotaCrud::CrudNota() {
     string codigoPrograma = "5020"; // Código del programa
     Bitacora Auditoria; // Objeto para gestionar la bitácora de auditoría
     string user = "admin"; // Usuario actual del sistema
+
     int opcion; // Variable para almacenar la opción seleccionada por el usuario
 
     // Menú principal de operaciones CRUD
-
+//bucle do-while de ejecucion 
     do {
         system("cls"); // Limpia la pantalla
         // Mostrar opciones disponibles
@@ -36,10 +36,11 @@ void NotaCrud::CrudNota() {
         cout << "\t\t\t |   Opción a escoger:[1|2|3|4|5|]           |" << endl;
         cout << "\t\t\t --------------------------------------------" << endl;
         cout << "\t\t\tIngrese tu Opción: ";
+
         cin >> opcion; // Leer la opción seleccionada por el usuario
 
         // Realizar la operación correspondiente según la opción seleccionada
-
+//lee opcion del usuario desde consola
         switch (opcion) {
             case 1:
                 IngresarNota(); // Llama a la función para ingresar una nota
@@ -69,7 +70,9 @@ void NotaCrud::CrudNota() {
 
 // Función para ingresar una nueva nota al sistema
 void NotaCrud::IngresarNota() {
+
     system("cls"); // Limpiar la pantalla
+    // imprime
     cout << "\n------------------------------------------------------------------------------------------------------------------------" << endl;
     cout << "\n-------------------------------------------------Agregar Nota--------------------------------------------" << endl;
     notas nota; // Declarar una variable para almacenar la nueva nota
@@ -90,7 +93,6 @@ void NotaCrud::IngresarNota() {
     archivo.write(reinterpret_cast<const char*>(&nota), sizeof(notas)); // Escribir la nota en el archivo
     archivo.close(); // Cerrar el archivo
 
-//    Auditoria.ingresoBitacora(user, codigoPrograma, "CNO"); // Registrar la acción en la bitácora
 
     cout << "Nota agregada exitosamente!" << endl; // Mensaje de éxito
 }
@@ -100,20 +102,20 @@ void NotaCrud::ModificarNota() {
     int codigo;
     cout << "Ingrese el código del estudiante cuya nota desea modificar: ";
     cin >> codigo; // Leer el código del estudiante
-
+//abre el archivo
     fstream archivo("notas.dat", ios::binary | ios::in | ios::out); // Abrir el archivo para lectura y escritura en modo binario
     if (!archivo) { // Si no se pudo abrir el archivo
         cout << "No hay notas registradas." << endl; // Mensaje de error
         return; // Salir de la función
     }
-
+//crea objeto "nota"
     notas nota; // Declarar una variable para almacenar la nota actual
     bool encontrada = false; // Bandera para indicar si se encontró la nota
     while (archivo.read(reinterpret_cast<char*>(&nota), sizeof(notas))) { // Leer cada registro de nota del archivo
         if (nota.codigoEstudiante == codigo) { // Si se encuentra la nota con el código ingresado
             cout << "Ingrese la nueva nota para el estudiante: ";
             cin >> nota.nota; // Leer la nueva nota
-
+//puntero
             archivo.seekp(-static_cast<int>(sizeof(notas)), ios::cur); // Mover el puntero de escritura una posición antes del registro actual
             archivo.write(reinterpret_cast<const char*>(&nota), sizeof(notas)); // Sobrescribir el registro actual con la nueva nota
 
@@ -127,7 +129,7 @@ void NotaCrud::ModificarNota() {
     if (!encontrada) { // Si la nota no se encontró
         cout << "No se encontró la nota del estudiante con el código ingresado." << endl; // Mensaje de error
     } else {
-      //  Auditoria.ingresoBitacora(user, codigoPrograma, "UNO"); // Registrar la acción de modificación en la bitácora
+        //si la nota fue encontrada ingresa mensaje
         cout << "Nota modificada exitosamente!" << endl; // Mensaje de éxito
     }
 }
@@ -141,12 +143,14 @@ void NotaCrud::BorrarNota() {
     ifstream archivo("notas.dat", ios::binary); // Abrir el archivo para lectura en modo binario
     if (!archivo) { // Si no se pudo abrir el archivo
         cout << "No hay notas registradas." << endl; // Mensaje de error
-        return; // Salir de la función
     }
+
 
     ofstream archivoTmp("notas_tmp.dat", ios::binary); // Abrir un archivo temporal para escribir en modo binario
     notas nota; // Declarar una variable para almacenar la nota actual
+
     bool eliminada = false; // Bandera para indicar si se eliminó la nota
+    
     while (archivo.read(reinterpret_cast<char*>(&nota), sizeof(notas))) { // Leer cada registro de nota del archivo
         if (nota.codigoEstudiante != codigo) { // Si el código del estudiante no coincide con el código ingresado
             archivoTmp.write(reinterpret_cast<const char*>(&nota), sizeof(notas)); // Escribir la nota en el archivo temporal
@@ -162,7 +166,7 @@ void NotaCrud::BorrarNota() {
     rename("notas_tmp.dat", "notas.dat"); // Renombrar el archivo temporal como el archivo original
 
     if (eliminada) { // Si la nota fue eliminada
-       // Auditoria.ingresoBitacora(user, codigoPrograma, "DNO"); // Registrar la acción de eliminación en la bitácora
+        Auditoria.ingresoBitacora(user, codigoPrograma, "DNO"); // Registrar la acción de eliminación en la bitácora
         cout << "Nota eliminada exitosamente!" << endl; // Mensaje de éxito
     } else {
         cout << "No se encontró la nota del estudiante con el código ingresado." << endl; // Mensaje de error

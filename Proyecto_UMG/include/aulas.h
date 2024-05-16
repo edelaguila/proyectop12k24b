@@ -26,7 +26,7 @@ class AulasCRUD
         void BorrarAula();
         void DesplegarAula();
         void CrudAula();
-
+        void visualizarBitacora();
 
 };//fin de la clase aula
 

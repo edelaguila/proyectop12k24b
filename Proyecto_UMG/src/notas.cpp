@@ -90,7 +90,7 @@ void NotaCrud::IngresarNota() {
     archivo.write(reinterpret_cast<const char*>(&nota), sizeof(notas)); // Escribir la nota en el archivo
     archivo.close(); // Cerrar el archivo
 
-    Auditoria.ingresoBitacora(user, codigoPrograma, "CNO"); // Registrar la acción en la bitácora
+//    Auditoria.ingresoBitacora(user, codigoPrograma, "CNO"); // Registrar la acción en la bitácora
 
     cout << "Nota agregada exitosamente!" << endl; // Mensaje de éxito
 }
@@ -127,7 +127,7 @@ void NotaCrud::ModificarNota() {
     if (!encontrada) { // Si la nota no se encontró
         cout << "No se encontró la nota del estudiante con el código ingresado." << endl; // Mensaje de error
     } else {
-        Auditoria.ingresoBitacora(user, codigoPrograma, "UNO"); // Registrar la acción de modificación en la bitácora
+      //  Auditoria.ingresoBitacora(user, codigoPrograma, "UNO"); // Registrar la acción de modificación en la bitácora
         cout << "Nota modificada exitosamente!" << endl; // Mensaje de éxito
     }
 }
@@ -162,7 +162,7 @@ void NotaCrud::BorrarNota() {
     rename("notas_tmp.dat", "notas.dat"); // Renombrar el archivo temporal como el archivo original
 
     if (eliminada) { // Si la nota fue eliminada
-        Auditoria.ingresoBitacora(user, codigoPrograma, "DNO"); // Registrar la acción de eliminación en la bitácora
+       // Auditoria.ingresoBitacora(user, codigoPrograma, "DNO"); // Registrar la acción de eliminación en la bitácora
         cout << "Nota eliminada exitosamente!" << endl; // Mensaje de éxito
     } else {
         cout << "No se encontró la nota del estudiante con el código ingresado." << endl; // Mensaje de error

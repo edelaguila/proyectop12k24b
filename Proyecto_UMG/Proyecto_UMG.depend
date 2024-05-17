@@ -206,16 +206,15 @@
 	<iomanip>
 	"Bitacora.h"
 
-1715810254 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24b\proyecto_umg\src\notas.cpp
+1715916523 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24b\proyecto_umg\src\notas.cpp
 	"notas.h"
 	"Bitacora.h"
 	<fstream>
 	<iostream>
 	<cstdlib>
 	<conio.h>
-	<stdlib.h>
 
-1715810226 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24b\proyecto_umg\include\notas.h
+1715916308 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24b\proyecto_umg\include\notas.h
 	<fstream>
 	<iostream>
 	<stdlib.h>

@@ -7,7 +7,8 @@
 #include "usuarios.h"
 #include "Login.h"
 #include "Bitacora.h"
-
+#include "aulas.h"
+#include "secciones.h"
 using namespace std;
 
 void menuGeneral();
@@ -144,9 +145,13 @@ void catalogos()
             break;
         case 8:
             // Implementación para Aulas
+            AulasCRUD aula;
+            aula.CrudAula();
             break;
         case 9:
             // Implementación para Secciones
+            SeccionesCrud sec;
+            sec.CrudSeccion();
             break;
         case 10:
             // Implementación para Sedes

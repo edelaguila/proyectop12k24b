@@ -7,7 +7,6 @@
 #include <iostream> // Inclusión de la biblioteca estándar de entrada/salida
 #include <cstdlib> // Inclusión de la biblioteca estándar para funciones de utilidad
 #include <conio.h> // Inclusión de la biblioteca para funciones de entrada y salida en consola
-
 using namespace std; // Uso del espacio de nombres estándar
 
 // Definición de la función para realizar operaciones CRUD en las notas
@@ -81,10 +80,10 @@ void NotaCrud::IngresarNota() {
     cin.ignore(); // Ignorar el carácter de nueva línea en el buffer de entrada
 
     cout << "Ingrese el nombre del estudiante: ";
-    getline(cin, nota.nombreEstudiante); // Leer el nombre del estudiante
+    cin.getline(nota.nombreEstudiante,50); // Leer el nombre del estudiante
 
     cout << "Ingrese el nombre del curso: ";
-    getline(cin, nota.nombreCurso); // Leer el nombre del curso
+    cin.getline(nota.nombreCurso,50); // Leer el nombre del curso
 
     cout << "Ingrese la nota: ";
     cin >> nota.nota; // Leer la nota
@@ -143,6 +142,8 @@ void NotaCrud::BorrarNota() {
     ifstream archivo("notas.dat", ios::binary); // Abrir el archivo para lectura en modo binario
     if (!archivo) { // Si no se pudo abrir el archivo
         cout << "No hay notas registradas." << endl; // Mensaje de error
+        return; // Salir de la funcion
+
     }
 
 

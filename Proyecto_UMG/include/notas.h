@@ -19,9 +19,9 @@ struct notas
 {
 
     int codigoEstudiante; // Variable para almacenar el código del estudiante
-    string nombreEstudiante; // Variable para almacenar el nombre del estudiante
-    string nombreCurso; // Variable para almacenar el nombre del curso
-    float nota; // Variable para almacenar la nota del estudiante
+    char nombreEstudiante [45]; // Variable para almacenar el nombre del estudiante
+    char nombreCurso[45]; // Variable para almacenar el nombre del curso
+    int nota; // Variable para almacenar la nota del estudiante
 
 
 };

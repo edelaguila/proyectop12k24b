@@ -39,8 +39,10 @@
 		<Unit filename="include/Cursoss.h" />
 		<Unit filename="include/Facultad.h" />
 		<Unit filename="include/Login.h" />
+		<Unit filename="include/alumnos.h" />
 		<Unit filename="include/aulas.h" />
 		<Unit filename="include/jornada.h" />
+		<Unit filename="include/maestros.h" />
 		<Unit filename="include/notas.h" />
 		<Unit filename="include/secciones.h" />
 		<Unit filename="include/seguridad.h" />
@@ -51,8 +53,10 @@
 		<Unit filename="src/Cursoss.cpp" />
 		<Unit filename="src/Facultad.cpp" />
 		<Unit filename="src/Login.cpp" />
+		<Unit filename="src/alumnos.cpp" />
 		<Unit filename="src/aulas.cpp" />
 		<Unit filename="src/jornada.cpp" />
+		<Unit filename="src/maestros.cpp" />
 		<Unit filename="src/notas.cpp" />
 		<Unit filename="src/secciones.cpp" />
 		<Unit filename="src/seguridad.cpp" />

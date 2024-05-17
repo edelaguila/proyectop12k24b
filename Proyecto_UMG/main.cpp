@@ -145,13 +145,9 @@ void catalogos()
             break;
         case 8:
             // Implementación para Aulas
-            AulasCRUD aula;
-            aula.CrudAula();
             break;
         case 9:
             // Implementación para Secciones
-            SeccionesCrud sec;
-            sec.CrudSeccion();
             break;
         case 10:
             // Implementación para Sedes

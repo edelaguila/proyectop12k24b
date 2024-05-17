@@ -7,9 +7,9 @@
 #include "usuarios.h"
 #include "Login.h"
 #include "Bitacora.h"
-#include "maestros.h"
-#include "alumnos.h"
 
+#include "alumnos.h"
+#include "maestros.h"
 
 using namespace std;
 
@@ -25,7 +25,7 @@ string user, contrasena;
 
 int main()
 {
-    // Llamamos al objeto e ingresamos los parametros
+        // Llamamos al objeto e ingresamos los parametros
     Login ingreso(user, contrasena);
 
     // Creamos un bool que verifique y despliegue el metodo VerificarUsuario
@@ -75,19 +75,13 @@ void menuGeneral()
             reportes();
             break;
         case 4:
-        {
-
-           /*Bitacora Bitacora;
-           Bitacora.visualizarBitacora();
-            break;
-        */}
             seguridad();
             break;
         case 5:
             ayuda();
             break;
         case 6:
-            Auditoria.ingresoBitacora(user,codigoPrograma,"LGO");//llamada para registrar la bitacora de seguridad
+                    Auditoria.ingresoBitacora(user,codigoPrograma,"LGO"); //llamada para registrar la bitacora de seguridad
             exit(0);
         default:
             cout << "\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
@@ -129,15 +123,18 @@ void catalogos()
         {
         case 1:
         {
-            break;
+            alumnos alumno;
+            alumno.menu();
         }
+            break;
         case 2:
-         {
-            break;
+        {
+            maestros maestro;
+            maestro.menu();
         }
+            break;
         case 3:
         {
-
             usuarios usuario;
             usuario.menuUsuarios();
             break;

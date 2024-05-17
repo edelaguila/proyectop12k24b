@@ -1,12 +1,16 @@
-// archivo de implementacion de la clase FACULTAD que contiene el funcionamiento de la clase
+//Archivo de implementacion de la clase FACULTAD que contiene el funcionamiento de la clase
 #include "facultad.h"
+#include "Login.h"
+#include "Bitacora.h"
+#include "usuarios.h"
 #include <fstream>
 #include <iostream>
 #include <stdlib.h>
 #include <cstdlib>
 #include <conio.h>
 #include <iomanip>
-
+//Elaborado por: Lourdes Isabel Melendez Pineda 9959-23-1379
+//Comentado, Depurado y revisado por: Josue Daniel Villagran Pinto 9490-11-17319
 using namespace std;
 // CRUD de la clase
 void FacultadCRUD::Crudfacultad() {
@@ -53,6 +57,7 @@ void FacultadCRUD::Crudfacultad() {
 }
 // en esta parte de codigo nos permite agregar Facultades
 void FacultadCRUD::IngresarFa() {
+    string codigoPrograma="3001";
     system("cls");
     cout << "\n------------------------------------------------------------------------------------------------------------------------" << endl;
     cout << "\n-------------------------------------------------Agregar Facultad--------------------------------------------" << endl;
@@ -67,11 +72,17 @@ void FacultadCRUD::IngresarFa() {
     ofstream archivo("facultad.dat", ios::binary | ios::app);
     archivo.write(reinterpret_cast<const char*>(&facultad), sizeof(Facultad));
     archivo.close();
+//------------------------------------------------------------------
+    Bitacora Auditoria;
+    string user,pass;
 
+    Auditoria.ingresoBitacora(user,codigoPrograma,"ICA");//ICA = Insertar Carrera
+//------------------------------------------------------------------------------------------
     cout << "Facultad agregada exitosamente!" << endl;
 }
 // modifica facultades regitradas
 void FacultadCRUD::ModificarFa() {
+    string codigoPrograma="3001";
     system("cls");
     cout << "\n-------------------------------------------------Modificar Facultad--------------------------------------------" << endl;
     int codigo;
@@ -101,6 +112,12 @@ void FacultadCRUD::ModificarFa() {
     }
 
     archivo.close();
+//------------------------------------------------------------------------------------
+    Bitacora Auditoria;
+    string user,pass;
+
+    Auditoria.ingresoBitacora(user,codigoPrograma,"UCA");//UCA = Update Carrera
+//-----------------------------------------------------------------------------------------
     // nos indica si no se encontro la facultad por si no esta registrada
     if (!encontrada) {
         cout << "No se encontró la facultad con el codigo ingresado." << endl;
@@ -110,6 +127,7 @@ void FacultadCRUD::ModificarFa() {
 }
 // Borra facultades existentes
 void FacultadCRUD::BorrarFa() {
+    string codigoPrograma="3001";
     system("cls");
     cout << "\n-------------------------------------------------Borrar Facultad--------------------------------------------" << endl;
     int codigo;
@@ -138,6 +156,12 @@ void FacultadCRUD::BorrarFa() {
 
     remove("facultad.dat");
     rename("facultad_tmp.dat", "facultad.dat");
+//---------------------------------------------------------------------------------------
+    Bitacora Auditoria;
+    string user,pass;
+
+    Auditoria.ingresoBitacora(user,codigoPrograma,"DCA");//DCA = Delete Carrera
+//----------------------------------------------------------------------------------------
 
     if (eliminada) {
         cout << "Facultad eliminada exitosamente!" << endl;
@@ -147,6 +171,7 @@ void FacultadCRUD::BorrarFa() {
 }
 // nos muestra un reporte de las facultades que estan registradas
 void FacultadCRUD::DesplegarFa() {
+    string codigoPrograma="3001";
     system("cls");
     cout << "-----------------Despliegue de facultades registradas---------------------" << endl;
     ifstream archivo("facultad.dat", ios::binary);
@@ -163,6 +188,12 @@ void FacultadCRUD::DesplegarFa() {
     }
 
     archivo.close();
+//----------------------------------------------------------------------------------
+    Bitacora Auditoria;
+    string user,pass;
+
+    Auditoria.ingresoBitacora(user,codigoPrograma,"RCA");// RCA = Read Carrera
+//---------------------------------------------------------------------------------------
 //para hacer otra operacion
     cout << "Presione Enter para continuar...";
     cin.ignore();

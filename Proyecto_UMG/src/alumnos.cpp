@@ -1,5 +1,5 @@
 
-                                                                //creado por Oscar Morales 9959-23-3070
+//creado por Oscar Morales 9959-23-3070
 
 //Incluyendo las librerias a utilizar
 #include<iostream>
@@ -9,7 +9,6 @@
 #include<conio.h>
 #include<iomanip>
 #include<string>
-
 
 //incluyendo el encabezado alumnos
 #include "alumnos.h"
@@ -170,6 +169,7 @@ string alumnos::getanoingre()
 //Funcion menu donde muestra el sistema de gestion de alumnos
 void alumnos::menu()
 {
+
 //Implementando la bitacora
 //Declarando variable string con el codigo programa
 string codigoPrograma="2322";
@@ -177,6 +177,7 @@ Bitacora Auditoria;
 //Declarando 2 variables string con el codigo programa
 string user, contrasena;
 Auditoria.ingresoBitacora(user,codigoPrograma,"ALM");
+
 
     //Definiendo Variable int
     int opcion;
@@ -257,10 +258,16 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALM");
 //Funcion para insertar un estudiando
 void alumnos::insertar()
 {
+
+//Implementando la bitacora
+//Declarando variable string con el codigo programa
 string codigoPrograma="2350";
 Bitacora Auditoria;
+//Declarando 2 variables string con el codigo programa
 string user, contrasena;
 Auditoria.ingresoBitacora(user,codigoPrograma,"ALMI");
+
+
     //Limpiando pantalla
     system("cls");
 
@@ -298,12 +305,14 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMI");
 
     //Mensaje para ingresar el DPI del alumno
     cout<<"       -> Ingrese el email del estudiante: ";
-    cin.getline(alumno.DPI, 20);
+    cin.getline(alumno.DPI, 50);
 
 
     //Mensaje para ingresar la nacionalidad del alumno
-    cout<<"       -> Ingrese la estatus del estudiante: ";
+    cout<<"-> Ingrese la estatus del estudiante (solvente=1 | pendiente=0): ";
     cin.getline(alumno.nacionalidad, 100);
+
+
 
 
     //Mensaje para ingresar la direccion del alumno
@@ -359,7 +368,7 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMD");
         cout << "                        Mostrando -> ID del estudiante: " << alumno.id << endl;
         cout << "                        Mostrando -> Nombre del estudiante: " << alumno.nombre << endl;
         cout << "                        Mostrando -> email del estudiante : " << alumno.DPI << endl;
-        cout << "                        Mostrando -> Estatus del estudiante: " << alumno.nacionalidad << endl;
+        cout << "                        Mostrando -> Estatus del estudiante (solvente=1 | pendiente=0): " << alumno.nacionalidad << endl;
         cout << "                        Mostrando -> Direccion: " << alumno.direccion << endl;
         cout << "                        Mostrando -> Telefono: " << alumno.telefono << endl;
         cout << "+---------------------------------------------------------------------------------+" << endl;
@@ -375,6 +384,7 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMD");
 //Funcion para modificar los alumnos ya registrados
 void alumnos::modificar()
 {
+//Declarando 2 variables string con el codigo programa
 string codigoPrograma="2380";
 Bitacora Auditoria;
 string user, contrasena;
@@ -419,7 +429,7 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMM");
             cin >> alumno.nombre;
             cout << "Ingrese el nuevo email del estudiante: ";
             cin >> alumno.DPI;
-            cout << "Ingrese el nuevo estatus del estudiante: ";
+            cout << "Ingrese el nuevo estatus del estudiante (solvente=1 | pendiente=0): ";
             cin >> alumno.nacionalidad;
             cout << "Ingrese la nueva direccion del estudiante: ";
             cin >> alumno.direccion;

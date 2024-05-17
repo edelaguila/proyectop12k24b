@@ -7,8 +7,7 @@
 #include "usuarios.h"
 #include "Login.h"
 #include "Bitacora.h"
-#include "aulas.h"
-#include "secciones.h"
+
 using namespace std;
 
 void menuGeneral();

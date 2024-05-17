@@ -729,3 +729,47 @@
 	"alumnos.h"
 	"maestros.h"
 
+1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\main.cpp
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	"usuarios.h"
+	"Login.h"
+	"Bitacora.h"
+	"alumnos.h"
+	"maestros.h"
+
+1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\usuarios.h
+	<iostream>
+
+1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\login.h
+	<iostream>
+	<fstream>
+	<string>
+
+1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\bitacora.h
+	<iostream>
+
+1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\alumnos.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+

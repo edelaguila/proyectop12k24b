@@ -11,6 +11,7 @@
 #include <iomanip>
 //Elaborado por: Lourdes Isabel Melendez Pineda 9959-23-1379
 //Comentado, Depurado y revisado por: Josue Daniel Villagran Pinto 9490-11-17319
+//Implementacion de bitacora: Evelyn Sofï¿½a Andrade Luna   9959-23-1224
 using namespace std;
 // CRUD de la clase
 void FacultadCRUD::Crudfacultad() {
@@ -55,6 +56,27 @@ void FacultadCRUD::Crudfacultad() {
         }
     } while (choice != 5);
 }
+
+//Funciï¿½n que valida si ya existe la facultad para evitar redundancia de datos
+ bool FacultadCRUD::ValidarFA(int codigo){
+        fstream archivo("facultad.dat", ios::binary | ios::in | ios::out);
+        if (!archivo) {
+            return false;
+        }
+        Facultad facultad;
+        bool encontrada = false;
+        while (archivo.read(reinterpret_cast<char*>(&facultad), sizeof(Facultad))) {
+            if (facultad.codigo == codigo) {
+
+                encontrada = true;
+                break;
+            }
+        }
+
+        archivo.close();
+
+       return encontrada;
+}
 // en esta parte de codigo nos permite agregar Facultades
 void FacultadCRUD::IngresarFa() {
     string codigoPrograma="3001";
@@ -65,6 +87,12 @@ void FacultadCRUD::IngresarFa() {
     cout << "Ingrese el codigo de la facultad: ";
     cin >> facultad.codigo;
     cin.ignore();
+
+    if (ValidarFA(facultad.codigo)){
+        system("cls");
+        cout << "El codigo de la facultad que desea crear ya existe!!" << endl << endl<< endl<< endl;
+        return;
+    }
 
     cout << "Ingrese el nombre de la Facultad: ";
     cin.getline(facultad.nombre, 50);
@@ -120,7 +148,7 @@ void FacultadCRUD::ModificarFa() {
 //-----------------------------------------------------------------------------------------
     // nos indica si no se encontro la facultad por si no esta registrada
     if (!encontrada) {
-        cout << "No se encontró la facultad con el codigo ingresado." << endl;
+        cout << "No se encontrï¿½ la facultad con el codigo ingresado." << endl;
     } else {
         cout << "Facultad modificada exitosamente!" << endl;
     }
@@ -166,7 +194,7 @@ void FacultadCRUD::BorrarFa() {
     if (eliminada) {
         cout << "Facultad eliminada exitosamente!" << endl;
     } else {
-        cout << "No se encontró la facultad con el codigo ingresado." << endl;
+        cout << "No se encontrï¿½ la facultad con el codigo ingresado." << endl;
     }
 }
 // nos muestra un reporte de las facultades que estan registradas

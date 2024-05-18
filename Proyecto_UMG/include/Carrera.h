@@ -21,7 +21,7 @@ public:
     void BorrarCa();
     void DesplegarCa();
     void Crudcarrera();
-
+    bool ValidarCA(int codigo);
 };
 
 #endif // CARRERA_H

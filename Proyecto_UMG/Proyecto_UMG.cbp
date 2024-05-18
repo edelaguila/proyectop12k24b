@@ -47,6 +47,7 @@
 		<Unit filename="include/notas.h" />
 		<Unit filename="include/secciones.h" />
 		<Unit filename="include/seguridad.h" />
+		<Unit filename="include/sueldos.h" />
 		<Unit filename="include/usuarios.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Bitacora.cpp" />
@@ -62,6 +63,7 @@
 		<Unit filename="src/notas.cpp" />
 		<Unit filename="src/secciones.cpp" />
 		<Unit filename="src/seguridad.cpp" />
+		<Unit filename="src/sueldos.cpp" />
 		<Unit filename="src/usuarios.cpp" />
 		<Extensions />
 	</Project>

@@ -773,7 +773,7 @@
 	<conio.h>
 	<iostream>
 
-1716007528 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\main.cpp
+1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\main.cpp
 	<iostream>
 	<cstdlib>
 	<conio.h>
@@ -783,26 +783,18 @@
 	"alumnos.h"
 	"maestros.h"
 
-1716007528 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\usuarios.h
+1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\usuarios.h
 	<iostream>
 
-1716007528 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\login.h
+1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\login.h
 	<iostream>
 	<fstream>
 	<string>
 
-1716007528 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\bitacora.h
+1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\bitacora.h
 	<iostream>
 
-1716007528 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\alumnos.h
-	<iostream>
-	<fstream>
-	<stdlib.h>
-	<cstdlib>
-	<conio.h>
-	<iomanip>
-
-1716007528 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\maestros.h
+1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\alumnos.h
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -810,7 +802,15 @@
 	<conio.h>
 	<iomanip>
 
-1716007528 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\usuarios.cpp
 	"usuarios.h"
 	<fstream>
 	<cstdlib>

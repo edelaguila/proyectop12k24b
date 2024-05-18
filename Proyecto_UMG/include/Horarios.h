@@ -13,7 +13,9 @@ public:
 private:
     struct Horario {
         char id[11];
-        // Otros atributos del horario
+        char nombre[11];
+        char Horario[11];
+
     };
     Horario horario;
 };

@@ -1,5 +1,6 @@
 //Creado por Anderson Rodriguez 9959-23-495
 //Programa que permite insertar, desplegar, modificar y borrar Sedes
+//
 #include "Sedes.h" // Incluye el archivo de cabecera Sedes.h que contiene la declaración de la clase Sedes
 #include "usuarios.h"
 #include<iostream> // Incluye la biblioteca estándar para entrada y salida

@@ -79,7 +79,7 @@ bool login_catedratico::VerificarUsuario()
 
     //abrira el archivo de User y contraseñas--------------------------
     ifstream fileU_P;
-    fileU_P.open("U&P_Catedraticos.txt",ios::in);
+    fileU_P.open("UsuariosMaestros.txt",ios::in);
 
 
     //verificar si se abrio el archivo---------------------------

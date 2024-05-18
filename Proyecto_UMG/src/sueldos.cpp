@@ -171,7 +171,7 @@ void sueldos::eliminarEmpleado() {
 
     system("pause");
 }
-
+//.
 void sueldos::verEmpleados() {
     ifstream archivo("empleados.dat", ios::binary); // Abrir el archivo para lectura en modo binario
     if (!archivo) { // Si no se pudo abrir el archivo

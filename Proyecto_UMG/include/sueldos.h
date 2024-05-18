@@ -16,7 +16,7 @@ class sueldos {
 public:
     void crudsueldo();
     void menuEmpleados();
-    void agregarEmpleado();
+    void agregarEmpleado();// nuevo metodo para agregar empleados
     void eliminarEmpleado();
     void verEmpleados();
     void procesoAsignacionMaestros();

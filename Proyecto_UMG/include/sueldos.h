@@ -15,7 +15,7 @@ struct Empleado {
 class sueldos {
 public:
     void crudsueldo();
-    void menuEmpleados();
+    void menuEmpleados();// nuebo metodo menu empleados
     void agregarEmpleado();// nuevo metodo para agregar empleados
     void eliminarEmpleado();
     void verEmpleados();

@@ -230,7 +230,7 @@ void sueldos::procesoAsignacionMaestros() {
     cout << "\n\t¡La información ha sido guardada con éxito!\n";
     system("pause");
 }
-//.
+//...
 void sueldos::generacionNomina() {
     string nombre, mesPago;
     double salario;

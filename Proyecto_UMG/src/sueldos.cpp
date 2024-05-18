@@ -9,12 +9,12 @@
 
 using namespace std;
 
-// Definición de la estructura para almacenar los datos de los empleados
+// Definición de la estructura para almacenar los datos de los empleadoss
 
 void sueldos::crudsueldo() {
     int choice;
-    string codigoPrograma = "6650"; // Código del programa
-    Bitacora Auditoria; // Objeto para gestionar la bitácora de auditoría
+    string codigoPrograma = "6650"; // Código del programa.
+    Bitacora Auditoria; // Objeto para gestionar la bitácora de auditoría.
     string user = "admin"; // Usuario actual del sistema
 
     do {

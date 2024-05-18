@@ -19,7 +19,7 @@ public:
     void agregarEmpleado();// nuevo metodo para agregar empleados
     void eliminarEmpleado(); //nuevo metodo para eliminar empleados
     void verEmpleados();
-    void procesoAsignacionMaestros();
+    void procesoAsignacionMaestros();//0
     void generacionNomina(); // Nuevo método para la generación de nómina
 };
 

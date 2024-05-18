@@ -40,6 +40,7 @@
 		<Unit filename="include/Facultad.h" />
 		<Unit filename="include/Login.h" />
 		<Unit filename="include/Sedes.h" />
+		<Unit filename="include/Sueldos.h" />
 		<Unit filename="include/alumnos.h" />
 		<Unit filename="include/aulas.h" />
 		<Unit filename="include/jornada.h" />
@@ -55,6 +56,7 @@
 		<Unit filename="src/Facultad.cpp" />
 		<Unit filename="src/Login.cpp" />
 		<Unit filename="src/Sedes.cpp" />
+		<Unit filename="src/Sueldos.cpp" />
 		<Unit filename="src/alumnos.cpp" />
 		<Unit filename="src/aulas.cpp" />
 		<Unit filename="src/jornada.cpp" />

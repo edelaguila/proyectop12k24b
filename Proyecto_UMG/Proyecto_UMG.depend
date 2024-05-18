@@ -773,10 +773,11 @@
 	<conio.h>
 	<iostream>
 
-<<<<<<< HEAD
+1716011422 D
+
 1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\alumnos.cpp
-=======
-1716013103 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\main.cpp
+
+1716070190 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\main.cpp
 	<iostream>
 	<cstdlib>
 	<conio.h>
@@ -786,26 +787,18 @@
 	"alumnos.h"
 	"maestros.h"
 
-1716013103 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\usuarios.h
+1716070190 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\usuarios.h
 	<iostream>
 
-1716013103 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\login.h
+1716070190 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\login.h
 	<iostream>
 	<fstream>
 	<string>
 
-1716013103 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\bitacora.h
+1716070190 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\bitacora.h
 	<iostream>
 
-1716013103 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\alumnos.h
-	<iostream>
-	<fstream>
-	<stdlib.h>
-	<cstdlib>
-	<conio.h>
-	<iomanip>
-
-1716013103 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\maestros.h
+1716070190 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\alumnos.h
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -813,7 +806,15 @@
 	<conio.h>
 	<iomanip>
 
-1716013103 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+1716070190 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716070190 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\usuarios.cpp
 	"usuarios.h"
 	<fstream>
 	<cstdlib>
@@ -821,7 +822,8 @@
 	<iostream>
 
 1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\alumnos.cpp
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
+
+1716011422 798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -831,12 +833,6 @@
 	<string>
 	"alumnos.h"
 	"Bitacora.h"
-
-<<<<<<< HEAD
-1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\aulas.cpp
-=======
-1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\aulas.cpp
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	"aulas.h"
 	<fstream>
 	<iostream>
@@ -845,22 +841,10 @@
 	<conio.h>
 	<iomanip>
 	"Bitacora.h"
-
-<<<<<<< HEAD
-1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\aulas.h
-=======
-1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\aulas.h
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	<stdlib.h>
 	<cstdlib>
 	<conio.h>
 	<iomanip>
-
-<<<<<<< HEAD
-1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\bitacora.cpp
-=======
-1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\bitacora.cpp
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	"Bitacora.h"
 	<iostream>
 	<fstream>
@@ -868,12 +852,6 @@
 	<ctime>
 	<stdlib.h>
 	<iomanip>
-
-<<<<<<< HEAD
-1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\carrera.cpp
-=======
-1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\carrera.cpp
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	"Carrera.h"
 	"usuarios.h"
 	"Login.h"
@@ -884,22 +862,10 @@
 	<cstdlib>
 	<conio.h>
 	<iomanip>
-
-<<<<<<< HEAD
-1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\carrera.h
-=======
-1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\carrera.h
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	<stdlib.h>
 	<cstdlib>
 	<conio.h>
 	<iomanip>
-
-<<<<<<< HEAD
-1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\cursoss.cpp
-=======
-1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\cursoss.cpp
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	"Cursoss.h"
 	<fstream>
 	<iostream>
@@ -908,22 +874,10 @@
 	<conio.h>
 	<iomanip>
 	"Bitacora.h"
-
-<<<<<<< HEAD
-1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\cursoss.h
-=======
-1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\cursoss.h
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	<stdlib.h>
 	<cstdlib>
 	<conio.h>
 	<iomanip>
-
-<<<<<<< HEAD
-1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\facultad.cpp
-=======
-1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\facultad.cpp
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	"facultad.h"
 	"Login.h"
 	"Bitacora.h"
@@ -934,22 +888,10 @@
 	<cstdlib>
 	<conio.h>
 	<iomanip>
-
-<<<<<<< HEAD
-1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\facultad.h
-=======
-1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\facultad.h
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	<stdlib.h>
 	<cstdlib>
 	<conio.h>
 	<iomanip>
-
-<<<<<<< HEAD
-1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\jornada.cpp
-=======
-1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\jornada.cpp
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	"jornada.h"
 	<fstream>
 	<iostream>
@@ -958,22 +900,10 @@
 	<conio.h>
 	<iomanip>
 	"Bitacora.h"
-
-<<<<<<< HEAD
-1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\jornada.h
-=======
-1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\jornada.h
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	<stdlib.h>
 	<cstdlib>
 	<conio.h>
 	<iomanip>
-
-<<<<<<< HEAD
-1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\login.cpp
-=======
-1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\login.cpp
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	"Login.h"
 	<iostream>
 	<fstream>
@@ -982,12 +912,6 @@
 	<conio.h>
 	<iomanip>
 	"Bitacora.h"
-
-<<<<<<< HEAD
-1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\maestros.cpp
-=======
-1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\maestros.cpp
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -997,36 +921,18 @@
 	<string>
 	"maestros.h"
 	"Bitacora.h"
-
-<<<<<<< HEAD
-1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\notas.cpp
-=======
-1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\notas.cpp
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	"notas.h"
 	"Bitacora.h"
 	<fstream>
 	<iostream>
 	<cstdlib>
 	<conio.h>
-
-<<<<<<< HEAD
-1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\notas.h
-=======
-1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\notas.h
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	<fstream>
 	<iostream>
 	<stdlib.h>
 	<cstdlib>
 	<conio.h>
 	<iomanip>
-
-<<<<<<< HEAD
-1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\secciones.cpp
-=======
-1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\secciones.cpp
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	"secciones.h"
 	<fstream>
 	<iostream>
@@ -1035,27 +941,10 @@
 	<conio.h>
 	<iomanip>
 	"Bitacora.h"
-
-<<<<<<< HEAD
-1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\secciones.h
-=======
-1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\secciones.h
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	<stdlib.h>
 	<cstdlib>
 	<conio.h>
 	<iomanip>
-
-<<<<<<< HEAD
-1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\seguridad.cpp
-	"seguridad.h"
-
-1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\seguridad.h
-
-1715958551 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\sedes.cpp
-=======
-1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\sedes.cpp
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067
 	"Sedes.h"
 	"usuarios.h"
 	<iostream>
@@ -1067,11 +956,88 @@
 	<cstring>
 	"Bitacora.h"
 
-<<<<<<< HEAD
+1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\aulas.cpp
+
+1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\aulas.cpp
+
+1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\aulas.h
+
+1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\aulas.h
+
+1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\bitacora.cpp
+
+1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\bitacora.cpp
+
+1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\carrera.cpp
+
+1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\carrera.cpp
+
+1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\carrera.h
+
+1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\carrera.h
+
+1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\cursoss.cpp
+
+1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\cursoss.cpp
+
+1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\cursoss.h
+
+1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\cursoss.h
+
+1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\facultad.cpp
+
+1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\facultad.cpp
+
+1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\facultad.h
+
+1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\facultad.h
+
+1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\jornada.cpp
+
+1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\jornada.cpp
+
+1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\jornada.h
+
+1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\jornada.h
+
+1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\login.cpp
+
+1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\login.cpp
+
+1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\maestros.cpp
+
+1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\maestros.cpp
+
+1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\notas.cpp
+
+1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\notas.cpp
+
+1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\notas.h
+
+1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\notas.h
+
+1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\secciones.cpp
+
+1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\secciones.cpp
+
+1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\secciones.h
+
+1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\secciones.h
+
+1715957395 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\seguridad.cpp
+	"seguridad.h"
+
+1715957395 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\seguridad.h
+
+1715958551 source:c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\src\sedes.cpp
+
+1716011422 source:c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\src\sedes.cpp
+
 1715958551 c:\users\admi\onedrive\documentos\carpeta para git\proyectop12k24b\proyecto_umg\include\sedes.h
 	<iostream>
 
-=======
+1715958551 
+
 1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\sedes.h
 	<iostream>
 
@@ -1080,4 +1046,3 @@
 
 1716011422 c:\users\pc\documents\proyecto final github\proyectop12k24b\proyecto_umg\include\seguridad.h
 
->>>>>>> 4b2798afcf7768e98dbf8c4eaa1cfb1b5510e067

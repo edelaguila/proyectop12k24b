@@ -22,6 +22,7 @@ public:
     void BorrarFa();
     void DesplegarFa();
     void Crudfacultad();
+    bool ValidarFA(int codigo);
 
 };
 

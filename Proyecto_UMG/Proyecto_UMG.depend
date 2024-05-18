@@ -729,3 +729,47 @@
 	"alumnos.h"
 	"maestros.h"
 
+1716003534 source:c:\users\david sipac\desktop\universidad\tercer semestre\programación 1\sistemafinalumg\proyectop12k24b\proyecto_umg\main.cpp
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	"usuarios.h"
+	"Login.h"
+	"Bitacora.h"
+	"alumnos.h"
+	"maestros.h"
+
+1715301504 c:\users\david sipac\desktop\universidad\tercer semestre\programación 1\sistemafinalumg\proyectop12k24b\proyecto_umg\include\usuarios.h
+	<iostream>
+
+1715301504 c:\users\david sipac\desktop\universidad\tercer semestre\programación 1\sistemafinalumg\proyectop12k24b\proyecto_umg\include\login.h
+	<iostream>
+	<fstream>
+	<string>
+
+1715301504 c:\users\david sipac\desktop\universidad\tercer semestre\programación 1\sistemafinalumg\proyectop12k24b\proyecto_umg\include\bitacora.h
+	<iostream>
+
+1716003534 c:\users\david sipac\desktop\universidad\tercer semestre\programación 1\sistemafinalumg\proyectop12k24b\proyecto_umg\include\alumnos.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716003534 c:\users\david sipac\desktop\universidad\tercer semestre\programación 1\sistemafinalumg\proyectop12k24b\proyecto_umg\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715301504 source:c:\users\david sipac\desktop\universidad\tercer semestre\programación 1\sistemafinalumg\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+

@@ -1,5 +1,14 @@
+//Esqueleto proceso asignaci贸n realizado por Victor G贸mez 9959-23-10733
 #include "Asignacion_Maestro_curso.h"
 #include "login_catedratico.h"
+#include "aulas.h"
+#include "secciones.h"
+#include "Facultad.h"
+#include "Carrera.h"
+#include "Cursoss.h"
+#include "jornada.h"
+//#include "Horario.h"
+//#include "Sedes.h"
 #include<iostream>
 #include<fstream>
 #include<stdlib.h>
@@ -7,7 +16,7 @@
 #include<conio.h>
 #include<iomanip>
 using namespace std;
-Asignacion_Maestro_curso:: Asignacion_Maestro_curso( string codigo_maestro,string nombre_maestro,string apellido_maestro, string sede,string aula,string seccion,string facultad,string carrera,string curso,string jornada,string horario)
+/*Asignacion_Maestro_curso:: Asignacion_Maestro_curso( string codigo_maestro,string nombre_maestro,string apellido_maestro, string sede,string aula,string seccion,string facultad,string carrera,string curso,string jornada,string horario)
 {
 
 
@@ -22,12 +31,16 @@ Asignacion_Maestro_curso:: Asignacion_Maestro_curso( string codigo_maestro,strin
     this-> curso=curso;
     this -> jornada=jornada;
     this-> horario=horario;
+}*/
+Asignacion_Maestro_curso:: Asignacion_Maestro_curso()
+{
+
 }
 
 void Asignacion_Maestro_curso::Menu_catedratico()
 {
 
- //variables de user y contrase馻n
+ //variables de user y contrase帽an
     string user,contrasena;
     //llmamos al objeto e ingresamos los parametros
     login_catedratico ingreso(user,contrasena);
@@ -37,7 +50,7 @@ void Asignacion_Maestro_curso::Menu_catedratico()
     bool UsuarioCorrecto=ingreso.VerificarUsuario();
 
 
-    //luego de ingresar con usuario y contrase馻 se nos desplega otro menu
+    //luego de ingresar con usuario y contrase帽a se nos desplega otro menu
     if(UsuarioCorrecto)
     {
         int opcion;
@@ -85,42 +98,230 @@ void Asignacion_Maestro_curso::Menu_catedratico()
 }
 void Asignacion_Maestro_curso::asignarse_curso()
 {
+//Proceso asignaci贸n maestro a curso realizado por Kathia Contreras 9959-23-8246
+
+int num=1;
+Asignacion Asigna;
 cout<<"ingrese codigo maestro"<<endl;
-cin >> codigo_maestro ;
+cin >> Asigna.codigo_maestro ;
+cin.ignore();
 
 cout <<"ingrese nombre catedratico"<<endl;
-cin>> nombre_maestro;
+cin.getline(Asigna.nombre_maestro,50);
 
 cout <<"ingrese apellido catedratico"<<endl;
-cin>> apellido_maestro;
+cin.getline(Asigna.apellido_maestro,50);
+
+//REVISAR QUE NOMBRE COLOCAN A CLASE Y ARCHIVO SEDE AL GRUPO ASIGNADO
+
+/* **********   DESPLIEGUE SEDE.DAT   ********** */
+    /*cout<<"---------------- Sedes existentes---------------------"<<endl;
+    ifstream archivo7("sede.dat", ios::binary);
+    // Verificar si el archivo se abri贸 correctamente
+    if (!archivo7) {
+        cout << "No hay aulas registradas." << endl;
+        return;
+    }
+    Sedes sede1;
+    // Recorrer el archivo y mostrar los datos de cada aula
+    while (archivo7.read(reinterpret_cast<char*>(&sede1), sizeof(Sedes))) {
+
+        cout << num<< ". " << sede1.nombre << endl;
+
+        cout << "------------------------------------------------------" << endl;
+        num++;
+    }
+    archivo7.close(); // Cerrar el archivo
+    cout << "Presione Enter para ingresar la sede que desee...";
+    cin.ignore();
+    cin.get(); */
 
 cout <<"ingrese la sede"<<endl;
-cin>> sede;
+cin.getline(Asigna.sede,50);
+
+/* **********   DESPLIEGUE AULAS.DAT   ********** */
+
+cout<<"-----------------Aulas Existentes---------------------"<<endl;
+    // Abrir el archivo de aulas en modo lectura binaria
+    ifstream archivo("aulas.dat", ios::binary);
+    // Verificar si el archivo se abri贸 correctamente
+    if (!archivo) {
+        cout << "No hay aulas registradas." << endl;
+        return;
+    }
+
+    // Declarar una variable para el aula
+    aulas aula1;
+    // Recorrer el archivo y mostrar los datos de cada aula
+    while (archivo.read(reinterpret_cast<char*>(&aula1), sizeof(aulas))) {
+
+        cout << num<< ". " << aula1.nombre << endl;
+
+        cout << "------------------------------------------------------" << endl;
+        num++;
+    }
+
+    archivo.close(); // Cerrar el archivo
+
+    cout << "Presione Enter para poder ingresar el aula que desee...";
+    cin.ignore();
+    cin.get();
 
 cout <<"ingrese el aula"<<endl;
-cin>> aula;
+cin.getline(Asigna.aula,50);
 
+/* **********   DESPLIEGUE SECCION.DAT   ********** */
+    cout<<"-----------------Secciones Existentes---------------------"<<endl;
+    // Abre el archivo 'seccion.dat' en modo binario para lectura
+    ifstream archivo1("seccion.dat", ios::binary);
+    // Si el archivo no se pudo abrir, imprime un mensaje de error y termina la funci锟絥
+    if (!archivo1) {
+        cout << "No hay seccion registradas." << endl;
+        return;
+    }
+    secciones seccion1;
+    // Mientras se pueda leer un objeto 'seccion1' del archivo...
+    num=1;
+    while (archivo1.read(reinterpret_cast<char*>(&seccion1), sizeof(secciones))) {
+        // Imprime los datos de la seccion1 en la consola
+        cout << num <<". " << seccion1.nombre << endl;
+        cout << "------------------------------------------------------" << endl;
+        num++;
+    }
+    archivo1.close();
+
+    // Imprime un mensaje indicando al usuario que presione Enter para continuar
+    cout << "Presione Enter para poder ingresar la seccion que desee...";
+    cin.ignore();
+    cin.get();
 cout <<"ingrese la seccion"<<endl;
-cin>> seccion;
+cin.getline(Asigna.seccion,50);
+/* **********   DESPLIEGUE FACULTAD.DAT   ********** */
+    num=1;
+    cout << "-----------------Facultades Existentes---------------------" << endl;
+    ifstream archivo2("facultad.dat", ios::binary);
+    if (!archivo2) {
+        cout << "No hay facultades registradas." << endl;
+        return;
+    }
 
-cout <<"ingrese la facultad"<<endl;
-cin>> facultad;
+    Facultad facultad1;
+    while (archivo2.read(reinterpret_cast<char*>(&facultad1), sizeof(Facultad))) {
 
-cout <<"ingrese la carrera"<<endl;
-cin>> carrera;
+        cout << num <<". "<<"Nombre: " << facultad1.nombre << endl;
+        cout << "------------------------------------------------------" << endl;
+    }
 
-cout <<"ingrese el curso"<<endl;
-cin>> curso;
+    archivo2.close();
+    cout << "Presione Enter seleccionar la facultad que desee...";
+    cin.ignore();
+    cin.get();
+    cout <<"ingrese la facultad"<<endl;
+    cin.getline(Asigna.facultad,50);
+/* **********   DESPLIEGUE CARRERA.DAT   ********** */
 
-cout <<"ingrese la jornada"<<endl;
-cin>> jornada;
+    cout<<"-----------------Carreras Existentes---------------------"<<endl;
+    ifstream archivo3("carreras.dat", ios::binary);
+    if (!archivo3) {
+        cout << "No hay carreras registradas." << endl;
+        return;
+    }
+    Carrera carrera1;
+    num=1;
+    while (archivo3.read(reinterpret_cast<char*>(&carrera1), sizeof(Carrera))) {
+        cout << num <<". " << carrera1.nombre << endl;
+        cout << "------------------------------------------------------" << endl;
+    }
+    archivo3.close();
+    cout << "Presione Enter para poder ingresar la carrera que desee...";
+    cin.ignore();
+    cin.get();
 
-cout <<"ingrese el horario"<<endl;
-cin>> horario;
+    cout <<"ingrese la carrera"<<endl;
+    cin.getline(Asigna.carrera,50);
+/* **********   DESPLIEGUE CURSO.DAT   ********** */
+    cout<<"-----------------Cursos Existentes---------------------"<<endl;
+   //abre el archivo en modo lectura binaria y lee los datos del archivo
+    ifstream archivo4("Cursoss.DAT", ios::binary);
+    if (!archivo4) {
+        cout << "No hay Cursoss registradas." << endl;
+        return;
+    }
+    Curso Curso1;
+    num=1;
+    //lee de forma repetida cada registro del archivo hasta que no haya mas registros
+    while (archivo4.read(reinterpret_cast<char*>(&Curso1), sizeof(Curso))) {
+		//Imprime los registros leidos del archivo
+        cout << num <<". " << Curso1.nombre << endl;
+        cout << "------------------------------------------------------" << endl;
+    }
+
+    archivo4.close();
+
+    cout << "Presione Enter para poder ingresar el curso que desee asignar...";
+    cin.ignore();
+    cin.get();
+
+    cout <<"ingrese el curso"<<endl;
+    cin.getline(Asigna.curso,50);
+/* **********   DESPLIEGUE JORNADAS.DAT   ********** */
+
+    cout<<"-----------------Jornadas Existentes---------------------"<<endl;
+      //abre el archivo en modo lectura binaria y lee los datos del archivo
+    ifstream archivo5("Jornadas.DAT", ios::binary);
+    if (!archivo5) {
+        cout << "No hay Jornadas registradas." << endl;
+        return;
+    }
+    Jornada Jornada1;
+    num=1;
+        //lee de forma repetida cada registro del archivo hasta que no haya mas registros
+
+    while (archivo5.read(reinterpret_cast<char*>(&Jornada1), sizeof(Jornada))) {
+			//Imprime los registros leidos del archivo
+        cout << num <<". " << Jornada1.nombre << endl;
+        cout << "------------------------------------------------------" << endl;
+    }
+    archivo5.close();
+    cout << "Presione Enter para ingresar la jornada que desee asignar...";
+    cin.ignore();
+    cin.get();
+    cout <<"ingrese la jornada"<<endl;
+    cin.getline(Asigna.jornada,50);
+
+/* **********   DESPLIEGUE HORARIO.DAT   ********** */
+   /* cout<<"-----------------Horarios Existentes---------------------"<<endl;
+      //abre el archivo en modo lectura binaria y lee los datos del archivo
+    ifstream archivo6("Horarios.DAT", ios::binary);
+    if (!archivo6) {
+        cout << "No hay Jornadas registradas." << endl;
+        return;
+    }
+
+    Horario horario1;
+    num=1;
+        //lee de forma repetida cada registro del archivo hasta que no haya mas registros
+
+    while (archivo6.read(reinterpret_cast<char*>(&horario1), sizeof(Horario))) {
+			//Imprime los registros leidos del archivo
+        cout << num <<". " << horario1.nombre << endl;
+        cout << "------------------------------------------------------" << endl;
+    }
+    archivo6.close();
+    cout << "Presione Enter para ingresar el horario que desee asignar...";
+    cin.ignore();
+    cin.get();*/
+    cout <<"ingrese el horario"<<endl;
+    cin.getline(Asigna.horario,50);
+    ofstream archivo8("asignaciones.dat", ios::binary | ios::app);
+    archivo8.write(reinterpret_cast<const char*>(&Asigna), sizeof(Asignacion));
+    archivo8.close();
+    cout << "Asignacion ingresada exitosamente!" << endl;
 system("pause");
 
-}
 
+}
+/*
 string Asignacion_Maestro_curso::setCodigo(string codigo_maestro)
 {
     this -> codigo_maestro=codigo_maestro;
@@ -225,4 +426,4 @@ string Asignacion_Maestro_curso::setHorario(string horario)
 string Asignacion_Maestro_curso::getHorario()
 {
     return this-> horario;
-}
+}*/

@@ -38,6 +38,7 @@
 		<Unit filename="include/Carrera.h" />
 		<Unit filename="include/Cursoss.h" />
 		<Unit filename="include/Facultad.h" />
+		<Unit filename="include/Horarios.h" />
 		<Unit filename="include/Login.h" />
 		<Unit filename="include/Sedes.h" />
 		<Unit filename="include/alumnos.h" />
@@ -53,6 +54,7 @@
 		<Unit filename="src/Carrera.cpp" />
 		<Unit filename="src/Cursoss.cpp" />
 		<Unit filename="src/Facultad.cpp" />
+		<Unit filename="src/Horarios.cpp" />
 		<Unit filename="src/Login.cpp" />
 		<Unit filename="src/Sedes.cpp" />
 		<Unit filename="src/alumnos.cpp" />

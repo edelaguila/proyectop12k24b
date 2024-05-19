@@ -523,11 +523,12 @@
 	<conio.h>
 	<iomanip>
 
-<<<<<<< HEAD
-1715893468 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\alumnos.cpp
-=======
+1715910836 D
+	"usumaestros.h"
+
 1715978840 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\alumnos.cpp
->>>>>>> f50158bc289da4041c6456a55d8d308200a34085
+
+1715981244 158bc289da4041c6456a55d8d308200a34085
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -537,8 +538,13 @@
 	<string>
 	"alumnos.h"
 	"Bitacora.h"
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
 
-1715893481 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\alumnos.h
+1715893482 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\alumnos.h
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -592,11 +598,7 @@
 	<conio.h>
 	<iomanip>
 
-<<<<<<< HEAD
-1715865726 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\usuarios.h
-=======
-1715974930 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\usuarios.h
->>>>>>> f50158bc289da4041c6456a55d8d308200a34085
+1715982682 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\usuarios.h
 	<iostream>
 
 1715865726 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\login.h
@@ -664,7 +666,7 @@
 	<iomanip>
 	"Bitacora.h"
 
-1715893537 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\maestros.cpp
+1715893538 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\maestros.cpp
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -675,7 +677,7 @@
 	"maestros.h"
 	"Bitacora.h"
 
-1715893561 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\maestros.h
+1715893562 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\maestros.h
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -720,24 +722,18 @@
 
 1715865726 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\seguridad.h
 
-<<<<<<< HEAD
-1715865726 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\usuarios.cpp
-	"usuarios.h"
-=======
-1715981269 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+1715982682 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\usuarios.cpp
 	"usuarios.h"
 	"usualumnos.h"
->>>>>>> f50158bc289da4041c6456a55d8d308200a34085
 	<fstream>
 	<cstdlib>
 	<conio.h>
 	<iostream>
-<<<<<<< HEAD
-=======
 	"usumaestros.h"
->>>>>>> f50158bc289da4041c6456a55d8d308200a34085
 
-1715910836 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\main.cpp
+1715865726 h"
+
+1715910838 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\main.cpp
 	<iostream>
 	<cstdlib>
 	<conio.h>
@@ -746,18 +742,16 @@
 	"Bitacora.h"
 	"alumnos.h"
 	"maestros.h"
-<<<<<<< HEAD
-=======
 
-1715980145 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\usualumnos.cpp
+1715982682 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\usualumnos.cpp
 	<iostream>
 	<fstream>
 	<iomanip>
 
-1715980585 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\usualumnos.h
+1715982682 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\usualumnos.h
 	<iostream>
 
-1715980487 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\usumaestros.cpp
+1715982682 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\usumaestros.cpp
 	<iostream>
 	<fstream>
 	<iomanip>
@@ -767,7 +761,6 @@
 
 1715981188 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\u_maestros.h
 
-1715981244 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\usumaestros.h
+1715982682 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\usumaestros.h
 	<iostream>
->>>>>>> f50158bc289da4041c6456a55d8d308200a34085
 

@@ -523,7 +523,11 @@
 	<conio.h>
 	<iomanip>
 
+<<<<<<< HEAD
 1715893468 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\alumnos.cpp
+=======
+1715978840 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\alumnos.cpp
+>>>>>>> f50158bc289da4041c6456a55d8d308200a34085
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -588,7 +592,11 @@
 	<conio.h>
 	<iomanip>
 
+<<<<<<< HEAD
 1715865726 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\usuarios.h
+=======
+1715974930 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\usuarios.h
+>>>>>>> f50158bc289da4041c6456a55d8d308200a34085
 	<iostream>
 
 1715865726 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\login.h
@@ -712,12 +720,22 @@
 
 1715865726 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\seguridad.h
 
+<<<<<<< HEAD
 1715865726 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\usuarios.cpp
 	"usuarios.h"
+=======
+1715981269 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+	"usuarios.h"
+	"usualumnos.h"
+>>>>>>> f50158bc289da4041c6456a55d8d308200a34085
 	<fstream>
 	<cstdlib>
 	<conio.h>
 	<iostream>
+<<<<<<< HEAD
+=======
+	"usumaestros.h"
+>>>>>>> f50158bc289da4041c6456a55d8d308200a34085
 
 1715910836 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\main.cpp
 	<iostream>
@@ -728,4 +746,28 @@
 	"Bitacora.h"
 	"alumnos.h"
 	"maestros.h"
+<<<<<<< HEAD
+=======
+
+1715980145 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\usualumnos.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+
+1715980585 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\usualumnos.h
+	<iostream>
+
+1715980487 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\usumaestros.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+
+1715981188 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\u_maestros.cpp
+	"u_maestros.h"
+
+1715981188 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\u_maestros.h
+
+1715981244 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\usumaestros.h
+	<iostream>
+>>>>>>> f50158bc289da4041c6456a55d8d308200a34085
 

@@ -305,6 +305,7 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMI");
 
     //Mensaje para ingresar el DPI del alumno
     cout<<"       -> Ingrese el email del estudiante: ";
+<<<<<<< HEAD
     cin.getline(alumno.DPI, 20);
 
 
@@ -313,6 +314,18 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMI");
     cin.getline(alumno.nacionalidad, 100);
 
 
+=======
+    cin.getline(alumno.DPI, 50);
+
+
+    //Mensaje para ingresar la nacionalidad del alumno
+    cout<<"-> Ingrese la estatus del estudiante (solvente=1 | pendiente=0): ";
+    cin.getline(alumno.nacionalidad, 100);
+
+
+
+
+>>>>>>> f50158bc289da4041c6456a55d8d308200a34085
     //Mensaje para ingresar la direccion del alumno
     cout<<"       -> Ingrese la direccion del estudiante: ";
     cin.getline(alumno.direccion, 50);
@@ -366,7 +379,11 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMD");
         cout << "                        Mostrando -> ID del estudiante: " << alumno.id << endl;
         cout << "                        Mostrando -> Nombre del estudiante: " << alumno.nombre << endl;
         cout << "                        Mostrando -> email del estudiante : " << alumno.DPI << endl;
+<<<<<<< HEAD
         cout << "                        Mostrando -> Estatus del estudiante: " << alumno.nacionalidad << endl;
+=======
+        cout << "                        Mostrando -> Estatus del estudiante (solvente=1 | pendiente=0): " << alumno.nacionalidad << endl;
+>>>>>>> f50158bc289da4041c6456a55d8d308200a34085
         cout << "                        Mostrando -> Direccion: " << alumno.direccion << endl;
         cout << "                        Mostrando -> Telefono: " << alumno.telefono << endl;
         cout << "+---------------------------------------------------------------------------------+" << endl;
@@ -427,7 +444,11 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMM");
             cin >> alumno.nombre;
             cout << "Ingrese el nuevo email del estudiante: ";
             cin >> alumno.DPI;
+<<<<<<< HEAD
             cout << "Ingrese el nuevo estatus del estudiante: ";
+=======
+            cout << "Ingrese el nuevo estatus del estudiante (solvente=1 | pendiente=0): ";
+>>>>>>> f50158bc289da4041c6456a55d8d308200a34085
             cin >> alumno.nacionalidad;
             cout << "Ingrese la nueva direccion del estudiante: ";
             cin >> alumno.direccion;

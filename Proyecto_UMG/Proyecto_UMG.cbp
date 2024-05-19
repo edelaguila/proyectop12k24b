@@ -46,7 +46,13 @@
 		<Unit filename="include/notas.h" />
 		<Unit filename="include/secciones.h" />
 		<Unit filename="include/seguridad.h" />
+<<<<<<< HEAD
+=======
+		<Unit filename="include/u_maestros.h" />
+		<Unit filename="include/usualumnos.h" />
+>>>>>>> f50158bc289da4041c6456a55d8d308200a34085
 		<Unit filename="include/usuarios.h" />
+		<Unit filename="include/usumaestros.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Bitacora.cpp" />
 		<Unit filename="src/Carrera.cpp" />
@@ -60,7 +66,13 @@
 		<Unit filename="src/notas.cpp" />
 		<Unit filename="src/secciones.cpp" />
 		<Unit filename="src/seguridad.cpp" />
+<<<<<<< HEAD
+=======
+		<Unit filename="src/u_maestros.cpp" />
+		<Unit filename="src/usualumnos.cpp" />
+>>>>>>> f50158bc289da4041c6456a55d8d308200a34085
 		<Unit filename="src/usuarios.cpp" />
+		<Unit filename="src/usumaestros.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

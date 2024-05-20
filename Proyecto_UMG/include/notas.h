@@ -1,9 +1,7 @@
 //creado por Diana Mishel Loeiza Ramirez 9959-23-3457
+//Burificado y terminado al 100% de funcionalidad Por Diana Mishel Loeiza Ramìrez
 #ifndef NOTAS_H
 #define NOTAS_H
-
-#include <fstream>
-#include <iostream>
 
 
 #include<stdlib.h>// Incluye funciones para el manejo de memoria dinamica, control de procesos y conversiones de cadena.
@@ -21,22 +19,22 @@ struct notas
     int codigoEstudiante; // Variable para almacenar el código del estudiante
     char nombreEstudiante [45]; // Variable para almacenar el nombre del estudiante
     char nombreCurso[45]; // Variable para almacenar el nombre del curso
-    int nota; // Variable para almacenar la nota del estudiante
-
-
+        int np1; // Nota parcial 1
+    int np2; // Nota parcial 2
+    int za;  // Nota de ZA
+    int ef;  // Nota de EF
+    int nf;  // Nota final
 };
 
 class NotaCrud {
 public:
-    //void CrudNota();
+    void CrudNota();
     void IngresarNota();
     void ModificarNota();
     void BorrarNota();
     void DesplegarNotas();
-    void CrudNota();
     void RegistrarBitacora(string usuario, string accion);
 
 };
 
 #endif // NOTAS_H
-

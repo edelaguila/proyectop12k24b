@@ -305,6 +305,7 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMI");
 
     //Mensaje para ingresar el DPI del alumno
     cout<<"       -> Ingrese el email del estudiante: ";
+<<<<<<< HEAD
     cin.getline(alumno.DPI, 20);
 
 
@@ -320,6 +321,16 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMI");
     cout<<"-> Ingrese la estatus del estudiante (solvente=1 | pendiente=0): ";
     cin.getline(alumno.nacionalidad, 100);
 
+=======
+    cin.getline(alumno.DPI, 50);
+
+
+    //Mensaje para ingresar la nacionalidad del alumno
+    cout<<"-> Ingrese la estatus del estudiante (solvente=1 | pendiente=0): ";
+    cin.getline(alumno.nacionalidad, 100);
+
+
+>>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
 
 
     //Mensaje para ingresar la direccion del alumno
@@ -375,7 +386,10 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMD");
         cout << "                        Mostrando -> ID del estudiante: " << alumno.id << endl;
         cout << "                        Mostrando -> Nombre del estudiante: " << alumno.nombre << endl;
         cout << "                        Mostrando -> email del estudiante : " << alumno.DPI << endl;
+<<<<<<< HEAD
         cout << "                        Mostrando -> Estatus del estudiante: " << alumno.nacionalidad << endl;
+=======
+>>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
         cout << "                        Mostrando -> Estatus del estudiante (solvente=1 | pendiente=0): " << alumno.nacionalidad << endl;
         cout << "                        Mostrando -> Direccion: " << alumno.direccion << endl;
         cout << "                        Mostrando -> Telefono: " << alumno.telefono << endl;
@@ -437,7 +451,10 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMM");
             cin >> alumno.nombre;
             cout << "Ingrese el nuevo email del estudiante: ";
             cin >> alumno.DPI;
+<<<<<<< HEAD
             cout << "Ingrese el nuevo estatus del estudiante: ";
+=======
+>>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
             cout << "Ingrese el nuevo estatus del estudiante (solvente=1 | pendiente=0): ";
             cin >> alumno.nacionalidad;
             cout << "Ingrese la nueva direccion del estudiante: ";

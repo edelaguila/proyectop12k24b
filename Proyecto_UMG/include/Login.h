@@ -1,32 +1,15 @@
-
-//Creado por Andy Alfonso 9959-23-1494
-
 #ifndef LOGIN_H
 #define LOGIN_H
-#include<iostream>
-#include<fstream>
-#include<string>
+#define MAX 80
+#define ARCHIVO_USUARIOS "usuarios.dat"
+#define TECLA_ENTER 13
+#define TECLA_BACKSPACE 8
+#define MAX_INTENTOS 3
 
- using namespace std;
-
-class Login
-{
- public:
-        Login(string usuarios,string contrasena);
-
-        string setUser(string usuarios);
-        string getUser();
-
-        string setContrasena(string contrasena);
-        string getContrasena();
-
-
-        bool VerificarUsuario();
-
-
-    private:
-        string usuarios,contrasena;
-
+class Login {
+public:
+    int menuIniciarSesion();
+    char logear(char nombreUsuario[], char password[]);
+    void leerClave(char *password);
 };
-
 #endif // LOGIN_H

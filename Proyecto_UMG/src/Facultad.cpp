@@ -1,5 +1,8 @@
 //Archivo de implementacion de la clase FACULTAD que contiene el funcionamiento de la clase
 #include "facultad.h"
+#include "Login.h"
+#include "Bitacora.h"
+#include "usuarios.h"
 #include <fstream>
 #include <iostream>
 #include <stdlib.h>
@@ -8,6 +11,7 @@
 #include <iomanip>
 //Elaborado por: Lourdes Isabel Melendez Pineda 9959-23-1379
 //Comentado, Depurado y revisado por: Josue Daniel Villagran Pinto 9490-11-17319
+//Implementacion de bitacora: Evelyn Sofía Andrade Luna   9959-23-1224
 using namespace std;
 // CRUD de la clase
 void FacultadCRUD::Crudfacultad() {
@@ -52,8 +56,30 @@ void FacultadCRUD::Crudfacultad() {
         }
     } while (choice != 5);
 }
+
+//Función que valida si ya existe la facultad para evitar redundancia de datos
+ bool FacultadCRUD::ValidarFA(int codigo){
+        fstream archivo("facultad.dat", ios::binary | ios::in | ios::out);
+        if (!archivo) {
+            return false;
+        }
+        Facultad facultad;
+        bool encontrada = false;
+        while (archivo.read(reinterpret_cast<char*>(&facultad), sizeof(Facultad))) {
+            if (facultad.codigo == codigo) {
+
+                encontrada = true;
+                break;
+            }
+        }
+
+        archivo.close();
+
+       return encontrada;
+}
 // en esta parte de codigo nos permite agregar Facultades
 void FacultadCRUD::IngresarFa() {
+    string codigoPrograma="3001";
     system("cls");
     cout << "\n------------------------------------------------------------------------------------------------------------------------" << endl;
     cout << "\n-------------------------------------------------Agregar Facultad--------------------------------------------" << endl;
@@ -62,17 +88,29 @@ void FacultadCRUD::IngresarFa() {
     cin >> facultad.codigo;
     cin.ignore();
 
+    if (ValidarFA(facultad.codigo)){
+        system("cls");
+        cout << "El codigo de la facultad que desea crear ya existe!!" << endl << endl<< endl<< endl;
+        return;
+    }
+
     cout << "Ingrese el nombre de la Facultad: ";
     cin.getline(facultad.nombre, 50);
 
     ofstream archivo("facultad.dat", ios::binary | ios::app);
     archivo.write(reinterpret_cast<const char*>(&facultad), sizeof(Facultad));
     archivo.close();
+//------------------------------------------------------------------
+    Bitacora Auditoria;
+    string user,pass;
 
+    Auditoria.ingresoBitacora(user,codigoPrograma,"ICA");//ICA = Insertar Carrera
+//------------------------------------------------------------------------------------------
     cout << "Facultad agregada exitosamente!" << endl;
 }
 // modifica facultades regitradas
 void FacultadCRUD::ModificarFa() {
+    string codigoPrograma="3001";
     system("cls");
     cout << "\n-------------------------------------------------Modificar Facultad--------------------------------------------" << endl;
     int codigo;
@@ -102,6 +140,12 @@ void FacultadCRUD::ModificarFa() {
     }
 
     archivo.close();
+//------------------------------------------------------------------------------------
+    Bitacora Auditoria;
+    string user,pass;
+
+    Auditoria.ingresoBitacora(user,codigoPrograma,"UCA");//UCA = Update Carrera
+//-----------------------------------------------------------------------------------------
     // nos indica si no se encontro la facultad por si no esta registrada
     if (!encontrada) {
         cout << "No se encontró la facultad con el codigo ingresado." << endl;
@@ -111,6 +155,7 @@ void FacultadCRUD::ModificarFa() {
 }
 // Borra facultades existentes
 void FacultadCRUD::BorrarFa() {
+    string codigoPrograma="3001";
     system("cls");
     cout << "\n-------------------------------------------------Borrar Facultad--------------------------------------------" << endl;
     int codigo;
@@ -139,6 +184,12 @@ void FacultadCRUD::BorrarFa() {
 
     remove("facultad.dat");
     rename("facultad_tmp.dat", "facultad.dat");
+//---------------------------------------------------------------------------------------
+    Bitacora Auditoria;
+    string user,pass;
+
+    Auditoria.ingresoBitacora(user,codigoPrograma,"DCA");//DCA = Delete Carrera
+//----------------------------------------------------------------------------------------
 
     if (eliminada) {
         cout << "Facultad eliminada exitosamente!" << endl;
@@ -148,6 +199,7 @@ void FacultadCRUD::BorrarFa() {
 }
 // nos muestra un reporte de las facultades que estan registradas
 void FacultadCRUD::DesplegarFa() {
+    string codigoPrograma="3001";
     system("cls");
     cout << "-----------------Despliegue de facultades registradas---------------------" << endl;
     ifstream archivo("facultad.dat", ios::binary);
@@ -164,6 +216,12 @@ void FacultadCRUD::DesplegarFa() {
     }
 
     archivo.close();
+//----------------------------------------------------------------------------------
+    Bitacora Auditoria;
+    string user,pass;
+
+    Auditoria.ingresoBitacora(user,codigoPrograma,"RCA");// RCA = Read Carrera
+//---------------------------------------------------------------------------------------
 //para hacer otra operacion
     cout << "Presione Enter para continuar...";
     cin.ignore();

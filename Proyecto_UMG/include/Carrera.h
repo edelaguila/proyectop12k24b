@@ -21,10 +21,11 @@ public:
     void BorrarCa();
     void DesplegarCa();
     void Crudcarrera();
-
+    bool ValidarCA(int codigo);
 };
 
 #endif // CARRERA_H
 
 // Usamos archivos de encabezado para tener un orden y mas limpio nuestro codigo y facil de encontrar errores
+
 

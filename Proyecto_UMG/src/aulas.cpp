@@ -1,14 +1,20 @@
 //Creado por Rocio Guisell Lopez espinoza 9959-23-740
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "aulas.h"
 
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 
 //Incluir la biblioteca para manipulación de archivo
 #include "aulas.h"
 
 //Bibliotecas necesarias para que el codigo funcione
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 #include <fstream>
 #include <iostream>
 #include<stdlib.h>
@@ -16,11 +22,14 @@
 #include<conio.h>
 #include<iomanip>
 <<<<<<< HEAD
+<<<<<<< HEAD
 using namespace std;
 
 void AulasCRUD::CrudAula()
 {
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 
 
 //implementacion de bitacora
@@ -37,19 +46,28 @@ void AulasCRUD::CrudAula()
     Bitacora Auditoria;
     string user ="admin";
 
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     int opcion;
     do
     {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	system("cls");
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 //Limpiamos pantalla
 	system("cls");
 
 	//Mostramos el menu principal
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 	cout<<"\t\t\t--------------------------------------------"<<endl;
 	cout<<"\t\t\t|     SISTEMA DE GESTION UMG - Aulas       |"<<endl;
 	cout<<"\t\t\t--------------------------------------------"<<endl;
@@ -65,14 +83,19 @@ void AulasCRUD::CrudAula()
     cin>>opcion;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 //Maneja las opciones del menu
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+//Maneja las opciones del menu
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
      switch(opcion)
     {
 	case 1:
         IngresarAula();
+<<<<<<< HEAD
 <<<<<<< HEAD
 		break;
     case 2:
@@ -85,6 +108,8 @@ void AulasCRUD::CrudAula()
         DesplegarAula();
 		break;
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
         //registro de bitacora ingreso
         Auditoria.ingresoBitacora(user,codigoPrograma,"CUA");//CAU = Create aulas
 
@@ -107,7 +132,10 @@ void AulasCRUD::CrudAula()
 		//registro de bitacora despliegle
         Auditoria.ingresoBitacora(user,codigoPrograma,"RAU");//RCU = Read aulas
         break;
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     case 5:
 		break;
 	default:
@@ -119,6 +147,7 @@ void AulasCRUD::CrudAula()
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 void AulasCRUD::IngresarAula() {
 
    system("cls");
@@ -126,6 +155,8 @@ void AulasCRUD::IngresarAula() {
     cout<<"\n-------------------------------------------------Agregar Aula--------------------------------------------"<<endl;
     aulas aula;
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 // Función para agregar un aula
 void AulasCRUD::IngresarAula() {
     // Limpiar la pantalla
@@ -136,7 +167,10 @@ void AulasCRUD::IngresarAula() {
     // Declarar una variable para el aula
     aulas aula;
     // Solicitar al usuario ingresar los datos del aula
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     cout << "Ingrese el codigo del aula: ";
     cin >> aula.codigo;
     cin.ignore();
@@ -147,6 +181,7 @@ void AulasCRUD::IngresarAula() {
     cout << "Ingrese la estatus de la aula: ";
     cin.getline(aula.estatus, 50);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     ofstream archivo("aulas.dat", ios::binary | ios::app);
     archivo.write(reinterpret_cast<const char*>(&aula), sizeof(aulas));
@@ -162,6 +197,8 @@ void AulasCRUD::ModificarAula() {
 
     fstream archivo("aulas.dat", ios::binary | ios::in | ios::out);
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     // Abrir el archivo de aulas en modo binario para agregar el aula
     ofstream archivo("aulas.dat", ios::binary | ios::app);
     // Escribir el aula en el archivo
@@ -181,18 +218,24 @@ void AulasCRUD::ModificarAula() {
     // Abrir el archivo de aulas en modo lectura y escritura binaria
     fstream archivo("aulas.dat", ios::binary | ios::in | ios::out);
     // Verificar si el archivo se abrió correctamente
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     if (!archivo) {
         cout << "No hay aulas registradas." << endl;
         return;
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     aulas aula;
     bool encontrada = false;
     while (archivo.read(reinterpret_cast<char*>(&aula), sizeof(aulas))) {
         if (aula.codigo == codigo) {
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     // Declarar una variable para el aula
     aulas aula;
     bool encontrada = false;
@@ -200,7 +243,10 @@ void AulasCRUD::ModificarAula() {
     while (archivo.read(reinterpret_cast<char*>(&aula), sizeof(aulas))) {
         if (aula.codigo == codigo) {
             // Solicitar al usuario ingresar los nuevos datos del aula
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
             cout << "Ingrese el nuevo nombre de la aula: ";
             cin.ignore();
             cin.getline(aula.nombre, 50);
@@ -209,12 +255,18 @@ void AulasCRUD::ModificarAula() {
             cin.getline(aula.estatus, 50);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             archivo.seekp(-static_cast<int>(sizeof(aulas)), ios::cur);
 =======
             // Mover el puntero de escritura hacia atrás para sobreescribir el aula
             archivo.seekp(-static_cast<int>(sizeof(aulas)), ios::cur);
             // Escribir el aula modificada en el archivo
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+            // Mover el puntero de escritura hacia atrás para sobreescribir el aula
+            archivo.seekp(-static_cast<int>(sizeof(aulas)), ios::cur);
+            // Escribir el aula modificada en el archivo
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
             archivo.write(reinterpret_cast<const char*>(&aula), sizeof(aulas));
 
             encontrada = true;
@@ -223,10 +275,14 @@ void AulasCRUD::ModificarAula() {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     archivo.close();
 =======
     archivo.close(); // Cerrar el archivo
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+    archivo.close(); // Cerrar el archivo
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 
     if (!encontrada) {
         cout << "No se encontró la aula con el codigo ingresado." << endl;
@@ -236,6 +292,7 @@ void AulasCRUD::ModificarAula() {
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 void AulasCRUD::BorrarAula() {
     int codigo;
@@ -252,6 +309,8 @@ void AulasCRUD::BorrarAula() {
     aulas aula;
     bool eliminada = false;
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 // Función para eliminar un aula
 void AulasCRUD::BorrarAula() {
     int codigo;
@@ -273,7 +332,10 @@ void AulasCRUD::BorrarAula() {
     aulas aula;
     bool eliminada = false;
     // Recorrer el archivo para copiar las aulas que no se van a eliminar al archivo temporal
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     while (archivo.read(reinterpret_cast<char*>(&aula), sizeof(aulas))) {
         if (aula.codigo != codigo) {
             archivoTmp.write(reinterpret_cast<const char*>(&aula), sizeof(aulas));
@@ -283,24 +345,33 @@ void AulasCRUD::BorrarAula() {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     archivo.close();
     archivoTmp.close();
 
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     archivo.close(); // Cerrar el archivo original
     archivoTmp.close(); // Cerrar el archivo temporal
 
     // Eliminar el archivo original y renombrar el archivo temporal
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     remove("aulas.dat");
     rename("aulas_tmp.dat", "aulas.dat");
 
     if (eliminada) {
         cout << "aula eliminada exitosamente!" << endl;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     } else {
         cout << "No se encontró la aula con el codigo ingresado." << endl;
     }
@@ -308,11 +379,14 @@ void AulasCRUD::BorrarAula() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 void AulasCRUD::DesplegarAula() {
     system("cls");
     cout<<"-----------------Despliegue de aulas registradas---------------------"<<endl;
     ifstream archivo("aulas.dat", ios::binary);
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 // Función para desplegar todas las aulas registradas
 void AulasCRUD::DesplegarAula() {
     // Limpiar la pantalla
@@ -322,12 +396,16 @@ void AulasCRUD::DesplegarAula() {
     // Abrir el archivo de aulas en modo lectura binaria
     ifstream archivo("aulas.dat", ios::binary);
     // Verificar si el archivo se abrió correctamente
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     if (!archivo) {
         cout << "No hay aulas registradas." << endl;
         return;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     aulas aula;
 =======
@@ -335,6 +413,11 @@ void AulasCRUD::DesplegarAula() {
     aulas aula;
     // Recorrer el archivo y mostrar los datos de cada aula
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+    // Declarar una variable para el aula
+    aulas aula;
+    // Recorrer el archivo y mostrar los datos de cada aula
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     while (archivo.read(reinterpret_cast<char*>(&aula), sizeof(aulas))) {
         cout << "Codigo: " << aula.codigo << endl;
         cout << "Nombre: " << aula.nombre << endl;
@@ -343,18 +426,25 @@ void AulasCRUD::DesplegarAula() {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     archivo.close();
 =======
     archivo.close(); // Cerrar el archivo
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+    archivo.close(); // Cerrar el archivo
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 
     cout << "Presione Enter para continuar...";
     cin.ignore();
     cin.get();
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84

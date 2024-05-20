@@ -3,6 +3,7 @@
 #define AULAS_H
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include<stdlib.h>
 #include<cstdlib>
 #include<conio.h>
@@ -22,6 +23,8 @@ class AulasCRUD
 {
     public:
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 #include<stdlib.h>// Incluye funciones para el manejo de memoria dinamica, control de procesos y conversiones de cadena.
 #include<cstdlib>// Incluye funciones para el control de procesos y conversiones de cadena.
 #include<conio.h>// Incluye funciones para el manejo de la consola.
@@ -41,22 +44,33 @@ struct aulas
 class AulasCRUD
 {
     public:// Mótodos para realizar operaciones CRUD.
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
         void IngresarAula();
         void ModificarAula();
         void BorrarAula();
         void DesplegarAula();
         void CrudAula();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         void visualizarBitacora();
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+        void visualizarBitacora();
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 
 };//fin de la clase aula
 
 #endif // AULAS_H
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84

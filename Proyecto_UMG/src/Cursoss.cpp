@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "Cursoss.h"
 //Elaborado por: Alisson Rocio Lopez Ortiz 9959 - 23 - 7225
 
@@ -7,6 +8,11 @@
 
 #include "Cursoss.h"
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+//Elaborado por: Alisson Rocio Lopez Ortiz 9959 - 23 - 7225
+
+#include "Cursoss.h"
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 #include <fstream>
 #include <iostream>
 #include<stdlib.h>
@@ -14,23 +20,35 @@
 #include<conio.h>
 #include<iomanip>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 
 //Implementación de Bitácora hechar por: Pablo Romeo Palencia Rosales 9959-23-736
 #include "Bitacora.h"
 
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 using namespace std;
 
 void CursosCRUD::CrudCursos() {
 int choice;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 //implementacion de variables para la bitacora
 string codigoPrograma="4000";
 Bitacora Auditoria;
 string user="admin";
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 
     do {
 	//limpiar pantalla
@@ -55,37 +73,57 @@ string user="admin";
 	case 1:
         IngresarCa();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         //Se ejecuta la accion y se registra en la bitacora
         Auditoria.ingresoBitacora(user,codigoPrograma,"CCU"); //CCU = Create Cursos
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+        //Se ejecuta la accion y se registra en la bitacora
+        Auditoria.ingresoBitacora(user,codigoPrograma,"CCU"); //CCU = Create Cursos
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
          system("pause");
 		break;
     case 2:
         ModificarCa();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
          //Se ejecuta la accion y se registra en la bitacora
         Auditoria.ingresoBitacora(user,codigoPrograma,"UCU"); //UCU = Update Cursos
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+         //Se ejecuta la accion y se registra en la bitacora
+        Auditoria.ingresoBitacora(user,codigoPrograma,"UCU"); //UCU = Update Cursos
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
          system("pause");
 		break;
     case 3:
         BorrarCa();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         //Se ejecuta la accion y se registra en la bitacora
         Auditoria.ingresoBitacora(user,codigoPrograma,"DCU"); //DCU = Delete Cursos
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+        //Se ejecuta la accion y se registra en la bitacora
+        Auditoria.ingresoBitacora(user,codigoPrograma,"DCU"); //DCU = Delete Cursos
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
          system("pause");
 		break;
     case 4:
         DesplegarCa();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         //Se ejecuta la accion y se registra en la bitacora
         Auditoria.ingresoBitacora(user,codigoPrograma,"RCU"); //RCU = Read Cursos
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+        //Se ejecuta la accion y se registra en la bitacora
+        Auditoria.ingresoBitacora(user,codigoPrograma,"RCU"); //RCU = Read Cursos
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
         system("pause");
 		break;
     case 5:

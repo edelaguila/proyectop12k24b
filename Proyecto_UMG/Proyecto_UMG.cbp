@@ -40,10 +40,14 @@
 		<Unit filename="include/Facultad.h" />
 		<Unit filename="include/Login.h" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 		<Unit filename="include/alumnos.h" />
 		<Unit filename="include/aulas.h" />
 		<Unit filename="include/jornada.h" />
 		<Unit filename="include/maestros.h" />
+<<<<<<< HEAD
 		<Unit filename="include/secciones.h" />
 =======
 		<Unit filename="include/aulas.h" />
@@ -52,7 +56,18 @@
 		<Unit filename="include/secciones.h" />
 		<Unit filename="include/seguridad.h" />
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+		<Unit filename="include/notas.h" />
+		<Unit filename="include/secciones.h" />
+		<Unit filename="include/seguridad.h" />
+<<<<<<< HEAD
+=======
+		<Unit filename="include/u_maestros.h" />
+		<Unit filename="include/usualumnos.h" />
+>>>>>>> f50158bc289da4041c6456a55d8d308200a34085
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 		<Unit filename="include/usuarios.h" />
+		<Unit filename="include/usumaestros.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Bitacora.cpp" />
 		<Unit filename="src/Carrera.cpp" />
@@ -60,10 +75,14 @@
 		<Unit filename="src/Facultad.cpp" />
 		<Unit filename="src/Login.cpp" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 		<Unit filename="src/alumnos.cpp" />
 		<Unit filename="src/aulas.cpp" />
 		<Unit filename="src/jornada.cpp" />
 		<Unit filename="src/maestros.cpp" />
+<<<<<<< HEAD
 		<Unit filename="src/secciones.cpp" />
 =======
 		<Unit filename="src/aulas.cpp" />
@@ -72,7 +91,18 @@
 		<Unit filename="src/secciones.cpp" />
 		<Unit filename="src/seguridad.cpp" />
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+		<Unit filename="src/notas.cpp" />
+		<Unit filename="src/secciones.cpp" />
+		<Unit filename="src/seguridad.cpp" />
+<<<<<<< HEAD
+=======
+		<Unit filename="src/u_maestros.cpp" />
+		<Unit filename="src/usualumnos.cpp" />
+>>>>>>> f50158bc289da4041c6456a55d8d308200a34085
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 		<Unit filename="src/usuarios.cpp" />
+		<Unit filename="src/usumaestros.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

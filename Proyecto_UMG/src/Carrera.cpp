@@ -2,11 +2,17 @@
 //del funcionamiento del la clase
 #include "Carrera.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #include "usuarios.h"
 #include "Login.h"
 #include "Bitacora.h"
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+#include "usuarios.h"
+#include "Login.h"
+#include "Bitacora.h"
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 #include <fstream>
 #include <iostream>
 #include<stdlib.h>
@@ -15,16 +21,22 @@
 #include<iomanip>
 using namespace std;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // menu CRUD de carreras
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 //Carlos David calderón Ramírez      9959-23-848
 //Comentado revisado y depurado por:  Evelyn Sofía Andrade Luna   9959-23-1224
 // menu CRUD de carreras
 
 
 
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 void CarrerasCRUD::Crudcarrera() {
 int choice;
     //int x;
@@ -72,6 +84,7 @@ int choice;
     }while(choice!= 5);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // aqui se agregan carreras que son almacenadas
 
@@ -82,6 +95,11 @@ void CarrerasCRUD::IngresarCa() {
 void CarrerasCRUD::IngresarCa() {
     string codigoPrograma="3000";
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+// aqui se agregan carreras que son almacenadas
+void CarrerasCRUD::IngresarCa() {
+    string codigoPrograma="3000";
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
    system("cls");
     cout<<"\n------------------------------------------------------------------------------------------------------------------------"<<endl;
     cout<<"\n-------------------------------------------------Agregar Carrera--------------------------------------------"<<endl;
@@ -101,22 +119,32 @@ void CarrerasCRUD::IngresarCa() {
     archivo.close();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 
     Bitacora Auditoria;
     string user,pass;
 
     Auditoria.ingresoBitacora(user,codigoPrograma,"ICA");//ICA = Insertar Carrera
 
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     cout << "Carrera agregada exitosamente!" << endl;
 }
 // modificar carreras
 void CarrerasCRUD::ModificarCa() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     string codigoPrograma="3000";
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+    string codigoPrograma="3000";
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     cout<<"\n------------------------------------------------------------------------------------------------------------------------"<<endl;
     cout<<"\n-------------------------------------------------Modificacion de Carreras--------------------------------------------"<<endl;
     int codigo;
@@ -151,13 +179,19 @@ void CarrerasCRUD::ModificarCa() {
     archivo.close();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     Bitacora Auditoria;
     string user,pass;
 
     Auditoria.ingresoBitacora(user,codigoPrograma,"UCA");//UCA = Update Carrera
 
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     if (!encontrada) {
         cout << "No se encontró la carrera con el codigo ingresado." << endl;
     }
@@ -169,9 +203,13 @@ void CarrerasCRUD::ModificarCa() {
 // elimina carreras que ya no deseamos que estan registradas
 void CarrerasCRUD::BorrarCa() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     string codigoPrograma="3000";
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+    string codigoPrograma="3000";
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     int codigo;
     cout<<"\n------------------------------------------------------------------------------------------------------------------------"<<endl;
     cout<<"\n-------------------------------------------------Eliminar Carreras--------------------------------------------"<<endl;
@@ -202,14 +240,20 @@ void CarrerasCRUD::BorrarCa() {
     rename("carreras_tmp.dat", "carreras.dat");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 
     Bitacora Auditoria;
     string user,pass;
 
     Auditoria.ingresoBitacora(user,codigoPrograma,"DCA");//DCA = Delete Carrera
 
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     if (eliminada) {
         cout << "Carrera eliminada exitosamente!" << endl;
 
@@ -222,9 +266,13 @@ void CarrerasCRUD::BorrarCa() {
 void CarrerasCRUD::DesplegarCa() {
     system("cls");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     string codigoPrograma="3000";
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+    string codigoPrograma="3000";
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     cout<<"-----------------Despliegue de carreras registradas---------------------"<<endl;
     ifstream archivo("carreras.dat", ios::binary);
     if (!archivo) {
@@ -243,14 +291,20 @@ void CarrerasCRUD::DesplegarCa() {
     archivo.close();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 
     Bitacora Auditoria;
     string user,pass;
 
     Auditoria.ingresoBitacora(user,codigoPrograma,"RCA");// RCA = Read Carrera
 
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     cout << "Presione Enter para continuar...";
     cin.ignore();
     cin.get();

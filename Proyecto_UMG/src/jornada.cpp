@@ -8,23 +8,35 @@
 #include<conio.h>
 #include<iomanip>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 
 //Implementación de Bitácora hechar por: Pablo Romeo Palencia Rosales 9959-23-736
 #include "Bitacora.h"
 
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 using namespace std;
 
 void JornadaCRUD::CrudJornada() {
 int choice;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 //implementacion de variables para la bitacora
 string codigoPrograma="4001";
 Bitacora Auditoria;
 string user="admin";
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 
     do {
 	//limpiar pantalla
@@ -49,37 +61,57 @@ string user="admin";
 	case 1:
         Ingresar();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         //Se ejecuta la accion y se registra en la bitacora
         Auditoria.ingresoBitacora(user,codigoPrograma,"CJO"); //CJO = Create Jornada
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+        //Se ejecuta la accion y se registra en la bitacora
+        Auditoria.ingresoBitacora(user,codigoPrograma,"CJO"); //CJO = Create Jornada
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
         system("pause");
 		break;
     case 2:
         Modificar();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         //Se ejecuta la accion y se registra en la bitacora
         Auditoria.ingresoBitacora(user,codigoPrograma,"UJO"); //UJO = Update Jornada
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+        //Se ejecuta la accion y se registra en la bitacora
+        Auditoria.ingresoBitacora(user,codigoPrograma,"UJO"); //UJO = Update Jornada
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
         system("pause");
 		break;
     case 3:
         Borrar();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         //Se ejecuta la accion y se registra en la bitacora
         Auditoria.ingresoBitacora(user,codigoPrograma,"DJO"); //DJO = Delete Jornada
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+        //Se ejecuta la accion y se registra en la bitacora
+        Auditoria.ingresoBitacora(user,codigoPrograma,"DJO"); //DJO = Delete Jornada
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
         system("pause");
 		break;
     case 4:
         Desplegar();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         //Se ejecuta la accion y se registra en la bitacora
         Auditoria.ingresoBitacora(user,codigoPrograma,"RJO"); //RJO = Read Jornada
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+        //Se ejecuta la accion y se registra en la bitacora
+        Auditoria.ingresoBitacora(user,codigoPrograma,"RJO"); //RJO = Read Jornada
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
         system("pause");
 		break;
     case 5:

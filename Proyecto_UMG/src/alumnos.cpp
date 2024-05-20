@@ -1,5 +1,5 @@
 
-                                                                //creado por Oscar Morales 9959-23-3070
+//creado por Oscar Morales 9959-23-3070
 
 //Incluyendo las librerias a utilizar
 #include<iostream>
@@ -313,6 +313,15 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMI");
     cin.getline(alumno.nacionalidad, 100);
 
 
+    cin.getline(alumno.DPI, 50);
+
+
+    //Mensaje para ingresar la nacionalidad del alumno
+    cout<<"-> Ingrese la estatus del estudiante (solvente=1 | pendiente=0): ";
+    cin.getline(alumno.nacionalidad, 100);
+
+
+
     //Mensaje para ingresar la direccion del alumno
     cout<<"       -> Ingrese la direccion del estudiante: ";
     cin.getline(alumno.direccion, 50);
@@ -367,6 +376,7 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMD");
         cout << "                        Mostrando -> Nombre del estudiante: " << alumno.nombre << endl;
         cout << "                        Mostrando -> email del estudiante : " << alumno.DPI << endl;
         cout << "                        Mostrando -> Estatus del estudiante: " << alumno.nacionalidad << endl;
+        cout << "                        Mostrando -> Estatus del estudiante (solvente=1 | pendiente=0): " << alumno.nacionalidad << endl;
         cout << "                        Mostrando -> Direccion: " << alumno.direccion << endl;
         cout << "                        Mostrando -> Telefono: " << alumno.telefono << endl;
         cout << "+---------------------------------------------------------------------------------+" << endl;
@@ -428,6 +438,7 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMM");
             cout << "Ingrese el nuevo email del estudiante: ";
             cin >> alumno.DPI;
             cout << "Ingrese el nuevo estatus del estudiante: ";
+            cout << "Ingrese el nuevo estatus del estudiante (solvente=1 | pendiente=0): ";
             cin >> alumno.nacionalidad;
             cout << "Ingrese la nueva direccion del estudiante: ";
             cin >> alumno.direccion;

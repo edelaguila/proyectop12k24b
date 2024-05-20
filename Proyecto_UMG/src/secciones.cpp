@@ -1,8 +1,11 @@
 //Creado por Rocio Guisell Lopez espinoza 9959-23-740
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 #include "secciones.h"
 
 #include <fstream>
@@ -12,6 +15,7 @@
 #include<conio.h>
 #include<iomanip>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 using namespace std;
 
@@ -24,6 +28,8 @@ void SeccionesCrud::CrudSeccion()
 
 	system("cls");
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 //implementacion de bitacora
 
 #include "Bitacora.h"
@@ -46,7 +52,10 @@ void SeccionesCrud::CrudSeccion()
     // Limpia la consola
 	system("cls");
 	// Imprime el men� de opciones en la consola
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 	cout<<"\t\t\t--------------------------------------------"<<endl;
 	cout<<"\t\t\t|     SISTEMA DE GESTION UMG - Secciones       |"<<endl;
 	cout<<"\t\t\t--------------------------------------------"<<endl;
@@ -59,6 +68,7 @@ void SeccionesCrud::CrudSeccion()
 	cout<<"\t\t\t |   Opcion a escoger:[1|2|3|4|5|]           |"<<endl;
 	cout<<"\t\t\t --------------------------------------------"<<endl;
 	cout<<"\t\t\tIngresa tu Opcion: ";
+<<<<<<< HEAD
 <<<<<<< HEAD
     cin>>opcion;
 
@@ -93,6 +103,8 @@ void SeccionesCrud::IngresarSeccion()
     cout<<"\n-------------------------------------------------Agregar Seccion--------------------------------------------"<<endl;
     secciones seccion;
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     // Lee la opci�n del usuario desde la consola
     cin>>opcion;
 
@@ -149,11 +161,15 @@ void SeccionesCrud::IngresarSeccion()
     // Crea un objeto 'seccion' de la clase 'secciones'
     secciones seccion;
     // Solicita al usuario que ingrese el c�digo de la secci�n
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     cout << "Ingrese el codigo del Seccion: ";
     cin >> seccion.codigo;
     cin.ignore();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     cout << "Ingrese el nombre del Seccion: ";
     cin.getline(seccion.nombre, 50);
@@ -166,6 +182,8 @@ void SeccionesCrud::IngresarSeccion()
     archivo.close();
 
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     // Solicita al usuario que ingrese el nombre de la secci�n
     cout << "Ingrese el nombre del Seccion: ";
     cin.getline(seccion.nombre, 50);
@@ -182,12 +200,16 @@ void SeccionesCrud::IngresarSeccion()
     archivo.close();
 
     // Imprime un mensaje de �xito en la consola
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     cout << "Seccion agregada exitosamente!" << endl;
 
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 void SeccionesCrud::ModificarSeccion()
 {
@@ -197,6 +219,8 @@ void SeccionesCrud::ModificarSeccion()
 
     fstream archivo("seccion.dat", ios::binary | ios::in | ios::out);
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 // Definici�n de la funci�n ModificarSeccion de la clase SeccionesCrud
 void SeccionesCrud::ModificarSeccion()
 {
@@ -209,18 +233,24 @@ void SeccionesCrud::ModificarSeccion()
     // Abre el archivo 'seccion.dat' en modo binario para lectura y escritura
     fstream archivo("seccion.dat", ios::binary | ios::in | ios::out);
     // Si el archivo no se pudo abrir, imprime un mensaje de error y termina la funci�n
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     if (!archivo) {
         cout << "No hay Seccion registradas." << endl;
         return;
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     secciones seccion;
     bool encontrada = false;
     while (archivo.read(reinterpret_cast<char*>(&seccion), sizeof(secciones))) {
         if (seccion.codigo == codigo) {
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     // Crea un objeto 'seccion' de la clase 'secciones'
     secciones seccion;
     // Declaraci�n de la variable booleana 'encontrada' que indicar� si se encontr� la secci�n a modificar
@@ -230,11 +260,15 @@ void SeccionesCrud::ModificarSeccion()
         // Si el c�digo de la secci�n le�da es igual al c�digo ingresado por el usuario...
         if (seccion.codigo == codigo) {
             // Solicita al usuario que ingrese el nuevo nombre de la secci�n
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
             cout << "Ingrese el nuevo nombre de la Seccion: ";
             cin.ignore();
             cin.getline(seccion.nombre, 50);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             cout << "Ingrese el nuevo estatus de la Seccion: ";
             cin.getline(seccion.estatus, 50);
@@ -244,6 +278,8 @@ void SeccionesCrud::ModificarSeccion()
 
             encontrada = true;
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
             // Solicita al usuario que ingrese el nuevo estatus de la secci�n
             cout << "Ingrese el nuevo estatus de la Seccion: ";
             cin.getline(seccion.estatus, 50);
@@ -256,11 +292,15 @@ void SeccionesCrud::ModificarSeccion()
             // Cambia el valor de 'encontrada' a true
             encontrada = true;
             // Termina el bucle
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
             break;
         }
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     archivo.close();
 
@@ -294,6 +334,8 @@ void SeccionesCrud::BorrarSeccion()
             archivoTmp.write(reinterpret_cast<const char*>(&seccion), sizeof(secciones));
         } else {
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 
     archivo.close();
 
@@ -342,11 +384,15 @@ void SeccionesCrud::BorrarSeccion()
             archivoTmp.write(reinterpret_cast<const char*>(&seccion), sizeof(secciones));
         } else {
             // Si el c�digo de la secci�n le�da es igual al c�digo ingresado por el usuario, cambia el valor de 'eliminada' a true
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
             eliminada = true;
         }
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     archivo.close();
     archivoTmp.close();
@@ -368,6 +414,8 @@ void SeccionesCrud::DesplegarSeccion()
     cout<<"-----------------Despliegue de seccion registradas---------------------"<<endl;
     ifstream archivo("seccion.dat", ios::binary);
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     // Cierra los archivos
     archivo.close();
     archivoTmp.close();
@@ -401,28 +449,38 @@ void SeccionesCrud::DesplegarSeccion()
     // Abre el archivo 'seccion.dat' en modo binario para lectura
     ifstream archivo("seccion.dat", ios::binary);
     // Si el archivo no se pudo abrir, imprime un mensaje de error y termina la funci�n
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     if (!archivo) {
         cout << "No hay seccion registradas." << endl;
         return;
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     secciones seccion;
     while (archivo.read(reinterpret_cast<char*>(&seccion), sizeof(secciones))) {
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
       // Crea un objeto 'seccion' de la clase 'secciones'
     secciones seccion;
     // Mientras se pueda leer un objeto 'seccion' del archivo...
     while (archivo.read(reinterpret_cast<char*>(&seccion), sizeof(secciones))) {
         // Imprime los datos de la secci�n en la consola
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
         cout << "Codigo: " << seccion.codigo << endl;
         cout << "Nombre: " << seccion.nombre << endl;
         cout << "Estatus: " << seccion.estatus << endl;
         cout << "-----------------------------" << endl;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     archivo.close();
 
@@ -432,6 +490,8 @@ void SeccionesCrud::DesplegarSeccion()
 
 }
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     // Cierra el archivo
     archivo.close();
 
@@ -444,4 +504,7 @@ void SeccionesCrud::DesplegarSeccion()
 
 }
 
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84

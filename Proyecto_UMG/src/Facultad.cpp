@@ -1,13 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // archivo de implementacion de la clase FACULTAD que contiene el funcionamiento de la clase
 #include "facultad.h"
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 //Archivo de implementacion de la clase FACULTAD que contiene el funcionamiento de la clase
 #include "facultad.h"
 #include "Login.h"
 #include "Bitacora.h"
 #include "usuarios.h"
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 #include <fstream>
 #include <iostream>
 #include <stdlib.h>
@@ -15,11 +21,16 @@
 #include <conio.h>
 #include <iomanip>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 //Elaborado por: Lourdes Isabel Melendez Pineda 9959-23-1379
 //Comentado, Depurado y revisado por: Josue Daniel Villagran Pinto 9490-11-17319
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+//Elaborado por: Lourdes Isabel Melendez Pineda 9959-23-1379
+//Comentado, Depurado y revisado por: Josue Daniel Villagran Pinto 9490-11-17319
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 using namespace std;
 // CRUD de la clase
 void FacultadCRUD::Crudfacultad() {
@@ -67,9 +78,13 @@ void FacultadCRUD::Crudfacultad() {
 // en esta parte de codigo nos permite agregar Facultades
 void FacultadCRUD::IngresarFa() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     string codigoPrograma="3001";
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+    string codigoPrograma="3001";
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     system("cls");
     cout << "\n------------------------------------------------------------------------------------------------------------------------" << endl;
     cout << "\n-------------------------------------------------Agregar Facultad--------------------------------------------" << endl;
@@ -85,23 +100,33 @@ void FacultadCRUD::IngresarFa() {
     archivo.write(reinterpret_cast<const char*>(&facultad), sizeof(Facultad));
     archivo.close();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 //------------------------------------------------------------------
     Bitacora Auditoria;
     string user,pass;
 
     Auditoria.ingresoBitacora(user,codigoPrograma,"ICA");//ICA = Insertar Carrera
 //------------------------------------------------------------------------------------------
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     cout << "Facultad agregada exitosamente!" << endl;
 }
 // modifica facultades regitradas
 void FacultadCRUD::ModificarFa() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     string codigoPrograma="3001";
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+    string codigoPrograma="3001";
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     system("cls");
     cout << "\n-------------------------------------------------Modificar Facultad--------------------------------------------" << endl;
     int codigo;
@@ -132,14 +157,20 @@ void FacultadCRUD::ModificarFa() {
 
     archivo.close();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 //------------------------------------------------------------------------------------
     Bitacora Auditoria;
     string user,pass;
 
     Auditoria.ingresoBitacora(user,codigoPrograma,"UCA");//UCA = Update Carrera
 //-----------------------------------------------------------------------------------------
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     // nos indica si no se encontro la facultad por si no esta registrada
     if (!encontrada) {
         cout << "No se encontró la facultad con el codigo ingresado." << endl;
@@ -150,9 +181,13 @@ void FacultadCRUD::ModificarFa() {
 // Borra facultades existentes
 void FacultadCRUD::BorrarFa() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     string codigoPrograma="3001";
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+    string codigoPrograma="3001";
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     system("cls");
     cout << "\n-------------------------------------------------Borrar Facultad--------------------------------------------" << endl;
     int codigo;
@@ -182,14 +217,20 @@ void FacultadCRUD::BorrarFa() {
     remove("facultad.dat");
     rename("facultad_tmp.dat", "facultad.dat");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 //---------------------------------------------------------------------------------------
     Bitacora Auditoria;
     string user,pass;
 
     Auditoria.ingresoBitacora(user,codigoPrograma,"DCA");//DCA = Delete Carrera
 //----------------------------------------------------------------------------------------
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 
     if (eliminada) {
         cout << "Facultad eliminada exitosamente!" << endl;
@@ -200,9 +241,13 @@ void FacultadCRUD::BorrarFa() {
 // nos muestra un reporte de las facultades que estan registradas
 void FacultadCRUD::DesplegarFa() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     string codigoPrograma="3001";
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+    string codigoPrograma="3001";
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
     system("cls");
     cout << "-----------------Despliegue de facultades registradas---------------------" << endl;
     ifstream archivo("facultad.dat", ios::binary);
@@ -220,14 +265,20 @@ void FacultadCRUD::DesplegarFa() {
 
     archivo.close();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 //----------------------------------------------------------------------------------
     Bitacora Auditoria;
     string user,pass;
 
     Auditoria.ingresoBitacora(user,codigoPrograma,"RCA");// RCA = Read Carrera
 //---------------------------------------------------------------------------------------
+<<<<<<< HEAD
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 //para hacer otra operacion
     cout << "Presione Enter para continuar...";
     cin.ignore();

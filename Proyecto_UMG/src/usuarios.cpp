@@ -2,13 +2,16 @@
 //Creado por Andre de Jesus 9959-23-3117
 
 #include "usuarios.h"
+#include "usualumnos.h"
 #include<fstream>
 #include<cstdlib>
 #include<conio.h>
 #include<iostream>
 #define USER "usuario"
 #define PASS "1234"
-#include "Bitacora.h"
+
+#include "usumaestros.h"
+
 using namespace std;
 
 
@@ -23,12 +26,15 @@ usuarios::~usuarios()
 }
 
 void usuarios::menuUsuarios(){
+<<<<<<< HEAD
 
 
 string codigoPrograma="2834";
 Bitacora Auditoria;
 string user, contrasena;
             Auditoria.ingresoBitacora(user,codigoPrograma,"USER");
+=======
+>>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 
 int choice;
     do {
@@ -41,7 +47,8 @@ int choice;
 	cout<<"\t\t\t 2. Consulta Usuarios"<<endl;
 	cout<<"\t\t\t 3. Modificacion Usuarios"<<endl;
 	cout<<"\t\t\t 4. Eliminacion Usuarios"<<endl;
-	cout<<"\t\t\t 5. Retornar menu anterior"<<endl;
+	cout<<"\t\t\t 5. Alumnos y Maestros"<<endl;
+	cout<<"\t\t\t 6. Retornar menu anterior"<<endl;
     cout<<"\t\t\t-------------------------------------------------------"<<endl;
 	cout<<"\t\t\tOpcion a escoger:[1/2/3/4/5]"<<endl;
 	cout<<"\t\t\t-------------------------------------------------------"<<endl;
@@ -68,13 +75,16 @@ int choice;
 		borrar();
 		break;
 	case 5:
+	    menuextra();
+		break;
+    case 6:
 		break;
 	default:
 		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
 	}
 	cin.get();
 	//getch();
-    }while(choice!= 5);
+    }while(choice!= 6);
 }
 bool usuarios::buscar(string user, string passw)
 {
@@ -123,10 +133,6 @@ string usuarios::setNombre(string nombre)
 
 void usuarios::insertar()
 {
-    string codigoPrograma="2899";
- Bitacora Auditoria;
-string user, contrasena;
-            Auditoria.ingresoBitacora(user,codigoPrograma,"USERI");
     system("cls");
     cout<<"+---------------------------------------------------------+"<< endl;
     cout<<"|                Agregar detalles del Usuario             |"<< endl;
@@ -150,10 +156,6 @@ string user, contrasena;
 
 void usuarios::desplegar()
 {
-    string codigoPrograma="2900";
- Bitacora Auditoria;
-string user, contrasena;
-            Auditoria.ingresoBitacora(user,codigoPrograma,"USERD");
     system("cls");
 
     cout << "+---------------------------------------------------------------------------------+" << endl;
@@ -180,10 +182,6 @@ string user, contrasena;
 
 void usuarios::modificar()
 {
-    string codigoPrograma="2962";
- Bitacora Auditoria;
-string user, contrasena;
-            Auditoria.ingresoBitacora(user,codigoPrograma,"USERM");
 	system("cls");
     fstream archivo;
     string idPersona;
@@ -230,10 +228,6 @@ string user, contrasena;
 
 void usuarios::borrar()
 {
-    string codigoPrograma="2999";
- Bitacora Auditoria;
-string user, contrasena;
-            Auditoria.ingresoBitacora(user,codigoPrograma,"USERB");
 	system("cls");
 	string idPersona;
     cout<<"+---------------------------------------------------------------------------------+"<<endl;
@@ -279,4 +273,46 @@ string user, contrasena;
         {
         cout << "No se a podido encontrar el usuario" << endl;
         }
+}
+
+void usuarios::menuextra()
+{
+   int choice;
+    do {
+    char x;
+	system("cls");
+	cout<<"\t\t\t-------------------------------------------------------"<<endl;
+	cout<<"\t\t\t |   SISTEMA GESTION DE SEGURIDAD - Catalogos Usuarios |"<<endl;
+	cout<<"\t\t\t-------------------------------------------------------"<<endl;
+	cout<<"\t\t\t 1. Menu de usuarios de alumnos"<<endl;
+	cout<<"\t\t\t 2. Menu de usuarios de maestros"<<endl;
+	cout<<"\t\t\t 3. Retornar menu anterior"<<endl;
+    cout<<"\t\t\t-------------------------------------------------------"<<endl;
+	cout<<"\t\t\tOpcion a escoger:[1/2/3]"<<endl;
+	cout<<"\t\t\t-------------------------------------------------------"<<endl;
+	cout<<"\t\t\tIngresa tu Opcion: ";
+    cin>>choice;
+
+    switch(choice)
+    {
+    case 1:
+        {
+            usualumnos alum;
+            alum.menu();
+        }
+		break;
+	case 2:
+	    {
+	        usumaestros maestros;
+	        maestros.menu();
+	    }
+	    break;
+	case 3:
+		break;
+	default:
+		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
+	}
+	cin.get();
+	//getch();
+    }while(choice!= 3);
 }

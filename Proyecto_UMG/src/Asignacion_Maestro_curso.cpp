@@ -318,6 +318,59 @@ system("pause");
 
 
 }
+void Asignacion_Maestro_curso::actas()
+{
+    //ACTAS HECHO POR KATHIA CONTRERAS 9959-23-8246
+    system("cls");
+    cout<<"--------------------------------------------------------------------ASIGNACIONES MAESTRO A CURSO-----------------------------------------------------------------------"<<endl;
+    cout<<" Codigo      Nombre        Apellido         Sede           Aula      Seccion     Facultad              Carrera               Curso              Jornada        Horario"<<endl;
+    cout<<"-----------------------------------------------------------------------------------------------------------------------------------------------------------------------"<<endl;
+
+    // Abrir el archivo de aulas en modo lectura binaria
+    ifstream archivo("asignaciones.dat", ios::binary);
+    // Verificar si el archivo se abrió correctamente
+    if (!archivo) {
+        cout << "No hay asignaciones registradas." << endl;
+        return;
+    }
+
+    // Declarar una variable para el aula
+    Asignacion asign1;
+    // Recorrer el archivo y mostrar los datos de cada aula
+    while (archivo.read(reinterpret_cast<char*>(&asign1), sizeof(Asignacion))) {
+        cout<<"|";
+        cout << setw(5)<< asign1.codigo_maestro ;
+        cout<<" |";
+        cout << setw(12)<< asign1.nombre_maestro ;
+        cout<<" |";
+        cout  << setw(12)<< asign1.apellido_maestro ;
+        cout<<" |";
+        cout << setw(15)<< asign1.sede ;
+        cout<<" |";
+        cout << setw(10)<< asign1.aula;
+        cout<<" |";
+        cout << setw(10) << asign1.seccion;
+        cout<<" |";
+        cout << setw(15) << asign1.facultad ;
+        cout<<"|";
+        cout  << setw(25)<< asign1.carrera ;
+        cout<<"|";
+        cout << setw(18)<<  asign1.curso ;
+        cout<<" |";
+        cout << setw(15)<<   asign1.jornada;
+        cout<<" |";
+        cout << setw(10)<<   asign1.horario;
+        cout<<" |"<<endl;
+        cout<<"-----------------------------------------------------------------------------------------------------------------------------------------------------------------------"<<endl;
+    }
+
+    archivo.close();
+    cout << "Presione Enter para continuar...";
+    cin.ignore();
+    cin.get();
+
+}
+
 Asignacion_Maestro_curso:: Asignacion_Maestro_curso()
 {
 

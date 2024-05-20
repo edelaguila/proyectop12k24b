@@ -39,11 +39,19 @@
 		<Unit filename="include/Cursoss.h" />
 		<Unit filename="include/Facultad.h" />
 		<Unit filename="include/Login.h" />
+<<<<<<< HEAD
 		<Unit filename="include/alumnos.h" />
 		<Unit filename="include/aulas.h" />
 		<Unit filename="include/jornada.h" />
 		<Unit filename="include/maestros.h" />
 		<Unit filename="include/secciones.h" />
+=======
+		<Unit filename="include/aulas.h" />
+		<Unit filename="include/jornada.h" />
+		<Unit filename="include/notas.h" />
+		<Unit filename="include/secciones.h" />
+		<Unit filename="include/seguridad.h" />
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
 		<Unit filename="include/usuarios.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Bitacora.cpp" />
@@ -51,11 +59,19 @@
 		<Unit filename="src/Cursoss.cpp" />
 		<Unit filename="src/Facultad.cpp" />
 		<Unit filename="src/Login.cpp" />
+<<<<<<< HEAD
 		<Unit filename="src/alumnos.cpp" />
 		<Unit filename="src/aulas.cpp" />
 		<Unit filename="src/jornada.cpp" />
 		<Unit filename="src/maestros.cpp" />
 		<Unit filename="src/secciones.cpp" />
+=======
+		<Unit filename="src/aulas.cpp" />
+		<Unit filename="src/jornada.cpp" />
+		<Unit filename="src/notas.cpp" />
+		<Unit filename="src/secciones.cpp" />
+		<Unit filename="src/seguridad.cpp" />
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
 		<Unit filename="src/usuarios.cpp" />
 		<Extensions />
 	</Project>

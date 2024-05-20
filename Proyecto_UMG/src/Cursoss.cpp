@@ -1,16 +1,36 @@
+<<<<<<< HEAD
 #include "Cursoss.h"
 //Elaborado por: Alisson Rocio Lopez Ortiz 9959 - 23 - 7225
 
+=======
+//Elaborado por: Alisson Rocio Lopez Ortiz 9959 - 23 - 7225
+
+#include "Cursoss.h"
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
 #include <fstream>
 #include <iostream>
 #include<stdlib.h>
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
+<<<<<<< HEAD
+=======
+
+//Implementación de Bitácora hechar por: Pablo Romeo Palencia Rosales 9959-23-736
+#include "Bitacora.h"
+
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
 using namespace std;
 
 void CursosCRUD::CrudCursos() {
 int choice;
+<<<<<<< HEAD
+=======
+//implementacion de variables para la bitacora
+string codigoPrograma="4000";
+Bitacora Auditoria;
+string user="admin";
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
 
     do {
 	//limpiar pantalla
@@ -34,18 +54,38 @@ int choice;
     {
 	case 1:
         IngresarCa();
+<<<<<<< HEAD
+=======
+        //Se ejecuta la accion y se registra en la bitacora
+        Auditoria.ingresoBitacora(user,codigoPrograma,"CCU"); //CCU = Create Cursos
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
          system("pause");
 		break;
     case 2:
         ModificarCa();
+<<<<<<< HEAD
+=======
+         //Se ejecuta la accion y se registra en la bitacora
+        Auditoria.ingresoBitacora(user,codigoPrograma,"UCU"); //UCU = Update Cursos
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
          system("pause");
 		break;
     case 3:
         BorrarCa();
+<<<<<<< HEAD
+=======
+        //Se ejecuta la accion y se registra en la bitacora
+        Auditoria.ingresoBitacora(user,codigoPrograma,"DCU"); //DCU = Delete Cursos
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
          system("pause");
 		break;
     case 4:
         DesplegarCa();
+<<<<<<< HEAD
+=======
+        //Se ejecuta la accion y se registra en la bitacora
+        Auditoria.ingresoBitacora(user,codigoPrograma,"RCU"); //RCU = Read Cursos
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
         system("pause");
 		break;
     case 5:

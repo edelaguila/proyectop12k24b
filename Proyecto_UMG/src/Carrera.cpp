@@ -1,6 +1,12 @@
 //Aqui se encuentra el archivos de implentación de la clase CARRERA que contiene todo el codigo fuente
 //del funcionamiento del la clase
 #include "Carrera.h"
+<<<<<<< HEAD
+=======
+#include "usuarios.h"
+#include "Login.h"
+#include "Bitacora.h"
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
 #include <fstream>
 #include <iostream>
 #include<stdlib.h>
@@ -8,8 +14,17 @@
 #include<conio.h>
 #include<iomanip>
 using namespace std;
+<<<<<<< HEAD
 
 // menu CRUD de carreras
+=======
+//Carlos David calderón Ramírez      9959-23-848
+//Comentado revisado y depurado por:  Evelyn Sofía Andrade Luna   9959-23-1224
+// menu CRUD de carreras
+
+
+
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
 void CarrerasCRUD::Crudcarrera() {
 int choice;
     //int x;
@@ -56,11 +71,17 @@ int choice;
 	}
     }while(choice!= 5);
 }
+<<<<<<< HEAD
 
 // aqui se agregan carreras que son almacenadas
 
 void CarrerasCRUD::IngresarCa() {
 
+=======
+// aqui se agregan carreras que son almacenadas
+void CarrerasCRUD::IngresarCa() {
+    string codigoPrograma="3000";
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
    system("cls");
     cout<<"\n------------------------------------------------------------------------------------------------------------------------"<<endl;
     cout<<"\n-------------------------------------------------Agregar Carrera--------------------------------------------"<<endl;
@@ -79,10 +100,23 @@ void CarrerasCRUD::IngresarCa() {
     archivo.write(reinterpret_cast<const char*>(&carrera), sizeof(Carrera));
     archivo.close();
 
+<<<<<<< HEAD
+=======
+
+    Bitacora Auditoria;
+    string user,pass;
+
+    Auditoria.ingresoBitacora(user,codigoPrograma,"ICA");//ICA = Insertar Carrera
+
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
     cout << "Carrera agregada exitosamente!" << endl;
 }
 // modificar carreras
 void CarrerasCRUD::ModificarCa() {
+<<<<<<< HEAD
+=======
+    string codigoPrograma="3000";
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
     cout<<"\n------------------------------------------------------------------------------------------------------------------------"<<endl;
     cout<<"\n-------------------------------------------------Modificacion de Carreras--------------------------------------------"<<endl;
     int codigo;
@@ -116,6 +150,14 @@ void CarrerasCRUD::ModificarCa() {
 
     archivo.close();
 
+<<<<<<< HEAD
+=======
+    Bitacora Auditoria;
+    string user,pass;
+
+    Auditoria.ingresoBitacora(user,codigoPrograma,"UCA");//UCA = Update Carrera
+
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
     if (!encontrada) {
         cout << "No se encontró la carrera con el codigo ingresado." << endl;
     }
@@ -126,6 +168,10 @@ void CarrerasCRUD::ModificarCa() {
 }
 // elimina carreras que ya no deseamos que estan registradas
 void CarrerasCRUD::BorrarCa() {
+<<<<<<< HEAD
+=======
+    string codigoPrograma="3000";
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
     int codigo;
     cout<<"\n------------------------------------------------------------------------------------------------------------------------"<<endl;
     cout<<"\n-------------------------------------------------Eliminar Carreras--------------------------------------------"<<endl;
@@ -155,6 +201,15 @@ void CarrerasCRUD::BorrarCa() {
     remove("carreras.dat");
     rename("carreras_tmp.dat", "carreras.dat");
 
+<<<<<<< HEAD
+=======
+
+    Bitacora Auditoria;
+    string user,pass;
+
+    Auditoria.ingresoBitacora(user,codigoPrograma,"DCA");//DCA = Delete Carrera
+
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
     if (eliminada) {
         cout << "Carrera eliminada exitosamente!" << endl;
 
@@ -166,6 +221,10 @@ void CarrerasCRUD::BorrarCa() {
 // Nos muestra las carreras registradas
 void CarrerasCRUD::DesplegarCa() {
     system("cls");
+<<<<<<< HEAD
+=======
+    string codigoPrograma="3000";
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
     cout<<"-----------------Despliegue de carreras registradas---------------------"<<endl;
     ifstream archivo("carreras.dat", ios::binary);
     if (!archivo) {
@@ -183,6 +242,15 @@ void CarrerasCRUD::DesplegarCa() {
 
     archivo.close();
 
+<<<<<<< HEAD
+=======
+
+    Bitacora Auditoria;
+    string user,pass;
+
+    Auditoria.ingresoBitacora(user,codigoPrograma,"RCA");// RCA = Read Carrera
+
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
     cout << "Presione Enter para continuar...";
     cin.ignore();
     cin.get();

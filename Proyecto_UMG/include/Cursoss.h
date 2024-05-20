@@ -1,6 +1,13 @@
 #ifndef CURSOSS_H
 #define CURSOSS_H
+<<<<<<< HEAD
 
+=======
+#include<stdlib.h>
+#include<cstdlib>
+#include<conio.h>
+#include<iomanip>
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
 
 using namespace std;
 
@@ -20,4 +27,8 @@ public:
     void CrudCursos();
 
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
 #endif // CURSOSS_H

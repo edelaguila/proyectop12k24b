@@ -7,7 +7,11 @@
 >>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
 //Archivo de implementacion de la clase FACULTAD que contiene el funcionamiento de la clase
 #include "facultad.h"
+<<<<<<< HEAD
 #include "Login.h"
+=======
+
+>>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
 #include "Bitacora.h"
 #include "usuarios.h"
 <<<<<<< HEAD

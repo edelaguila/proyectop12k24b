@@ -5,7 +5,11 @@
 <<<<<<< HEAD
 =======
 #include "usuarios.h"
+<<<<<<< HEAD
 #include "Login.h"
+=======
+
+>>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
 #include "Bitacora.h"
 >>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
 =======

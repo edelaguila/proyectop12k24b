@@ -5,11 +5,17 @@
 #include <cstdlib>
 #include <conio.h>
 #include "usuarios.h"
-#include "Login.h"
 #include "Bitacora.h"
+<<<<<<< HEAD
 
 #include "alumnos.h"
 #include "maestros.h"
+=======
+#include "alumnos.h"
+#include "maestros.h"
+#include "login.h"
+#define MAX 80
+>>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
 
 using namespace std;
 
@@ -23,23 +29,40 @@ string codigoPrograma="1";
 Bitacora Auditoria;
 string user, contrasena;
 
+<<<<<<< HEAD
 int main()
 {
         // Llamamos al objeto e ingresamos los parametros
     Login ingreso(user, contrasena);
+=======
+int main() {
+    Login login;
+    int intentos = 0;
+    bool loginExitoso = false;
+>>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
 
-    // Creamos un bool que verifique y despliegue el metodo VerificarUsuario
-    bool UsuarioCorrecto = ingreso.VerificarUsuario();
+    do {
+    int resultadoLogin = login.menuIniciarSesion();
+    if (resultadoLogin == 1) {
+    loginExitoso = true;
+    break;
+    } else {
+    intentos++;
+    cout << "Intento fallido. Intento " << intentos << " de 3." << endl;
+    if (intentos >= 3) {
+    cout << "Demasiados intentos fallidos. Saliendo del programa."<< endl;
+    return 1; // Código de error
+    }
+    }
+    } while (!loginExitoso);
 
-    // Luego de ingresar con usuario y contraseña se nos despliega otro menu
-    if (UsuarioCorrecto)
-    {
-        menuGeneral();
+    if (loginExitoso) {
+    cout << "Inicio de sesión exitoso. Bienvenido al sistema."<< endl;
+    menuGeneral();
     }
 
     return 0;
 }
-
 void menuGeneral()
 {
     int choice;
@@ -49,7 +72,7 @@ void menuGeneral()
     {
         system("cls");
         cout << "\t\t\t-------------------------------" << endl;
-        cout << "\t\t\t|   SISTEMA DE GESTION UMG     |" << endl;
+        cout << "\t\t\t|   SISTEMA DE GESTION UMG     |"<< endl;
         cout << "\t\t\t-------------------------------" << endl;
         cout << "\t\t\t 1. Catalogos" << endl;
         cout << "\t\t\t 2. Procesos" << endl;
@@ -135,8 +158,8 @@ void catalogos()
             break;
         case 3:
         {
-            usuarios usuario;
-            usuario.menuUsuarios();
+            Usuario UsuarioS;
+            UsuarioS.menuInicial();
             break;
         }
         case 4:

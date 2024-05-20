@@ -188,7 +188,12 @@ void JornadaCRUD::Borrar() {
 //Funcion para desplegar todos los registros
 void JornadaCRUD::Desplegar() {
     system("cls");
-    cout<<"-----------------Despliegue de Jornadas registradas---------------------"<<endl;
+
+//Despliegue modificado por Alisson López 9959-23-7225
+
+    cout<<"-------DESPLIEGUE JORNADAS REGISTRADAS----"<<endl;
+    cout<<"           Codigo       Nombre             "<<endl;
+    cout<<"------------------------------------------"<<endl;
       //abre el archivo en modo lectura binaria y lee los datos del archivo
     ifstream archivo("Jornadas.DAT", ios::binary);
     if (!archivo) {
@@ -202,9 +207,9 @@ void JornadaCRUD::Desplegar() {
     while (archivo.read(reinterpret_cast<char*>(&Jornada), sizeof(Jornada))) {
 			//Imprime los registros leidos del archivo
 
-        cout << "Codigo: " << Jornada.codigo << endl;
-        cout << "Nombre: " << Jornada.nombre << endl;
-        cout << "-----------------------------" << endl;
+        cout  << setw(14)<< Jornada.codigo ;
+        cout << setw(18)<< Jornada.nombre ;
+        cout<<" "<<endl;
     }
 
     archivo.close();

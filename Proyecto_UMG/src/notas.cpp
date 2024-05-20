@@ -1,7 +1,8 @@
 
+
 //Creado por Diana Mishel Loeiza Ramírez 9959-23-3457
-//proceso notas 
-// implementacion de bitacora 
+//proceso notas
+// implementacion de bitacora
 #include "notas.h" // Inclusion del archivo de cabecera para las definiciones relacionadas con las notas
 #include "Bitacora.h" // Inclusion del archivo de cabecera para las definiciones relacionadas con la bitacora
 #include <fstream> // Inclusion de la biblioteca estandar de manejo de archivos
@@ -94,7 +95,7 @@ void NotaCrud::IngresarNota() {
     cin >> nota.np2;
     cout << "Ingrese la nota de za: "; //zona actividades
     cin >> nota.za;
-    cout << "Ingrese la nota de ef: ";
+    cout << "Ingrese la nota de ef: "; // ingreso de nota final
     cin >> nota.ef;
 
     // Calcular la nota final (NF)
@@ -162,10 +163,13 @@ void NotaCrud::ModificarNota() {
                         cout << "Opción no válida. Intente de nuevo." << endl;
                 }
             } while (opcion < 1 || opcion > 5);
+ // Calcular la nota final (NF)
+    nota.nf = nota.np1 + nota.np2 + nota.za + nota.ef;
 
             archivo.seekp(-static_cast<int>(sizeof(notas)), ios::cur); // Mover el puntero de escritura una posicion antes del registro actual
             archivo.write(reinterpret_cast<const char*>(&nota), sizeof(notas)); // Sobrescribir el registro actual con la nueva nota
             break; // Salir del bucle después de modificar la nota
+
         }
     }
 

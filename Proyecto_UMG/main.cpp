@@ -5,11 +5,11 @@
 #include <cstdlib>
 #include <conio.h>
 #include "usuarios.h"
-#include "Login.h"
 #include "Bitacora.h"
-#include "maestros.h"
 #include "alumnos.h"
-
+#include "maestros.h"
+#include "login.h"
+#define MAX 80
 
 using namespace std;
 
@@ -23,23 +23,33 @@ string codigoPrograma="1";
 Bitacora Auditoria;
 string user, contrasena;
 
-int main()
-{
-    // Llamamos al objeto e ingresamos los parametros
-    Login ingreso(user, contrasena);
+int main() {
+    Login login;
+    int intentos = 0;
+    bool loginExitoso = false;
 
-    // Creamos un bool que verifique y despliegue el metodo VerificarUsuario
-    bool UsuarioCorrecto = ingreso.VerificarUsuario();
+    do {
+    int resultadoLogin = login.menuIniciarSesion();
+    if (resultadoLogin == 1) {
+    loginExitoso = true;
+    break;
+    } else {
+    intentos++;
+    cout << "Intento fallido. Intento " << intentos << " de 3." << endl;
+    if (intentos >= 3) {
+    cout << "Demasiados intentos fallidos. Saliendo del programa."<< endl;
+    return 1; // Código de error
+    }
+    }
+    } while (!loginExitoso);
 
-    // Luego de ingresar con usuario y contraseña se nos despliega otro menu
-    if (UsuarioCorrecto)
-    {
-        menuGeneral();
+    if (loginExitoso) {
+    cout << "Inicio de sesión exitoso. Bienvenido al sistema."<< endl;
+    menuGeneral();
     }
 
     return 0;
 }
-
 void menuGeneral()
 {
     int choice;
@@ -49,7 +59,7 @@ void menuGeneral()
     {
         system("cls");
         cout << "\t\t\t-------------------------------" << endl;
-        cout << "\t\t\t|   SISTEMA DE GESTION UMG     |" << endl;
+        cout << "\t\t\t|   SISTEMA DE GESTION UMG     |"<< endl;
         cout << "\t\t\t-------------------------------" << endl;
         cout << "\t\t\t 1. Catalogos" << endl;
         cout << "\t\t\t 2. Procesos" << endl;
@@ -75,18 +85,13 @@ void menuGeneral()
             reportes();
             break;
         case 4:
-             {
-                Bitacora Bitacora;
-           Bitacora.visualizarBitacora();
-            break;
-        }
             seguridad();
             break;
         case 5:
             ayuda();
             break;
         case 6:
-            Auditoria.ingresoBitacora(user,codigoPrograma,"LGO");//llamada para registrar la bitacora de seguridad
+                    Auditoria.ingresoBitacora(user,codigoPrograma,"LGO"); //llamada para registrar la bitacora de seguridad
             exit(0);
         default:
             cout << "\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
@@ -128,22 +133,20 @@ void catalogos()
         {
         case 1:
         {
-            alumnos alumnos;
-            alumnos.menu();
-            break;
+            alumnos alumno;
+            alumno.menu();
         }
-
-
-        case 2:
-         /*{
-        maestros maestro;
-        maestro.menu();
             break;
-        }*/
+        case 2:
+        {
+            maestros maestro;
+            maestro.menu();
+        }
+            break;
         case 3:
         {
-            usuarios usuario;
-            usuario.menuUsuarios();
+            Usuario UsuarioS;
+            UsuarioS.menuInicial();
             break;
         }
         case 4:

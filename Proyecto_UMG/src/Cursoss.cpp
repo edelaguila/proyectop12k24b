@@ -1,16 +1,24 @@
-#include "Cursoss.h"
 //Elaborado por: Alisson Rocio Lopez Ortiz 9959 - 23 - 7225
 
+#include "Cursoss.h"
 #include <fstream>
 #include <iostream>
 #include<stdlib.h>
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
+
+//Implementación de Bitácora hechar por: Pablo Romeo Palencia Rosales 9959-23-736
+#include "Bitacora.h"
+
 using namespace std;
 
 void CursosCRUD::CrudCursos() {
 int choice;
+//implementacion de variables para la bitacora
+string codigoPrograma="4000";
+Bitacora Auditoria;
+string user="admin";
 
     do {
 	//limpiar pantalla
@@ -34,18 +42,26 @@ int choice;
     {
 	case 1:
         IngresarCa();
+        //Se ejecuta la accion y se registra en la bitacora
+        Auditoria.ingresoBitacora(user,codigoPrograma,"CCU"); //CCU = Create Cursos
          system("pause");
 		break;
     case 2:
         ModificarCa();
+         //Se ejecuta la accion y se registra en la bitacora
+        Auditoria.ingresoBitacora(user,codigoPrograma,"UCU"); //UCU = Update Cursos
          system("pause");
 		break;
     case 3:
         BorrarCa();
+        //Se ejecuta la accion y se registra en la bitacora
+        Auditoria.ingresoBitacora(user,codigoPrograma,"DCU"); //DCU = Delete Cursos
          system("pause");
 		break;
     case 4:
         DesplegarCa();
+        //Se ejecuta la accion y se registra en la bitacora
+        Auditoria.ingresoBitacora(user,codigoPrograma,"RCU"); //RCU = Read Cursos
         system("pause");
 		break;
     case 5:

@@ -1,6 +1,9 @@
 //Aqui se encuentra el archivos de implentación de la clase CARRERA que contiene todo el codigo fuente
 //del funcionamiento del la clase
 #include "Carrera.h"
+#include "usuarios.h"
+
+#include "Bitacora.h"
 #include <fstream>
 #include <iostream>
 #include<stdlib.h>
@@ -8,8 +11,12 @@
 #include<conio.h>
 #include<iomanip>
 using namespace std;
-
+//Carlos David calderón Ramírez      9959-23-848
+//Comentado revisado y depurado por:  Evelyn Sofía Andrade Luna   9959-23-1224
 // menu CRUD de carreras
+
+
+
 void CarrerasCRUD::Crudcarrera() {
 int choice;
     //int x;
@@ -56,11 +63,9 @@ int choice;
 	}
     }while(choice!= 5);
 }
-
 // aqui se agregan carreras que son almacenadas
-
 void CarrerasCRUD::IngresarCa() {
-
+    string codigoPrograma="3000";
    system("cls");
     cout<<"\n------------------------------------------------------------------------------------------------------------------------"<<endl;
     cout<<"\n-------------------------------------------------Agregar Carrera--------------------------------------------"<<endl;
@@ -79,10 +84,17 @@ void CarrerasCRUD::IngresarCa() {
     archivo.write(reinterpret_cast<const char*>(&carrera), sizeof(Carrera));
     archivo.close();
 
+
+    Bitacora Auditoria;
+    string user,pass;
+
+    Auditoria.ingresoBitacora(user,codigoPrograma,"ICA");//ICA = Insertar Carrera
+
     cout << "Carrera agregada exitosamente!" << endl;
 }
 // modificar carreras
 void CarrerasCRUD::ModificarCa() {
+    string codigoPrograma="3000";
     cout<<"\n------------------------------------------------------------------------------------------------------------------------"<<endl;
     cout<<"\n-------------------------------------------------Modificacion de Carreras--------------------------------------------"<<endl;
     int codigo;
@@ -116,6 +128,11 @@ void CarrerasCRUD::ModificarCa() {
 
     archivo.close();
 
+    Bitacora Auditoria;
+    string user,pass;
+
+    Auditoria.ingresoBitacora(user,codigoPrograma,"UCA");//UCA = Update Carrera
+
     if (!encontrada) {
         cout << "No se encontró la carrera con el codigo ingresado." << endl;
     }
@@ -126,6 +143,7 @@ void CarrerasCRUD::ModificarCa() {
 }
 // elimina carreras que ya no deseamos que estan registradas
 void CarrerasCRUD::BorrarCa() {
+    string codigoPrograma="3000";
     int codigo;
     cout<<"\n------------------------------------------------------------------------------------------------------------------------"<<endl;
     cout<<"\n-------------------------------------------------Eliminar Carreras--------------------------------------------"<<endl;
@@ -155,6 +173,12 @@ void CarrerasCRUD::BorrarCa() {
     remove("carreras.dat");
     rename("carreras_tmp.dat", "carreras.dat");
 
+
+    Bitacora Auditoria;
+    string user,pass;
+
+    Auditoria.ingresoBitacora(user,codigoPrograma,"DCA");//DCA = Delete Carrera
+
     if (eliminada) {
         cout << "Carrera eliminada exitosamente!" << endl;
 
@@ -166,6 +190,7 @@ void CarrerasCRUD::BorrarCa() {
 // Nos muestra las carreras registradas
 void CarrerasCRUD::DesplegarCa() {
     system("cls");
+    string codigoPrograma="3000";
     cout<<"-----------------Despliegue de carreras registradas---------------------"<<endl;
     ifstream archivo("carreras.dat", ios::binary);
     if (!archivo) {
@@ -182,6 +207,12 @@ void CarrerasCRUD::DesplegarCa() {
     }
 
     archivo.close();
+
+
+    Bitacora Auditoria;
+    string user,pass;
+
+    Auditoria.ingresoBitacora(user,codigoPrograma,"RCA");// RCA = Read Carrera
 
     cout << "Presione Enter para continuar...";
     cin.ignore();

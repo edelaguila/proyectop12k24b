@@ -204,7 +204,12 @@ void CursosCRUD::BorrarCa() {
 
 void CursosCRUD::DesplegarCa() {
     system("cls");
-    cout<<"-----------------Despliegue de Cursoss registradas---------------------"<<endl;
+
+    cout<<"------------------------DESPLIEGUE DE CURSOS---------------------"<<endl;
+    cout<<" Codigo      Nombre del Curso        Creditos         Requisitos "<<endl;
+    cout<<"-----------------------------------------------------------------"<<endl;
+
+
    //abre el archivo en modo lectura binaria y lee los datos del archivo
     ifstream archivo("Cursoss.DAT", ios::binary);
     if (!archivo) {
@@ -216,11 +221,12 @@ void CursosCRUD::DesplegarCa() {
     //lee de forma repetida cada registro del archivo hasta que no haya mas registros
     while (archivo.read(reinterpret_cast<char*>(&Curso), sizeof(Curso))) {
 		//Imprime los registros leidos del archivo
-        cout << "Codigo: " << Curso.codigo << endl;
-        cout << "Nombre: " << Curso.nombre << endl;
-        cout << "Creditos: " << Curso.Creditos << endl;
-        cout << "Requisitos: " << Curso.requisitos << endl;
-        cout << "-----------------------------" << endl;
+
+		cout << setw(5)<< Curso.codigo;
+        cout << setw(20)<< Curso.nombre;
+        cout  << setw(16)<< Curso.Creditos ;
+        cout << setw(20)<< Curso.requisitos ;
+        cout<<" "<<endl;
     }
 
     archivo.close();

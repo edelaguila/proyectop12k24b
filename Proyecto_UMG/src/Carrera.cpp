@@ -1,4 +1,4 @@
-//Aqui se encuentra el archivos de implentaciï¿½n de la clase CARRERA que contiene todo el codigo fuente
+//Aqui se encuentra el archivos de implentación de la clase CARRERA que contiene todo el codigo fuente
 //del funcionamiento del la clase
 #include "Carrera.h"
 #include "usuarios.h"
@@ -11,8 +11,8 @@
 #include<conio.h>
 #include<iomanip>
 using namespace std;
-//Elaboracion de CRUD y Bitacora: Carlos David calderï¿½n Ramï¿½rez      9959-23-848
-//Comentado revisado y depurado por:  Evelyn Sofï¿½a Andrade Luna   9959-23-1224
+//Elaboracion de CRUD y Bitacora: Carlos David calderón Ramírez      9959-23-848
+//Comentado revisado y depurado por:  Evelyn Sofía Andrade Luna   9959-23-1224
 // menu CRUD de carreras
 
 
@@ -64,11 +64,10 @@ int choice;
     }while(choice!= 5);
 }
 
-//Funciï¿½n que valida si ya existe la carrera para evitar redundancia de datos
+//Función que valida si ya existe la carrera para evitar redundancia de datos
  bool CarrerasCRUD::ValidarCA(int codigo){
         fstream archivo("carreras.dat", ios::binary | ios::in | ios::out);
         if (!archivo) {
-            
             return false;
         }
 
@@ -161,7 +160,7 @@ void CarrerasCRUD::ModificarCa() {
     Auditoria.ingresoBitacora(user,codigoPrograma,"UCA");//UCA = Update Carrera
 
     if (!encontrada) {
-        cout << "No se encontrï¿½ la carrera con el codigo ingresado." << endl;
+        cout << "No se encontró la carrera con el codigo ingresado." << endl;
     }
     else {
         cout << "Carrera modificada exitosamente!" << endl;
@@ -210,7 +209,7 @@ void CarrerasCRUD::BorrarCa() {
         cout << "Carrera eliminada exitosamente!" << endl;
 
     } else {
-        cout << "No se encontrï¿½ la carrera con el codigo ingresado." << endl;
+        cout << "No se encontró la carrera con el codigo ingresado." << endl;
     }
 
 }
@@ -245,3 +244,4 @@ void CarrerasCRUD::DesplegarCa() {
     cin.ignore();
     cin.get();
 }
+

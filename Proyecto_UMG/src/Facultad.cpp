@@ -11,7 +11,7 @@
 #include <iomanip>
 //Elaborado por: Lourdes Isabel Melendez Pineda 9959-23-1379
 //Comentado, Depurado y revisado por: Josue Daniel Villagran Pinto 9490-11-17319
-//Implementacion de bitacora: Evelyn Sofï¿½a Andrade Luna   9959-23-1224
+//Implementacion de bitacora: Evelyn Sofía Andrade Luna   9959-23-1224
 using namespace std;
 // CRUD de la clase
 void FacultadCRUD::Crudfacultad() {
@@ -57,7 +57,7 @@ void FacultadCRUD::Crudfacultad() {
     } while (choice != 5);
 }
 
-//Funciï¿½n que valida si ya existe la facultad para evitar redundancia de datos
+//Función que valida si ya existe la facultad para evitar redundancia de datos
  bool FacultadCRUD::ValidarFA(int codigo){
         fstream archivo("facultad.dat", ios::binary | ios::in | ios::out);
         if (!archivo) {
@@ -148,7 +148,7 @@ void FacultadCRUD::ModificarFa() {
 //-----------------------------------------------------------------------------------------
     // nos indica si no se encontro la facultad por si no esta registrada
     if (!encontrada) {
-        cout << "No se encontrï¿½ la facultad con el codigo ingresado." << endl;
+        cout << "No se encontró la facultad con el codigo ingresado." << endl;
     } else {
         cout << "Facultad modificada exitosamente!" << endl;
     }
@@ -194,7 +194,7 @@ void FacultadCRUD::BorrarFa() {
     if (eliminada) {
         cout << "Facultad eliminada exitosamente!" << endl;
     } else {
-        cout << "No se encontrï¿½ la facultad con el codigo ingresado." << endl;
+        cout << "No se encontró la facultad con el codigo ingresado." << endl;
     }
 }
 // nos muestra un reporte de las facultades que estan registradas

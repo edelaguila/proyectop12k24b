@@ -11,6 +11,7 @@
 #include <iomanip>
 //Elaborado por: Lourdes Isabel Melendez Pineda 9959-23-1379
 //Comentado, Depurado y revisado por: Josue Daniel Villagran Pinto 9490-11-17319
+//Implementacion de bitacora: Evelyn Sofía Andrade Luna   9959-23-1224
 using namespace std;
 // CRUD de la clase
 void FacultadCRUD::Crudfacultad() {
@@ -55,6 +56,27 @@ void FacultadCRUD::Crudfacultad() {
         }
     } while (choice != 5);
 }
+
+//Función que valida si ya existe la facultad para evitar redundancia de datos
+ bool FacultadCRUD::ValidarFA(int codigo){
+        fstream archivo("facultad.dat", ios::binary | ios::in | ios::out);
+        if (!archivo) {
+            return false;
+        }
+        Facultad facultad;
+        bool encontrada = false;
+        while (archivo.read(reinterpret_cast<char*>(&facultad), sizeof(Facultad))) {
+            if (facultad.codigo == codigo) {
+
+                encontrada = true;
+                break;
+            }
+        }
+
+        archivo.close();
+
+       return encontrada;
+}
 // en esta parte de codigo nos permite agregar Facultades
 void FacultadCRUD::IngresarFa() {
     string codigoPrograma="3001";
@@ -65,6 +87,12 @@ void FacultadCRUD::IngresarFa() {
     cout << "Ingrese el codigo de la facultad: ";
     cin >> facultad.codigo;
     cin.ignore();
+
+    if (ValidarFA(facultad.codigo)){
+        system("cls");
+        cout << "El codigo de la facultad que desea crear ya existe!!" << endl << endl<< endl<< endl;
+        return;
+    }
 
     cout << "Ingrese el nombre de la Facultad: ";
     cin.getline(facultad.nombre, 50);

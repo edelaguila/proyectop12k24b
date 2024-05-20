@@ -6,16 +6,15 @@
 #include <conio.h>
 #include "usuarios.h"
 #include "Bitacora.h"
-<<<<<<< HEAD
+
 
 #include "alumnos.h"
 #include "maestros.h"
-=======
 #include "alumnos.h"
 #include "maestros.h"
 #include "login.h"
 #define MAX 80
->>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
+
 
 using namespace std;
 
@@ -29,17 +28,17 @@ string codigoPrograma="1";
 Bitacora Auditoria;
 string user, contrasena;
 
-<<<<<<< HEAD
+
 int main()
 {
         // Llamamos al objeto e ingresamos los parametros
     Login ingreso(user, contrasena);
-=======
+
 int main() {
     Login login;
     int intentos = 0;
     bool loginExitoso = false;
->>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
+
 
     do {
     int resultadoLogin = login.menuIniciarSesion();

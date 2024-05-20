@@ -38,46 +38,15 @@
 		<Unit filename="include/Carrera.h" />
 		<Unit filename="include/Cursoss.h" />
 		<Unit filename="include/Facultad.h" />
-<<<<<<< HEAD
 		<Unit filename="include/Login.h" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
-=======
->>>>>>> 3febf5a7795344e5bfcdfd6889a1a8a95340f389
 		<Unit filename="include/alumnos.h" />
 		<Unit filename="include/aulas.h" />
 		<Unit filename="include/jornada.h" />
-		<Unit filename="include/login.h" />
 		<Unit filename="include/maestros.h" />
-<<<<<<< HEAD
-		<Unit filename="include/secciones.h" />
-=======
-		<Unit filename="include/aulas.h" />
-		<Unit filename="include/jornada.h" />
 		<Unit filename="include/notas.h" />
 		<Unit filename="include/secciones.h" />
 		<Unit filename="include/seguridad.h" />
->>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
-=======
-		<Unit filename="include/notas.h" />
-		<Unit filename="include/secciones.h" />
-		<Unit filename="include/seguridad.h" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-		<Unit filename="include/u_maestros.h" />
 		<Unit filename="include/usualumnos.h" />
->>>>>>> f50158bc289da4041c6456a55d8d308200a34085
-<<<<<<< HEAD
->>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
-=======
-=======
-		<Unit filename="include/u_maestros.h" />
-		<Unit filename="include/usualumnos.h" />
->>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
->>>>>>> 3febf5a7795344e5bfcdfd6889a1a8a95340f389
 		<Unit filename="include/usuarios.h" />
 		<Unit filename="include/usumaestros.h" />
 		<Unit filename="main.cpp" />
@@ -85,46 +54,15 @@
 		<Unit filename="src/Carrera.cpp" />
 		<Unit filename="src/Cursoss.cpp" />
 		<Unit filename="src/Facultad.cpp" />
-<<<<<<< HEAD
 		<Unit filename="src/Login.cpp" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
-=======
->>>>>>> 3febf5a7795344e5bfcdfd6889a1a8a95340f389
 		<Unit filename="src/alumnos.cpp" />
 		<Unit filename="src/aulas.cpp" />
 		<Unit filename="src/jornada.cpp" />
-		<Unit filename="src/login.cpp" />
 		<Unit filename="src/maestros.cpp" />
-<<<<<<< HEAD
-		<Unit filename="src/secciones.cpp" />
-=======
-		<Unit filename="src/aulas.cpp" />
-		<Unit filename="src/jornada.cpp" />
 		<Unit filename="src/notas.cpp" />
 		<Unit filename="src/secciones.cpp" />
 		<Unit filename="src/seguridad.cpp" />
->>>>>>> 7fee22e7c1a780459548acc106d5712411a3308b
-=======
-		<Unit filename="src/notas.cpp" />
-		<Unit filename="src/secciones.cpp" />
-		<Unit filename="src/seguridad.cpp" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-		<Unit filename="src/u_maestros.cpp" />
 		<Unit filename="src/usualumnos.cpp" />
->>>>>>> f50158bc289da4041c6456a55d8d308200a34085
-<<<<<<< HEAD
->>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
-=======
-=======
-		<Unit filename="src/u_maestros.cpp" />
-		<Unit filename="src/usualumnos.cpp" />
->>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
->>>>>>> 3febf5a7795344e5bfcdfd6889a1a8a95340f389
 		<Unit filename="src/usuarios.cpp" />
 		<Unit filename="src/usumaestros.cpp" />
 		<Extensions />

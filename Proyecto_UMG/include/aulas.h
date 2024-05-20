@@ -2,8 +2,7 @@
 #ifndef AULAS_H
 #define AULAS_H
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 #include<stdlib.h>
 #include<cstdlib>
 #include<conio.h>
@@ -22,9 +21,7 @@ struct aulas
 class AulasCRUD
 {
     public:
-=======
-=======
->>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
+
 #include<stdlib.h>// Incluye funciones para el manejo de memoria dinamica, control de procesos y conversiones de cadena.
 #include<cstdlib>// Incluye funciones para el control de procesos y conversiones de cadena.
 #include<conio.h>// Incluye funciones para el manejo de la consola.

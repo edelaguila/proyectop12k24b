@@ -10,7 +10,7 @@ extern char linea[];
 class Usuario {
 private:
 
-<<<<<<< HEAD
+
 class usuarios
 {
     public:
@@ -46,8 +46,8 @@ class usuarios
 		string id;
 		string name;
 		string pass;
-=======
->>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
+
+
 
 public:
     char nombre[MAX];

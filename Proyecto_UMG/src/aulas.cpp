@@ -1,6 +1,5 @@
 //Creado por Rocio Guisell Lopez espinoza 9959-23-740
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 #include "aulas.h"
 
 =======

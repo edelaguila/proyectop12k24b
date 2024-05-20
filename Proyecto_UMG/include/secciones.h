@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 //Creado por Rocio Guisell Lopez espinoza 9959-23-740
 #ifndef SECCIONES_H
 #define SECCIONES_H
 
-=======
-=======
->>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
+
 // Creado por Rocio Guisell Lopez espinoza 9959-23-740
 
 // Comprueba si SECCIONES_H ya ha sido definido, si no, lo define

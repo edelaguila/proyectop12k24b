@@ -4,21 +4,19 @@
 #include <conio.h>
 #include "usuarios.h"
 #include "usualumnos.h"
-<<<<<<< HEAD
 #include<fstream>
 #include<cstdlib>
 #include<conio.h>
 #include<iostream>
 #define USER "usuario"
 #define PASS "1234"
-=======
 #include "usumaestros.h"
 #define MAX 80
 #define ARCHIVO_USUARIOS "usuarios.dat"
 #define TECLA_ENTER 13
 #define TECLA_BACKSPACE 8
 #define MAX_INTENTOS 3
->>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
+
 
 #include "usumaestros.h"
 
@@ -32,28 +30,26 @@ void Usuario::menuInicial() {
         usualumnos Ualumnos;
         usumaestros Umaestros;
 
-<<<<<<< HEAD
+
 usuarios::~usuarios()
 {
     //dtor
 }
 
 void usuarios::menuUsuarios(){
-<<<<<<< HEAD
+
 
 
 string codigoPrograma="2834";
 Bitacora Auditoria;
 string user, contrasena;
             Auditoria.ingresoBitacora(user,codigoPrograma,"USER");
-=======
->>>>>>> 678481e7b31f256476f53bd40df483d8780d6b84
+
 
 int choice;
-=======
->>>>>>> 3febf5a7795344e5bfcdfd6889a1a8a95340f389
+
     do {
-<<<<<<< HEAD
+
     char x;
 	system("cls");
 	cout<<"\t\t\t-------------------------------------------------------"<<endl;
@@ -104,7 +100,7 @@ int choice;
 }
 bool usuarios::buscar(string user, string passw)
 {
-=======
+
         system("cls");
         printf("\n\t\t\tMENU INICIAL\n");
         printf("\t\t\t============\n");
@@ -121,7 +117,7 @@ bool usuarios::buscar(string user, string passw)
             case 1:
                 menuListarUsuarios();
                 break;
->>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
+
 
             case 2:
                 menuRegistrarUsuario();

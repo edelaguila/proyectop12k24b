@@ -1,5 +1,3 @@
-//Ruddyard Eduardo Castro Chavez 9959-23-1409
-
 #ifndef MENUINGRESOALUMNO_H
 #define MENUINGRESOALUMNO_H
 

@@ -9,6 +9,9 @@
 #include<conio.h>
 #include<iomanip>
 #include<string>
+#include <unistd.h>
+
+
 
 //incluyendo el encabezado maestros
 #include "maestros.h"

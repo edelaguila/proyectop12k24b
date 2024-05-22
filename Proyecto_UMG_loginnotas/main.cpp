@@ -9,6 +9,8 @@
 #include "Bitacora.h"
 #include "notas.h"
 #include "loginNotas.h"
+#include "alumnos.h"
+#include "maestros.h"
 
 using namespace std;
 
@@ -98,8 +100,14 @@ void catalogos()
     {
         system("cls");
         cout << "\t\t\t--------------------------------------------" << endl;
-        cout << "\t\t\t|   SISTEMA DE GESTION UMG - CATALOGOS      |" << endl;
+        cout << "\t\t\t|   SISTEMA DE maestro    |" << endl;
         cout << "\t\t\t--------------------------------------------" << endl;
+       // cout <<"        ingresar nota de clase:";
+        //crear un archvo dat, pragramacion
+
+
+
+
         cout << "\t\t\t 1. Alumnos" << endl;
         cout << "\t\t\t 2. Maestros" << endl;
         cout << "\t\t\t 3. Usuarios del sistema" << endl;
@@ -122,9 +130,12 @@ void catalogos()
         {
         case 1:
             // Implementación para Alumnos
+
+
             break;
         case 2:
             // Implementación para Maestros
+
             break;
         case 3:
         {
@@ -146,8 +157,7 @@ void catalogos()
             break;
         case 8:
             // Implementación para Aulas
-             loginNotas l;
-            l.menuGeneralNotas();
+
 
             break;
         case 9:
@@ -173,6 +183,8 @@ void catalogos()
 void procesos()
 {
     // Implementación de procesos
+      loginNotas l;
+            l.menuGeneralNotas();
 }
 
 void reportes()

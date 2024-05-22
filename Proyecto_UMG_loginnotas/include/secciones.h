@@ -1,4 +1,4 @@
-// Creado por Rocio Guisell Lopez espinoza 9959-23-740
+// Creado por Meilyn Juleisy García Lima 9959-23-17838
 
 // Comprueba si SECCIONES_H ya ha sido definido, si no, lo define
 #ifndef SECCIONES_H

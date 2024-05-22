@@ -1,4 +1,3 @@
-// By Ruddyard Eduardo Castro Chavez 9959-23-1409
 #include "loginNotas.h"
 #include "menuIngresoAlumno.h"
 #include "menuIngresoMaestro.h"
@@ -57,7 +56,7 @@ void loginNotas::menuGeneralNotasAlumno(){
 }
 void loginNotas::menuGeneralNotasMaestro(){
 
-            menuIngresoAlumno im;
+            menuIngresoMaestro im;
             im.VerificarCarnet();
 
 

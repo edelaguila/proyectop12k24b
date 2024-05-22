@@ -1,4 +1,5 @@
-//Creado por Rocio Guisell Lopez espinoza 9959-23-740
+//Creado por Meilyn Juleisy García Lima 9959-23-17838
+
 #ifndef AULAS_H
 #define AULAS_H
 

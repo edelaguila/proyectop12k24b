@@ -1,0 +1,3 @@
+luis     	DerechoPenal          Historia              Contabilidad
+juanito 	ProgramacionII        Matematicas           ContabilidadII
+valeria 	ProgramacionI	      Matematicas 	        Contabilidad

@@ -56,6 +56,8 @@ bool Login::VerificarUsuario()
     cout <<"\t\t\t+-----------------------------------+"<<endl;
     cout <<"\t\t\tIngrese el nombre de usuario: ";
     cin >> usuario;
+
+
     cout <<"\t\t\tIngrese la contrasena: ";
     char caracter;
     caracter = getch();

@@ -1,3 +1,5 @@
+//By Ruddyard Eduardo Castro Chavez
+
 #ifndef MENUINGRESOALUMNO_H
 #define MENUINGRESOALUMNO_H
 

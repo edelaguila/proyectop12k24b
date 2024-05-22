@@ -1,3 +1,5 @@
+//By Ruddyard Eduardo Castro Chavez
+
 #include "menuIngresoAlumno.h"
 #include<iostream>
 #include<fstream>

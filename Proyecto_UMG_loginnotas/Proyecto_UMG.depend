@@ -2776,3 +2776,336 @@
 	"notas.h"
 	"Bitacora.h"
 
+1716391671 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\main.cpp
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	"usuarios.h"
+	"Login.h"
+	"Bitacora.h"
+	"notas.h"
+	"loginNotas.h"
+	"alumnos.h"
+	"maestros.h"
+
+1715541234 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\usuarios.h
+	<iostream>
+
+1715541234 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\login.h
+	<iostream>
+	<fstream>
+	<string>
+
+1715541234 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\bitacora.h
+	<iostream>
+
+1716167857 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\notas.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716256893 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\loginnotas.h
+	<iostream>
+	<fstream>
+	<string>
+
+1716178966 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\alumnos.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716178966 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716178966 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\alumnos.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	"alumnos.h"
+	"Bitacora.h"
+
+1716178966 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\asigcursos_alumnos.cpp
+	"AsigCursos_Alumnos.h"
+	"Login_Alumno.h"
+	"Carrera.h"
+	"aulas.h"
+	"secciones.h"
+	"Facultad.h"
+	"Cursoss.h"
+	"jornada.h"
+	"catalogo.h"
+	"alumnos.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<cstring>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1716178966 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\asigcursos_alumnos.h
+	<iostream>
+	<fstream>
+	<string>
+	<cstring>
+
+1716178966 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\login_alumno.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715811106 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\carrera.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716391357 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\aulas.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716391357 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\secciones.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715811106 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\facultad.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715811106 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\cursoss.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715811106 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\jornada.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716178966 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\catalogo.h
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"alumnos.h"
+
+1715812223 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\aulas.cpp
+	"aulas.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Bitacora.h"
+
+1715541234 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\bitacora.cpp
+	"Bitacora.h"
+	<iostream>
+	<fstream>
+	<conio.h>
+	<ctime>
+	<stdlib.h>
+	<iomanip>
+
+1715811106 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\carrera.cpp
+	"Carrera.h"
+	"usuarios.h"
+	"Login.h"
+	"Bitacora.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716178966 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\catalogo.cpp
+	"catalogo.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<vector>
+
+1715811106 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\cursoss.cpp
+	"Cursoss.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Bitacora.h"
+
+1715811106 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\facultad.cpp
+	"facultad.h"
+	"Login.h"
+	"Bitacora.h"
+	"usuarios.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715811106 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\jornada.cpp
+	"jornada.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Bitacora.h"
+
+1716320083 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\login.cpp
+	"Login.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Bitacora.h"
+
+1716178966 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\login_alumno.cpp
+	"Login_Alumno.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716331061 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\loginnotas.cpp
+	"loginNotas.h"
+	"menuIngresoAlumno.h"
+	"menuIngresoMaestro.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"notas.h"
+
+1716396247 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\menuingresoalumno.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716396273 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\menuingresomaestro.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716313903 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\maestros.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<unistd.h>
+	"maestros.h"
+	"Bitacora.h"
+
+1716258572 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\menugeneralnotasalumno.cpp
+	"menuGeneralNotasAlumno.h"
+
+1716258570 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\menugeneralnotasalumno.h
+	<iostream>
+	<fstream>
+	<string>
+
+1716177978 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\notas.cpp
+	"notas.h"
+	"Bitacora.h"
+	<fstream>
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	<cstdio>
+
+1715812223 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\secciones.cpp
+	"secciones.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Bitacora.h"
+
+1715541234 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\seguridad.cpp
+	"seguridad.h"
+
+1715541234 c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\include\seguridad.h
+
+1715541234 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+
+1716396260 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\menuingresoalumno.cpp
+	"menuIngresoAlumno.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"notas.h"
+	"Bitacora.h"
+
+1716396272 source:c:\users\ruddyard\desktop\2024\progra i\sistema_umgb\proyectop12k24b\proyecto_umg_loginnotas\src\menuingresomaestro.cpp
+	"menuIngresoMaestro.h"
+	<vector>
+	<iostream>
+	<fstream>
+	<sstream>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"notas.h"
+	"Bitacora.h"
+

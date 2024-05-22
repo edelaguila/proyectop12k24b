@@ -3,6 +3,14 @@
 #ifndef HORARIOS_H
 #define HORARIOS_H
 
+// La estructura Horario representa un horario con un identificador, nombre y descripción.
+struct Horario {
+        char id[11];       // Identificador del horario.
+        char nombre[11];   // Nombre del horario.
+        char Jornada [11];
+        char Horario[11];  // Descripción del horario.
+    };
+
 // La clase Horarios maneja operaciones relacionadas con horarios.
 class Horarios {
 public:
@@ -20,15 +28,6 @@ public:
 
     // Borra un horario existente.
     void borrar();
-
-private:
-    // La estructura Horario representa un horario con un identificador, nombre y descripción.
-    struct Horario {
-        char id[11];       // Identificador del horario.
-        char nombre[11];   // Nombre del horario.
-        char Jornada [11];
-        char Horario[11];  // Descripción del horario.
-    };
 
     Horario horario;  // Instancia de la estructura Horario.
 };

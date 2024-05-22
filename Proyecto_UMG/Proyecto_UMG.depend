@@ -1254,3 +1254,190 @@
 
 1716267644 c:\users\pc\documents\proyecto final ing programacion\proyectop12k24b\proyecto_umg\include\seguridad.h
 
+1716270996 source:c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\main.cpp
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	"usuarios.h"
+	"Login.h"
+	"Bitacora.h"
+	"alumnos.h"
+	"maestros.h"
+
+1716270996 c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\include\usuarios.h
+	<iostream>
+
+1716270996 c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\include\login.h
+	<iostream>
+	<fstream>
+	<string>
+
+1716270996 c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\include\bitacora.h
+	<iostream>
+
+1716270996 c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\include\alumnos.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716270996 c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716270996 source:c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+
+1716270996 source:c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\src\alumnos.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	"alumnos.h"
+	"Bitacora.h"
+
+1716270996 source:c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\src\asignacion_maestro_curso.cpp
+	"Asignacion_Maestro_curso.h"
+	"login_catedratico.h"
+	"aulas.h"
+	"secciones.h"
+	"Facultad.h"
+	"Carrera.h"
+	"Cursoss.h"
+	"jornada.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716270996 c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\include\asignacion_maestro_curso.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716270996 c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\include\login_catedratico.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716270996 c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\include\aulas.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716270996 c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\include\secciones.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716270996 c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\include\facultad.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716270996 c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\include\carrera.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716270996 c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\include\cursoss.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716270996 c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\include\jornada.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716270996 source:c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\src\aulas.cpp
+	"aulas.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Bitacora.h"
+
+1716270996 source:c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\src\bitacora.cpp
+	"Bitacora.h"
+	<iostream>
+	<fstream>
+	<conio.h>
+	<ctime>
+	<stdlib.h>
+	<iomanip>
+
+1716270996 source:c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\src\carrera.cpp
+	"Carrera.h"
+	"usuarios.h"
+	"Login.h"
+	"Bitacora.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1716270996 source:c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\src\colegiatura.cpp
+	"colegiatura.h"
+	<fstream>
+	<iomanip>
+	<ctime>
+	<cstdlib>
+	<sstream>
+
+1716270996 c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\include\colegiatura.h
+	<iostream>
+
+1716270996 source:c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\src\cursoss.cpp
+	"Cursoss.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"Bitacora.h"
+
+1716270996 source:c:\users\c2307\desktop\repositorio github\proyectop12k24b\proyecto_umg\src\facultad.cpp
+	"facultad.h"
+	"Login.h"
+	"Bitacora.h"
+	"usuarios.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+

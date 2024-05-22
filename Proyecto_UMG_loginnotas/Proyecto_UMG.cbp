@@ -42,7 +42,6 @@
 		<Unit filename="include/aulas.h" />
 		<Unit filename="include/jornada.h" />
 		<Unit filename="include/loginNotas.h" />
-		<Unit filename="include/menuGeneralNotasAlumno.h" />
 		<Unit filename="include/menuIngresoAlumno.h" />
 		<Unit filename="include/menuIngresoMaestro.h" />
 		<Unit filename="include/notas.h" />
@@ -58,7 +57,6 @@
 		<Unit filename="src/aulas.cpp" />
 		<Unit filename="src/jornada.cpp" />
 		<Unit filename="src/loginNotas.cpp" />
-		<Unit filename="src/menuGeneralNotasAlumno.cpp" />
 		<Unit filename="src/menuIngresoAlumno.cpp" />
 		<Unit filename="src/menuIngresoMaestro.cpp" />
 		<Unit filename="src/notas.cpp" />

@@ -1,3 +1,4 @@
+// By Ruddyard Eduardo Castro Chavez 9959-23-1409
 #include "loginNotas.h"
 #include "menuIngresoAlumno.h"
 #include "menuIngresoMaestro.h"

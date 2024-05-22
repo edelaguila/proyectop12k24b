@@ -1,3 +1,5 @@
+//By Ruddyard Eduardo Castro Chavez 9959-23-1409
+
 #include "menuIngresoAlumno.h"
 #include<iostream>
 #include<fstream>
@@ -48,7 +50,7 @@ using namespace std;
     {
         if (user==usuario )
         {
-            // Que esra LGI
+            // Que esra RN
             Auditoria.ingresoBitacora(user,codigoPrograma,"RN");
             encontrado=true;
             break;
@@ -56,7 +58,7 @@ using namespace std;
     }
      fileU_P.close();
 
-    //si no encuentra user y pass , el contador incrementara------------------------
+    //si no encuentra user  , el contador incrementara------------------------
     if(!encontrado)
     {
         cout << "\n\n\t\t\tCarnet incorrecto" << endl;

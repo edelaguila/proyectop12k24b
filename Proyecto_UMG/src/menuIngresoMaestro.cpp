@@ -103,23 +103,24 @@ bool menuIngresoMaestro::VerificarCarnet() {
 //Gabriela Pinto García carne: 9959 - 23 - 1087
 //modificacion de menu maestro
 
-        // buscar el nombre de usuario en el archivo y mostrar las clases asociadas
+        // busca el nombre de el usuario en el archivo txt, y lee las clases asignadas
         cout << "\n\t----- Clases Dadas -----" << endl;
         string line;
         vector<string> clases;
         bool clasesEncontradas = false;
 
-        // leer cada línea del archivo
+        // leer las líneas del archivo
         while (getline(fileCursos, line)) {
             stringstream ss(line);
             string nombreMaestro, clase;
-            ss >> nombreMaestro; // leer el nombre del maestro
+            // leer el nombre del catedratico
+            ss >> nombreMaestro;
             if (nombreMaestro == usuario) {
                 clasesEncontradas = true;
-                while (ss >> clase) {
+                while (ss >> clase) { // Leer todas las clases asignadas al maestro
                     clases.push_back(clase);
                 }
-                break;
+                break; //Deja de buscar más líneas, una vez se encuentran las clases del maestro
             }
         }
         fileCursos.close();
@@ -127,17 +128,22 @@ bool menuIngresoMaestro::VerificarCarnet() {
         if (!clasesEncontradas) {
             cout << "\n\tNo se encontraron clases dadas para este usuario." << endl;
         } else {
-            // mostrar el menú de clases
+
+            // despliega un menu de clases
             for (int i = 0; i < clases.size(); i++) {
                 cout << "\t" << (i + 1) << ". " << clases[i] << endl;
             }
 
-            cout << "\n\tSeleccione una clase ingresando el número correspondiente: ";
+            //Se le pide que ingrese una opcion
+            cout << "\n\tSeleccione una clase [1/2/3]: ";
+            cout << " ";
             int opcion;
-            cin >> opcion;
+            cin >> opcion; //Lee las opciones seleccionadas por el usuario
 
             if (opcion > 0 && opcion <= clases.size()) {
-                string claseSeleccionada = clases[opcion - 1];
+
+                    // Verificar que la opción seleccionada sea válida
+                string claseSeleccionada = clases[opcion - 1]; // Obtener la clase seleccionada
                 cout << "\n\tClase seleccionada: " << claseSeleccionada << endl;
                 system("pause");
 
@@ -149,12 +155,15 @@ bool menuIngresoMaestro::VerificarCarnet() {
             }
         }
 
-        return true;
+        return true; // Retornar true si se encuentra un usuario y contraseña válidos
     } else {
-        system("cls");
+        system("cls");//limpiamos
+
+        // Mensaje de error si el usuario no logró ingresar correctamente después de 3 intentos
         cout << "\n\n\t\t\tPERDIÓ LOS 3 INTENTOS" << endl;
         system("pause");
-        exit(0);
+        exit(0);// Terminar el programa si se alcanzan los 3 intentos fallidos
+
 
         return false;
     }

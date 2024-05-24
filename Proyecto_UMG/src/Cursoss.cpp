@@ -43,25 +43,25 @@ string user="admin";
 	case 1:
         IngresarCa();
         //Se ejecuta la accion y se registra en la bitacora
-        Auditoria.ingresoBitacora(user,codigoPrograma,"CCU"); //CCU = Create Cursos
+
          system("pause");
 		break;
     case 2:
         ModificarCa();
          //Se ejecuta la accion y se registra en la bitacora
-        Auditoria.ingresoBitacora(user,codigoPrograma,"UCU"); //UCU = Update Cursos
+
          system("pause");
 		break;
     case 3:
         BorrarCa();
         //Se ejecuta la accion y se registra en la bitacora
-        Auditoria.ingresoBitacora(user,codigoPrograma,"DCU"); //DCU = Delete Cursos
+
          system("pause");
 		break;
     case 4:
         DesplegarCa();
         //Se ejecuta la accion y se registra en la bitacora
-        Auditoria.ingresoBitacora(user,codigoPrograma,"RCU"); //RCU = Read Cursos
+
         system("pause");
 		break;
     case 5:

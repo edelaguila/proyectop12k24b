@@ -1,6 +1,7 @@
 #ifndef PERSONAS_H
 #define PERSONAS_H
 #include <iostream>
+#include"usuarios.h"
 
 using namespace std;
 

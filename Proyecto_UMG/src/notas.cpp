@@ -44,19 +44,19 @@ void NotaCrud::CrudNota() {
         switch (opcion) {
             case 1:
                 IngresarNota(); // Llama a la función para ingresar una nota
-                Auditoria.ingresoBitacora(user, codigoPrograma, "CNO"); // Registra en la bitácora la acción de creación de nota
+
                 break;
             case 2:
                 ModificarNota(); // Llama a la función para modificar una nota
-                Auditoria.ingresoBitacora(user, codigoPrograma, "UNO"); // Registra en la bitácora la acción de modificación de nota
+ // Registra en la bitácora la acción de modificación de nota
                 break;
             case 3:
                 BorrarNota(); // Llama a la función para borrar una nota
-                Auditoria.ingresoBitacora(user, codigoPrograma, "DNO"); // Registra en la bitácora la acción de eliminación de nota
+ // Registra en la bitácora la acción de eliminación de nota
                 break;
             case 4:
                 DesplegarNotas(); // Llama a la función para desplegar todas las notas
-                Auditoria.ingresoBitacora(user, codigoPrograma, "RNO"); // Registra en la bitácora la acción de lectura de notas
+ // Registra en la bitácora la acción de lectura de notas
                 break;
             case 5:
                 break; // Salir del bucle y regresar al menú anterior

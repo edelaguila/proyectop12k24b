@@ -85,10 +85,7 @@ void CarrerasCRUD::IngresarCa() {
     archivo.close();
 
 
-    Bitacora Auditoria;
-    string user,pass;
 
-    Auditoria.ingresoBitacora(user,codigoPrograma,"ICA");//ICA = Insertar Carrera
 
     cout << "Carrera agregada exitosamente!" << endl;
 }
@@ -131,7 +128,7 @@ void CarrerasCRUD::ModificarCa() {
     Bitacora Auditoria;
     string user,pass;
 
-    Auditoria.ingresoBitacora(user,codigoPrograma,"UCA");//UCA = Update Carrera
+
 
     if (!encontrada) {
         cout << "No se encontró la carrera con el codigo ingresado." << endl;
@@ -174,10 +171,7 @@ void CarrerasCRUD::BorrarCa() {
     rename("carreras_tmp.dat", "carreras.dat");
 
 
-    Bitacora Auditoria;
-    string user,pass;
 
-    Auditoria.ingresoBitacora(user,codigoPrograma,"DCA");//DCA = Delete Carrera
 
     if (eliminada) {
         cout << "Carrera eliminada exitosamente!" << endl;
@@ -209,10 +203,7 @@ void CarrerasCRUD::DesplegarCa() {
     archivo.close();
 
 
-    Bitacora Auditoria;
-    string user,pass;
 
-    Auditoria.ingresoBitacora(user,codigoPrograma,"RCA");// RCA = Read Carrera
 
     cout << "Presione Enter para continuar...";
     cin.ignore();

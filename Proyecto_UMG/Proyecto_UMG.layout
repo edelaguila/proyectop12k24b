@@ -2,14 +2,278 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="src\aulas.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="257" topLine="0" />
-		</Cursor>
-	</File>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 	<File name="include\usumaestros.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="37" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Procesos.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="215" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\ProcesoMaestros.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3838" topLine="101" />
+		</Cursor>
+	</File>
+	<File name="src\notas.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="960" topLine="108" />
+=======
+	<File name="src\Carrera.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6215" topLine="175" />
+		</Cursor>
+	</File>
+	<File name="src\procealumnos.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5764" topLine="189" />
+		</Cursor>
+		<Folding>
+			<Collapse line="41" />
+			<Collapse line="48" />
+			<Collapse line="54" />
+			<Collapse line="61" />
+			<Collapse line="67" />
+			<Collapse line="74" />
+			<Collapse line="80" />
+			<Collapse line="87" />
+			<Collapse line="93" />
+			<Collapse line="100" />
+			<Collapse line="106" />
+			<Collapse line="113" />
+			<Collapse line="132" />
+			<Collapse line="139" />
+			<Collapse line="145" />
+			<Collapse line="152" />
+			<Collapse line="158" />
+			<Collapse line="165" />
+			<Collapse line="171" />
+			<Collapse line="179" />
+			<Collapse line="185" />
+			<Collapse line="192" />
+			<Collapse line="199" />
+			<Collapse line="206" />
+			<Collapse line="212" />
+			<Collapse line="219" />
+			<Collapse line="225" />
+		</Folding>
+	</File>
+	<File name="include\secciones.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="193" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\seguridad.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="60" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Procesos.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="60" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Cursoss.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="130" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Procesos.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1558" topLine="36" />
+		</Cursor>
+	</File>
+	<File name="src\Bitacora.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1424" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\usumaestros.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="240" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="10" />
+		</Folding>
+	</File>
+	<File name="src\Cursoss.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1737" topLine="39" />
+		</Cursor>
+	</File>
+	<File name="include\Bitacora.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="214" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\maestros.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="289" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="src\usualumnos.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4996" topLine="155" />
+		</Cursor>
+	</File>
+>>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
+	<File name="src\aulas.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="486" topLine="12" />
+		</Cursor>
+	</File>
+<<<<<<< HEAD
+	<File name="include\usumaestros.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="37" topLine="0" />
+=======
+	<File name="main.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="586" topLine="21" />
+>>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
+		</Cursor>
+	</File>
+	<File name="include\alumnos.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+<<<<<<< HEAD
+			<Cursor1 position="146" topLine="133" />
+		</Cursor>
+	</File>
+	<File name="src\alumnos.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="15673" topLine="545" />
+=======
+			<Cursor1 position="448" topLine="8" />
+		</Cursor>
+	</File>
+	<File name="include\Login.h" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="292" topLine="4" />
+		</Cursor>
+	</File>
+	<File name="src\maestros.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="354" topLine="15" />
+		</Cursor>
+		<Folding>
+			<Collapse line="81" />
+			<Collapse line="88" />
+			<Collapse line="94" />
+			<Collapse line="101" />
+			<Collapse line="107" />
+			<Collapse line="114" />
+			<Collapse line="120" />
+			<Collapse line="127" />
+			<Collapse line="133" />
+			<Collapse line="141" />
+			<Collapse line="148" />
+			<Collapse line="155" />
+			<Collapse line="161" />
+			<Collapse line="168" />
+			<Collapse line="174" />
+			<Collapse line="181" />
+			<Collapse line="188" />
+		</Folding>
+	</File>
+	<File name="include\usumaestros.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="87" topLine="0" />
+>>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
+		</Cursor>
+	</File>
+	<File name="src\secciones.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2311" topLine="44" />
+		</Cursor>
+	</File>
+	<File name="src\Login.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1476" topLine="38" />
+		</Cursor>
+	</File>
+	<File name="include\ProcesoMaestros.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="404" topLine="18" />
+		</Cursor>
+	</File>
+	<File name="include\aulas.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="407" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\alumnos.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="264" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Facultad.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="252" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\usualumnos.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="81" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\notas.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2878" topLine="32" />
+		</Cursor>
+	</File>
+	<File name="src\ProcesoMaestros.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2395" topLine="2" />
+		</Cursor>
+	</File>
+	<File name="include\procealumnos.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3687" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Carrera.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="236" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\jornada.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="145" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\jornada.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1618" topLine="35" />
+		</Cursor>
+	</File>
+	<File name="include\usuarios.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="89" topLine="2" />
+		</Cursor>
+	</File>
+	<File name="src\usuarios.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3091" topLine="125" />
+		</Cursor>
+		<Folding>
+			<Collapse line="203" />
+		</Folding>
+	</File>
+	<File name="src\Facultad.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6716" topLine="152" />
+		</Cursor>
+	</File>
+<<<<<<< HEAD
+	<File name="src\login.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="253" topLine="0" />
+>>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 		</Cursor>
 	</File>
 	<File name="src\Carrera.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -17,6 +281,7 @@
 			<Cursor1 position="181" topLine="0" />
 		</Cursor>
 	</File>
+<<<<<<< HEAD
 	<File name="src\ProcesoMaestros.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="331" topLine="0" />
@@ -101,18 +366,57 @@
 			<Collapse line="156" />
 			<Collapse line="163" />
 			<Collapse line="169" />
+=======
+	<File name="include\usuarios.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="491" topLine="9" />
+=======
+	<File name="src\alumnos.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="13468" topLine="462" />
+>>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
+		</Cursor>
+		<Folding>
+			<Collapse line="157" />
+			<Collapse line="163" />
+			<Collapse line="170" />
+			<Collapse line="184" />
+			<Collapse line="190" />
+			<Collapse line="197" />
+			<Collapse line="204" />
+			<Collapse line="211" />
+			<Collapse line="217" />
+			<Collapse line="224" />
+			<Collapse line="230" />
+			<Collapse line="237" />
+			<Collapse line="243" />
+			<Collapse line="250" />
+			<Collapse line="255" />
+			<Collapse line="261" />
+			<Collapse line="505" />
+			<Collapse line="506" />
+>>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 		</Folding>
 	</File>
-	<File name="src\notas.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\usualumnos.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="960" topLine="108" />
+			<Cursor1 position="7032" topLine="4" />
 		</Cursor>
+		<Folding>
+			<Collapse line="9" />
+			<Collapse line="22" />
+			<Collapse line="72" />
+			<Collapse line="103" />
+			<Collapse line="152" />
+			<Collapse line="209" />
+		</Folding>
 	</File>
 	<File name="src\login.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1043" topLine="0" />
 		</Cursor>
 	</File>
+<<<<<<< HEAD
 	<File name="src\Facultad.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="114" topLine="0" />
@@ -200,6 +504,143 @@
 	<File name="src\usumaestros.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="973" topLine="0" />
+=======
+	<File name="include\Bitacora.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="207" topLine="0" />
 		</Cursor>
+	</File>
+	<File name="include\procealumnos.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1213" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="include\login.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="297" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ProcesoMaestros.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4176" topLine="192" />
+		</Cursor>
+	</File>
+	<File name="src\maestros.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="16879" topLine="535" />
+		</Cursor>
+		<Folding>
+			<Collapse line="81" />
+			<Collapse line="88" />
+			<Collapse line="94" />
+			<Collapse line="101" />
+			<Collapse line="107" />
+			<Collapse line="114" />
+			<Collapse line="120" />
+			<Collapse line="127" />
+			<Collapse line="133" />
+			<Collapse line="141" />
+			<Collapse line="148" />
+			<Collapse line="155" />
+			<Collapse line="161" />
+			<Collapse line="168" />
+			<Collapse line="174" />
+			<Collapse line="181" />
+			<Collapse line="188" />
+		</Folding>
+	</File>
+	<File name="src\usuarios.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4114" topLine="129" />
+		</Cursor>
+		<Folding>
+			<Collapse line="187" />
+		</Folding>
+	</File>
+	<File name="src\Cursoss.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="90" />
+		</Cursor>
+	</File>
+	<File name="src\procealumnos.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="171" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="19" />
+			<Collapse line="43" />
+			<Collapse line="50" />
+			<Collapse line="56" />
+			<Collapse line="63" />
+			<Collapse line="69" />
+			<Collapse line="76" />
+			<Collapse line="82" />
+			<Collapse line="89" />
+			<Collapse line="95" />
+			<Collapse line="102" />
+			<Collapse line="108" />
+			<Collapse line="115" />
+			<Collapse line="134" />
+			<Collapse line="141" />
+			<Collapse line="147" />
+			<Collapse line="154" />
+			<Collapse line="160" />
+			<Collapse line="167" />
+			<Collapse line="173" />
+			<Collapse line="181" />
+			<Collapse line="187" />
+			<Collapse line="194" />
+			<Collapse line="201" />
+			<Collapse line="208" />
+			<Collapse line="214" />
+			<Collapse line="221" />
+			<Collapse line="227" />
+		</Folding>
+	</File>
+	<File name="src\Bitacora.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1355" topLine="18" />
+		</Cursor>
+	</File>
+	<File name="src\usumaestros.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7047" topLine="5" />
+		</Cursor>
+		<Folding>
+			<Collapse line="10" />
+			<Collapse line="23" />
+			<Collapse line="73" />
+			<Collapse line="105" />
+			<Collapse line="154" />
+			<Collapse line="211" />
+		</Folding>
+	</File>
+	<File name="include\usualumnos.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="332" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\maestros.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4330" topLine="126" />
+		</Cursor>
+	</File>
+	<File name="src\aulas.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="257" topLine="0" />
+>>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5196" topLine="6" />
+		</Cursor>
+		<Folding>
+			<Collapse line="26" />
+			<Collapse line="195" />
+			<Collapse line="200" />
+			<Collapse line="205" />
+			<Collapse line="210" />
+		</Folding>
 	</File>
 </CodeBlocks_layout_file>

@@ -1,7 +1,9 @@
 //By Ruddyard Eduardo Castro Chavez
 
-
 #include "menuIngresoMaestro.h"
+#include "notas.h"
+#include "Bitacora.h"
+
 #include <vector>
 #include <iostream>
 #include <fstream>
@@ -9,95 +11,112 @@
 #include <cstdlib>
 #include <conio.h>
 #include <iomanip>
-#include "notas.h"
-#include "Bitacora.h"
 
 using namespace std;
-
+// Variables para almacenar el usuario y la contraseña
 bool menuIngresoMaestro::VerificarCarnet() {
     string usuario, contrasena;
-    int contador = 0; // contador de intentos
-    bool encontrado = false; // indica si encontró user y contra
+    // Contador de intentos fallidos
+    int contador = 0;
+    // Bandera para indicar si se encontró el usuario y la contraseña correctos
+    bool encontrado = false;
 
-    // el ciclo se repite mientras el número de intentos sea menor a 3 o no se encuentre user válido
+    // Bucle que se repite mientras el número de intentos sea menor a 3 y no se haya encontrado un usuario válido
     while (contador < 3 && !encontrado) {
-        system("cls");
+        system("cls"); // Limpiar la pantalla
         cout << "\t\t\t+-----------------------------------+" << endl;
         cout << "\t\t\t|       LOGIN  Maestro              |" << endl;
         cout << "\t\t\t+-----------------------------------+" << endl;
         cout << "\t\t\t|Solo tienes permitido 3 intentos   |" << endl;
         cout << "\t\t\t+-----------------------------------+" << endl;
         cout << "\t\t\tIngrese el nombre: ";
+        // Leer el nombre de usuario
         cin >> usuario;
         cout << "\t\t\tIngrese la contrasena: ";
         char caracter;
+        // Leer un carácter sin mostrarlo en la pantalla
         caracter = getch();
 
-        // ocultar a la hora de escribir la contraseña
+        // Ocultar la entrada de la contraseña mientras se escribe
         contrasena = "";
-        while (caracter != 13) { // ASCII enter
-            if (caracter != 8) { // ASCII backspace
+        // 13 es el código ASCII para Enter
+        while (caracter != 13) {
+                // 8 es el código ASCII para Backspace
+            if (caracter != 8) {
+                // Añadir el carácter a la contraseña
                 contrasena.push_back(caracter);
+        // Mostrar un asterisco en lugar del carácter
                 cout << "*";
             } else {
                 if (contrasena.length() > 0) {
+                        // Borrar el último asterisco
                     cout << "\b \b";
+                // Eliminar el último carácter de la contraseña
                     contrasena = contrasena.substr(0, contrasena.length() - 1);
                 }
             }
-            caracter = getch();
+            caracter = getch(); // Leer el siguiente carácter
         }
 
-        // abrir el archivo de User y contraseñas
+        // Abrir el archivo de usuarios y contraseñas
         ifstream fileU_P;
         fileU_P.open("contraseniaMaestro.txt", ios::in);
 
-        // verificar si se abrió el archivo
+        // Verificar si el archivo se abrió correctamente
         if (!fileU_P) {
             cout << "\n\t\t\t No es posible abrir el archivo." << endl;
             fileU_P.close();
             return false;
         }
+        // Código del programa para bitacora
         string codigoPrograma = "5600";
+        // Objeto para registrar en la bitacora
         Bitacora Auditoria;
 
-        // busca el usuario en el archivo
+        // Buscar el usuario en el archivo
         string user, pass;
         while (fileU_P >> user >> pass) {
             if (user == usuario && pass == contrasena) {
+                    // Registrar el ingreso en la bitacora
                 Auditoria.ingresoBitacora(user, codigoPrograma, "LMA");
+            // Usuario y contraseña encontrados
                 encontrado = true;
                 break;
             }
         }
+        // Cerrar el archivo
         fileU_P.close();
 
-        // si no encuentra user y pass, el contador incrementará
+        // Si no se encuentra el usuario y la contraseña, incrementar el contador
         if (!encontrado) {
             cout << "\n\n\t\t\tNombre incorrecto" << endl;
             cout << "\n\n\t\t\tPerdio un intento, intente de nuevo\n" << endl;
+            // Incrementar el contador de intentos fallidos
             contador++;
+            // Pausar el sistema para que el usuario vea el mensaje
             system("pause");
         }
     }
 
-    // Si encuentra a user y pass, se retornará un true
+    // Si se encuentra el usuario y la contraseña, retornar true
     if (encontrado) {
+             // Limpiar la pantalla
         system("cls");
+        // Pausar el sistema para que el usuario vea el mensaje
         cout << "\n\t----- Bienvenido " << usuario << " -----" << endl;
         system("pause");
 
-        // abrir el archivo de cursos asignados
+        // Abrir el archivo de cursos asignados
         ifstream fileCursos;
         fileCursos.open("cursosAsignadosMaestro.txt", ios::in);
 
-        // verificar si se abrió el archivo
+        // Verificar si el archivo se abrió correctamente
         if (!fileCursos) {
             cout << "\n\t\t\t No es posible abrir el archivo." << endl;
             fileCursos.close();
             return false;
         }
-
+    // Limpiar la pantalla
         system("cls");
 
 //Gabriela Pinto García carne: 9959 - 23 - 1087

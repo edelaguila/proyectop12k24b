@@ -1,174 +1,169 @@
 //By Ruddyard Eduardo Castro Chavez
 
+
+// Incluye el archivo de cabecera "menuIngresoAlumno.h"
 #include "menuIngresoAlumno.h"
-#include<iostream>
-#include<fstream>
-#include<stdlib.h>
-#include<cstdlib>
-#include<conio.h>
-#include<iomanip>
+// Incluye el archivo de cabecera "menuIngresoMaestro.h"
+#include "menuIngresoMaestro.h"
+// Incluye el archivo de cabecera "notas.h"
 #include "notas.h"
+// Incluye el archivo de cabecera "Bitacora.h"
 #include "Bitacora.h"
+
+
+
+// Incluye la biblioteca iostream que permite la entrada y salida de datos
+#include<iostream>
+// Incluye la biblioteca fstream que permite la lectura y escritura de archivos
+#include<fstream>
+// Incluye la biblioteca stdlib que proporciona funciones generales de utilidad
+#include<stdlib.h>
+// Incluye la biblioteca cstdlib que proporciona funciones generales de utilidad
+#include<cstdlib>
+// Incluye la biblioteca conio.h que proporciona funciones para controlar la entrada y salida de la consola
+#include<conio.h>
+// Incluye la biblioteca iomanip que proporciona funciones para manipular la salida formateada
+#include<iomanip>
+
+
+
+// Utiliza el espacio de nombres estándar. Esto evita tener que escribir std:: antes de cada uso de objetos
 using namespace std;
- bool menuIngresoAlumno::VerificarCarnet()
- {
 
-      string usuario,contrasena;
-    int contador= 0; // contador de intentos
-    bool encontrado =false; // indica si encontro user y contra
+// Define la función miembro VerificarCarnet de la clase menuIngresoAlumno que devuelve un valor booleano
+bool menuIngresoAlumno::VerificarCarnet()
+{
+    // Declara dos variables de tipo string llamadas usuario y contrasena
+    string usuario, contrasena;
+    // Declara una variable entera llamada contador e inicialízala en 0
+    int contador= 0;
+    // Declara una variable booleana llamada encontrado e inicialízala en false
+    bool encontrado =false;
 
-    //el ciclo se repite mientras el numero de intentos sea menor a 3 o no se encuentre user valido
+    // Inicia un bucle while que se ejecuta mientras el contador sea menor a 3 y encontrado sea false
     while(contador<3 && !encontrado)
     {
-         system("cls");
-    cout <<"\t\t\t+-----------------------------------+"<<endl;
-    cout <<"\t\t\t|       LOGIN  Alumno                     |"<<endl;
-    cout <<"\t\t\t+-----------------------------------+"<<endl;
-    cout <<"\t\t\t|Solo tienes permitido 3 intentos   |"<<endl;
-    cout <<"\t\t\t+-----------------------------------+"<<endl;
-    cout <<"\t\t\tIngrese nombre: ";
-    cin >> usuario;
- cout <<"\t\t\tIngrese la contrasena: ";
-    char caracter;
-    caracter = getch();
+        // Limpia la consola
+        system("cls");
+        // Imprime el menú de login en la consola
+        cout <<"\t\t\t+-----------------------------------+"<<endl;
+        cout <<"\t\t\t|       LOGIN  Alumno                     |"<<endl;
+        cout <<"\t\t\t+-----------------------------------+"<<endl;
+        cout <<"\t\t\t|Solo tienes permitido 3 intentos   |"<<endl;
+        cout <<"\t\t\t+-----------------------------------+"<<endl;
+        cout <<"\t\t\tIngrese nombre: ";
+        // Lee el nombre del usuario desde la consola
+        cin >> usuario;
+        cout <<"\t\t\tIngrese la contrasena: ";
+        // Declara una variable de tipo char llamada caracter
+        char caracter;
+        // Lee un carácter desde la consola sin mostrarlo
+        caracter = getch();
 
-    // ocultar a la hora de escribir la contraseña
-    contrasena="";
-        while (caracter!=13)//ascci enter
+        // Inicia un bucle while que se ejecuta mientras el carácter no sea enter (13 en ASCII)
+        while (caracter!=13)
         {
-        if(caracter !=8)//ascci backs pace
+            // Si el carácter no es backspace (8 en ASCII)
+            if(caracter !=8)
             {
+                // Añade el carácter a la contraseña
                 contrasena.push_back(caracter);
+                // Imprime un asterisco en la consola
                 cout<<"*";
             }
-        else
+            else
             {
+                // Si la longitud de la contraseña es mayor a 0
                 if(contrasena.length()>0)
                 {
+                    // Borra el último carácter impreso en la consola
                     cout<<"\b \b";
+                    // Elimina el último carácter de la contraseña
                     contrasena=contrasena.substr(0,contrasena.length()-1);
                 }
             }
+            // Lee el siguiente carácter desde la consola
             caracter=getch();
         }
 
-    //abrira el contrasenias Estudiantes--------------------------
-    ifstream fileU_P;
-    fileU_P.open("contraseniaEstuantes.txt",ios::in);
+        // Declara un objeto de tipo ifstream llamado fileU_P
+        ifstream fileU_P;
+        // Abre el archivo "contraseniaEstuantes.txt" para lectura
+        fileU_P.open("contraseniaEstuantes.txt",ios::in);
 
-
-    //verificar si se abrio el archivo---------------------------
-    if (!fileU_P)
-    {
-        cout<<"\n\t\t\t No es posible abrir el archivo."<<endl;
-        fileU_P.close();
-        return false;
-    }
-    string codigoPrograma="5030";
-    Bitacora Auditoria;
-
-    //busca el usuario en el archivo---------------------------------
-    string user,pass;
-    while (fileU_P>>user>>pass)
-    {
-        if (user==usuario&&pass==contrasena )
+        // Si no se pudo abrir el archivo
+        if (!fileU_P)
         {
-            // Que esra LGI
-            Auditoria.ingresoBitacora(user,codigoPrograma,"RN");
-            encontrado=true;
-            break;
+            // Imprime un mensaje en la consola
+            cout<<"\n\t\t\t No es posible abrir el archivo."<<endl;
+            // Cierra el archivo
+            fileU_P.close();
+            // Retorna false
+            return false;
+        }
+        // Declara una variable de tipo string llamada codigoPrograma e inicialízala en "5030"
+        string codigoPrograma="5030";
+        // Declara un objeto de tipo Bitacora llamado Auditoria
+        Bitacora Auditoria;
+
+        // Inicia un bucle while que se ejecuta mientras se puedan leer un usuario y una contraseña desde el archivo
+        string user,pass;
+        while (fileU_P>>user>>pass)
+        {
+            // Si el usuario y la contraseña leídos desde el archivo coinciden con el usuario y la contraseña ingresados
+            if (user==usuario&&pass==contrasena )
+            {
+                // Llama a la función miembro ingresoBitacora del objeto Auditoria
+                Auditoria.ingresoBitacora(user,codigoPrograma,"RN");
+                // Cambia el valor de encontrado a true
+                encontrado=true;
+                // Termina el bucle while
+                break;
+            }
+        }
+        // Cierra el archivo
+        fileU_P.close();
+
+        // Si no se encontró el usuario y la contraseña
+        if(!encontrado)
+        {
+            // Imprime un mensaje en la consola
+            cout << "\n\n\t\t\tCarnet incorrecto" << endl;
+            // Imprime un mensaje en la consola
+            cout << "\n\n\t\t\tPerdio un intento, Intente de nuevo\n" << endl;
+            // Incrementa el contador
+            contador++;
+            // Pausa la ejecución del programa hasta que el usuario presione una tecla
+            system("pause");
         }
     }
-     fileU_P.close();
 
-    //si no encuentra user y pass , el contador incrementara------------------------
-    if(!encontrado)
+    // Si se encontró el usuario y la contraseña
+    if (encontrado)
     {
-        cout << "\n\n\t\t\tCarnet incorrecto" << endl;
-        cout << "\n\n\t\t\tPerdio un intento, Intente de nuevo\n" << endl;
-        contador++;
+        // Limpia la consola
+        system("cls");
+        // Imprime un mensaje de bienvenida en la consola
+        cout << "\n\t----- Bienvenido " << usuario << " -----" << endl;
+        // Pausa la ejecución del programa hasta que el usuario presione una tecla
         system("pause");
+        // Retorna true
+        return true;
+    }
+    else
+    {
+        // Limpia la consola
+        system("cls");
+        // Imprime un mensaje en la consola
+        cout << "\n\n\t\t\tPERDIO LOS 3 INTENTOS" << endl;
+        // Pausa la ejecución del programa hasta que el usuario presione una tecla
+        system("pause");
+        // Termina la ejecución del programa
+        exit(0);
+
+        // Retorna false
+        return false;
     }
 }
 
-    //Si encuentra a user y pass , se retornara un true
-   if (encontrado)
-    {
-    	         system("cls");
-
-    cout << "\n\t----- Bienvenido " << usuario << " -----" << endl;
-     system("pause");
-
-//     NotaCrud n;
-//     n.DesplegarNotas();
-//
-
-//
-//void consultarRegistro( fstream &leerDeArchivo )
-//{
-//
-//   cout << left << setw( 10 ) << "nombre" << setw( 16 )
-//       << "carnet" << setw( 14 ) << "Primer nota" << right
-//       << setw( 10 ) << "segunda nota"<< setw( 10 ) << "tercera nota" << setw( 10 ) << "actividades nota"<< setw( 10 ) << "nota final"<< endl;
-//
-//   // colocar el apuntador de posición de archivo al principio del archivo de registros
-//   leerDeArchivo.seekg( 0 );
-//
-//   // leer el primer registro del archivo de registros
-//   DatosCliente cliente;
-//   leerDeArchivo.read( reinterpret_cast< char * >( &cliente ),
-//      sizeof( DatosCliente ) );
-//
-//   // copiar todos los registros del archivo de registros en el archivo de texto
-//   while ( !leerDeArchivo.eof() ) {
-//
-//      // escribir un registro individual en el archivo de texto
-//      if ( cliente.obtenerNumeroCuenta() != 0 )
-//         mostrarLineaPantalla(cliente);
-//
-//      // leer siguiente registro del archivo de registros
-//      leerDeArchivo.read( reinterpret_cast< char * >( &cliente ),
-//         sizeof( DatosCliente ) );
-//
-//   } // fin de instrucción while
-//
-//} // fin de la función consultarRegistro
-//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     //cout<<"aqui debe ingresar a la visualizacion de notas"<< endl;
-      //      n.CrudNota();
-    return true;
-    }
-   else
-    {
-	system("cls");
-    cout << "\n\n\t\t\tPERDIO LOS 3 INTENTOS" << endl;
-     system("pause");
-     exit(0);
-
-    return false;
-    }
-
-
-
-
-
-}
 

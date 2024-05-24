@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream> //Libreria necesaria para la creacion, lectura y manejo de archivos
 #include <iomanip> //Libreria necesaria para el comando setw()
+#include "login.h"
+#include "Bitacora.h"
 
 using namespace std;
 
@@ -19,6 +21,16 @@ class usualumnos
 
 void usualumnos::menu()
 {
+
+    string codigoPrograma="2525";
+//Instancia de la clase bitacora
+    Bitacora Auditoria;
+//Declarando 2 variables string con el codigo programa
+    string user, contrasena;
+    char nombreUsuario[MAX];
+// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
+    Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"USAL");
+
     int opc;
     do
     {
@@ -62,6 +74,15 @@ void usualumnos::pideDatos()
     system("cls");
     fstream file;
 
+    string codigoPrograma="2530";
+//Instancia de la clase bitacora
+    Bitacora Auditoria;
+//Declarando 2 variables string con el codigo programa
+    string user, contrasena;
+    char nombreUsuario[MAX];
+// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
+    Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"USALP");
+
     cout<<"+---------------------------------------------------------+"<< endl;
     cout<<"|        Agregar detalles del Usuario de Alumnos          |"<< endl;
     cout<<"+---------------------------------------------------------+"<< endl;
@@ -81,6 +102,16 @@ void usualumnos::pideDatos()
 
 void usualumnos::muestraDatos()
 {
+
+    string codigoPrograma="2550";
+//Instancia de la clase bitacora
+    Bitacora Auditoria;
+//Declarando 2 variables string con el codigo programa
+    string user, contrasena;
+    char nombreUsuario[MAX];
+// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
+    Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"USALD");
+
     system("cls");
     fstream file;
     int total=0;
@@ -120,6 +151,16 @@ void usualumnos::muestraDatos()
 
 void usualumnos::editaDatos()
  {
+
+    string codigoPrograma="2555";
+//Instancia de la clase bitacora
+    Bitacora Auditoria;
+//Declarando 2 variables string con el codigo programa
+    string user, contrasena;
+    char nombreUsuario[MAX];
+// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
+    Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"USALE");
+
     system("cls");
     fstream file, file1;
     string foundNom;
@@ -167,6 +208,16 @@ void usualumnos::editaDatos()
 
 void usualumnos::borraDatos()
 {
+
+    string codigoPrograma="2560";
+//Instancia de la clase bitacora
+    Bitacora Auditoria;
+//Declarando 2 variables string con el codigo programa
+    string user, contrasena;
+    char nombreUsuario[MAX];
+// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
+    Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"USALB");
+
    	system("cls");
 	fstream file, file1;
 	string partcipante;

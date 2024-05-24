@@ -4,23 +4,12 @@
 #include <conio.h>
 #include "usuarios.h"
 #include "usualumnos.h"
-<<<<<<< HEAD
-#include<fstream>
-#include<cstdlib>
-#include<conio.h>
-#include<iostream>
-#define USER "usuario"
-#define PASS "1234"
-=======
 #include "usumaestros.h"
 #define MAX 80
 #define ARCHIVO_USUARIOS "usuarios.dat"
 #define TECLA_ENTER 13
 #define TECLA_BACKSPACE 8
 #define MAX_INTENTOS 3
->>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
-
-#include "usumaestros.h"
 
 using namespace std;
 
@@ -33,58 +22,6 @@ void Usuario::menuInicial() {
         usumaestros Umaestros;
 
     do {
-<<<<<<< HEAD
-    char x;
-	system("cls");
-	cout<<"\t\t\t-------------------------------------------------------"<<endl;
-	cout<<"\t\t\t |   SISTEMA GESTION DE SEGURIDAD - Catalogos Usuarios |"<<endl;
-	cout<<"\t\t\t-------------------------------------------------------"<<endl;
-	cout<<"\t\t\t 1. Ingreso Usuarios"<<endl;
-	cout<<"\t\t\t 2. Consulta Usuarios"<<endl;
-	cout<<"\t\t\t 3. Modificacion Usuarios"<<endl;
-	cout<<"\t\t\t 4. Eliminacion Usuarios"<<endl;
-	cout<<"\t\t\t 5. Alumnos y Maestros"<<endl;
-	cout<<"\t\t\t 6. Retornar menu anterior"<<endl;
-    cout<<"\t\t\t-------------------------------------------------------"<<endl;
-	cout<<"\t\t\tOpcion a escoger:[1/2/3/4/5]"<<endl;
-	cout<<"\t\t\t-------------------------------------------------------"<<endl;
-	cout<<"\t\t\tIngresa tu Opcion: ";
-    cin>>choice;
-
-    switch(choice)
-    {
-    case 1:
-    	do
-    	{
-    		insertar();
-    		cout<<"\n\t\t\t Agrega otra persona(s,n): ";
-    		cin>>x;
-		}while(x=='s'||x=='S');
-		break;
-	case 2:
-		desplegar();
-		break;
-	case 3:
-		modificar();
-		break;
-	case 4:
-		borrar();
-		break;
-	case 5:
-	    menuextra();
-		break;
-    case 6:
-		break;
-	default:
-		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
-	}
-	cin.get();
-	//getch();
-    }while(choice!= 6);
-}
-bool usuarios::buscar(string user, string passw)
-{
-=======
         system("cls");
         printf("\n\t\t\tMENU INICIAL\n");
         printf("\t\t\t============\n");
@@ -101,7 +38,6 @@ bool usuarios::buscar(string user, string passw)
             case 1:
                 menuListarUsuarios();
                 break;
->>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
 
             case 2:
                 menuRegistrarUsuario();
@@ -280,7 +216,7 @@ char Usuario::existeUsuario(char nombreUsuario[], Usuario* usuario) {
     return existe;
 }
 
-Usuario *Usuario::obtenerUsuarios(int *n) { // Moved inside the class
+Usuario *Usuario::obtenerUsuarios(int *n) {
     FILE *archivo;
     Usuario usuario;
     Usuario *usuarios; // Vector dinámico de usuarios
@@ -397,46 +333,4 @@ void Usuario::leerClave(char *password) {
             }
         }
     }
-}
-
-void usuarios::menuextra()
-{
-   int choice;
-    do {
-    char x;
-	system("cls");
-	cout<<"\t\t\t-------------------------------------------------------"<<endl;
-	cout<<"\t\t\t |   SISTEMA GESTION DE SEGURIDAD - Catalogos Usuarios |"<<endl;
-	cout<<"\t\t\t-------------------------------------------------------"<<endl;
-	cout<<"\t\t\t 1. Menu de usuarios de alumnos"<<endl;
-	cout<<"\t\t\t 2. Menu de usuarios de maestros"<<endl;
-	cout<<"\t\t\t 3. Retornar menu anterior"<<endl;
-    cout<<"\t\t\t-------------------------------------------------------"<<endl;
-	cout<<"\t\t\tOpcion a escoger:[1/2/3]"<<endl;
-	cout<<"\t\t\t-------------------------------------------------------"<<endl;
-	cout<<"\t\t\tIngresa tu Opcion: ";
-    cin>>choice;
-
-    switch(choice)
-    {
-    case 1:
-        {
-            usualumnos alum;
-            alum.menu();
-        }
-		break;
-	case 2:
-	    {
-	        usumaestros maestros;
-	        maestros.menu();
-	    }
-	    break;
-	case 3:
-		break;
-	default:
-		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
-	}
-	cin.get();
-	//getch();
-    }while(choice!= 3);
 }

@@ -1,53 +1,15 @@
 #ifndef USUARIOS_H
 #define USUARIOS_H
-
 #define MAX 80
 #define ARCHIVO_USUARIOS "usuarios.dat"
 #define TECLA_ENTER 13
 #define TECLA_BACKSPACE 8
 #define MAX_INTENTOS 3
 extern char linea[];
+
 class Usuario {
 private:
 
-<<<<<<< HEAD
-class usuarios
-{
-    public:
-        usuarios();
-        virtual ~usuarios();
-        bool loginUsuarios();
-        void menuUsuarios();
-        bool buscar(string user, string passw);
-        string getNombre();
-        string setNombre(string nombre);
-
-        void insertar();
-        void desplegar();
-        void modificar();
-        void borrar();
-        void menuextra();
-
-        alumnos(string usu, string contra);
-        string setid(string usu);
-        string getid();
-
-        string setnombre(string contra);
-        string getnombre();
-
-        struct Usuario {
-            char usu[20];
-            char contra[50];
-        };
-
-    protected:
-
-    private:
-		string id;
-		string name;
-		string pass;
-=======
->>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
 
 public:
     char nombre[MAX];

@@ -6,16 +6,11 @@
 #include <conio.h>
 #include "usuarios.h"
 #include "Bitacora.h"
-<<<<<<< HEAD
-
-#include "alumnos.h"
-#include "maestros.h"
-=======
 #include "alumnos.h"
 #include "maestros.h"
 #include "login.h"
+#include "Procesos.h"
 #define MAX 80
->>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
 
 using namespace std;
 
@@ -29,17 +24,10 @@ string codigoPrograma="1";
 Bitacora Auditoria;
 string user, contrasena;
 
-<<<<<<< HEAD
-int main()
-{
-        // Llamamos al objeto e ingresamos los parametros
-    Login ingreso(user, contrasena);
-=======
 int main() {
     Login login;
     int intentos = 0;
     bool loginExitoso = false;
->>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
 
     do {
     int resultadoLogin = login.menuIniciarSesion();
@@ -51,7 +39,7 @@ int main() {
     cout << "Intento fallido. Intento " << intentos << " de 3." << endl;
     if (intentos >= 3) {
     cout << "Demasiados intentos fallidos. Saliendo del programa."<< endl;
-    return 1; // Código de error
+    return 1;
     }
     }
     } while (!loginExitoso);
@@ -92,14 +80,21 @@ void menuGeneral()
             catalogos();
             break;
         case 2:
-            procesos();
-            break;
+            {
+               Procesos proceso;
+               proceso.menuGenerar();
+               break;
+            }
+
         case 3:
             reportes();
             break;
         case 4:
-            seguridad();
-            break;
+            {
+                Bitacora Auditoria;
+                Auditoria.visualizarBitacora();
+                break;
+            }
         case 5:
             ayuda();
             break;
@@ -199,7 +194,7 @@ void catalogos()
 
 void procesos()
 {
-    // Implementación de procesos
+    //Implementacion de procesos
 }
 
 void reportes()

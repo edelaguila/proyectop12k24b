@@ -1,10 +1,6 @@
 //Archivo de implementacion de la clase FACULTAD que contiene el funcionamiento de la clase
 #include "facultad.h"
-<<<<<<< HEAD
-#include "Login.h"
-=======
 
->>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
 #include "Bitacora.h"
 #include "usuarios.h"
 #include <fstream>

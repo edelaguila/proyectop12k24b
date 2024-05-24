@@ -2,11 +2,7 @@
 //del funcionamiento del la clase
 #include "Carrera.h"
 #include "usuarios.h"
-<<<<<<< HEAD
-#include "Login.h"
-=======
 
->>>>>>> fe9d22d9aea18290301fb123b219a553b09aa5e8
 #include "Bitacora.h"
 #include <fstream>
 #include <iostream>

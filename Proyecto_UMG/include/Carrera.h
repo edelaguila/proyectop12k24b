@@ -6,6 +6,7 @@
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
+#include"usuarios.h"
 
 using namespace std;
 //Elaborado por : Daniel Antonio Chacón Morataya  9959-22-1827

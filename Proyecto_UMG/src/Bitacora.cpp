@@ -1,45 +1,52 @@
 #include "Bitacora.h"
-#include <iostream>
-#include <fstream>
-#include <conio.h>
-#include <ctime>
-#include <stdlib.h>
-#include <iomanip>
+#include <cstring>
 
-void Bitacora::ingresoBitacora(string nombre, string aplicacion, string accion)
-//Parametros:  nombre: codigo de usuario autenticado.  aplicacion: codigo de aplicacion.  accion: puede ser INS->ingreso
-//QRY->consulta UPD->actualizacion DEL->borrado de datos PRN->imprimir
-{
-	fstream file;
-	file.open("Bitacora.dat", ios::binary | ios::app | ios::out );
-    time_t now = time(0);
-    date_time = ctime(&now);
-    file<<std::left<<std::setw(20)<<nombre<<std::left<<std::setw(15)<<aplicacion<<std::left<<std::setw(15)<< accion <<std::left<<std::setw(15)<< date_time;
-    file.close();
+
+void Bitacora::ingresoBitacora(const string& usuario, const string& codigoPrograma, const string& tipoIngreso) {
+    ofstream archivo("Bitacora.dat", ios::binary | ios::app);
+    if (archivo.is_open()) {
+        RegistroBitacora registro;
+
+        strncpy(registro.nombre, usuario.c_str(), sizeof(registro.nombre) - 1);
+        registro.nombre[sizeof(registro.nombre) - 1] = '\0'; // Asegurar la terminación nula
+
+        strncpy(registro.aplicacion, codigoPrograma.c_str(), sizeof(registro.aplicacion) - 1);
+        registro.aplicacion[sizeof(registro.aplicacion) - 1] = '\0'; // Asegurar la terminación nula
+
+        strncpy(registro.accion, tipoIngreso.c_str(), sizeof(registro.accion) - 1);
+        registro.accion[sizeof(registro.accion) - 1] = '\0'; // Asegurar la terminación nula
+
+        // Obtener la fecha y hora actual
+        time_t now = time(0);
+        tm *ltm = localtime(&now);
+        string fechaHora = to_string(ltm->tm_year + 1900) + "-" + to_string(ltm->tm_mon + 1) + "-" + to_string(ltm->tm_mday) + " " +
+                           to_string(ltm->tm_hour) + ":" + to_string(ltm->tm_min) + ":" + to_string(ltm->tm_sec);
+
+        strncpy(registro.fechaHora, fechaHora.c_str(), sizeof(registro.fechaHora) - 1);
+        registro.fechaHora[sizeof(registro.fechaHora) - 1] = '\0'; // Asegurar la terminación nula
+
+        archivo.write(reinterpret_cast<char*>(&registro), sizeof(RegistroBitacora));
+        archivo.close();
+    } else {
+        cout << "No se pudo abrir el archivo de bitácora." << endl;
+    }
 }
-void Bitacora::visualizarBitacora()
-{
+
+void Bitacora::mostrarBitacora() {
     system("cls");
-    cout<<"\n-------------------------Tabla de Detalles de Bitacora - 1000 -------------------------"<<endl;
-
-	fstream file;
-	string texto;
-	int total=0;
-	file.open("Bitacora.dat",ios::binary | ios::in);
-	cout<<"\nNombre" <<setw(22)<< "Aplicacion" <<setw(12)<< "Accion" <<setw(20)<< "Fecha\n\n";
-	file >> nombre >> aplicacion >> accion >> date_time;
-
-    while(!file.eof())
-    {
-        total++;
-        getline(file,texto);
-        cout<<texto<<endl;
-    }
-    if(total==0)
-    {
-        cout<<"\n\t\t\tNo hay informacion...";
+    ifstream archivo("Bitacora.dat", ios::binary | ios::in);
+    if (!archivo) {
+        cout << "No hay información registrada en la bitácora." << endl;
+        return;
     }
 
-    file.close();
-    system("pause");
+    RegistroBitacora registro;
+    while (archivo.read(reinterpret_cast<char*>(&registro), sizeof(RegistroBitacora))) {
+        cout << "Usuario: " << registro.nombre << ", Aplicacion: " << registro.aplicacion << ", Accion: " << registro.accion << ", Fecha y Hora: " << registro.fechaHora << endl;
+    }
+    archivo.close();
+
+    cout << "Presione Enter para continuar";
+    cin.ignore();
+    cin.get();
 }

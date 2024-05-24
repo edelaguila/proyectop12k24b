@@ -5,6 +5,7 @@
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
+#include"usuarios.h"
 
 using namespace std;
 

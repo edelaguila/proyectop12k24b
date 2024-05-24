@@ -2,6 +2,9 @@
 #include <fstream> //Libreria necesaria para la creacion, lectura y manejo de archivos
 #include <iomanip> //Libreria necesaria para el comando setw()
 
+#include "login.h"
+#include "Bitacora.h"
+
 using namespace std;
 
 class usumaestros
@@ -19,6 +22,9 @@ class usumaestros
 
 void usumaestros::menu()
 {
+
+
+
     int opc;
     do
     {
@@ -59,6 +65,9 @@ void usumaestros::menu()
 
 void usumaestros::pideDatos()
 {
+
+
+
     system("cls");
     fstream file;
 
@@ -81,6 +90,9 @@ void usumaestros::pideDatos()
 
 void usumaestros::muestraDatos()
 {
+
+
+
     system("cls");
     fstream file;
     int total=0;
@@ -120,6 +132,9 @@ void usumaestros::muestraDatos()
 
 void usumaestros::editaDatos()
  {
+
+
+
     system("cls");
     fstream file, file1;
     string foundNom;
@@ -167,6 +182,8 @@ void usumaestros::editaDatos()
 
 void usumaestros::borraDatos()
 {
+
+
    	system("cls");
 	fstream file, file1;
 	string partcipante;

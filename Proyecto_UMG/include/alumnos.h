@@ -12,21 +12,37 @@
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
+#include"usuarios.h"
 
 using namespace std;
+
+    struct Procealumnos {
+
+    char dpi[20];
+    char certiestudios[50];
+    char fotoestatica[10];
+    char titulo[20];
+    char fotocedula[100];
+    char copiadpi[50];
+    char solvente[20];
+
+
+};
 
 //Creacion de la clase alumnos
 class alumnos
 {
     //Atributos privados de la clase alumnos
     private:
-    string id, nombre, telefono, DPI, direccion, Genero, nacionalidad, civil, fechanaci, anoingre;
+    string id, nombre, telefono, DPI, direccion, Genero, nacionalidad, civil, fechanaci, anoingre,dpi , certiestudios, fotoestatica, titulo, fotocedula, copiadpi;
+
 
     //Atributos publicos de la clase alumnos
     public:
         //Creando los contructores
+        string solvente;
         alumnos() {}
-        alumnos(string id, string nombre, string telefono, string DPI, string direccion, string Genero, string nacionalidad, string civil, string fechanaci, string anoingre);
+        alumnos(string dpi, string certiestudios, string fotoestatica, string titulo, string fotocedula, string copiadpi, string id, string nombre, string telefono, string DPI, string direccion, string Genero, string nacionalidad, string civil, string fechanaci, string anoingre, string solvente);
 
         //Estableciendo la id
         string setid(string id);
@@ -85,6 +101,29 @@ class alumnos
         string setanoingre(string anoingre);
         //Obteniendo el año de ingreso
         string getanoingre();
+
+        string setsolvente(string solvente);
+        //Obteniendo el año de ingreso
+        string getsolvente();
+
+        string setdpi(string dpi);
+        string getdpi();
+
+        string setcertiestudios(string certiestudios);
+        string getcertiestudios();
+
+        string setfotoestatica(string fotoestatica);
+        string getcfotoestatica();
+
+        string settitulo(string titulo);
+        string gettitulo();
+
+        string setfotocedula(string fotocedula);
+        string gettfotocedula();
+
+        string setcopiadpi(string copiadpi);
+        string getcopiadpi();
+
 
 
     //Funciones

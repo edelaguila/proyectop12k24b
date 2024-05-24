@@ -1,336 +1,272 @@
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
-#include <conio.h>
 #include "usuarios.h"
-#include "usualumnos.h"
-#include "usumaestros.h"
-#define MAX 80
-#define ARCHIVO_USUARIOS "usuarios.dat"
-#define TECLA_ENTER 13
-#define TECLA_BACKSPACE 8
-#define MAX_INTENTOS 3
+#include <iostream>
+#include <fstream> //Libreria necesaria para la creacion, lectura y manejo de archivos
+#include <iomanip> //Libreria necesaria para el comando setw()
+
+#include "Bitacora.h"
 
 using namespace std;
 
-char linea[MAX];
 
-void Usuario::menuInicial() {
-    char repite = 1;
-    int opcion = -1;
-        usualumnos Ualumnos;
-        usumaestros Umaestros;
+usuarios::usuarios(string nombre, string contra){
 
-    do {
-        system("cls");
-        printf("\n\t\t\tMENU INICIAL\n");
-        printf("\t\t\t============\n");
-        printf("\n\t\t[1]. Ver usuarios registrados\n");
-        printf("\t\t[2]. Registrar usuario nuevo\n");
-        printf("\t\t[3]. Registrar usuario Alumon nuevo\n");
-        printf("\t\t[4]. Registrar usuario Maestro nuevo\n");
-        printf("\t\t[0]. Salir\n");
-        printf("\n\t\tIngrese su opcion: [ ]\b\b");
-        leerLinea(linea, MAX);
-        sscanf(linea, "%d", &opcion);
 
-        switch (opcion) {
-            case 1:
-                menuListarUsuarios();
-                break;
+this->nombre = nombre;
+this->contra = contra;
 
-            case 2:
-                menuRegistrarUsuario();
-                break;
-            case 3:
-                Ualumnos.menu();
-                break;
-            case 4:
-                Umaestros.menu();
-                break;
-            case 0:
-                repite = 0;
-                break;
-        }
 
-    } while (repite == 1);
+
+
+}
+string usuarios::setnombre(string nombre)
+{
+    this->nombre = nombre;
+    return nombre;
 }
 
-void Usuario::menuRegistrarUsuario() {
-    Usuario usuario;
-    char nombreUsuario[MAX];
-    char respuesta[MAX];
-    char repite = 1;
 
-    do {
-        system("cls");
-        printf("\n\t\t\tREGISTRAR USUARIO\n");
-        printf("\t\t\t=================\n");
-        printf("\n\tIngrese nombre de usuario: ");
-        leerLinea(linea, MAX);
-        sscanf(linea, "%s", nombreUsuario);
-
-        // Verifica que el nombre de usuario no exista
-        if (!existeUsuario(nombreUsuario, &usuario)) {
-            strcpy(usuario.nombre, nombreUsuario);
-
-            printf("\tIngrese la clave: ");
-            leerLinea(usuario.password, MAX);
-
-            // Inserta el usuario en el archivo de usuarios
-            if (insertarUsuario(usuario)) {
-                printf("\n\tEl usuario fue registrado satisfactoriamente!\n");
-            } else {
-                printf("\n\tOcurrio un error al registrar el usuario\n");
-                printf("\nInténtelo mas tarde\n");
-            }
-        } else {
-            printf("\n\tEl usuario \"%s\" ya ha sido registrado previamente\n", usuario.nombre);
-            printf("\tNo puede registrar dos usuarios con el mismo nombre de usuario.\n");
-        }
-
-        printf("\n\tDesea seguir registrando usuarios? [S/N]: ");
-        leerLinea(respuesta, MAX);
-
-        if (!(strcmp(respuesta, "S") == 0 || strcmp(respuesta, "s") == 0)) {
-            repite = 0;
-        }
-
-    } while (repite == 1);
+string usuarios::getnombre()
+{
+    return nombre;
 }
 
-void Usuario::menuListarUsuarios() {
-    int numeroUsuarios = 0;
-    Usuario *usuarios;
-    int i;
+
+string usuarios::setcontra(string contra)
+{
+    this->contra = contra;
+    return contra;
+}
+
+
+string usuarios::getcontra()
+{
+    return contra;
+}
+
+void usuarios::menu()
+{
+
+
+
+    int opc;
+    do
+    {
+        system("cls");
+        cout<<"+-----------------------------------------------+"<<endl;
+		cout<<"|        Gestion de Usuarios de Alumnos         |"<<endl;
+		cout<<"+-----------------------------------------------+"<<endl;
+		cout<<"|            1. Agregar Usuario                 |"<<endl;
+		cout<<"|            2. Mostrar Usuario                 |"<<endl;
+		cout<<"|            3. Modificar Usuario               |"<<endl;
+		cout<<"|            4. Borrar Usuario                  |"<<endl;
+		cout<<"|            5. Regresar al menu                |"<<endl;
+		cout<<"+-----------------------------------------------+"<<endl;
+		cout<<"|         Ingrese su opcion [1/2/3/4/5]         |"<<endl;
+		cout<<"+-----------------------------------------------+"<<endl;
+        cin >> opc;
+
+        switch(opc)
+        {
+        case 1:
+            pideDatos();
+            break;
+        case 2:
+            muestraDatos();
+            break;
+        case 3:
+            editaDatos();
+            break;
+        case 4:
+            borraDatos();
+            break;
+        case 5:
+            break;
+        }
+    } while (opc!=5);
+
+}
+
+void usuarios::pideDatos()
+{
+    system("cls");
+
+
+
+    cout<<"+---------------------------------------------------------+"<< endl;
+    cout<<"|        Agregar detalles del Usuario de Alumnos          |"<< endl;
+    cout<<"+---------------------------------------------------------+"<< endl;
+
+    Usuarios usuario;
+
+    cout<<"       -> Ingrese un nombre: ";
+    cin.ignore();
+    cin.getline(usuario.nombre, 80);
+    cout<<"       -> Ingrese una contrasena: ";
+    cin.getline(usuario.contra, 80);
+
+    ofstream archivo("Usuario.dat", ios::binary | ios::app);
+    archivo.write(reinterpret_cast<const char*>(&usuario), sizeof(usuario));
+    archivo.close();
+}
+
+
+void usuarios::muestraDatos()
+{
+
 
     system("cls");
-    usuarios = obtenerUsuarios(&numeroUsuarios); // Retorna un vector dinámico de usuarios
 
-    if (numeroUsuarios == 0) {
-        printf("\n\tNo existe ningun usuario registrado!\n");
-    } else {
-        printf("\n\t\t    ==> LISTADO DE USUARIOS REGISTRADOS <==\n");
-        printf(" ------------------------------------------------------------------------------\n");
-        printf("%10s%25s%25s\n", "#", "NOMBRE", "PASSWORD");
-        printf(" ------------------------------------------------------------------------------\n");
+    cout<<"+---------------------------------------------------------+"<< endl;
+    cout<<"|        Mostrar detalles del Usuario de Alumnos          |"<< endl;
+    cout<<"+---------------------------------------------------------+"<< endl;
 
-        // Recorre el vector dinámico de productos
-        for (i = 0; i < numeroUsuarios; i++) {
-            printf("%10d%25s%25s\n", (i + 1), usuarios[i].nombre, usuarios[i].password);
+     ifstream archivo("Usuario.dat", ios::binary | ios::in);
+    if(!archivo)
+    {
+        cout << "No hay informacion registrada";
+        return;
+    }
+        Usuarios usuario;
+
+
+        while (archivo.read(reinterpret_cast<char*>(&usuario), sizeof(Usuarios)))
+        {
+            cout<<"       -> Ingrese un nombre: "<< usuario.nombre << endl;
+            cout<<"       -> Ingrese una contrasena: "<<usuario.contra << endl;
+            cout << "+---------------------------------------------------------+" << endl;
         }
-        printf(" ------------------------------------------------------------------------------\n");
-    }
+            archivo.close();
 
-    // Libera la memoria asignada al vector dinámico
-    free(usuarios);
-    usuarios = NULL;
-    getchar();
+
+    cout << "Presione Enter Para Continuar";
+    cin.ignore();
+    cin.get();
 }
 
-void Usuario::menuIniciarSesion() {
-    char nombreUsuario[MAX];
-    char password[MAX];
-    int intento = 0;
-    int loginExitoso = 0;
+void usuarios::editaDatos()
+ {
 
-    do {
-        system("cls");
-        printf("\n\t\t\tINGRESAR AL SISTEMA\n");
-        printf("\t\t\t===================\n");
+    system("cls");
 
-        printf("\n\t\tUSUARIO: ");
-        leerLinea(linea, MAX);
-        sscanf(linea, "%s", nombreUsuario);
+    fstream archivo;
+    string nom;
+    bool encontrado = false;
 
-        printf("\t\tCLAVE: ");
-        leerClave(password);
+    cout<<"+---------------------------------------------------------+"<< endl;
+    cout<<"|         Editar detalles del Usuario de Alumnos          |"<< endl;
+    cout<<"+---------------------------------------------------------+"<< endl;
 
-        if (logear(nombreUsuario, password)) {
-            loginExitoso = 1;
-        } else {
-            printf("\n\n\t\tUsuario y/o password incorrectos");
-            intento++;
-            getchar();
-        }
-    } while (intento < MAX_INTENTOS && loginExitoso == 0);
+    archivo.open("Usuario.dat",ios::binary | ios::in | ios::out);
+    if(!archivo){
 
-    if (loginExitoso == 1) {
-
-    } else {
-        printf("\n\tHa sobrepasado el numero maximo de intentos permitidos\n");
-        getchar();
-    }
-}
-// Retorna 1 si se registró el usuario en el archivo correctamente
-char Usuario::insertarUsuario(Usuario usuario) {
-    FILE *archivo;
-    char insercion = 0;
-
-    // Abre el archivo en modo de añadidura, para agregar datos al final. Si no existe es creado
-    archivo = fopen(ARCHIVO_USUARIOS, "ab");
-
-    if (archivo == NULL) {
-        insercion = 0;
-    } else {
-        // Registra el struct usuario en el archivo
-        fwrite(&usuario, sizeof(usuario), 1, archivo);
-        insercion = 1;
-
-        // Cierra el archivo
-        fclose(archivo);
+        cout << "No hay informacion registrada";
+        return;
     }
 
-    return insercion;
-}
+        cout << "Ingrese el nombre del usuario que quiera modificar: ";
+        cin >> nom;
 
-// Retorna 1 si existe el nombre de usuario. Retorna el usuario buscado si existe
-char Usuario::existeUsuario(char nombreUsuario[], Usuario* usuario) {
-    FILE *archivo;
-    char existe;
+        Usuarios usuario;
 
-    // Abre el archivo en modo de lectura
-    archivo = fopen(ARCHIVO_USUARIOS, "rb");
+        while (archivo.read(reinterpret_cast<char*>(&usuario), sizeof(Usuarios))) {
+        if (usuario.nombre == nom) {
+            encontrado = true;
 
-    if (archivo == NULL) {
-        existe = 0;
-    } else {
-        existe = 0;
+            //Muestra mensajes para poder ingresar los detalles para poder modificar del alumnno
+            cout << "Ingrese el nuevo nombre del usuario: ";
+            cin >> usuario.nombre;
+            cout << "Ingrese la nueva contraseña del usuario: ";
+            cin >> usuario.contra;
 
-        // Lee secuencialmente del archivo de usuarios
-        fread(&(*usuario), sizeof(*usuario), 1, archivo);
-        while (!feof(archivo)) {
-            if (strcmp((*usuario).nombre, nombreUsuario) == 0) {
-                // Encuentra un usuario del archivo con el nombre de usuario buscado
-                existe = 1;
-                break;
-            }
 
-            fread(&(*usuario), sizeof(*usuario), 1, archivo);
-        }
+            // Posiciona el puntero de escritura al inicio del registro que se está modificando
+            archivo.seekp(-static_cast<int>(sizeof(Usuarios)), ios::cur);
 
-        // Cierra el archivo
-        fclose(archivo);
-    }
-
-    return existe;
-}
-
-Usuario *Usuario::obtenerUsuarios(int *n) { // Moved inside the class
-    FILE *archivo;
-    Usuario usuario;
-    Usuario *usuarios; // Vector dinámico de usuarios
-    int i;
-
-    // Abre el archivo en modo lectura
-    archivo = fopen(ARCHIVO_USUARIOS, "rb");
-
-    if (archivo == NULL) { // Si no se pudo abrir el archivo, el valor de archivo es NULL
-        *n = 0; // No se pudo abrir. Se considera n = 0
-        usuarios = NULL;
-    } else {
-        fseek(archivo, 0, SEEK_END); // Posiciona el cursor al final del archivo
-        *n = ftell(archivo) / sizeof(Usuario); // # de usuarios almacenados en el archivo. (# de registros)
-        usuarios = (Usuario *)malloc((*n) * sizeof(Usuario)); // Asigna memoria para todos los usuarios almacenados en el archivo
-
-        // Recorre el archivo secuencialmente
-        fseek(archivo, 0, SEEK_SET); // Posiciona el cursor al principio del archivo
-        fread(&usuario, sizeof(usuario), 1, archivo);
-        i = 0;
-        while (!feof(archivo)) {
-            usuarios[i++] = usuario;
-            fread(&usuario, sizeof(usuario), 1, archivo);
-        }
-
-        // Cierra el archivo
-        fclose(archivo);
-    }
-
-    return usuarios;
-}
-
-// Retorna 1 o 0 si el usuario y password son correctos para un usuario en particular
-char Usuario::logear(char nombreUsuario[], char password[]) {
-    FILE *archivo;
-    char logeoExitoso;
-    Usuario usuario;
-
-    // Abre el archivo en modo de lectura
-    archivo = fopen(ARCHIVO_USUARIOS, "rb");
-
-    if (archivo == NULL) {
-        logeoExitoso = 0;
-    } else {
-        logeoExitoso = 0;
-
-        // Lee secuencialmente del archivo de usuarios
-        fread(&usuario, sizeof(usuario), 1, archivo);
-        while (!feof(archivo)) {
-            if (strcmp(usuario.nombre, nombreUsuario) == 0 && strcmp(usuario.password, password) == 0) {
-                // Encuentra un usuario del archivo con el nombre de usuario y password buscado
-                logeoExitoso = 1;
-                break;
-            }
-
-            fread(&usuario, sizeof(usuario), 1, archivo);
-        }
-
-        // Cierra el archivo
-        fclose(archivo);
-    }
-
-    return logeoExitoso;
-}
-
-int Usuario::leerLinea(char *cad, int n) {
-    int i, c;
-
-    // 1. Comprobación de datos iniciales en el buffer
-    c = getchar();
-    if (c == EOF) {
-        cad[0] = '\0';
-        return 0;
-    }
-
-    if (c == '\n') {
-        i = 0;
-    } else {
-        cad[0] = c;
-        i = 1;
-    }
-
-    // 2. Lectura de la cadena
-    for (; i < n - 1 && (c = getchar()) != EOF && c != '\n'; i++) {
-        cad[i] = c;
-    }
-    cad[i] = '\0';
-
-    // 3. Limpieza del buffer
-    if (c != '\n' && c != EOF) // Es un caracter
-        while ((c = getchar()) != '\n' && c != EOF);
-
-    return 1;
-}
-
-void Usuario::leerClave(char *password) {
-    char caracter;
-    int i = 0;
-
-    while ((caracter = _getch())) {
-        if (caracter == TECLA_ENTER) {
-            password[i] = '\0';
+            // Escribe  nuevos detalles del estudiante en el archivo
+            archivo.write(reinterpret_cast<char*>(&usuario), sizeof(Usuarios));
             break;
-        } else if (caracter == TECLA_BACKSPACE) {
-            if (i > 0) {
-                i--;
-                printf("\b \b");
-            }
-        } else {
-            if (i < MAX) {
-                printf("*");
-                password[i] = caracter;
-                i++;
-            }
         }
     }
+
+    archivo.close(); // Cierra el archivo
+
+    //si no lo encuentra mostrara el siguiente mensaje
+    if (!encontrado) {
+        cout << "No se encontró un usuario con el nombre proporcionado." << endl;
+    }
+
+    cout << "Presione Enter Para Continuar";
+    cin.ignore();
+    cin.get();
 }
+
+void usuarios::borraDatos()
+{
+
+
+   	system("cls");
+
+	string nom;
+
+	cout<<"+---------------------------------------------------------+"<< endl;
+    cout<<"|       Eliminar detalles del Usuario de Alumnos          |"<< endl;
+    cout<<"+---------------------------------------------------------+"<< endl;
+
+    ifstream archivo("Usuario.dat", ios::binary);
+
+    //verifica si se abrio el archivo
+	if(!archivo)
+	{
+        //si no se abrio imprime el siguiente mensaje
+		cout<<"Error, no se encuentra informacion...";
+		return;
+	}
+    // Crea un nuevo archivo binario en modo de escritura
+	ofstream archivo2("Usuario2.dat", ios::binary);
+	Usuarios usuario;
+
+    //Muestra el mensaje para poder borrar el alumno
+    cout<<"-> Ingrese el nombre de la persona que desea eliminar: ";
+    cin>>nom;
+
+    // Crea un nuevo archivo binario en modo de escritura
+    bool resta = false;
+
+        // Lee cada registro del archivo y busca el usuario proporcionado por el usuario
+		while(archivo.read(reinterpret_cast<char*>(&usuario), sizeof(Usuarios)))
+		{
+		    // Si el nombre del usuario no coincide con el proporcionado, se escribe en el nuevo archivo
+			if(usuario.nombre != nom)
+			{
+				archivo2.write(reinterpret_cast<const char*>(&usuario), sizeof(Usuarios));
+			}
+			else
+			{
+			    resta = true;
+			}
+
+		}
+        //cierra ambos archivos
+		archivo.close();
+		archivo2.close();
+
+        //remueve el Alumnos.dat
+		remove("Usuario.dat");
+
+        //y renombra el Alumnos2.dat a alumnos.dat
+		rename("Usuario2.dat","Usuario.dat");
+
+		if (resta)
+        {
+        //Si se encuentra el alumno muestra el mensaje
+        cout << "Usuario eliminado con exito." << endl;
+        }
+        else
+        {
+        //Si no se encuentra el alumno muestra el mensaje
+        cout << "No se a podido encontrar el nombre del Usuario" << endl;
+        }
+}
+
+
+

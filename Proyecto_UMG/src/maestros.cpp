@@ -13,22 +13,68 @@
 //incluyendo el encabezado maestros
 #include "maestros.h"
 #include "Bitacora.h"
+#include "login.h"
+#include "ProcesoMaestros.h"
 using namespace std;
-//Constructor maestros y sus parametros
 
-maestros::maestros(string id, string nombre, string telefono, string DPI, string direccion, string Genero, string nacionalidad, string civil, string fechanaci, string anoingre)
+//Constructor maestros y sus parametros
+maestros::maestros(string anoingre, string Actas, string Cuadernillos, string Asistencia, string id, string nombre, string telefono, string DPI, string direccion, string Genero, string civil, string fechanaci, string solvente)
 {
     // Asignando los valores de los parámetros a los atributos del objeto
     this->id = id;
+    this->Actas = Actas;
+    this->Cuadernillos = Cuadernillos;
+    this->Asistencia = Asistencia;
     this->nombre = nombre;
     this->telefono = telefono;
     this->DPI = DPI;
     this->direccion = direccion;
     this->Genero = Genero;
-    this->nacionalidad = nacionalidad;
     this->civil = civil;
     this->fechanaci = fechanaci;
     this->anoingre = anoingre;
+    this->solvente= solvente;
+}
+
+//Estableciendo las actas del maestro
+string maestros::setActas(string Actas)
+{
+    this -> Actas = Actas;
+    return Actas;
+}
+
+//Obteniendo las actas del maestro
+string maestros::getActas()
+{
+
+    return Actas;
+}
+
+//Estableciendo los cuadernillos del maestro
+string maestros::setCuadernillos(string Cuadernillos)
+{
+    this -> Cuadernillos = Cuadernillos;
+    return Cuadernillos;
+}
+
+//Obteniendo los cuadernillos del maestro
+string maestros::getCuadernillos()
+{
+
+    return Cuadernillos;
+}
+
+//Estableciendo la asistencia del maestro
+string maestros::setAsistencia(string Asistencia)
+{
+    this -> Asistencia = Asistencia;
+    return Asistencia;
+}
+
+//Obteniendo la asistencia del maestro
+string maestros::getAsistencia()
+{
+    return Asistencia;
 }
 
 //Estableciendo la id del maestro
@@ -43,7 +89,6 @@ string maestros::getid()
 {
     return id;
 }
-
 
 //Estableciendo el nombre del maestro
 string maestros::setnombre(string nombre)
@@ -112,19 +157,6 @@ string maestros::getGenero()
     return Genero;
 }
 
-//Estableciendo la nacionalidad del maestro
-string maestros::setnacionalidad(string nacionalidad)
-{
-    this->nacionalidad = nacionalidad;
-    return nacionalidad;
-}
-
-//Obteniendo la nacionalidad del maestro
-string maestros::getnacionalidad()
-{
-    return nacionalidad;
-}
-
 //Estableciendo el estado civil del maestro
 string maestros::setcivil(string civil)
 {
@@ -165,16 +197,22 @@ string maestros::getanoingre()
     return anoingre;
 }
 
+string maestros::setsolvente(string solvente)
+{
+    this->solvente = solvente;
+    return solvente;
+}
+
+string maestros::getsolvente()
+{
+    return solvente;
+}
+
 //Funcion menu donde muestra el sistema de gestion de alumnos
 void maestros::menu()
 {
 //Implementando la bitacora
-string codigoPrograma="2533";
-
-Bitacora Auditoria;
 //Declarando variable string con el codigo programa
-string user, contrasena;
-            Auditoria.ingresoBitacora(user,codigoPrograma,"MST");
 
     //Definiendo Variable int
     int opcion;
@@ -265,16 +303,20 @@ string user, contrasena;
 //Funcion para insertar un maestro
 void maestros::insertar()
 {
+//Implementando la bitacora
+//Declarando variable string con el codigo programa
 string codigoPrograma="2534";
+//Instancia de la clase bitacora
 Bitacora Auditoria;
-string user, contrasena;
-Auditoria.ingresoBitacora(user,codigoPrograma,"MSTI");
+//Declarando 2 variables string con el codigo programa
+
+
     //Limpiando pantalla
     system("cls");
 
     //Encabezado del diseño insertar estudiante
     cout<<"+---------------------------------------------------------+"<< endl;
-    cout<<"|                Agregar detalles del Maestro          |"<< endl;
+    cout<<"|                Agregar detalles del Maestro             |"<< endl;
     cout<<"+---------------------------------------------------------+"<< endl;
 
     //Encabezado del diseño insertar estudiante
@@ -308,10 +350,6 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"MSTI");
     cout<<"       -> Ingrese el email del maestro: ";
     cin.getline(maestro.DPI, 20);
 
-    //Mensaje para ingresar la estatus del maestro
-    cout<<"       -> Ingrese la estatus del maestro: ";
-    cin.getline(maestro.nacionalidad, 100);
-
     //Mensaje para ingresar la direccion del maestro
     cout<<"       -> Ingrese la direccion del maestro: ";
     cin.getline(maestro.direccion, 50);
@@ -331,10 +369,9 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"MSTI");
 //Funcion para desplegar los alumnos ya registrados
 void maestros::desplegar()
 {
-    string codigoPrograma="2612";
- Bitacora Auditoria;
-string user, contrasena;
-            Auditoria.ingresoBitacora(user,codigoPrograma,"MSTD");
+//Implementando la bitacora
+
+
     //Limpiando pantalla
 	system("cls");
 
@@ -344,21 +381,25 @@ string user, contrasena;
     cout << "+---------------------------------------------------------------------------------+" << endl;
 
     //Mostrando el encabezado de la tabla de detalles del estudiante
-    ifstream archivo("Maestros.dat", ios::binary | ios::app);
-    if (!archivo) {
+    ifstream archivo("ProcesoMaestros.dat", ios::binary | ios::in);
+    ifstream archivo3("Maestros.dat", ios::binary | ios::in);
+    if (!archivo || !archivo3) {
             //Si no encuentra informacion muestra el siguiente mensaje
         cout << "Error, no se encuentra informacion...";
         return;
     }
     Maestro maestro;
 
+    proceamaestros maestros;
+
     //Ciclo while para leer los datos del archivo binario  y los almacenan en un objeto alumno llamado alumno y repite este procedimiento hasta que se acaben los datos por leer
-    while (archivo.read(reinterpret_cast<char*>(&maestro), sizeof(Maestro))) {
+    while (archivo.read(reinterpret_cast<char*>(&maestros), sizeof(proceamaestros)) &&
+           archivo3.read(reinterpret_cast<char*>(&maestro), sizeof(Maestro))) {
         //Se muestra los detalles del estudiante
         cout << "                        Mostrando -> Codigo del Maestro: " << maestro.id << endl;
         cout << "                        Mostrando -> Nombre del Maestro: " << maestro.nombre << endl;
         cout << "                        Mostrando -> Email del maestro : " << maestro.DPI << endl;
-        cout << "                        Mostrando -> Estatus del maestro: " << maestro.nacionalidad << endl;
+        cout << "                        Mostrando -> Estatus del estudiante (solvente=1 | pendiente=0): " << maestros.solvente << endl;
         cout << "                        Mostrando -> Direccion: " << maestro.direccion << endl;
         cout << "                        Mostrando -> Telefono: " << maestro.telefono << endl;
         cout << "+---------------------------------------------------------------------------------+" << endl;
@@ -374,10 +415,9 @@ string user, contrasena;
 //Funcion para modificar los maestros ya registrados
 void maestros::modificar()
 {
-    string codigoPrograma="2789";
- Bitacora Auditoria;
-string user, contrasena;
-            Auditoria.ingresoBitacora(user,codigoPrograma,"MSTM");
+//Implementando la bitacora
+//Declarando variable string con el codigo programa
+
     //Limpiando pantalla
 	system("cls");
 	//Declarando variables tipo fstream y string
@@ -423,8 +463,6 @@ string user, contrasena;
             cin >> maestro.nombre;
             cout << "Ingrese el nuevo email del Maestro: ";
             cin >> maestro.DPI;
-            cout << "Ingrese el nuevo estatus del Maestro: ";
-            cin >> maestro.nacionalidad;
             cout << "Ingrese la nueva direccion del Maestro: ";
             cin >> maestro.direccion;
             cout << "Ingrese el nuevo Telefono del Maestro: ";
@@ -454,10 +492,11 @@ string user, contrasena;
 //funcion para borrarr a las maestros registradas
 void maestros::borrar()
 {
-    string codigoPrograma="2802";
- Bitacora Auditoria;
-string user, contrasena;
-            Auditoria.ingresoBitacora(user,codigoPrograma,"MSTB");
+//Implementando la bitacora
+
+//Instancia de la clase bitacora
+
+
     //Limpia pantalla
     system("cls");
 
@@ -496,6 +535,7 @@ string user, contrasena;
             // Lee cada registro del archivo y busca el usuario proporcionado por el usuario
             if(maestro.id != idPersona)
             {
+                // Escribe  nuevos detalles del estudiante en el archivo
                 archivo2.write(reinterpret_cast<const char*>(&maestro), sizeof(Maestro));
             }
             else

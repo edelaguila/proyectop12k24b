@@ -1,11 +1,8 @@
-
-//Creando por Andre Gonzalez 9959-23-3117
-
 //Encabezados de proteccion
-#ifndef MAESTROS_H
-#define MAESTROS_H
+#ifndef PROCESOMAESTROS_H
+#define PROCESOMAESTROS_H
 
-//Incluyendo librerias a utilizar
+//Incluyendo librerias
 #include<iostream>
 #include<fstream>
 #include<stdlib.h>
@@ -16,48 +13,20 @@
 
 using namespace std;
 
-//Estructura del maestro
-struct Maestro {
-
-    char id[20];       // Almacena la id de los maestros ingresado
-    char nombre[50];   // Almacena el nombre del maestro ingresado
-    char Genero[10];   // Almacena el género del maestro ingresado
-    char DPI[20];       // Almacena el DPI del maestro ingresado
-    char direccion[100];  // Almacena la dirección del maestro ingresado
-    char telefono[15];      // Almacena el número de teléfono del maestro ingresado
-    char civil[20];         // Almacena el estado civil del maestro ingresado
-    char fechanaci[20];     // Almacena la fecha de nacimiento del maestro ingresado
-    char anoingre[10];      // Almacena el año de ingreso del maestro ingresado
-};
-
-struct proceamaestros {
-
-    char id[20];
-    char Actas[20];          // Almacena las actas de los maestros
-    char Cuadernillos[50];   // Almacena los cuadernillos  del maestro ingresado
-    char Asistencia[10];     // Almacena la asistencia del maestro ingresado
-    char solvente[20];
-
-};
-
-//Creando la clase maestros
-class maestros
+//Creamos la clase ProcesoMaestros
+class ProceMaestros
 {
     //Atributos privados de la clase maestros
     private:
-    string id, nombre, telefono, DPI, direccion, Genero, civil, fechanaci, anoingre, Actas, Cuadernillos, Asistencia;
+    string Actas, Cuadernillos, Asistencia, id, nombre, telefono, DPI, direccion, Genero, civil, fechanaci, anoingre;
 
     //Atributos publicos de la clase maestros
     public:
 
         string solvente;
         //Constructores
-        maestros() {}
-        maestros(string Actas, string Cuadernillos, string Asistencia, string id, string nombre, string telefono, string DPI, string direccion, string Genero, string civil, string fechanaci, string anoingre, string solvente);
-
-        string setsolvente(string solvente);
-        //Obteniendo el año de ingreso
-        string getsolvente();
+        ProceMaestros() {}
+        ProceMaestros(string Actas, string Cuadernillos, string Asistencia, string id, string nombre, string telefono, string DPI, string direccion, string Genero, string civil, string fechanaci, string anoingre);
 
         //Estableciendo las actas
         string setActas(string Actas);
@@ -76,7 +45,6 @@ class maestros
 
         //obteniendo la asistencia
         string getAsistencia();
-
 
         //Estableciendo la id
         string setid(string id);
@@ -132,16 +100,36 @@ class maestros
         string getanoingre();
 
     //Funciones
-    void menu(); //Funcion menu para poder mostar el menu de maestros
-    void insertar(); //Funcion para insertar un nuevo maestro
-    void desplegar();  //Funcion para poder desplegar los maestros registrados
-    void modificar(); //Funcion para modificar un maestro registrado
-    void buscar(); //Funcion para poder buscar un maestro por medio de la id
-    void borrar(); //Funcion para poder borrar algun maestro registrado
+    void menu();
+    void insertar();
+    void mostrarmenu();
+    bool validarCarnet();
 
+    struct Maestro {
 
+    char id[20];       // Almacena la id de los maestros ingresado
+    char nombre[50];   // Almacena el nombre del maestro ingresado
+    char Genero[10];   // Almacena el género del maestro ingresado
+    char DPI[20];       // Almacena el DPI del maestro ingresado
+    char direccion[100];  // Almacena la dirección del maestro ingresado
+    char telefono[15];      // Almacena el número de teléfono del maestro ingresado
+    char civil[20];         // Almacena el estado civil del maestro ingresado
+    char fechanaci[20];     // Almacena la fecha de nacimiento del maestro ingresado
+    char anoingre[10];      // Almacena el año de ingreso del maestro ingresado
+};
+
+    //Estructura del procesomaestros
+    struct proceamaestros {
+
+    char id[20];
+    char Actas[20];          // Almacena las actas de los maestros
+    char Cuadernillos[50];   // Almacena los cuadernillos  del maestro ingresado
+    char Asistencia[10];     // Almacena la asistencia del maestro ingresado
+    char solvente[20];
 
 };
 
 
-#endif // MAESTROS_H
+};
+
+#endif // PROCESOMAESTROS_H

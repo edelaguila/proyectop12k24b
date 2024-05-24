@@ -1,94 +1,72 @@
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
-#include <conio.h>
-#include "login.h"
-#include "usuarios.h"
+#include "Login.h"
+#include "Bitacora.h"
 
-#define MAX 80
+using namespace std;
 
-int Login::menuIniciarSesion() {
-    char nombreUsuario[MAX];
-    char password[MAX];
-    int intento = 0;
-    int loginExitoso = 0;
+string Login::usuarioActual = "";
 
-    do {
+Login::Login(string nombre, string contra) : nombre(nombre), contra(contra) {}
+
+void Login::setnombre(string nombre) {
+    this->nombre = nombre;
+}
+
+string Login::getnombre() const {
+    return nombre;
+}
+
+void Login::setcontra(string contra) {
+    this->contra = contra;
+}
+
+string Login::getcontra() const {
+    return contra;
+}
+bool Login::validacion() {
     system("cls");
-    printf("\n\t\t\tINGRESAR AL SISTEMA\n");
-    printf("\t\t\t===================\n");
 
-    printf("\n\t\tUSUARIO: ");
-    fgets(nombreUsuario, MAX, stdin);
-    nombreUsuario[strcspn(nombreUsuario, "\n")] = 0; // Eliminar el salto de línea
+    fstream archivo;
+    string nom;
+    string pass;
+    bool encontrado = false;
 
-    printf("\t\tCLAVE: ");
-    leerClave(password);
+    cout << "+---------------------------------------------------------------------------------+" << endl;
+    cout << "+                      Bienvenido Al sistema                                      +" << endl;
+    cout << "+---------------------------------------------------------------------------------+" << endl;
 
-    if (logear(nombreUsuario, password)) {
-    loginExitoso = 1;
-    } else {
-     printf("\n\n\t\tUsuario y/o password incorrectos");
-    intento++;
-    getchar();
-    }
-    } while (intento < MAX_INTENTOS && loginExitoso == 0);
+    archivo.open("Usuario.dat", ios::binary | ios::in);
 
-    if (loginExitoso == 1) {
-    printf("\n\n\t\tInicio de sesión exitoso\n");
-    } else {
-    printf("\n\tHa sobrepasado el numero maximo de intentos permitidos\n");
-    getchar();
+    if (!archivo) {
+        cout << "Error, no se encuentra información..." << endl;
+        return false;
     }
 
-    return loginExitoso;
-}
+    cout << "Ingrese su Nombre: ";
+    cin >> nom;
+    cout << "Ingrese su contraseña: ";
+    cin >> pass;
 
-char Login::logear(char nombreUsuario[], char password[]) {
-    FILE *archivo;
-char logeoExitoso = 0;
-    Usuario usuario;
+    Usuarios usuario;
 
-    // Abre el archivo en modo de lectura
-archivo = fopen(ARCHIVO_USUARIOS, "rb");
-
-if (archivo != NULL) {
-    // Lee secuencialmente del archivo de usuarios
-while (fread(&usuario, sizeof(usuario), 1, archivo)) {
-if (strcmp(usuario.nombre, nombreUsuario) == 0 && strcmp(usuario.password, password) == 0) {
-    logeoExitoso = 1;
-    break;
-    }
-    }
-
-    // Cierra el archivo
-    fclose(archivo);
-    }
-
-return logeoExitoso;
-}
-
-
-
-void Login::leerClave(char *password) {
-    char caracter;
-    int i = 0;
-
-    while ((caracter = _getch())) {
-        if (caracter == TECLA_ENTER) {
-            password[i] = '\0';
+    while (archivo.read(reinterpret_cast<char*>(&usuario), sizeof(Usuarios))) {
+        if (nom == usuario.nombre && pass == usuario.contra) {
+            // Establecer el usuario actual después de la validación exitosa
+            usuarioActual = nom;
+            string codigoPrograma = "2350";
+            Bitacora bitacora;
+            bitacora.ingresoBitacora(nom, codigoPrograma, "LOG");
+            encontrado = true;
             break;
-        } else if (caracter == TECLA_BACKSPACE) {
-            if (i > 0) {
-                i--;
-                printf("\b \b");
-            }
-        } else {
-            if (i < MAX) {
-                printf("*");
-                password[i] = caracter;
-                i++;
-            }
         }
+    }
+
+    archivo.close();
+
+    if (encontrado) {
+        cout << "Login exitoso!" << endl;
+        return true;
+    } else {
+        cout << "Nombre o contraseña incorrectos" << endl;
+        return false;
     }
 }

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream> //Libreria necesaria para la creacion, lectura y manejo de archivos
 #include <iomanip> //Libreria necesaria para el comando setw()
+#include "Bitacora.h"
 
 using namespace std;
 
@@ -19,6 +20,9 @@ class usualumnos
 
 void usualumnos::menu()
 {
+
+
+
     int opc;
     do
     {
@@ -62,6 +66,8 @@ void usualumnos::pideDatos()
     system("cls");
     fstream file;
 
+
+
     cout<<"+---------------------------------------------------------+"<< endl;
     cout<<"|        Agregar detalles del Usuario de Alumnos          |"<< endl;
     cout<<"+---------------------------------------------------------+"<< endl;
@@ -81,6 +87,9 @@ void usualumnos::pideDatos()
 
 void usualumnos::muestraDatos()
 {
+
+
+
     system("cls");
     fstream file;
     int total=0;
@@ -120,6 +129,9 @@ void usualumnos::muestraDatos()
 
 void usualumnos::editaDatos()
  {
+
+
+
     system("cls");
     fstream file, file1;
     string foundNom;
@@ -167,6 +179,8 @@ void usualumnos::editaDatos()
 
 void usualumnos::borraDatos()
 {
+
+
    	system("cls");
 	fstream file, file1;
 	string partcipante;

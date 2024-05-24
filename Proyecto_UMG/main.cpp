@@ -7,23 +7,11 @@
 #include "Bitacora.h"
 #include "alumnos.h"
 #include "maestros.h"
-<<<<<<< HEAD
-#include "login.h"
-#include "Procesos.h"
-#define MAX 80
-=======
-<<<<<<< HEAD
-#include "login.h"
-#include "Procesos.h"
-#define MAX 80
-=======
 #include "Procesos.h"
 #include "usuarios.h"
 #include "Login.h"
 
 
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 
 using namespace std;
 
@@ -35,37 +23,13 @@ void ayuda();
 void seguridad();
 string codigoPrograma="1";
 
-<<<<<<< HEAD
-int main() {
-    Login login;
-    int intentos = 0;
-    bool loginExitoso = false;
-
-    do {
-    int resultadoLogin = login.menuIniciarSesion();
-    if (resultadoLogin == 1) {
-    loginExitoso = true;
-    break;
-=======
 
 int main() {
     Login login;
     if (login.validacion()) {
         menuGeneral();
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
     } else {
-<<<<<<< HEAD
-    intentos++;
-    cout << "Intento fallido. Intento " << intentos << " de 3." << endl;
-    if (intentos >= 3) {
-    cout << "Demasiados intentos fallidos. Saliendo del programa."<< endl;
-    return 1;
-<<<<<<< HEAD
-=======
-=======
         cout << "Intentelo nuevamente..." << endl;
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
     }
     return 0;
 }
@@ -108,29 +72,21 @@ void menuGeneral()
             break;
         case 4:
             {
-<<<<<<< HEAD
-    Bitacora Auditoria;
-    Auditoria.visualizarBitacora();
-            }
-            seguridad();
-            break;
-=======
-<<<<<<< HEAD
-                Bitacora Auditoria;
-                Auditoria.visualizarBitacora();
-=======
                 Bitacora sex;
                 sex.mostrarBitacora();
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
                 break;
             }
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
         case 5:
             ayuda();
             break;
         case 6:
-
+            {
+            string usuarioActual = Login::getUsuarioActual();
+            Bitacora bitacora;
+            bitacora.ingresoBitacora(usuarioActual, "2600", "LGO");
             exit(0);
+            }
+
         default:
             cout << "\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
             cin.ignore();

@@ -2,7 +2,7 @@
 #include <fstream> //Libreria necesaria para la creacion, lectura y manejo de archivos
 #include <iomanip> //Libreria necesaria para el comando setw()
 
-#include "login.h"
+#include "Login.h"
 #include "Bitacora.h"
 
 using namespace std;
@@ -22,19 +22,10 @@ class usumaestros
 
 void usumaestros::menu()
 {
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2500", "UMM");
 
-<<<<<<< HEAD
-    string codigoPrograma="2565";
-//Instancia de la clase bitacora
-    Bitacora Auditoria;
-//Declarando 2 variables string con el codigo programa
-    string user, contrasena;
-    char nombreUsuario[MAX];
-// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
-    Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"USMA");
-=======
-
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
     int opc;
     do
@@ -76,19 +67,10 @@ void usumaestros::menu()
 
 void usumaestros::pideDatos()
 {
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2501", "UMPD");
 
-<<<<<<< HEAD
-    string codigoPrograma="2570";
-//Instancia de la clase bitacora
-    Bitacora Auditoria;
-//Declarando 2 variables string con el codigo programa
-    string user, contrasena;
-    char nombreUsuario[MAX];
-// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
-    Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"USMAP");
-=======
-
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
     system("cls");
     fstream file;
@@ -112,19 +94,10 @@ void usumaestros::pideDatos()
 
 void usumaestros::muestraDatos()
 {
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2502", "UMMD");
 
-<<<<<<< HEAD
-    string codigoPrograma="2575";
-//Instancia de la clase bitacora
-    Bitacora Auditoria;
-//Declarando 2 variables string con el codigo programa
-    string user, contrasena;
-    char nombreUsuario[MAX];
-// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
-    Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"USMAM");
-=======
-
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
     system("cls");
     fstream file;
@@ -165,19 +138,10 @@ void usumaestros::muestraDatos()
 
 void usumaestros::editaDatos()
  {
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2503", "UMED");
 
-<<<<<<< HEAD
-    string codigoPrograma="2580";
-//Instancia de la clase bitacora
-    Bitacora Auditoria;
-//Declarando 2 variables string con el codigo programa
-    string user, contrasena;
-    char nombreUsuario[MAX];
-// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
-    Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"USMAE");
-=======
-
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
     system("cls");
     fstream file, file1;
@@ -226,18 +190,9 @@ void usumaestros::editaDatos()
 
 void usumaestros::borraDatos()
 {
-
-<<<<<<< HEAD
-    string codigoPrograma="2585";
-//Instancia de la clase bitacora
-    Bitacora Auditoria;
-//Declarando 2 variables string con el codigo programa
-    string user, contrasena;
-    char nombreUsuario[MAX];
-// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
-    Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"USMAB");
-=======
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2504", "UMBD");
 
    	system("cls");
 	fstream file, file1;

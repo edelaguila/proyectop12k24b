@@ -7,25 +7,11 @@
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
-<<<<<<< HEAD
-=======
 #include"usuarios.h"
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 
 
 using namespace std;
 
-<<<<<<< HEAD
-class procealumnos
-{
-    private:
-    string dpi, certiestudios, fotoestatica, titulo, fotocedula, copiadpi;
-
-    public:
-
-        procealumnos() {}
-        procealumnos(string dpi, string certiestudios, string fotoestatica, string titulo, string fotocedula, string copiadpi);
-=======
 struct Alumno {
 
     char id[20];          // Almacena la id de los alumnos ingresados
@@ -50,7 +36,6 @@ class procealumnos
         string solvente;
         procealumnos() {}
         procealumnos(string dpi, string certiestudios, string fotoestatica, string titulo, string fotocedula, string copiadpi, string id, string nombre, string telefono, string DPI, string direccion, string Genero, string nacionalidad, string civil, string fechanaci, string anoingre, string solvente);
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 
         string setdpi(string dpi);
         string getdpi();
@@ -70,10 +55,6 @@ class procealumnos
         string setcopiadpi(string copiadpi);
         string getcopiadpi();
 
-<<<<<<< HEAD
-    void menu();
-    void insertar();
-=======
         string setid(string id);
         //obteniendo la id
         string getid();
@@ -140,7 +121,6 @@ class procealumnos
     bool validarCarnet();
     void mostrarmenu();
 
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 
     struct Procealumnos {
 
@@ -150,10 +130,7 @@ class procealumnos
     char titulo[20];
     char fotocedula[100];
     char copiadpi[50];
-<<<<<<< HEAD
-=======
     char solvente[20];
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 
 };
 };

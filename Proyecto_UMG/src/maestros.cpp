@@ -13,7 +13,7 @@
 //incluyendo el encabezado maestros
 #include "maestros.h"
 #include "Bitacora.h"
-#include "login.h"
+#include "Login.h"
 #include "ProcesoMaestros.h"
 using namespace std;
 
@@ -211,19 +211,10 @@ string maestros::getsolvente()
 //Funcion menu donde muestra el sistema de gestion de alumnos
 void maestros::menu()
 {
-//Implementando la bitacora
-<<<<<<< HEAD
-//Declarando variable string con el codigo programa
-string codigoPrograma="2533";
-//Instancia de la clase bitacora
-Bitacora Auditoria;
-//Declarando variable string con el codigo programa
-string user, contrasena;
-// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
-Auditoria.ingresoBitacora(user,codigoPrograma,"MST");
-=======
-//Declarando variable string con el codigo programa
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2300", "MSM");
+
 
     //Definiendo Variable int
     int opcion;
@@ -314,20 +305,11 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"MST");
 //Funcion para insertar un maestro
 void maestros::insertar()
 {
-//Implementando la bitacora
-//Declarando variable string con el codigo programa
-string codigoPrograma="2534";
-//Instancia de la clase bitacora
-Bitacora Auditoria;
-//Declarando 2 variables string con el codigo programa
-<<<<<<< HEAD
-string user, contrasena;
-char nombreUsuario[MAX];
-// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
-Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"MSTI");
-=======
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2301", "MSMI");
 
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
+
 
     //Limpiando pantalla
     system("cls");
@@ -387,20 +369,10 @@ Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"MSTI");
 //Funcion para desplegar los alumnos ya registrados
 void maestros::desplegar()
 {
-//Implementando la bitacora
-<<<<<<< HEAD
-//Declarando variable string con el codigo programa
-string codigoPrograma="2612";
-//Instancia de la clase bitacora
-Bitacora Auditoria;
-//Declarando 2 variables string con el codigo programa
-string user, contrasena;
-char nombreUsuario[MAX];
-// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
-Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"MSTD");
-=======
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2302", "MSMD");
 
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
     //Limpiando pantalla
 	system("cls");
@@ -445,20 +417,9 @@ Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"MSTD");
 //Funcion para modificar los maestros ya registrados
 void maestros::modificar()
 {
-//Implementando la bitacora
-//Declarando variable string con el codigo programa
-<<<<<<< HEAD
-string codigoPrograma="2789";
-//Instancia de la clase bitacora
-Bitacora Auditoria;
-//Declarando 2 variables string con el codigo programa
-string user, contrasena;
-char nombreUsuario[MAX];
-// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
-Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"MSTM");
-=======
-
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2303", "MSMM");
     //Limpiando pantalla
 	system("cls");
 	//Declarando variables tipo fstream y string
@@ -533,22 +494,9 @@ Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"MSTM");
 //funcion para borrarr a las maestros registradas
 void maestros::borrar()
 {
-//Implementando la bitacora
-<<<<<<< HEAD
-//Declarando variable string con el codigo programa
-string codigoPrograma="2802";
-//Instancia de la clase bitacora
-Bitacora Auditoria;
-//Declarando 2 variables string con el codigo programa
-string user, contrasena;
-char nombreUsuario[MAX];
-// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
-Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"MSTB");
-=======
-
-//Instancia de la clase bitacora
-
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2304", "MSMB");
 
     //Limpia pantalla
     system("cls");

@@ -1,12 +1,8 @@
 #include <iostream>
 #include <fstream> //Libreria necesaria para la creacion, lectura y manejo de archivos
 #include <iomanip> //Libreria necesaria para el comando setw()
-<<<<<<< HEAD
-#include "login.h"
-=======
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 #include "Bitacora.h"
-
+#include "Login.h"
 using namespace std;
 
 class usualumnos
@@ -24,19 +20,10 @@ class usualumnos
 
 void usualumnos::menu()
 {
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2400", "UAM");
 
-<<<<<<< HEAD
-    string codigoPrograma="2525";
-//Instancia de la clase bitacora
-    Bitacora Auditoria;
-//Declarando 2 variables string con el codigo programa
-    string user, contrasena;
-    char nombreUsuario[MAX];
-// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
-    Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"USAL");
-=======
-
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
     int opc;
     do
@@ -78,21 +65,14 @@ void usualumnos::menu()
 
 void usualumnos::pideDatos()
 {
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2401", "USPD");
+
     system("cls");
     fstream file;
 
-<<<<<<< HEAD
-    string codigoPrograma="2530";
-//Instancia de la clase bitacora
-    Bitacora Auditoria;
-//Declarando 2 variables string con el codigo programa
-    string user, contrasena;
-    char nombreUsuario[MAX];
-// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
-    Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"USALP");
-=======
 
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
     cout<<"+---------------------------------------------------------+"<< endl;
     cout<<"|        Agregar detalles del Usuario de Alumnos          |"<< endl;
@@ -113,19 +93,11 @@ void usualumnos::pideDatos()
 
 void usualumnos::muestraDatos()
 {
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2402", "USMD");
 
-<<<<<<< HEAD
-    string codigoPrograma="2550";
-//Instancia de la clase bitacora
-    Bitacora Auditoria;
-//Declarando 2 variables string con el codigo programa
-    string user, contrasena;
-    char nombreUsuario[MAX];
-// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
-    Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"USALD");
-=======
 
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
     system("cls");
     fstream file;
@@ -166,19 +138,10 @@ void usualumnos::muestraDatos()
 
 void usualumnos::editaDatos()
  {
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2403", "USED");
 
-<<<<<<< HEAD
-    string codigoPrograma="2555";
-//Instancia de la clase bitacora
-    Bitacora Auditoria;
-//Declarando 2 variables string con el codigo programa
-    string user, contrasena;
-    char nombreUsuario[MAX];
-// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
-    Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"USALE");
-=======
-
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
     system("cls");
     fstream file, file1;
@@ -227,18 +190,9 @@ void usualumnos::editaDatos()
 
 void usualumnos::borraDatos()
 {
-
-<<<<<<< HEAD
-    string codigoPrograma="2560";
-//Instancia de la clase bitacora
-    Bitacora Auditoria;
-//Declarando 2 variables string con el codigo programa
-    string user, contrasena;
-    char nombreUsuario[MAX];
-// ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
-    Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"USALB");
-=======
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2404", "USBD");
 
    	system("cls");
 	fstream file, file1;

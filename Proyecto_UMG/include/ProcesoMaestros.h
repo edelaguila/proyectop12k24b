@@ -9,10 +9,7 @@
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
-<<<<<<< HEAD
-=======
 #include"usuarios.h"
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 
 using namespace std;
 
@@ -21,25 +18,15 @@ class ProceMaestros
 {
     //Atributos privados de la clase maestros
     private:
-<<<<<<< HEAD
-    string Actas, Cuadernillos, Asistencia;
-=======
     string Actas, Cuadernillos, Asistencia, id, nombre, telefono, DPI, direccion, Genero, civil, fechanaci, anoingre;
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 
     //Atributos publicos de la clase maestros
     public:
 
-<<<<<<< HEAD
-        //Constructores
-        ProceMaestros() {}
-        ProceMaestros(string Actas, string Cuadernillos, string Asistencia);
-=======
         string solvente;
         //Constructores
         ProceMaestros() {}
         ProceMaestros(string Actas, string Cuadernillos, string Asistencia, string id, string nombre, string telefono, string DPI, string direccion, string Genero, string civil, string fechanaci, string anoingre);
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 
         //Estableciendo las actas
         string setActas(string Actas);
@@ -59,11 +46,6 @@ class ProceMaestros
         //obteniendo la asistencia
         string getAsistencia();
 
-<<<<<<< HEAD
-    //Funciones
-    void menu();
-    void insertar();
-=======
         //Estableciendo la id
         string setid(string id);
         //Obteniendo la id
@@ -135,18 +117,10 @@ class ProceMaestros
     char fechanaci[20];     // Almacena la fecha de nacimiento del maestro ingresado
     char anoingre[10];      // Almacena el año de ingreso del maestro ingresado
 };
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 
     //Estructura del procesomaestros
     struct proceamaestros {
 
-<<<<<<< HEAD
-    char Actas[20];          // Almacena las actas de los maestros
-    char Cuadernillos[50];   // Almacena los cuadernillos  del maestro ingresado
-    char Asistencia[10];     // Almacena la asistencia del maestro ingresado
-
-};
-=======
     char id[20];
     char Actas[20];          // Almacena las actas de los maestros
     char Cuadernillos[50];   // Almacena los cuadernillos  del maestro ingresado
@@ -156,7 +130,6 @@ class ProceMaestros
 };
 
 
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 };
 
 #endif // PROCESOMAESTROS_H

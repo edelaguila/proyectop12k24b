@@ -1,19 +1,9 @@
 #include "usuarios.h"
-<<<<<<< HEAD
-#include "usualumnos.h"
-#include "usumaestros.h"
-#define MAX 80
-#define ARCHIVO_USUARIOS "usuarios.dat"
-#define TECLA_ENTER 13
-#define TECLA_BACKSPACE 8
-#define MAX_INTENTOS 3
-=======
 #include <iostream>
 #include <fstream> //Libreria necesaria para la creacion, lectura y manejo de archivos
 #include <iomanip> //Libreria necesaria para el comando setw()
-
+#include "Login.h"
 #include "Bitacora.h"
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 
 using namespace std;
 
@@ -26,48 +16,12 @@ this->contra = contra;
 
 
 
-<<<<<<< HEAD
-    do {
-        system("cls");
-        printf("\n\t\t\tMENU INICIAL\n");
-        printf("\t\t\t============\n");
-        printf("\n\t\t[1]. Ver usuarios registrados\n");
-        printf("\t\t[2]. Registrar usuario nuevo\n");
-        printf("\t\t[3]. Registrar usuario Alumon nuevo\n");
-        printf("\t\t[4]. Registrar usuario Maestro nuevo\n");
-        printf("\t\t[0]. Salir\n");
-        printf("\n\t\tIngrese su opcion: [ ]\b\b");
-        leerLinea(linea, MAX);
-        sscanf(linea, "%d", &opcion);
-
-        switch (opcion) {
-            case 1:
-                menuListarUsuarios();
-                break;
-
-            case 2:
-                menuRegistrarUsuario();
-                break;
-            case 3:
-                Ualumnos.menu();
-                break;
-            case 4:
-                Umaestros.menu();
-                break;
-            case 0:
-                repite = 0;
-                break;
-        }
-
-    } while (repite == 1);
-=======
 
 }
 string usuarios::setnombre(string nombre)
 {
     this->nombre = nombre;
     return nombre;
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 }
 
 
@@ -91,7 +45,9 @@ string usuarios::getcontra()
 
 void usuarios::menu()
 {
-
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2100", "GUA");
 
 
     int opc;
@@ -134,6 +90,10 @@ void usuarios::menu()
 
 void usuarios::pideDatos()
 {
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2102", "USPD");
+
     system("cls");
 
 
@@ -158,6 +118,9 @@ void usuarios::pideDatos()
 
 void usuarios::muestraDatos()
 {
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2102", "USMD");
 
 
     system("cls");
@@ -177,8 +140,8 @@ void usuarios::muestraDatos()
 
         while (archivo.read(reinterpret_cast<char*>(&usuario), sizeof(Usuarios)))
         {
-            cout<<"       -> Ingrese un nombre: "<< usuario.nombre << endl;
-            cout<<"       -> Ingrese una contrasena: "<<usuario.contra << endl;
+            cout<<"       -> Nombre de usuario: "<< usuario.nombre << endl;
+            cout<<"       -> Contrasena usuario: "<<usuario.contra << endl;
             cout << "+---------------------------------------------------------+" << endl;
         }
             archivo.close();
@@ -191,6 +154,10 @@ void usuarios::muestraDatos()
 
 void usuarios::editaDatos()
  {
+
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2103", "USED");
 
     system("cls");
 
@@ -228,121 +195,8 @@ void usuarios::editaDatos()
             // Posiciona el puntero de escritura al inicio del registro que se está modificando
             archivo.seekp(-static_cast<int>(sizeof(Usuarios)), ios::cur);
 
-<<<<<<< HEAD
-        // Cierra el archivo
-        fclose(archivo);
-    }
-
-    return existe;
-}
-
-Usuario *Usuario::obtenerUsuarios(int *n) {
-    FILE *archivo;
-    Usuario usuario;
-    Usuario *usuarios; // Vector dinámico de usuarios
-    int i;
-
-    // Abre el archivo en modo lectura
-    archivo = fopen(ARCHIVO_USUARIOS, "rb");
-
-    if (archivo == NULL) { // Si no se pudo abrir el archivo, el valor de archivo es NULL
-        *n = 0; // No se pudo abrir. Se considera n = 0
-        usuarios = NULL;
-    } else {
-        fseek(archivo, 0, SEEK_END); // Posiciona el cursor al final del archivo
-        *n = ftell(archivo) / sizeof(Usuario); // # de usuarios almacenados en el archivo. (# de registros)
-        usuarios = (Usuario *)malloc((*n) * sizeof(Usuario)); // Asigna memoria para todos los usuarios almacenados en el archivo
-
-        // Recorre el archivo secuencialmente
-        fseek(archivo, 0, SEEK_SET); // Posiciona el cursor al principio del archivo
-        fread(&usuario, sizeof(usuario), 1, archivo);
-        i = 0;
-        while (!feof(archivo)) {
-            usuarios[i++] = usuario;
-            fread(&usuario, sizeof(usuario), 1, archivo);
-        }
-
-        // Cierra el archivo
-        fclose(archivo);
-    }
-
-    return usuarios;
-}
-
-// Retorna 1 o 0 si el usuario y password son correctos para un usuario en particular
-char Usuario::logear(char nombreUsuario[], char password[]) {
-    FILE *archivo;
-    char logeoExitoso;
-    Usuario usuario;
-
-    // Abre el archivo en modo de lectura
-    archivo = fopen(ARCHIVO_USUARIOS, "rb");
-
-    if (archivo == NULL) {
-        logeoExitoso = 0;
-    } else {
-        logeoExitoso = 0;
-
-        // Lee secuencialmente del archivo de usuarios
-        fread(&usuario, sizeof(usuario), 1, archivo);
-        while (!feof(archivo)) {
-            if (strcmp(usuario.nombre, nombreUsuario) == 0 && strcmp(usuario.password, password) == 0) {
-                // Encuentra un usuario del archivo con el nombre de usuario y password buscado
-                logeoExitoso = 1;
-                break;
-            }
-
-            fread(&usuario, sizeof(usuario), 1, archivo);
-        }
-
-        // Cierra el archivo
-        fclose(archivo);
-    }
-
-    return logeoExitoso;
-}
-
-int Usuario::leerLinea(char *cad, int n) {
-    int i, c;
-
-    // 1. Comprobación de datos iniciales en el buffer
-    c = getchar();
-    if (c == EOF) {
-        cad[0] = '\0';
-        return 0;
-    }
-
-    if (c == '\n') {
-        i = 0;
-    } else {
-        cad[0] = c;
-        i = 1;
-    }
-
-    // 2. Lectura de la cadena
-    for (; i < n - 1 && (c = getchar()) != EOF && c != '\n'; i++) {
-        cad[i] = c;
-    }
-    cad[i] = '\0';
-
-    // 3. Limpieza del buffer
-    if (c != '\n' && c != EOF) // Es un caracter
-        while ((c = getchar()) != '\n' && c != EOF);
-
-    return 1;
-}
-
-void Usuario::leerClave(char *password) {
-    char caracter;
-    int i = 0;
-
-    while ((caracter = _getch())) {
-        if (caracter == TECLA_ENTER) {
-            password[i] = '\0';
-=======
             // Escribe  nuevos detalles del estudiante en el archivo
             archivo.write(reinterpret_cast<char*>(&usuario), sizeof(Usuarios));
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
             break;
         }
     }
@@ -358,12 +212,12 @@ void Usuario::leerClave(char *password) {
     cin.ignore();
     cin.get();
 }
-<<<<<<< HEAD
-=======
 
 void usuarios::borraDatos()
 {
-
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2104", "USBD");
 
    	system("cls");
 
@@ -431,4 +285,3 @@ void usuarios::borraDatos()
 
 
 
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3

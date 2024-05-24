@@ -38,13 +38,7 @@
 		<Unit filename="include/Carrera.h" />
 		<Unit filename="include/Cursoss.h" />
 		<Unit filename="include/Facultad.h" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 		<Unit filename="include/Login.h" />
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 		<Unit filename="include/ProcesoMaestros.h" />
 		<Unit filename="include/Procesos.h" />
 		<Unit filename="include/alumnos.h" />
@@ -63,13 +57,7 @@
 		<Unit filename="src/Carrera.cpp" />
 		<Unit filename="src/Cursoss.cpp" />
 		<Unit filename="src/Facultad.cpp" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 		<Unit filename="src/Login.cpp" />
->>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 		<Unit filename="src/ProcesoMaestros.cpp" />
 		<Unit filename="src/Procesos.cpp" />
 		<Unit filename="src/alumnos.cpp" />

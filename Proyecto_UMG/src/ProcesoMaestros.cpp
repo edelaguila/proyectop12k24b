@@ -1,10 +1,7 @@
 //Creado por Andy Alfonso Garcia Lopez 9959-23-1494
 
 //Incluyendo las librerias a utilizar
-<<<<<<< HEAD
-=======
 #include <cstring>
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 #include<iostream>
 #include<fstream>
 #include<stdlib.h>
@@ -16,22 +13,11 @@
 //Incluyendo el encabezado de Proceso Maestros.h
 #include "ProcesoMaestros.h"
 #include "Bitacora.h"
-<<<<<<< HEAD
-=======
-#include "login.h"
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
+#include "Login.h"
 
 using namespace std;
 
 //Constructor procemaestros y sus parametros
-<<<<<<< HEAD
-ProceMaestros::ProceMaestros(string Actas, string Cuadernillos, string Asistencia)
-{
-    // Asignando los valores de los parámetros a los atributos del objeto
-    this->Actas = Actas;
-    this->Cuadernillos = Cuadernillos;
-    this->Asistencia = Asistencia;
-=======
 ProceMaestros::ProceMaestros(string Actas, string Cuadernillos, string Asistencia, string id, string nombre, string telefono, string DPI, string direccion, string Genero, string civil, string fechanaci, string anoingre)
 {
     // Asignando los valores de los parámetros a los atributos del objeto
@@ -167,7 +153,6 @@ string ProceMaestros::setanoingre(string anoingre)
 string ProceMaestros::getanoingre()
 {
     return anoingre;
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 }
 
 //Estableciendo las actas del maestro
@@ -208,24 +193,15 @@ string ProceMaestros::setAsistencia(string Asistencia)
 //Obteniendo la asistencia del maestro
 string ProceMaestros::getAsistencia()
 {
-<<<<<<< HEAD
-
-=======
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
     return Asistencia;
 }
 
 void ProceMaestros::menu()
 {
-<<<<<<< HEAD
-    string codigoPrograma="2450";
-Bitacora Auditoria;
-string user, contrasena;
-Auditoria.ingresoBitacora(user,codigoPrograma,"PM");
-=======
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2800", "PMM");
 
-
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 int opc;
     do
     {
@@ -233,33 +209,17 @@ int opc;
         cout<<"+-----------------------------------------------+"<<endl;
         cout<<"|             Procesos De Maestros              |"<<endl;
         cout<<"+-----------------------------------------------+"<<endl;
-<<<<<<< HEAD
-        cout<<"|           1. Procesos de Maestros             |"<<endl;
-        cout<<"|           2. Regresar al menu                 |"<<endl;
-        cout<<"+-----------------------------------------------+"<<endl;
-        cout<<"|           Ingrese su opcion [1/2]             |"<<endl;
-        cout<<"+-----------------------------------------------+"<<endl;
-=======
         cout<<"|          1. Procesos de Maestros              |"<<endl;
 		cout<<"|          2. Tabla de Procesos                 |"<<endl;
 		cout<<"|          3. Regresar al menu                  |"<<endl;
 		cout<<"+-----------------------------------------------+"<<endl;
 		cout<<"|           Ingrese su opcion [1/2/3]           |"<<endl;
 		cout<<"+-----------------------------------------------+"<<endl;
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
         cin >> opc;
 
         switch(opc)
         {
         case 1:
-<<<<<<< HEAD
-            insertar();
-            break;
-        case 2:
-            break;
-        }
-    } while (opc!=2);
-=======
            if (validarCarnet())
             {
                 //Funcion insertar
@@ -278,6 +238,10 @@ int opc;
 
 //Funcion bool para validar el carnet
 bool ProceMaestros::validarCarnet() {
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2801", "PMVC");
+
     //Limpia pantalla
     system("cls");
 
@@ -334,19 +298,14 @@ bool ProceMaestros::validarCarnet() {
     cin.get();
 
     return true;
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 }
 
 void ProceMaestros::insertar()
 {
-<<<<<<< HEAD
-     string codigoPrograma="2624";
-Bitacora Auditoria;
-string user, contrasena;
-Auditoria.ingresoBitacora(user,codigoPrograma,"PMI");
-=======
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2802", "PMI");
 
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
     //Limpiando pantalla
     system("cls");
 
@@ -358,11 +317,8 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"PMI");
 
     proceamaestros maestros;
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
     cout<<" Ingrese un numero uno (1) para confirmar y un numero cero (0) para negar." << endl;
     cin.ignore();
 
@@ -375,8 +331,6 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"PMI");
     cout<<"       -> El maestro cuenta con la asistencia?: ";
     cin.getline(maestros.Asistencia, 15);
 
-<<<<<<< HEAD
-=======
 
     int solvente = 1;
     if (string(maestros.Actas) != "1" ||
@@ -388,18 +342,18 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"PMI");
     // Asignar el valor de solvencia
     strcpy(maestros.solvente, (solvente == 1) ? "1" : "0");
 
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
     cout<<"+---------------------------------------------------------+"<< endl;
     ofstream archivo("ProcesoMaestros.dat", ios::binary | ios::app);
     archivo.write(reinterpret_cast<const char*>(&maestros), sizeof(maestros));
     archivo.close();
 }
-<<<<<<< HEAD
-=======
 
 //Funcion para mostrar menu
 void ProceMaestros::mostrarmenu()
 {
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2803", "PMMM");
     //Limpia pantalla
     system("cls");
 
@@ -441,4 +395,3 @@ void ProceMaestros::mostrarmenu()
     cin.ignore();
     cin.get();
 }
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3

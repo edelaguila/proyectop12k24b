@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-
-#include "procealumnos.h"
-#include "Bitacora.h"
-
-#include<iostream>
-#include<fstream>
-#include<stdlib.h>
-#include<cstdlib>
-#include<conio.h>
-#include<iomanip>
-#include<string>
-
-using namespace std;
-
-
-procealumnos::procealumnos(string dpi, string certiestudios, string fotoestatica, string titulo, string fotocedula, string copiadpi)
-{
-=======
 //Incluyendo los encabezados procesoalumnos.h y bitacora.h
 #include "procealumnos.h"
 #include "Bitacora.h"
@@ -37,17 +18,12 @@ procealumnos::procealumnos(string dpi, string certiestudios, string fotoestatica
 {
     //Asignando los valores de los parametros a los atributos del objeto
 
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
     this->dpi = dpi;
     this->certiestudios = certiestudios;
     this->fotoestatica = fotoestatica;
     this->titulo = titulo;
     this->fotocedula = fotocedula;
     this->copiadpi = copiadpi;
-<<<<<<< HEAD
-}
-
-=======
     this->id = id;
     this->nombre = nombre;
     this->telefono = telefono;
@@ -62,129 +38,83 @@ procealumnos::procealumnos(string dpi, string certiestudios, string fotoestatica
 
 }
 //Estableciendo la id
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 string procealumnos::setdpi(string dpi)
 {
     this->dpi = dpi;
     return dpi;
 }
 
-<<<<<<< HEAD
-=======
 //Obteniendo la id
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 string procealumnos::getdpi()
 {
     return dpi;
 }
 
-<<<<<<< HEAD
-=======
 //Estableciendo el certificado de estudios
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 string procealumnos::setcertiestudios(string certiestudios)
 {
     this->certiestudios = certiestudios;
     return certiestudios;
 }
 
-<<<<<<< HEAD
-=======
 //obteniendo el certificado de estudios
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 string procealumnos::getcertiestudios()
 {
     return certiestudios;
 }
 
-<<<<<<< HEAD
-=======
 //Estableciendo la foto estatica
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 string procealumnos::setfotoestatica(string fotoestatica)
 {
     this->fotoestatica = fotoestatica;
     return fotoestatica;
 }
 
-<<<<<<< HEAD
-=======
 //obteniendo la foto estatica
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 string procealumnos::getcfotoestatica()
 {
     return fotoestatica;
 }
 
-<<<<<<< HEAD
-=======
 //Estableciendo el titulo
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 string procealumnos::settitulo(string titulo)
 {
     this->titulo = titulo;
     return titulo;
 }
 
-<<<<<<< HEAD
-=======
 //obteniendo el titulo
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 string procealumnos::gettitulo()
 {
     return titulo;
 }
 
-<<<<<<< HEAD
-=======
 //Estableciendo la foto cedula
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 string procealumnos::setfotocedula(string fotocedula)
 {
     this->fotocedula = fotocedula;
     return fotocedula;
 }
 
-<<<<<<< HEAD
-=======
 //obteniendo la foto cedula
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 string procealumnos::gettfotocedula()
 {
     return fotocedula;
 }
 
-<<<<<<< HEAD
-=======
 //Estableciendo la copia de dpi
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 string procealumnos::setcopiadpi(string copiadpi)
 {
     this->copiadpi = copiadpi;
     return copiadpi;
 }
 
-<<<<<<< HEAD
-=======
 //Obteniendo la copia de dpi
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 string procealumnos::getcopiadpi()
 {
     return copiadpi;
 }
 
-<<<<<<< HEAD
-void procealumnos::menu()
-{
-    string codigoPrograma="2050";
-Bitacora Auditoria;
-string user, contrasena;
-Auditoria.ingresoBitacora(user,codigoPrograma,"PA");
-    int opc;
-    do
-    {
-        system("cls");
-=======
 //Estableciendo la id
 string procealumnos::setid(string id)
 {
@@ -333,11 +263,11 @@ string procealumnos::getsolvente()
 //Funcion para poder observar el menu
 void procealumnos::menu()
 {
-//Implementando la bitacora
-//Declarando variable string con el codigo programa
+    //Implementando la bitacora
+    //Declarando variable string con el codigo programa
     string usuarioActual = Login::getUsuarioActual();
     Bitacora bitacora;
-    bitacora.ingresoBitacora(usuarioActual, "5002", "PRCA");
+    bitacora.ingresoBitacora(usuarioActual, "2700", "PAM");
     //Declarando variable int
 
     int opc;
@@ -349,28 +279,10 @@ void procealumnos::menu()
         system("cls");
 
         //Diseño del menu procesos de alumnos
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
         cout<<"+-----------------------------------------------+"<<endl;
 		cout<<"|              Procesos de Alumnos              |"<<endl;
 		cout<<"+-----------------------------------------------+"<<endl;
 		cout<<"|          1. Procesos de Alumnos               |"<<endl;
-<<<<<<< HEAD
-		cout<<"|          2. Regresar al menu                  |"<<endl;
-		cout<<"+-----------------------------------------------+"<<endl;
-		cout<<"|           Ingrese su opcion [1/2]             |"<<endl;
-		cout<<"+-----------------------------------------------+"<<endl;
-        cin >> opc;
-
-        switch(opc)
-        {
-        case 1:
-            insertar();
-            break;
-        case 2:
-            break;
-        }
-    } while (opc!=2);
-=======
 		cout<<"|          2. Tabla de Procesos                 |"<<endl;
 		cout<<"|          3. Regresar al menu                  |"<<endl;
 		cout<<"+-----------------------------------------------+"<<endl;
@@ -402,7 +314,9 @@ void procealumnos::menu()
 //Funcion bool para validar el carnet
 bool procealumnos::validarCarnet() {
 
-
+    string usuarioActual = Login::getUsuarioActual();
+    Bitacora bitacora;
+    bitacora.ingresoBitacora(usuarioActual, "2701", "PAVC");
 
     //Limpia pantalla
     system("cls");
@@ -460,54 +374,14 @@ bool procealumnos::validarCarnet() {
     cin.get();
 
     return true;
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3
 }
 
 void procealumnos::insertar()
 {
-<<<<<<< HEAD
-    string codigoPrograma="2175";
-Bitacora Auditoria;
-string user, contrasena;
-Auditoria.ingresoBitacora(user,codigoPrograma,"PAI");
-    system("cls");
-
-    cout<<"+---------------------------------------------------------+"<< endl;
-    cout<<"|                Agregar detalles de alumno               |"<< endl;
-    cout<<"+---------------------------------------------------------+"<< endl;
-
-    Procealumnos proalumnos;
-
-    cout<<" Ingrese un numero uno (1) para confirmar y un numero cero (0) para negar." << endl;
-    cin.ignore();
-
-    cout<<"       -> El alumno cuenta con DPI?: ";
-    cin.getline(proalumnos.dpi, 15);
-
-    cout<<"       -> El alumno cuenta con la certificacion de estudio?: ";
-    cin.getline(proalumnos.certiestudios, 15);
-
-    cout<<"       -> El alumno cuenta con la foto estatica?: ";
-    cin.getline(proalumnos.fotoestatica, 15);
-
-    cout<<"       -> El alumno cuenta con el titulo original?: ";
-    cin.getline(proalumnos.titulo, 15);
-
-    cout<<"       -> El alumno cuenta con la foto cedula?: ";
-    cin.getline(proalumnos.fotocedula, 15);
-
-     cout<<"       -> El alumno cuenta con una copia del DPI al 200%?: ";
-    cin.getline(proalumnos.copiadpi, 15);
-
-    cout<<"+---------------------------------------------------------+"<< endl;
-    ofstream archivo("ProcesoAlumnos.dat", ios::binary | ios::app);
-    archivo.write(reinterpret_cast<const char*>(&proalumnos), sizeof(proalumnos));
-    archivo.close();
-}
-=======
     string usuarioActual = Login::getUsuarioActual();
     Bitacora bitacora;
-    bitacora.ingresoBitacora(usuarioActual, "2005", "PRCI");
+    bitacora.ingresoBitacora(usuarioActual, "2702", "PAI");
+
     system("cls");
 
     cout << "+---------------------------------------------------------+" << endl;
@@ -561,7 +435,8 @@ void procealumnos::mostrarmenu()
 {
     string usuarioActual = Login::getUsuarioActual();
     Bitacora bitacora;
-    bitacora.ingresoBitacora(usuarioActual, "2006", "PRCM");
+    bitacora.ingresoBitacora(usuarioActual, "2703", "PAMM");
+
     system("cls");
 
     cout << "+---------------------------------------------------------+" << endl;
@@ -598,4 +473,3 @@ void procealumnos::mostrarmenu()
 
 
 
->>>>>>> 622f8ebce2543dc8685ec46d102fff264bc41df3

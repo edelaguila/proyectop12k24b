@@ -73,10 +73,7 @@ void FacultadCRUD::IngresarFa() {
     archivo.write(reinterpret_cast<const char*>(&facultad), sizeof(Facultad));
     archivo.close();
 //------------------------------------------------------------------
-    Bitacora Auditoria;
-    string user,pass;
 
-    Auditoria.ingresoBitacora(user,codigoPrograma,"ICA");//ICA = Insertar Carrera
 //------------------------------------------------------------------------------------------
     cout << "Facultad agregada exitosamente!" << endl;
 }
@@ -113,10 +110,7 @@ void FacultadCRUD::ModificarFa() {
 
     archivo.close();
 //------------------------------------------------------------------------------------
-    Bitacora Auditoria;
-    string user,pass;
 
-    Auditoria.ingresoBitacora(user,codigoPrograma,"UCA");//UCA = Update Carrera
 //-----------------------------------------------------------------------------------------
     // nos indica si no se encontro la facultad por si no esta registrada
     if (!encontrada) {
@@ -157,10 +151,7 @@ void FacultadCRUD::BorrarFa() {
     remove("facultad.dat");
     rename("facultad_tmp.dat", "facultad.dat");
 //---------------------------------------------------------------------------------------
-    Bitacora Auditoria;
-    string user,pass;
 
-    Auditoria.ingresoBitacora(user,codigoPrograma,"DCA");//DCA = Delete Carrera
 //----------------------------------------------------------------------------------------
 
     if (eliminada) {
@@ -189,11 +180,7 @@ void FacultadCRUD::DesplegarFa() {
 
     archivo.close();
 //----------------------------------------------------------------------------------
-    Bitacora Auditoria;
-    string user,pass;
 
-    Auditoria.ingresoBitacora(user,codigoPrograma,"RCA");// RCA = Read Carrera
-//---------------------------------------------------------------------------------------
 //para hacer otra operacion
     cout << "Presione Enter para continuar...";
     cin.ignore();

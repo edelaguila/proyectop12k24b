@@ -212,6 +212,7 @@ string maestros::getsolvente()
 void maestros::menu()
 {
 //Implementando la bitacora
+<<<<<<< HEAD
 //Declarando variable string con el codigo programa
 string codigoPrograma="2533";
 //Instancia de la clase bitacora
@@ -220,6 +221,9 @@ Bitacora Auditoria;
 string user, contrasena;
 // ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
 Auditoria.ingresoBitacora(user,codigoPrograma,"MST");
+=======
+//Declarando variable string con el codigo programa
+>>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
     //Definiendo Variable int
     int opcion;
@@ -316,10 +320,14 @@ string codigoPrograma="2534";
 //Instancia de la clase bitacora
 Bitacora Auditoria;
 //Declarando 2 variables string con el codigo programa
+<<<<<<< HEAD
 string user, contrasena;
 char nombreUsuario[MAX];
 // ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
 Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"MSTI");
+=======
+
+>>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
     //Limpiando pantalla
     system("cls");
@@ -380,6 +388,7 @@ Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"MSTI");
 void maestros::desplegar()
 {
 //Implementando la bitacora
+<<<<<<< HEAD
 //Declarando variable string con el codigo programa
 string codigoPrograma="2612";
 //Instancia de la clase bitacora
@@ -389,6 +398,9 @@ string user, contrasena;
 char nombreUsuario[MAX];
 // ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
 Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"MSTD");
+=======
+
+>>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
     //Limpiando pantalla
 	system("cls");
@@ -435,6 +447,7 @@ void maestros::modificar()
 {
 //Implementando la bitacora
 //Declarando variable string con el codigo programa
+<<<<<<< HEAD
 string codigoPrograma="2789";
 //Instancia de la clase bitacora
 Bitacora Auditoria;
@@ -443,6 +456,9 @@ string user, contrasena;
 char nombreUsuario[MAX];
 // ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
 Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"MSTM");
+=======
+
+>>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
     //Limpiando pantalla
 	system("cls");
 	//Declarando variables tipo fstream y string
@@ -518,6 +534,7 @@ Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"MSTM");
 void maestros::borrar()
 {
 //Implementando la bitacora
+<<<<<<< HEAD
 //Declarando variable string con el codigo programa
 string codigoPrograma="2802";
 //Instancia de la clase bitacora
@@ -527,6 +544,11 @@ string user, contrasena;
 char nombreUsuario[MAX];
 // ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
 Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"MSTB");
+=======
+
+//Instancia de la clase bitacora
+
+>>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
     //Limpia pantalla
     system("cls");

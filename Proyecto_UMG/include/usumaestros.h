@@ -1,6 +1,7 @@
 #ifndef USUMAESTROS_H
 #define USUMAESTROS_H
 #include <iostream>
+#include"usuarios.h"
 
 using namespace std;
 

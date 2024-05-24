@@ -12,6 +12,10 @@
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
+<<<<<<< HEAD
+=======
+#include"usuarios.h"
+>>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
 using namespace std;
 

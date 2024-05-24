@@ -272,10 +272,14 @@ void alumnos::menu()
 string codigoPrograma="2322";
 //Instancia de la clase bitacora
 Bitacora Auditoria;
+<<<<<<< HEAD
 //Declarando 2 variables string con el codigo programa
 string user, contrasena;
 // ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
 Auditoria.ingresoBitacora(user,codigoPrograma,"ALM");
+=======
+
+>>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
 
     //Definiendo Variable int
@@ -360,6 +364,7 @@ void alumnos::insertar()
 
 //Implemetando la bitacora
 //Declarando 2 variables string con el codigo programa
+<<<<<<< HEAD
 string codigoPrograma="2350";
 //Instancia de la clase bitacora
 Bitacora Auditoria;
@@ -368,6 +373,9 @@ string user, contrasena;
 char nombreUsuario[MAX];
 // ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
 Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"ALMI");
+=======
+
+>>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
 
     //Limpiando pantalla
@@ -432,6 +440,7 @@ void alumnos::desplegar()
 {
 //Implemetando la bitacora
 //Declarando 2 variables string con el codigo programa
+<<<<<<< HEAD
 string codigoPrograma="2370";
 // Declaramos una instancia de la clase Bitacora
 Bitacora Auditoria;
@@ -440,6 +449,9 @@ string user, contrasena;
 char nombreUsuario[MAX];
 // ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
 Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"ALMD");
+=======
+
+>>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
     //Limpiando pantalla
     system("cls");
@@ -491,6 +503,7 @@ void alumnos::modificar()
 {
 //Implemetando la bitacora
 //Declarando 2 variables string con el codigo programa
+<<<<<<< HEAD
 string codigoPrograma="2380";
 // Declaramos una instancia de la clase Bitacora
 Bitacora Auditoria;
@@ -499,6 +512,9 @@ string user, contrasena;
 char nombreUsuario[MAX];
 // ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
 Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"ALMM");
+=======
+
+>>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
     //Limpiando pantalla
 	system("cls");
@@ -575,10 +591,13 @@ string codigoPrograma="2400";
 // Declaramos una instancia de la clase Bitacora
 Bitacora Auditoria;
 //Variables string a utilizar
+<<<<<<< HEAD
 string user, contrasena;
 char nombreUsuario[MAX];
 // ingreso en la bitácora pasamos como parámetros el nombre de usuario, el código del programa y un código de operación
 Auditoria.ingresoBitacora(nombreUsuario,codigoPrograma,"ALMB");
+=======
+>>>>>>> 3269e90fd5a942b90e4cb9fced4d11702bff902d
 
     //Limpia pantalla
 	system("cls");

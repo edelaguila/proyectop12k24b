@@ -42,26 +42,24 @@ string user="admin";
     {
 	case 1:
         Ingresar();
-        //Se ejecuta la accion y se registra en la bitacora
-        Auditoria.ingresoBitacora(user,codigoPrograma,"CJO"); //CJO = Create Jornada
+
         system("pause");
 		break;
     case 2:
         Modificar();
         //Se ejecuta la accion y se registra en la bitacora
-        Auditoria.ingresoBitacora(user,codigoPrograma,"UJO"); //UJO = Update Jornada
+
         system("pause");
 		break;
     case 3:
         Borrar();
-        //Se ejecuta la accion y se registra en la bitacora
-        Auditoria.ingresoBitacora(user,codigoPrograma,"DJO"); //DJO = Delete Jornada
+
         system("pause");
 		break;
     case 4:
         Desplegar();
         //Se ejecuta la accion y se registra en la bitacora
-        Auditoria.ingresoBitacora(user,codigoPrograma,"RJO"); //RJO = Read Jornada
+
         system("pause");
 		break;
     case 5:

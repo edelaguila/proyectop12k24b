@@ -20,13 +20,16 @@ private:
     static string usuarioActual;
     string nombre;
     string contra;
+    int maxintentos;
+    int contintentos;
 public:
-    Login(string nombre = "", string contra = ""); // Constructor con valores predeterminados
+    Login(string nombre = "", string contra = "",int intentos = 3); // Constructor con valores predeterminados
     void setnombre(string nombre);
     string getnombre() const;
     void setcontra(string contra);
     string getcontra() const;
     bool validacion();
+    void resetintentos();
     static string getUsuarioActual() {
     return usuarioActual;
     }
@@ -34,5 +37,3 @@ public:
 
 
 };
-
-#endif // LOGIN_H

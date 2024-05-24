@@ -1,11 +1,11 @@
 #include "Login.h"
 #include "Bitacora.h"
-
+#include "conio.h"
 using namespace std;
 
 string Login::usuarioActual = "";
 
-Login::Login(string nombre, string contra) : nombre(nombre), contra(contra) {}
+Login::Login(string nombre, string contra, int maxintentos) : nombre(nombre), contra(contra), maxintentos(maxintentos), contintentos(0) {}
 
 void Login::setnombre(string nombre) {
     this->nombre = nombre;
@@ -22,6 +22,11 @@ void Login::setcontra(string contra) {
 string Login::getcontra() const {
     return contra;
 }
+
+void Login::resetintentos() {
+    contintentos = 0;
+}
+
 bool Login::validacion() {
     system("cls");
 
@@ -30,43 +35,71 @@ bool Login::validacion() {
     string pass;
     bool encontrado = false;
 
-    cout << "+---------------------------------------------------------------------------------+" << endl;
-    cout << "+                      Bienvenido Al sistema                                      +" << endl;
-    cout << "+---------------------------------------------------------------------------------+" << endl;
 
     archivo.open("Usuario.dat", ios::binary | ios::in);
 
     if (!archivo) {
-        cout << "Error, no se encuentra información..." << endl;
+        cout << "Error, no se encuentra informacion..." << endl;
         return false;
     }
 
-    cout << "Ingrese su Nombre: ";
-    cin >> nom;
-    cout << "Ingrese su contraseña: ";
-    cin >> pass;
+    while (contintentos < maxintentos) {
+        system("cls");
+    cout << "+---------------------------------------------------------------------------------+" << endl;
+    cout << "+                      Bienvenido Al sistema                                      +" << endl;
+    cout << "+---------------------------------------------------------------------------------+" << endl;
 
-    Usuarios usuario;
+        cout << "Intento " << (contintentos + 1) << " de " << maxintentos << "." << endl;
+        cout << "Ingrese su Nombre: ";
+        cin >> nom;
+        cout << "Ingrese su contraseña: ";
+         pass = "";
+         char ch;
+          while ((ch = getch()) != '\r') {
+            if (ch == '\b') {
+                if (!pass.empty()) {
+                    cout << "\b \b";
+                    pass.pop_back();
+                }
+            } else {
+                cout << '*';
+                pass += ch;
+            }
+        }
+        cout << endl;
+        Usuarios usuario;
+          system("cls");
+        while (archivo.read(reinterpret_cast<char*>(&usuario), sizeof(Usuarios))) {
+            if (nom == usuario.nombre && pass == usuario.contra) {
+                // Establecer el usuario actual después de la validación exitosa
+                usuarioActual = nom;
+                string codigoPrograma = "2350";
+                Bitacora bitacora;
+                bitacora.ingresoBitacora(nom, codigoPrograma, "LOG");
+                encontrado = true;
+                break;
+            }
+        }
 
-    while (archivo.read(reinterpret_cast<char*>(&usuario), sizeof(Usuarios))) {
-        if (nom == usuario.nombre && pass == usuario.contra) {
-            // Establecer el usuario actual después de la validación exitosa
-            usuarioActual = nom;
-            string codigoPrograma = "2350";
-            Bitacora bitacora;
-            bitacora.ingresoBitacora(nom, codigoPrograma, "LOG");
-            encontrado = true;
-            break;
+        if (encontrado) {
+            cout << "Login exitoso!" << endl;
+            archivo.close();
+            resetintentos();
+            return true;
+        } else {
+            cout << "Nombre o contrasena incorrectos" << endl;
+            contintentos++;
+            archivo.clear(); // Limpiar el estado del archivo
+            archivo.seekg(0, ios::beg); // Regresar al inicio del archivo
+        }
+
+        if (contintentos >= maxintentos) {
+            cout << "Se ha alcanzado el numero maximo de intentos. Acceso denegado." << endl;
+            archivo.close();
+            return false;
         }
     }
 
     archivo.close();
-
-    if (encontrado) {
-        cout << "Login exitoso!" << endl;
-        return true;
-    } else {
-        cout << "Nombre o contraseña incorrectos" << endl;
-        return false;
-    }
+    return false;
 }

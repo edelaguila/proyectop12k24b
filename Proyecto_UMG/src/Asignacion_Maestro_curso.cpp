@@ -20,11 +20,38 @@
 #include <cstdlib>
 #include <ctime>
 #include<iomanip>
-using namespace std;
+//Implementación de Bitácora realizado por: Pablo Romeo Palencia Rosales 9959-23-736
+#include "Bitacora.h"
 
+using namespace std;
+string users; //variable que manda el usuario: Pablo Palencia 736
 
 void Asignacion_Maestro_curso::Menu_catedratico()
 {
+    //---------------Trae usuario, solucion a bitacora: Pablo Palencia 9959-23-736 -----------------------PR--
+    fstream file;
+    int total=0;
+    file.open("bitaU.txt",ios::in);
+    if(!file)
+	{
+		cout<<"\n\t\t\tNo hay usuarios registrados...";
+		file.close();
+	}
+	else
+	{
+		file >> users;
+		while(!file.eof())
+		{
+			total++;
+			file >> users;
+		}
+		if(total==0)
+		{
+			cout<<"\n\t\t\tNo hay usuarios...";
+		}
+	}
+	file.close();
+    //----------------------------------fin arregla bitacora-------------------------------------------------PR--
 
  //variables de user y contraseñan
     string user,contrasena;

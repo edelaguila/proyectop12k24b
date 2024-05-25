@@ -1,6 +1,4 @@
-
 //Creando por Andy Garcia 9959-23-1494
-
 //Encabezados de proteccion
 #ifndef ALUMNOS_H
 #define ALUMNOS_H

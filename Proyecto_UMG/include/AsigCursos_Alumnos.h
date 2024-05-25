@@ -1,6 +1,5 @@
 #ifndef ASIGCURSOS_ALUMNOS_H
 #define ASIGCURSOS_ALUMNOS_H
-
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -11,14 +10,14 @@ using namespace std;
 struct Alumno {
     char id[20];          // Almacena la id de los alumnos ingresados
     char nombre[50];      // Almacena el nombre  del alumno ingresado
-    char Genero[10];      // Almacena el género del alumno ingresado
+    char Genero[10];      // Almacena el gï¿½nero del alumno ingresado
     char DPI[20];         // Almacena el DPI del alumno ingresado
-    char direccion[100];  // Almacena la dirección del alumno ingresado
+    char direccion[100];  // Almacena la direcciï¿½n del alumno ingresado
     char nacionalidad[50];// Almacena la nacionalidad del alumno ingresado
-    char telefono[15];    // Almacena el número de teléfono del alumno ingresado
+    char telefono[15];    // Almacena el nï¿½mero de telï¿½fono del alumno ingresado
     char civil[20];       // Almacena el estado civil del alumno ingresado
     char fechanaci[20];   // Almacena la fecha de nacimiento del alumno ingresado
-    char anoingre[10];    // Almacena el año de ingreso del alumno ingresado
+    char anoingre[10];    // Almacena el aï¿½o de ingreso del alumno ingresado
 };
 
 class AsigCursos_Alumnos {

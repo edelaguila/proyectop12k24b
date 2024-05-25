@@ -1,3 +1,4 @@
+//Creado por Anderson Rodriguez 9959-23-495
 #ifndef MATRICULA_H
 #define MATRICULA_H
 #include<iostream>
@@ -12,8 +13,10 @@ class matricula
 		//double monto;
 		struct Matricula {
         char carnet [20];
+        char idSede [10];
+        char telSede[20];
         char sede [20];
-        char facultad [40];
+        char facultad [50];
         char plan [20];
         char jornada[15];
         char nombre[50];
@@ -34,7 +37,7 @@ class matricula
 
 		int generarNumeroAleatorio();
 		string generarNumeroBoleta();
-		void pagarEnLinea();
+		bool pagarEnLinea();
 
 		struct Alumno {
 		    char id[20];          // Almacena la id de los alumnos ingresados
@@ -48,6 +51,17 @@ class matricula
 		    char fechanaci[20];   // Almacena la fecha de nacimiento del alumno ingresado
 		    char anoingre[10];    // Almacena el año de ingreso del alumno ingresado
 		};
+
+		struct Sede {
+		    char id[10];
+		    char nombre[50];
+		    char telefono[20];
+		    };
+
+        struct Facultad {
+            int codigo;
+            char nombre[50];
+            };
 
 
 };

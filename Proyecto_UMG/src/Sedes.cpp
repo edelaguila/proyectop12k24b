@@ -25,6 +25,10 @@ struct Sede {
 // Definición de las funciones miembro de la clase Sedes
 void Sedes::menu()
 {
+    //implementacion de variables para bitacora
+    string codigoPrograma = "6100";
+    Bitacora Auditoria;
+    string user = "admin";
     int choice; // Variable para almacenar la opción seleccionada por el usuario
     char x; // Variable para almacenar la respuesta de agregar otra sede
 
@@ -55,18 +59,26 @@ void Sedes::menu()
             do
             {
                 insertar(); // Llama a la función para agregar una sede
+                //registro de bitacora ingreso
+                Auditoria.ingresoBitacora(user,codigoPrograma,"INS");//ingreso matricula
                 cout<<"\n\t\t\t Agrega otra Sede(Y,N): ";
                 cin>>x; // Pregunta al usuario si quiere agregar otra sede
             } while(x=='y'||x=='Y'); // Repite el proceso si el usuario responde 'y' o 'Y'
             break;
         case 2:
             desplegar(); // Llama a la función para mostrar las sedes
+            //registro de bitacora
+            Auditoria.ingresoBitacora(user,codigoPrograma,"CON");//ingreso matricula
             break;
         case 3:
             modificar(); // Llama a la función para modificar una sede
+            //registro de bitacora
+            Auditoria.ingresoBitacora(user,codigoPrograma,"MOD");//ingreso matricula
             break;
         case 4:
             borrar(); // Llama a la función para borrar una sede
+            //registro de bitacora ingreso
+            Auditoria.ingresoBitacora(user,codigoPrograma,"DEL");//ingreso matricula
             break;
         case 5:
             break; // Salir del menú
@@ -102,10 +114,6 @@ void Sedes::insertar() {
     // Escribe los datos de la sede en el archivo
     file.write(reinterpret_cast<const char*>(&sede), sizeof(Sede));
     file.close(); // Cierra el archivo
-    string codigoPrograma="6100";
-    Bitacora Auditoria;
-    string user;
-    Auditoria.ingresoBitacora(user,codigoPrograma,"INS");
 }
 
 // Función para mostrar todas las sedes
@@ -139,10 +147,6 @@ void Sedes::desplegar(){
     file.close(); // Cierra el archivo
     cin.ignore(); // Limpia el buffer de entrada
     system("pause"); // Pausa el sistema para que el usuario pueda ver la información
-    string codigoPrograma="6100";
-    Bitacora Auditoria;
-    string user;
-    Auditoria.ingresoBitacora(user,codigoPrograma,"CON");
 }
 
 // Función para modificar los detalles de una sede
@@ -202,10 +206,6 @@ void Sedes::modificar() {
     rename("temporal.dat", "Sedes.dat"); // Renombra el archivo temporal como "Sedes.dat"
     cin.ignore(); // Limpia el buffer de entrada
     system("pause"); // Pausa el sistema para que el usuario pueda ver el mensaje
-    string codigoPrograma="6100";
-    Bitacora Auditoria;
-    string user;
-    Auditoria.ingresoBitacora(user,codigoPrograma,"ACT");
 }
 
 // Función para borrar una sede
@@ -258,8 +258,4 @@ void Sedes::borrar() {
 
     cin.ignore(); // Limpia el buffer de entrada
     system("pause"); // Pausa el sistema para que el usuario pueda ver el mensaje
-    string codigoPrograma="6100";
-    Bitacora Auditoria;
-    string user;
-    Auditoria.ingresoBitacora(user,codigoPrograma,"DEL");
 }

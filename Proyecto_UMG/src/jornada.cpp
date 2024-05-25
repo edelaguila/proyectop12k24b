@@ -16,9 +16,32 @@ using namespace std;
 void JornadaCRUD::CrudJornada() {
 int choice;
 //implementacion de variables para la bitacora
-string codigoPrograma="4001";
+string codigoPrograma="4001",users;
 Bitacora Auditoria;
-string user="admin";
+//---------------Trae usuario, solucion a bitacora: Pablo Palencia 9959-23-736 ----------------------PR----
+    fstream file;
+    int total=0;
+    file.open("bitaA.txt",ios::in);
+    if(!file)
+	{
+		cout<<"\n\t\t\tNo hay usuarios registrados...";
+		file.close();
+	}
+	else
+	{
+		file >> users;
+		while(!file.eof())
+		{
+			total++;
+			file >> users;
+		}
+		if(total==0)
+		{
+			cout<<"\n\t\t\tNo hay usuarios...";
+		}
+	}
+	file.close();
+    //----------------------------------fin arregla bitacora-------------------------------------------PR-----
 
     do {
 	//limpiar pantalla
@@ -43,25 +66,25 @@ string user="admin";
 	case 1:
         Ingresar();
         //Se ejecuta la accion y se registra en la bitacora
-        Auditoria.ingresoBitacora(user,codigoPrograma,"CJO"); //CJO = Create Jornada
+        Auditoria.ingresoBitacora(users,codigoPrograma,"CJO"); //CJO = Create Jornada
         system("pause");
 		break;
     case 2:
         Modificar();
         //Se ejecuta la accion y se registra en la bitacora
-        Auditoria.ingresoBitacora(user,codigoPrograma,"UJO"); //UJO = Update Jornada
+        Auditoria.ingresoBitacora(users,codigoPrograma,"UJO"); //UJO = Update Jornada
         system("pause");
 		break;
     case 3:
         Borrar();
         //Se ejecuta la accion y se registra en la bitacora
-        Auditoria.ingresoBitacora(user,codigoPrograma,"DJO"); //DJO = Delete Jornada
+        Auditoria.ingresoBitacora(users,codigoPrograma,"DJO"); //DJO = Delete Jornada
         system("pause");
 		break;
     case 4:
         Desplegar();
         //Se ejecuta la accion y se registra en la bitacora
-        Auditoria.ingresoBitacora(user,codigoPrograma,"RJO"); //RJO = Read Jornada
+        Auditoria.ingresoBitacora(users,codigoPrograma,"RJO"); //RJO = Read Jornada
         system("pause");
 		break;
     case 5:

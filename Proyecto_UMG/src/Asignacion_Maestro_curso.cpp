@@ -90,7 +90,9 @@ void Asignacion_Maestro_curso::Menu_catedratico()
 
          {
           asignarse_curso();
-
+            //Realiza el proceso de asignar maestro a curso y se registra en la bitacora
+            Auditoria.ingresoBitacora(users,"4002","ASG"); //ASG = Asignación Maestro
+            //mandamos a auditoria un ingreso a la bitacora que registra el usuario que realiza dicha accion, el codigo de proceso y la accion que hace
             break;
         }
 
@@ -98,7 +100,9 @@ void Asignacion_Maestro_curso::Menu_catedratico()
     case 2:
         {
             actas();
-
+            //Realiza el proceso de imprimir las actas y luego se registra en la bitacora
+            Auditoria.ingresoBitacora(users,"4003","DAC"); //DAC = Despliega Actas
+            //mandamos al usuario, el codigo del proceso/accion y 3 letras que resumen la accion
             break;
 
         }
@@ -106,8 +110,9 @@ void Asignacion_Maestro_curso::Menu_catedratico()
 
         {
             imprimir_acta();
-
-
+            //Realiza el proceso de imprimir el acta deseada y luego se registra en la bitacora
+            Auditoria.ingresoBitacora(users,"4004","RAC"); //RAC = Read Acta
+            //mandamos usuario, codigo de proceso y 3 letras que resumen la accion/proceso realizado
         }            break;
  case 4:
 

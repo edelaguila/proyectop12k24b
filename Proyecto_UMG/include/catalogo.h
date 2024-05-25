@@ -20,7 +20,7 @@ class catalogo
 
         string setCurso2(string curso2);
         string getCurso2();
-//metodos
+//metodos que realizara la clase
 
 
         void insertar(const char* carnet);

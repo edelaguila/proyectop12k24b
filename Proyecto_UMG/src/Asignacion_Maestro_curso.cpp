@@ -7,13 +7,18 @@
 #include "Carrera.h"
 #include "Cursoss.h"
 #include "jornada.h"
-//#include "Horario.h"
-//#include "Sedes.h"
+#include "maestros.h"
+#include "Horarios.h"
+#include "Sedes.h"
 #include<iostream>
+#include<cstring>
 #include<fstream>
 #include<stdlib.h>
 #include<cstdlib>
 #include<conio.h>
+#include <random>
+#include <cstdlib>
+#include <ctime>
 #include<iomanip>
 using namespace std;
 
@@ -38,16 +43,17 @@ void Asignacion_Maestro_curso::Menu_catedratico()
         char  x;
         do
         {
-        	system("cls");
+             	system("cls");
 
     cout<<"\t\t\t+------------------------------------------+"<<endl;
     cout<<"\t\t\t|      BIENVENIDO AL MENU CATEDRATICO      |"<<endl;
     cout<<"\t\t\t+------------------------------------------+"<<endl;
 	cout<<"\t\t\t|1. Asignacion De Cursos                   |"<<endl;
 	cout<<"\t\t\t|2. Actas                                  |"<<endl;
-	cout<<"\t\t\t|3. regresar al menu anterior              |"<<endl;
+	cout<<"\t\t\t|3. Imprimir Acta                          |"<<endl;
+	cout<<"\t\t\t|4. regresar al menu anterior              |"<<endl;
 	cout<<"\t\t\t+------------------------------------------+"<<endl;
-	cout<<"\t\t\t|Opcion a escoger:[1/2/3]              |"<<endl;
+	cout<<"\t\t\t|Opcion a escoger:[1/2/3/4]                |"<<endl;
 	cout<<"\t\t\t+------------------------------------------+"<<endl;
 	cout<<"\t\t\tIngresa tu Opcion: ";
     cin>>opcion;
@@ -63,20 +69,32 @@ void Asignacion_Maestro_curso::Menu_catedratico()
 
 
     case 2:
+        {
+            actas();
 
-        break;
+            break;
+
+        }
     case 3:
 
-        break;
+        {
+            imprimir_acta();
 
+
+        }            break;
+ case 4:
+
+
+            break;
 	default:
 		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
         break;}
-        }while(opcion!= 3);
+        }while(opcion!= 4);
 
     }
 
 }
+
 void Asignacion_Maestro_curso::asignarse_curso()
 {
 	system("cls");
@@ -320,11 +338,9 @@ system("pause");
 }
 void Asignacion_Maestro_curso::actas()
 {
-    //ACTAS HECHO POR KATHIA CONTRERAS 9959-23-8246
+      //ACTAS HECHO POR KATHIA CONTRERAS 9959-23-8246
     system("cls");
-    cout<<"--------------------------------------------------------------------ASIGNACIONES MAESTRO A CURSO-----------------------------------------------------------------------"<<endl;
-    cout<<" Codigo      Nombre        Apellido         Sede           Aula      Seccion     Facultad              Carrera               Curso              Jornada        Horario"<<endl;
-    cout<<"-----------------------------------------------------------------------------------------------------------------------------------------------------------------------"<<endl;
+    cout<<"------------------ ASIGNACIONES MAESTRO A CURSO--------------------"<<endl<< endl;
 
     // Abrir el archivo de aulas en modo lectura binaria
     ifstream archivo("asignaciones.dat", ios::binary);
@@ -338,30 +354,21 @@ void Asignacion_Maestro_curso::actas()
     Asignacion asign1;
     // Recorrer el archivo y mostrar los datos de cada aula
     while (archivo.read(reinterpret_cast<char*>(&asign1), sizeof(Asignacion))) {
-        cout<<"|";
-        cout << setw(5)<< asign1.codigo_maestro ;
-        cout<<" |";
-        cout << setw(12)<< asign1.nombre_maestro ;
-        cout<<" |";
-        cout  << setw(12)<< asign1.apellido_maestro ;
-        cout<<" |";
-        cout << setw(15)<< asign1.sede ;
-        cout<<" |";
-        cout << setw(10)<< asign1.aula;
-        cout<<" |";
-        cout << setw(10) << asign1.seccion;
-        cout<<" |";
-        cout << setw(15) << asign1.facultad ;
-        cout<<"|";
-        cout  << setw(25)<< asign1.carrera ;
-        cout<<"|";
-        cout << setw(18)<<  asign1.curso ;
-        cout<<" |";
-        cout << setw(15)<<   asign1.jornada;
-        cout<<" |";
-        cout << setw(10)<<   asign1.horario;
-        cout<<" |"<<endl;
-        cout<<"-----------------------------------------------------------------------------------------------------------------------------------------------------------------------"<<endl;
+			cout << "NO. Acta: "<<   asign1.acta<< endl;
+
+        cout << "Codigo:   "<< asign1.codigo_maestro<< endl;
+        cout << "Nombre:   "<< asign1.nombre_maestro<< endl ;
+        cout << "Sede:     "<< asign1.sede<< endl ;
+        cout << "Aula:     "<< asign1.aula<< endl;
+        cout << "Seccion:  " << asign1.seccion<< endl;
+        cout << "Facultad: "<< asign1.facultad<< endl ;
+        cout << "Carrera:  "<< asign1.carrera<< endl ;
+        cout << "Curso:    "<<  asign1.curso<< endl ;
+        cout << "Jornada:  "<<   asign1.jornada<< endl;
+        cout << "Horario:  "<<   asign1.horario<< endl;
+
+
+        cout<<"-----------------------------------------------------------------"<<endl;
     }
 
     archivo.close();

@@ -5,7 +5,8 @@
 #include <ctime>
 #include <cstdlib>
 #include <sstream>
-
+#include <algorithm>
+#include <Bitacora.h>
 using namespace std;
 
 bool colegiatura::validarID(const std::string& idEstudiante) {
@@ -33,11 +34,18 @@ string colegiatura::leerDatos() {
     string idIngresado;
 
     while (true) {
+        // Limpiar la consola antes de cada intento
+#ifdef _WIN32
+        system("cls");
+#else
+        system("clear");
+#endif
+
         cout << "Ingrese el carnet del estudiante: ";
         cin >> idIngresado;
 
         if (validarID(idIngresado)) {
-            cout << "El ID ingresado es válido." << endl;
+            cout << "El carnet ingresado es válido." << endl;
             break;
         } else {
             cout << "El carnet ingresado es inválido." << endl;
@@ -51,16 +59,24 @@ string colegiatura::leerDatos() {
     }
 
     cout << "\n1. Colegiatura cursos" << endl;
-    cout << "2. Regresar al menu principal" << endl;
-    cout << "Opciones a escoger: [1/2]" << endl;
-    cout << "Seleccione: ";
+    cout << "2. Examen extraordinario" << endl;
+    cout << "3. Recuperacion" << endl;
+    cout << "4. Regresar al menú principal" << endl;
+    cout << "Opciones a escoger: [1/2/3/4]" << endl;
+    cout << "Seleccione el tipo de pago: ";
     int opcionPago;
     cin >> opcionPago;
 
     if (opcionPago == 1) {
         procesarColegiaturaCursos(idIngresado);
+    } else if (opcionPago == 2) {
+        procesarExamenExtraordinario(idIngresado);
+    } else if (opcionPago == 3) {
+        procesarRecuperacion(idIngresado);
+    } else if (opcionPago == 4) {
+        return "";
     } else {
-        cout << "Opción no implementada todavía." << endl;
+        cout << "Opción no válida." << endl;
     }
 
     return "";
@@ -83,14 +99,68 @@ void colegiatura::procesarColegiaturaCursos(const string& idIngresado) {
     cin.ignore();  // Limpia el buffer de entrada
     cin.get();  // Espera a que el usuario presione una tecla
 
-    pagarEnLinea(825, fechaHoy, semestre, mes, anio, idIngresado);
+    pagarEnLinea(825, fechaHoy, semestre, mes, anio, idIngresado, "Colegiatura cursos");
 }
 
-void colegiatura::pagarEnLinea(int monto, const string& fechaHoy, const string& semestre, const string& mes, const string& anio, const string& idIngresado) {
-    // Limpia la pantalla
-    system("cls");
+void colegiatura::procesarExamenExtraordinario(const string& idIngresado) {
+    string fechaHoy, semestre, anio, parcial;
 
-    // Pide al usuario los datos de la tarjeta de crédito
+    cout << "Ingrese la fecha de hoy (dd/mm/yyyy): ";
+    cin >> fechaHoy;
+    cout << "Ingrese el semestre que cursa (1-10): ";
+    cin >> semestre;
+    cout << "Ingrese el año (2023-2024): ";
+    cin >> anio;
+
+    int opcionParcial;
+    do {
+        cout << "Especifique si es pago de primer parcial (1) o segundo parcial (2): ";
+        cin >> opcionParcial;
+        if (opcionParcial == 1) {
+            parcial = "Primer parcial";
+        } else if (opcionParcial == 2) {
+            parcial = "Segundo parcial";
+        } else {
+            cout << "Opción inválida. Por favor, ingrese 1 para primer parcial o 2 para segundo parcial." << endl;
+        }
+    } while (opcionParcial != 1 && opcionParcial != 2);
+
+    cout << "\n\t--------- Monto del examen extraordinario: Q100 ---------\n" << endl;
+    cout << "Presione una tecla para continuar..." << endl;
+    cin.ignore();  // Limpia el buffer de entrada
+    cin.get();  // Espera a que el usuario presione una tecla
+
+    pagarEnLinea(100, fechaHoy, semestre, parcial, anio, idIngresado, "Examen extraordinario");
+}
+
+
+void colegiatura::procesarRecuperacion(const string& idIngresado) {
+    string fechaHoy, semestre, anio;
+
+    cout << "Ingrese la fecha de hoy (dd/mm/yyyy): ";
+    cin >> fechaHoy;
+    cout << "Ingrese el semestre que cursa (1-10): ";
+    cin >> semestre;
+    cout << "Ingrese el año (2023-2024): ";
+    cin >> anio;
+
+    cout << "\n\t--------- Monto de la recuperación: Q100 ---------\n" << endl;
+    cout << "Presione una tecla para continuar..." << endl;
+    cin.ignore();  // Limpia el buffer de entrada
+    cin.get();  // Espera a que el usuario presione una tecla
+
+    pagarEnLinea(100, fechaHoy, semestre, "N/A", anio, idIngresado, "Recuperación");
+}
+
+void colegiatura::pagarEnLinea(int monto, const string& fechaHoy, const string& semestre, const string& mes, const string& anio, const string& idIngresado, const string& tipoPago) {
+    // Limpiar la pantalla
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+
+    // Captura de los datos de la tarjeta
     cout << "\n----------------------------------------------------------------------------------------------------------";
     cout << "\n-------------------------------------------DATOS DE LA TARJETA--------------------------------------------" << endl;
     cout << "Ingrese los datos de su tarjeta de crédito para realizar el pago en línea:" << endl;
@@ -103,14 +173,14 @@ void colegiatura::pagarEnLinea(int monto, const string& fechaHoy, const string& 
     cout << "Código de seguridad: ";
     getline(cin, codSeguridad);
 
-    // Abre el archivo que contiene los datos de la tarjeta
+    // Abrir el archivo de la tarjeta
     ifstream archivo("tarjeta.txt");
-    if (!archivo.is_open()) {  // Verifica si el archivo se abrió correctamente
+    if (!archivo.is_open()) {
         cout << "Error: No se pudo abrir el archivo tarjeta.txt." << endl;
         return;
     }
 
-    // Lee los datos de la tarjeta desde el archivo
+    // Leer los datos de la tarjeta desde el archivo
     string numeroTarjeta, fechaExpiracion, codigoSeguridad;
     int saldo;
     getline(archivo, numeroTarjeta);
@@ -119,10 +189,10 @@ void colegiatura::pagarEnLinea(int monto, const string& fechaHoy, const string& 
     archivo >> saldo;
     archivo.close();
 
-    // Función lambda para eliminar espacios en blanco al principio y al final de las cadenas
+    // Eliminar espacios en blanco al principio y al final de las cadenas
     auto trim = [](string& str) {
-        str.erase(0, str.find_first_not_of(' '));  // Quita espacios al inicio
-        str.erase(str.find_last_not_of(' ') + 1);  // Quita espacios al final
+        str.erase(0, str.find_first_not_of(' '));       // quitar espacios al inicio
+        str.erase(str.find_last_not_of(' ') + 1);       // quitar espacios al final
     };
     trim(numTarjeta);
     trim(fExpiracion);
@@ -131,27 +201,38 @@ void colegiatura::pagarEnLinea(int monto, const string& fechaHoy, const string& 
     trim(fechaExpiracion);
     trim(codigoSeguridad);
 
-    // Compara los datos ingresados con los datos leídos del archivo
+    // Convertir cadenas a minúsculas para una comparación insensible a mayúsculas/minúsculas
+    auto toLower = [](string& str) {
+        transform(str.begin(), str.end(), str.begin(), ::tolower);
+    };
+    toLower(numTarjeta);
+    toLower(fExpiracion);
+    toLower(codSeguridad);
+    toLower(numeroTarjeta);
+    toLower(fechaExpiracion);
+    toLower(codigoSeguridad);
+
+    // Comparar los datos ingresados con los del archivo
     if (numTarjeta != numeroTarjeta || fExpiracion != fechaExpiracion || codSeguridad != codigoSeguridad) {
         cout << "Datos de la tarjeta incorrectos." << endl;
         char opcion;
         cout << "Desea volver a intentar? (S/N): ";
         cin >> opcion;
-        if (opcion == 'S' || opcion == 's') {  // Si el usuario elige reintentar, llama a la función de nuevo
-            pagarEnLinea(monto, fechaHoy, semestre, mes, anio, idIngresado);
+        if (opcion == 'S' || opcion == 's') {
+            pagarEnLinea(monto, fechaHoy, semestre, mes, anio, idIngresado, tipoPago);
         }
-        return;  // Sale de la función si los datos son incorrectos
+        return;
     }
 
-    // Verifica si hay saldo suficiente en la tarjeta
+    // Verificar si hay saldo suficiente
     if (saldo >= monto) {
         cout << "\n¡Pago realizado en línea con éxito!" << endl;
         cout << "Monto pagado: Q" << monto << endl;
         cout << "Saldo disponible en la tarjeta: Q" << saldo - monto << endl;
 
-        // Actualiza el saldo en el archivo de la tarjeta
+        // Actualizar el saldo en el archivo de la tarjeta
         ofstream archivoSalida("tarjeta.txt");
-        if (!archivoSalida.is_open()) {  // Verifica si el archivo se abrió correctamente para escribir
+        if (!archivoSalida.is_open()) {
             cout << "Error: No se pudo abrir el archivo tarjeta.txt para escribir." << endl;
             return;
         }
@@ -162,10 +243,10 @@ void colegiatura::pagarEnLinea(int monto, const string& fechaHoy, const string& 
         archivoSalida << saldo - monto << endl;
         archivoSalida.close();
 
-        // Muestra el comprobante de pago
-        string numeroBoleta = generarNumeroBoleta();  // Genera un número de boleta
+        // Mostrar comprobante de pago
+        string numeroBoleta = generarNumeroBoleta();
         string nombreEstudiante;
-        obtenerDatosEstudiante(idIngresado, nombreEstudiante);  // Obtiene los datos del estudiante
+        obtenerDatosEstudiante(idIngresado, nombreEstudiante);
 
         cout << "\n----------------------------------------------------------------------------------------------------------";
         cout << "\n-------------------------------------------COMPROBANTE DE PAGO--------------------------------------------" << endl;
@@ -177,13 +258,13 @@ void colegiatura::pagarEnLinea(int monto, const string& fechaHoy, const string& 
         cout << "Monto pagado: Q" << monto << endl;
         cout << "Carnet del estudiante: " << idIngresado << endl;
         cout << "Nombre del estudiante: " << nombreEstudiante << endl;
+        cout << "Tipo de pago: " << tipoPago << endl;
         cout << "----------------------------------------------------------------------------------------------------------" << endl;
     } else {
-        // Mensaje si no hay fondos suficientes en la tarjeta
         cout << "\n¡No hay fondos suficientes en la tarjeta para realizar el pago!" << endl;
         cout << "Saldo disponible en la tarjeta: Q" << saldo << endl;
     }
-    system("pause");  // Pausa el sistema para esperar que el usuario presione una tecla
+    system("pause");
 }
 
 string colegiatura::generarNumeroBoleta() {

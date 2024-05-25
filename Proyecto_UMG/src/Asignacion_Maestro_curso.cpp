@@ -436,10 +436,35 @@ void Asignacion_Maestro_curso::imprimir_acta()
             cout << "Jornada:  " << asign1.jornada << endl;
             cout << "Horario:  " << asign1.horario << endl;
             cout << endl << "-----------------------------------------------------" << endl << endl;
-            //-------------------------------------------------------------------------
 
+            //imprimir en archivo - ALISSON LOPEZ 9959-23-7225
 
-            //--------------------------------------------------------------------------
+			// Se abre el archivo de texto en modo escritura
+            FILE *arch = fopen("Acta_Impresa.txt", "wt");
+			// Se verifica si se abrió correctamente el archivo de texto
+            if (arch == NULL) {
+                cerr << "Error al imprimir acta." << endl;
+                // Si hay un error, se termina la ejecución del programa
+                exit(1);
+            }
+			// Se escriben los datos del acta en el archivo de texto
+            fprintf(arch, "No. Acta: %d\n", asign1.acta);
+            fprintf(arch, "Codigo:   %d\n", asign1.codigo_maestro);
+            fprintf(arch, "Nombre:   %s\n", asign1.nombre_maestro);
+            fprintf(arch, "Sede:     %s\n", asign1.sede);
+            fprintf(arch, "Aula:     %s\n", asign1.aula);
+            fprintf(arch, "Seccion:  %s\n", asign1.seccion);
+            fprintf(arch, "Facultad: %s\n", asign1.facultad);
+            fprintf(arch, "Carrera:  %s\n", asign1.carrera);
+            fprintf(arch, "Curso:    %s\n", asign1.curso);
+            fprintf(arch, "Jornada:  %s\n", asign1.jornada);
+            fprintf(arch, "Horario:  %s\n", asign1.horario);
+            // Se cierra el archivo de texto.
+            fclose(arch);
+                        // Se informa al usuario que se creó el archivo de texto con los datos del acta
+            cout << "Se imprimio correctamente (Acta_Impresa)" << endl;
+            getch();
+
  encontrada = true;
             break;
         }

@@ -399,3 +399,58 @@ Asignacion_Maestro_curso:: Asignacion_Maestro_curso()
 {
 
 }
+//Imprimir acta por Maria Florencia Ariaga Chiroy 9959-23-6741
+void Asignacion_Maestro_curso::imprimir_acta()
+
+{     system("cls");
+
+	// Variable para almacenar el número de acta
+    int numero_acta;
+    cout << "Ingrese el numero de acta que desea imprimir: ";
+    cin >> numero_acta;
+    // Abrir el archivo binario de asignaciones para lectura
+
+    ifstream archivo("asignaciones.dat", ios::binary);
+    if (!archivo) {
+        cout << "No hay asignaciones registradas." << endl;
+        return;
+    }
+
+    Asignacion asign1;
+    bool encontrada = false;
+    // Lee el archivo por registro
+    while (archivo.read(reinterpret_cast<char*>(&asign1), sizeof(Asignacion))) {
+		// Se compara el numero de acta del registro actual con el numero ingresado por el usuario
+        if (asign1.acta == numero_acta) {
+        	            // Si se encuentra el acta, se imprimen sus datos en la pantalla.
+            cout << endl << "-----------------------Acta--------------------------" << endl << endl;
+            cout << "NO. Acta: " << asign1.acta << endl;
+            cout << "Codigo:   " << asign1.codigo_maestro << endl;
+            cout << "Nombre:   " << asign1.nombre_maestro << endl;
+            cout << "Sede:     " << asign1.sede << endl;
+            cout << "Aula:     " << asign1.aula << endl;
+            cout << "Seccion:  " << asign1.seccion << endl;
+            cout << "Facultad: " << asign1.facultad << endl;
+            cout << "Carrera:  " << asign1.carrera << endl;
+            cout << "Curso:    " << asign1.curso << endl;
+            cout << "Jornada:  " << asign1.jornada << endl;
+            cout << "Horario:  " << asign1.horario << endl;
+            cout << endl << "-----------------------------------------------------" << endl << endl;
+            //-------------------------------------------------------------------------
+
+
+            //--------------------------------------------------------------------------
+ encontrada = true;
+            break;
+        }
+    }
+
+    if (!encontrada) {
+        cout << "La asignacion No. " << numero_acta << " no existe." << endl;
+    }
+
+    archivo.close();
+    cout << "Presione Enter para continuar...";
+    cin.ignore();
+    cin.get();
+}

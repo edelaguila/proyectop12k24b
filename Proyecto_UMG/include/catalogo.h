@@ -22,9 +22,10 @@ class catalogo
 //metodos
 
 
-        void insertar();
+        void insertar(const char* carnet);
 		void catalogoCursos(string CursosD);
 		void desplegar();
+		void desplegarcursosalumno(string carnet);
 
     protected:
 

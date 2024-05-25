@@ -8,7 +8,7 @@
 
 using namespace std;
 
- struct Alumno {
+struct Alumno {
     char id[20];          // Almacena la id de los alumnos ingresados
     char nombre[50];      // Almacena el nombre  del alumno ingresado
     char Genero[10];      // Almacena el género del alumno ingresado
@@ -23,14 +23,13 @@ using namespace std;
 
 class AsigCursos_Alumnos {
 private:
-    string codigo_alumno, nombre_Alumno, nom_Alumno, curso, jornada, aula, seccion, nacionalidad, id;
+    string id,codigo_alumno, nombre_Alumno, nom_Alumno, curso, jornada, aula, seccion, nacionalidad;
 
 public:
     AsigCursos_Alumnos() {}
     AsigCursos_Alumnos(string id, string codigo_alumno, string nombre_Alumno, string nom_Alumno, string curso, string jornada, string aula, string seccion, string nacionalidad);
 
     string setid(string id);
-    // obteniendo la id
     string getid();
 
     string setnom_Alumno(string nom_Alumno);
@@ -51,18 +50,24 @@ public:
     string setnacionalidad(string nacionalidad);
     string getnacionalidad();
 
-    void desplegarBoleta();
+    void desplegarBoleta(const char* carnet,string nombre);
     void Menu_alumno();
-    void asignacion_alumno();
+    void asignacion_alumno(const char* carnet); // Corregido
     void mostrar_cursos();
-    void validarCarnet();
+    bool validarCarnet(); // Corregido
+    bool ValidarJO(int codigo);
+    bool ValidarAU(int codigo);
+    bool ValidarSECC(int codigo);
+    bool ValidaAsignacion(const char* carnet);
+    string ObtenerJornada(int codigo);
+    string ObtenerAula(int codigo);
+    string ObtenerSeccion(int codigo);
 
-    struct Asig_al {
-        char nom_alumno[100];
-        char curso[100];
-        char jornada[50];
-        char aula[100];
-        char seccion[100];
+    struct Asignacion {
+        char carnet[20];
+        int codigoJornada;
+        int codigoAula;
+        int codigoSeccion;
     };
 };
 

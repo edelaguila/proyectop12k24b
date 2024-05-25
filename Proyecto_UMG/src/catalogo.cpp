@@ -46,7 +46,7 @@ void catalogo::desplegar()
     // Verificar si el archivo se pudo abrir
     if (!fileDesplegar)
     {
-        cout << "\n\t\t\tNo hay información..." << endl;
+        cout << "\n\t\t\tNo hay informaciï¿½n..." << endl;
     }
     else
     {
@@ -56,9 +56,9 @@ void catalogo::desplegar()
         cout << "|               Curso                       |" << endl;
         cout << "|-------------------------------------------|" << endl;
         string line;
-        while (getline(fileDesplegar, line)) // Leer el archivo línea por línea
+        while (getline(fileDesplegar, line)) // Leer el archivo lï¿½nea por lï¿½nea
         {
-            // Separar los datos de cada línea utilizando el delimitador '|'
+            // Separar los datos de cada lï¿½nea utilizando el delimitador '|'
             stringstream ss(line);
             string curso;
             getline(ss, curso, '|');
@@ -74,7 +74,7 @@ void catalogo::desplegar()
 
        if (total == 0)
         {
-            cout << "\n\t\t\tNo hay información..." << endl; // Mostrar un mensaje si no hay datos en el archivo
+            cout << "\n\t\t\tNo hay informaciï¿½n..." << endl; // Mostrar un mensaje si no hay datos en el archivo
         }
     }
 
@@ -105,7 +105,7 @@ void catalogo::catalogoCursos(string cursosD)
     }
 
 }
-void catalogo::insertar()
+void catalogo::insertar(const char* carnet)
 {
     system("cls");
     int opcion=0;
@@ -166,14 +166,40 @@ void catalogo::insertar()
     for (const string &curso : cursosSeleccionados)
     {
 
-        fileIngresar << curso <<"\n";
+        fileIngresar << carnet << '|' << curso << '|'  << "\n";
     }
 
     // Cierre del archivo
     fileIngresar.close();
 
-    // Mensaje de éxito
+    // Mensaje de ï¿½xito
     cout << "\t\t\tAsignado a sus cursos exitosamente." << endl;
+}
+
+void catalogo::desplegarcursosalumno(string carnet)
+{
+    string id, curso;
+    ifstream fileOri("catalogos.txt");
+
+    if (!fileOri)
+    {
+        cout << "\n\t\t\tNo hay informacion.." << endl;
+        return;
+    }
+      string line;
+      cout << "CURSOS ASIGNADOS: " << endl << endl ;
+      while (getline(fileOri, line)) // Leer el archivo lï¿½nea por lï¿½nea
+        {
+            stringstream ss(line);
+            string curso;
+            getline(ss, id, '|');
+            getline(ss, curso, '|');
+            if (id==carnet)
+                cout <<  "                      " << curso << endl ;
+
+        }
+        cout << "+-----------------------------------------------------------------------------------------+" << endl;
+
 }
 
 

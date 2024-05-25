@@ -22,6 +22,7 @@ class usuarios
         void desplegar();
         void modificar();
         void borrar();
+        void menuextra();
 
         alumnos(string usu, string contra);
         string setid(string usu);

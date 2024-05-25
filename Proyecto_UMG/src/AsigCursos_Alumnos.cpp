@@ -20,6 +20,8 @@
 
 
 using namespace std;
+
+
 string users;
 Alumno alumno;
 catalogo Catalogo("curso1", "curso2");

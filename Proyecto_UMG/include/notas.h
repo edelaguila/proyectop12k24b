@@ -2,43 +2,34 @@
 //creaciòn
 //reconstruccion
 
+// notas.h
+
 #ifndef NOTAS_H
 #define NOTAS_H
 
-#include <vector>
-#include <string>
+#include <fstream> // Para manejar archivos
+#include <iostream> // Para entrada y salida estándar
+#include <string> // Para manejar cadenas de texto
 
-struct Nota {
-    int id;
-    std::string nombre;
-    std::string curso;
-    float p1;
-    float p2;
-    float zona;
-    float ef;
+using namespace std;
+
+// Definición de la estructura para almacenar notas
+struct notas {00
+    int codigoEstudiante;
+    char nombreEstudiante[50];
+    char nombreCurso[50];
+    float np1, np2, za, ef, nf; // Notas parciales y nota final
 };
 
-class GestorNotas {
-private:
-    std::vector<Nota> notas;
-    const std::string filename = "notas.txt";
-    std::vector<int> idsValidos;
-    std::vector<std::string> nombresValidos;
-
+// Clase para manejar las operaciones CRUD en las notas
+class NotaCrud {
 public:
-    GestorNotas();
-
-    void agregarNota();
-    void modificarNota(int id);
-    void borrarNota(int id);
-    void mostrarNotas();
-
-private:
-    void cargarNotas();
-    void guardarNotas();
-    void cargarAlumnosValidos();
-    bool validarID(int id) const;
-    bool validarNombre(const std::string& nombre) const;
-};
+    void CrudNota();
+    void IngresarNota();
+    void ModificarNota();
+    void BorrarNota();
+    void DesplegarNotas();
+    bool validarAlumno(int codigoEstudiante);
+   };
 
 #endif // NOTAS_H

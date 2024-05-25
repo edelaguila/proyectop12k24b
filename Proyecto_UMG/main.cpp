@@ -1,15 +1,20 @@
-
 //Creado por Jose Gallardo 9959-23-106
-
 #include <iostream>
 #include <cstdlib>
 #include <conio.h>
 #include "usuarios.h"
 #include "Login.h"
 #include "Bitacora.h"
-
 #include "alumnos.h"
 #include "maestros.h"
+#include "Login_Alumno.h"
+#include "Carrera.h"
+#include "Facultad.h"
+#include "Cursoss.h"
+#include "AsigCursos_Alumnos.h"
+#include "jornada.h"
+#include "aulas.h"
+#include "secciones.h"
 
 using namespace std;
 
@@ -75,7 +80,10 @@ void menuGeneral()
             reportes();
             break;
         case 4:
-            seguridad();
+            {
+               Bitacora Auditoria;
+               Auditoria.visualizarBitacora();
+            }
             break;
         case 5:
             ayuda();
@@ -140,22 +148,28 @@ void catalogos()
             break;
         }
         case 4:
-            // Implementación para Carreras
+            CarrerasCRUD CCarrera;
+            CCarrera.Crudcarrera();
             break;
         case 5:
-            // Implementación para Facultades
+             FacultadCRUD FFacultad;
+             FFacultad.Crudfacultad();
             break;
         case 6:
-            // Implementación para Cursos
+           CursosCRUD CCurso;
+           CCurso.CrudCursos();
             break;
         case 7:
-            // Implementación para Jornadas
+            JornadaCRUD jjornada;
+            jjornada.CrudJornada();
             break;
         case 8:
-            // Implementación para Aulas
+            AulasCRUD Aaula;
+            Aaula.CrudAula();
             break;
         case 9:
-            // Implementación para Secciones
+            SeccionesCrud sec;
+            sec.CrudSeccion();
             break;
         case 10:
             // Implementación para Sedes
@@ -176,7 +190,42 @@ void catalogos()
 
 void procesos()
 {
-    // Implementación de procesos
+    int choice;
+    do {
+        system("cls");
+        cout << "\t\t\t--------------------------------------------" << endl;
+        cout << "\t\t\t|      SISTEMA GESTION UMG - Procesos       |" << endl;
+        cout << "\t\t\t--------------------------------------------" << endl;
+        cout << "\t\t\t 1. Asignacion de Cursos a Alumnos" << endl;
+        cout << "\t\t\t 2. Asignacion de Cursos a maestros" << endl;
+        cout << "\t\t\t 3. Retornar menu anterior" << endl;
+        cout << "\t\t\t--------------------------------------------" << endl;
+        cout << "\t\t\tOpcion a escoger:[1/2/3]" << endl;
+        cout << "\t\t\t--------------------------------------------" << endl;
+        cout << "\t\t\tIngresa tu Opcion: ";
+        cin >> choice;
+
+        switch(choice)
+        {
+        case 1:
+        {
+            AsigCursos_Alumnos alumnoA;
+            alumnoA.Menu_alumno();
+            // Proporcionar argumentos adecuados para el constructor de Login_Alumno
+
+        }
+            break;
+        case 2:
+            // Implementación para la asignación de cursos a maestros
+            break;
+        case 3:
+            break;
+
+        default:
+            cout << "\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
+            cin.get();
+        }
+    } while (choice != 3);
 }
 
 void reportes()
@@ -192,6 +241,5 @@ void ayuda()
 void seguridad()
 {
     // Implementación de seguridad
-    Bitacora Auditoria;
-    Auditoria.visualizarBitacora();
+
 }

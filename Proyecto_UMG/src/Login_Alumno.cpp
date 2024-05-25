@@ -93,12 +93,17 @@ bool Login_Alumno::VerificarUsuario()
     }
 
     //busca el usuario en el archivo---------------------------------
-    string user,pass;
-    while (fileU_P>>user>>pass)
+    string users,pass;
+    while (fileU_P>>users>>pass)
     {
-        if (user==usuario && pass==contrasena)
+        if (users==usuario && pass==contrasena)
         {
             encontrado=true;
+
+            fstream file;
+            file.open("BitacoraLoA.txt", ios::app | ios::out);
+            file <<left<<users<<"\n";
+            file.close();
             break;
         }
     }

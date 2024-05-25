@@ -1,4 +1,3 @@
-
 //creado por Oscar Morales 9959-23-3070
 
 //Incluyendo las librerias a utilizar
@@ -9,9 +8,10 @@
 #include<conio.h>
 #include<iomanip>
 #include<string>
-#include"procealumnos.h"
-//incluyendo el encabezado alumnos
+
+//incluyendo el encabezados
 #include "alumnos.h"
+#include"procealumnos.h"
 //Incluyendo el encabezado de bitacora
 #include "Bitacora.h"
 #include "Login.h"
@@ -266,12 +266,15 @@ string alumnos::getsolvente()
 //Funcion menu donde muestra el sistema de gestion de alumnos
 void alumnos::menu()
 {
-
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
     string usuarioActual = Login::getUsuarioActual();
+
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
     Bitacora bitacora;
-    bitacora.ingresoBitacora(usuarioActual, "2200", "ALM");
 
-
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2200", "ALM"); // Parámetros
 
     //Definiendo Variable int
     int opcion;
@@ -353,9 +356,16 @@ void alumnos::menu()
 void alumnos::insertar()
 {
 
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
     string usuarioActual = Login::getUsuarioActual();
+
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
     Bitacora bitacora;
-    bitacora.ingresoBitacora(usuarioActual, "2201", "ALMI");
+
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2201", "ALMI"); // Parámetros
+
 
     //Limpiando pantalla
     system("cls");
@@ -417,10 +427,15 @@ void alumnos::insertar()
 //Funcion para desplegar los alumnos ya registrados
 void alumnos::desplegar()
 {
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
     string usuarioActual = Login::getUsuarioActual();
-    Bitacora bitacora;
-    bitacora.ingresoBitacora(usuarioActual, "2202", "ALMD");
 
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
+    Bitacora bitacora;
+
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2202", "ALMD"); // Parámetros
 
     //Limpiando pantalla
     system("cls");
@@ -470,9 +485,16 @@ void alumnos::desplegar()
 //Funcion para modificar los alumnos ya registrados
 void alumnos::modificar()
 {
+
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
     string usuarioActual = Login::getUsuarioActual();
+
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
     Bitacora bitacora;
-    bitacora.ingresoBitacora(usuarioActual, "2203", "ALMM");
+
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2203", "ALMM"); // Parámetros
 
 
     //Limpiando pantalla
@@ -544,9 +566,16 @@ void alumnos::modificar()
 //funcion para borrarr a las alumnos registradas
 void alumnos::borrar()
 {
+
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
     string usuarioActual = Login::getUsuarioActual();
+
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
     Bitacora bitacora;
-    bitacora.ingresoBitacora(usuarioActual, "2204", "ALMB");
+
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2204", "ALMB"); // Parámetros
 
 
     //Limpia pantalla

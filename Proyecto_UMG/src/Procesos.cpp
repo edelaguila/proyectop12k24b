@@ -20,10 +20,15 @@ Procesos::Procesos()
 //Funcion para mostrar la funcion menu generar
 void Procesos::menuGenerar()
 {
-
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
     string usuarioActual = Login::getUsuarioActual();
+
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
     Bitacora bitacora;
-    bitacora.ingresoBitacora(usuarioActual, "2600", "PRC");
+
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2600", "PRC"); // Parámetros
 
     //Variable int
     int opc;
@@ -58,6 +63,7 @@ void Procesos::menuGenerar()
                 procesoalu.menu();
             }
             break;
+        //Opcion 2
         case 2:
             {
             //instancia de ProcesoMaestros
@@ -66,7 +72,9 @@ void Procesos::menuGenerar()
             maestros.menu();
             }
             break;
+        //Opcion 3
         case 3:
+            //Regresa al menu
             break;
         }
     //Si es opcion 3 regresa al menu

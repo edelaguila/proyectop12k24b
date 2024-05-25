@@ -17,7 +17,6 @@ using namespace std;
 procealumnos::procealumnos(string dpi, string certiestudios, string fotoestatica, string titulo, string fotocedula, string copiadpi, string id, string nombre, string telefono, string DPI, string direccion, string Genero, string nacionalidad, string civil, string fechanaci, string anoingre, string solvente)
 {
     //Asignando los valores de los parametros a los atributos del objeto
-
     this->dpi = dpi;
     this->certiestudios = certiestudios;
     this->fotoestatica = fotoestatica;
@@ -263,12 +262,15 @@ string procealumnos::getsolvente()
 //Funcion para poder observar el menu
 void procealumnos::menu()
 {
-    //Implementando la bitacora
-    //Declarando variable string con el codigo programa
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
     string usuarioActual = Login::getUsuarioActual();
+
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
     Bitacora bitacora;
-    bitacora.ingresoBitacora(usuarioActual, "2700", "PAM");
-    //Declarando variable int
+
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2700", "PAM"); // Parámetros
 
     int opc;
 
@@ -313,10 +315,15 @@ void procealumnos::menu()
 
 //Funcion bool para validar el carnet
 bool procealumnos::validarCarnet() {
-
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
     string usuarioActual = Login::getUsuarioActual();
+
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
     Bitacora bitacora;
-    bitacora.ingresoBitacora(usuarioActual, "2701", "PAVC");
+
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2701", "PAVC"); // Parámetros
 
     //Limpia pantalla
     system("cls");
@@ -352,7 +359,6 @@ bool procealumnos::validarCarnet() {
     Alumno alumno;
 
     // Lee secuencialmente el archivo para buscar el número de carnet ingresado
-
     while (archivo.read(reinterpret_cast<char*>(&alumno), sizeof(Alumno))) {
         if (alumno.id == idPersona) {
             encontrado = true;
@@ -378,21 +384,32 @@ bool procealumnos::validarCarnet() {
 
 void procealumnos::insertar()
 {
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
     string usuarioActual = Login::getUsuarioActual();
-    Bitacora bitacora;
-    bitacora.ingresoBitacora(usuarioActual, "2702", "PAI");
 
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
+    Bitacora bitacora;
+
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2702", "PAI"); // Parámetros
+
+    //Limpiando pantalla
     system("cls");
 
+    //Encabezado
     cout << "+---------------------------------------------------------+" << endl;
     cout << "|                Agregar detalles de alumno               |" << endl;
     cout << "+---------------------------------------------------------+" << endl;
 
+    //Instancia de Procealumnos
     Procealumnos procealumnos;
 
+    //Mensaje al usuario
     cout << " Ingrese un numero uno (1) para confirmar y un numero cero (0) para negar." << endl;
     cin.ignore();
 
+    //Obteniendo datos
     cout << "       -> El alumno cuenta con DPI?: ";
     cin.getline(procealumnos.dpi, 20);
 
@@ -426,50 +443,69 @@ void procealumnos::insertar()
     strcpy(procealumnos.solvente, (solvente == 1) ? "1" : "0");
 
     cout << "+---------------------------------------------------------+" << endl;
+    // Abre el archivo "ProcesoAlumnos.dat" en modo de escritura binaria, añadiendo al final
     ofstream archivo("ProcesoAlumnos.dat", ios::binary | ios::app);
+
+    // Escribe el contenido de la estructura procealumnos en el archivo
     archivo.write(reinterpret_cast<const char *>(&procealumnos), sizeof(Procealumnos));
+
+    // Cierra el archivo después de escribir
     archivo.close();
 }
 
 void procealumnos::mostrarmenu()
 {
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
     string usuarioActual = Login::getUsuarioActual();
-    Bitacora bitacora;
-    bitacora.ingresoBitacora(usuarioActual, "2703", "PAMM");
 
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
+    Bitacora bitacora;
+
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2703", "PAMM"); // Parámetros
+
+    //Limpiando pantalla
     system("cls");
 
+    //Diseño de la tabla
     cout << "+---------------------------------------------------------+" << endl;
     cout << "|            Mostrar detalles de los alumnos              |" << endl;
     cout << "|              (solvente=1 | pendiente=0)                 |" << endl;
     cout << "+---------------------------------------------------------+" << endl;
 
+    //Abre el archivo "ProcesoAlumnos.dat" en modo de lectura binaria
     ifstream archivo("ProcesoAlumnos.dat", ios::binary| ios::app);
     if (!archivo)
     {
+        //Mensaje al usuario
         cout << "Error al abrir el archivo." << endl;
         return;
     }
 
+    //Instancia de Procealumnos
     Procealumnos procealumnos;
 
-    while (archivo.read(reinterpret_cast<char *>(&procealumnos), sizeof(Procealumnos)))
-    {
-        cout << "       -> DPI: " << procealumnos.dpi << endl;
-        cout << "       -> Certificacion de estudio: " << procealumnos.certiestudios << endl;
-        cout << "       -> Foto estatica: " << procealumnos.fotoestatica << endl;
-        cout << "       -> Titulo original: " << procealumnos.titulo << endl;
-        cout << "       -> Foto cedula: " << procealumnos.fotocedula << endl;
-        cout << "       -> Copia DPI al 200%: " << procealumnos.copiadpi << endl;
-        cout << "+---------------------------------------------------------+" << endl;
-    }
+    // Bucle while
+    // Lee los datos del archivo y mostrarlos en la consola
+    while (archivo.read(reinterpret_cast<char *>(&procealumnos), sizeof(Procealumnos))) {
 
+    // Muestra los datos
+    cout << "       -> DPI: " << procealumnos.dpi << endl;
+    cout << "       -> Certificación de estudio: " << procealumnos.certiestudios << endl;
+    cout << "       -> Foto estática: " << procealumnos.fotoestatica << endl;
+    cout << "       -> Título original: " << procealumnos.titulo << endl;
+    cout << "       -> Foto cédula: " << procealumnos.fotocedula << endl;
+    cout << "       -> Copia DPI al 200%: " << procealumnos.copiadpi << endl;
+    cout << "+---------------------------------------------------------+" << endl;
+}
+    // Cierra el archivo después de leer todos los registros
     archivo.close();
 
+    //Mensaje al usuario
     cout << "Presione Enter Para Continuar";
     cin.ignore();
     cin.get();
+
+
 }
-
-
-

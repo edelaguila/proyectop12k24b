@@ -198,14 +198,25 @@ string ProceMaestros::getAsistencia()
 
 void ProceMaestros::menu()
 {
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
     string usuarioActual = Login::getUsuarioActual();
-    Bitacora bitacora;
-    bitacora.ingresoBitacora(usuarioActual, "2800", "PMM");
 
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
+    Bitacora bitacora;
+
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2800", "PMM"); // Parámetros
+
+//Variable opc
 int opc;
+    //Bucle do while
     do
     {
+        //Limpiando pantalla
         system("cls");
+
+        //Diseño procesos maestros
         cout<<"+-----------------------------------------------+"<<endl;
         cout<<"|             Procesos De Maestros              |"<<endl;
         cout<<"+-----------------------------------------------+"<<endl;
@@ -217,30 +228,46 @@ int opc;
 		cout<<"+-----------------------------------------------+"<<endl;
         cin >> opc;
 
+        //Switch case
         switch(opc)
         {
+        //Opcion 1
         case 1:
+            //Funcion validar carnet
            if (validarCarnet())
             {
                 //Funcion insertar
                 insertar();
             }
             break;
+
+        //Opcion 2
         case 2:
+            //Funcion para mostrar
             mostrarmenu();
             break;
+
+        //Opcion 3
         case 3:
-            //Funcion mostrar menu
+            //regresar
             break;
         }
+
+    //Si es 3 regresa
     } while (opc!=3);
 }
 
 //Funcion bool para validar el carnet
 bool ProceMaestros::validarCarnet() {
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
     string usuarioActual = Login::getUsuarioActual();
+
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
     Bitacora bitacora;
-    bitacora.ingresoBitacora(usuarioActual, "2801", "PMVC");
+
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2801", "PMVC"); // Parámetros
 
     //Limpia pantalla
     system("cls");
@@ -289,24 +316,34 @@ bool ProceMaestros::validarCarnet() {
 
     //Si no encuentra
     if (!encontrado) {
+        //Muestra el mensaje
         cout << "No se encontro un estudiante con el ID proporcionado." << endl;
+        //Retorna falso
         return false;
     }
 
+    //Mensaje al usuario
     cout << "Presione Enter Para Continuar";
     cin.ignore();
     cin.get();
 
+    //Retorna verdadero
     return true;
 }
 
 void ProceMaestros::insertar()
 {
-    string usuarioActual = Login::getUsuarioActual();
-    Bitacora bitacora;
-    bitacora.ingresoBitacora(usuarioActual, "2802", "PMI");
-
     int pro1=0, pro2=0, pro3=0, bd1=0, sisop1=0;
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
+    string usuarioActual = Login::getUsuarioActual();
+
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
+    Bitacora bitacora;
+
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2802", "PMI"); // Parámetros
+
 
     //Limpiando pantalla
     system("cls");
@@ -316,11 +353,10 @@ void ProceMaestros::insertar()
     cout<<"|               Agregar detalles de maestros              |"<< endl;
     cout<<"+---------------------------------------------------------+"<< endl;
 
-
+    //Instancia ProcesoMaestros
     proceamaestros maestros;
 
-
-    cout<<" Ingrese un numero uno (1) para confirmar y un numero cero (0) para negar." << endl;
+        cout<<" Ingrese un numero uno (1) para confirmar y un numero cero (0) para negar." << endl;
     cin.ignore();
 
     cout<<"       -> El maestro cuenta con actas?: ";
@@ -366,21 +402,37 @@ void ProceMaestros::insertar()
         solvente = 0;
     }
 
+
+
     // Asignar el valor de solvencia
     strcpy(maestros.solvente, (solvente == 1) ? "1" : "0");
 
     cout<<"+---------------------------------------------------------+"<< endl;
-    ofstream archivo("ProcesoMaestros.dat", ios::binary | ios::app);
-    archivo.write(reinterpret_cast<const char*>(&maestros), sizeof(maestros));
-    archivo.close();
+
+    // Abre el archivo "ProcesoMaestros.dat" en modo de escritura binaria, añadiendo al final
+ofstream archivo("ProcesoMaestros.dat", ios::binary | ios::app);
+
+// Escribe el contenido de la estructura maestros en el archivo
+archivo.write(reinterpret_cast<const char*>(&maestros), sizeof(maestros));
+
+// Cierra el archivo después de escribir
+archivo.close();
 }
 
 //Funcion para mostrar menu
 void ProceMaestros::mostrarmenu()
 {
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
     string usuarioActual = Login::getUsuarioActual();
+
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
     Bitacora bitacora;
-    bitacora.ingresoBitacora(usuarioActual, "2803", "PMMM");
+
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2803", "PMMM"); // Parámetros
+
+
     //Limpia pantalla
     system("cls");
 

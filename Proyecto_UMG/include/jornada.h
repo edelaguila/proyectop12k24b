@@ -1,3 +1,4 @@
+//Encabezados de proteccion
 #ifndef JORNADA_H
 #define JORNADA_H
 //blibliotecas

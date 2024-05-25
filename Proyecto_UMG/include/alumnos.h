@@ -1,4 +1,3 @@
-
 //Creando por Andy Garcia 9959-23-1494
 
 //Encabezados de proteccion
@@ -16,16 +15,16 @@
 
 using namespace std;
 
+//Estructura de proce alumnos
     struct Procealumnos {
 
-    char dpi[20];
-    char certiestudios[50];
-    char fotoestatica[10];
-    char titulo[20];
-    char fotocedula[100];
-    char copiadpi[50];
-    char solvente[20];
-
+char dpi[20]; // Almacena el número de DPI (Documento Personal de Identificación) del usuario
+char certiestudios[50]; // Almacena la información sobre la certificación de estudios del usuario
+char fotoestatica[10]; // Almacena información sobre la foto estática del usuario
+char titulo[20]; // Almacena información sobre el título del usuario
+char fotocedula[100]; // Almacena información sobre la foto de la cédula del usuario
+char copiadpi[50]; // Almacena información sobre la copia del DPI del usuario al 200%
+char solvente[20]; // Almacena información sobre el estado de solvencia del usuario
 
 };
 
@@ -106,22 +105,34 @@ class alumnos
         //Obteniendo el año de ingreso
         string getsolvente();
 
+        //Estableciendo el año de ingreso
         string setdpi(string dpi);
+        //Obteniendo el dpi
         string getdpi();
 
+         //Estableciendo el año de ingreso
         string setcertiestudios(string certiestudios);
+        //Obteniendo el certificado de estudios
         string getcertiestudios();
 
+         //Estableciendo el año de ingreso
         string setfotoestatica(string fotoestatica);
+        //Obteniendo la foto estatica
         string getcfotoestatica();
 
+         //Estableciendo el año de ingreso
         string settitulo(string titulo);
+        //Obteniendo el titulo
         string gettitulo();
 
+         //Estableciendo el año de ingreso
         string setfotocedula(string fotocedula);
+        //Obteniendo la foto cedula
         string gettfotocedula();
 
+         //Estableciendo el año de ingreso
         string setcopiadpi(string copiadpi);
+        //Obteniendo la copia de dpi
         string getcopiadpi();
 
 

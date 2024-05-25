@@ -125,7 +125,7 @@ class ProceMaestros
     char Actas[20];          // Almacena las actas de los maestros
     char Cuadernillos[50];   // Almacena los cuadernillos  del maestro ingresado
     char Asistencia[10];     // Almacena la asistencia del maestro ingresado
-    char solvente[20];
+    char solvente[20];      // Almacena solvente del maestro ingresado
 
 };
 

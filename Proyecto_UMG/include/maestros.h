@@ -139,9 +139,6 @@ class maestros
     void buscar(); //Funcion para poder buscar un maestro por medio de la id
     void borrar(); //Funcion para poder borrar algun maestro registrado
 
-
-
 };
-
 
 #endif // MAESTROS_H

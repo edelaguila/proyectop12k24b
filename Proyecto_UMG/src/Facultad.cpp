@@ -12,6 +12,7 @@
 //Elaborado por: Lourdes Isabel Melendez Pineda 9959-23-1379
 //Comentado, Depurado y revisado por: Josue Daniel Villagran Pinto 9490-11-17319
 //Implementacion de bitacora: Evelyn Sofía Andrade Luna   9959-23-1224
+
 using namespace std;
 // CRUD de la clase
 void FacultadCRUD::Crudfacultad() {

@@ -8,7 +8,7 @@
 #include<iomanip>
 #include"alumnos.h"
 using namespace std;
-
+// creando clase
 class catalogo
 {
     public:

@@ -97,23 +97,40 @@ void Asignacion_Maestro_curso::Menu_catedratico()
 
 void Asignacion_Maestro_curso::asignarse_curso()
 {
-	system("cls");
+    system("cls");
 
 //Proceso asignación maestro a curso realizado por Kathia Contreras 9959-23-8246
 
 int num=1;
 Asignacion Asigna;
-cout<<"ingrese codigo maestro: ";
-cin >> Asigna.codigo_maestro ;
-cin.ignore();
+    //PROCESO VALIDACION CODIGO MAESTRO KATHIA CONTRERAS 9959-23-8246
+    string idmaestro;
+    cout<<"ingrese codigo maestro: ";
+    cin >> idmaestro;
+    fstream archivo15("maestros.dat", ios::binary | ios::in | ios::out);
+    if (!archivo15) {
+        cout << "No hay Maestros registrados." << endl;
+        return;
+    }
+    Maestro maestros1;
+    bool encontrada = false;
+    while (archivo15.read(reinterpret_cast<char*>(&maestros1), sizeof(Maestro))) {
+        if (maestros1.id == idmaestro) {
+            archivo15.seekp(-static_cast<int>(sizeof(Maestro)), ios::cur);
+            strcpy(Asigna.codigo_maestro,(idmaestro).c_str());
+            cin.ignore();
+            strcpy(Asigna.nombre_maestro,(maestros1.nombre));
+            encontrada = true;
+            break;
+        }
+    }
+    archivo15.close();
+    if (!encontrada) {
+        cout << "No se encontro un maestro con el ID proporcionado, intente de nuevo" << endl;
+        system("pause");
+    }else{
+	system("cls");
 
-cout <<"ingrese nombre catedratico: ";
-cin.getline(Asigna.nombre_maestro,50);
-
-cout <<"ingrese apellido catedratico: ";
-cin.getline(Asigna.apellido_maestro,50);
-
-system("cls");
 
 //REVISAR QUE NOMBRE COLOCAN A CLASE Y ARCHIVO SEDE AL GRUPO ASIGNADO
 
@@ -333,7 +350,7 @@ cout << "------------------------------------------------" << endl;
     cout << "------------------------------------------------" << endl;
 
 system("pause");
-
+    }
 
 }
 void Asignacion_Maestro_curso::actas()

@@ -1,3 +1,5 @@
+
+
 #ifndef LOGIN_ALUMNO_H
 #define LOGIN_ALUMNO_H
 #include<iostream> // Biblioteca estándar para la entrada y salida
@@ -7,6 +9,8 @@
 #include<conio.h> // Biblioteca para la manipulación de la consola
 #include<iomanip> // Biblioteca para la manipulación de la entrada/salida formateada
 using namespace std;
+
+
 
 class Login_Alumno
 {

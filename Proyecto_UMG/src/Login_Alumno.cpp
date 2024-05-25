@@ -5,7 +5,9 @@
 #include<cstdlib> // Biblioteca estándar
 #include<conio.h> // Biblioteca para la manipulación de la consola
 #include<iomanip> // Biblioteca para la manipulación de la entrada/salida formateada
+
 using namespace std;
+
 
 // Constructor de la clase Login_Alumno
 Login_Alumno::Login_Alumno(string usuario, string contrasena)//parametros de la clase

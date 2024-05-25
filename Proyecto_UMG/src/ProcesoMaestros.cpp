@@ -306,6 +306,8 @@ void ProceMaestros::insertar()
     Bitacora bitacora;
     bitacora.ingresoBitacora(usuarioActual, "2802", "PMI");
 
+    int pro1=0, pro2=0, pro3=0, bd1=0, sisop1=0;
+
     //Limpiando pantalla
     system("cls");
 
@@ -318,24 +320,49 @@ void ProceMaestros::insertar()
     proceamaestros maestros;
 
 
-
     cout<<" Ingrese un numero uno (1) para confirmar y un numero cero (0) para negar." << endl;
     cin.ignore();
 
     cout<<"       -> El maestro cuenta con actas?: ";
     cin.getline(maestros.Actas, 15);
 
-    cout<<"       -> El maestro cuenta con cuadernillos?: ";
-    cin.getline(maestros.Cuadernillos, 15);
-
     cout<<"       -> El maestro cuenta con la asistencia?: ";
     cin.getline(maestros.Asistencia, 15);
 
+    cout << "\n";
+    cout << "-----------------------Cuadernillos de Materias-----------------------" << endl;
+    cout << "\n";
+    cout << "    -> Cuenta con el cuadernillo de Programacion I?: ";
+    cin >> pro1;
+    cout << "    -> Cuenta con el cuadernillo de Programacion II?: ";
+    cin >> pro2;
+    cout << "    -> Cuenta con el cuadernillo de Programacion III?: ";
+    cin >> pro3;
+    cout << "    -> Cuenta con el cuadernillo de Base de Datos I?: ";
+    cin >> bd1;
+    cout << "    -> Cuenta con el cuadernillo de Sistemas Operativos I?: ";
+    cin >> sisop1;
+
+    if ( (pro1 == 1) && (pro2 == 1) && (pro3 == 1) && (bd1 == 1) && (sisop1 == 1) )
+    {
+        cout<<"       -> El maestro cuenta con los cuadernillos";
+        cout << "\n";
+        system("pause");
+        cout << "\n";
+
+    } else
+    {
+        cout<<"       -> El maestro no cuenta con los cuadernillos";
+        cout << "\n";
+        system("pause");
+        cout << "\n";
+    }
 
     int solvente = 1;
-    if (string(maestros.Actas) != "1" ||
-        string(maestros.Cuadernillos) != "1" ||
-        string(maestros.Asistencia) != "1" ){
+
+    if ((string(maestros.Actas) != "1" || string(maestros.Cuadernillos) != "1" || string(maestros.Asistencia) != "1" )
+        && (pro1 != 1) || (pro2 != 1) || (pro3 != 1) || (bd1 != 1) || (sisop1 != 1))
+    {
         solvente = 0;
     }
 

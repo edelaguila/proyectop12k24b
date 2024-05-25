@@ -1,19 +1,22 @@
+//Jonathan Samuel Gonzalez Ixpata
 #ifndef COLEGIATURA_H
 #define COLEGIATURA_H
 
 #include <iostream>
+#include <string>
 using namespace std;
 
-class colegiatura
-{
+class colegiatura {
 private:
     string carnet, trimestre, anio, mes, id, nombre, estatus;
 
 public:
     bool validarID(const std::string &idEstudiante);
     string leerDatos();
-    void procesarColegiaturaCursos(const string &idIngresado); // Modificado para incluir idIngresado
-    void pagarEnLinea(int monto, const string &fechaHoy, const string &semestre, const string &mes, const string &anio, const string &idIngresado); // Modificado para incluir idIngresado
+    void procesarColegiaturaCursos(const string &idIngresado);
+    void procesarExamenExtraordinario(const string& idIngresado);
+    void procesarRecuperacion(const string& idIngresado);
+    void pagarEnLinea(int monto, const string &fechaHoy, const string &semestre, const string &mes, const string &anio, const string &idIngresado, const string &tipoPago);
     string generarNumeroBoleta();
     void menu();
     void insertar();
@@ -23,8 +26,7 @@ public:
 
     void obtenerDatosEstudiante(const string &idEstudiante, string &nombreEstudiante);
 
-    struct Alumno
-    {
+    struct Alumno {
         char id[20];
         char nombre[50];
         char Genero[10];
@@ -39,3 +41,4 @@ public:
 };
 
 #endif // COLEGIATURA_H
+

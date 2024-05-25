@@ -1,11 +1,14 @@
-// Jonathan Samuel Gonzalez Ixpata
+// Jonathan Samuel Gonzalez Ixpata.
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <cstdlib>
+#include <ctime>
+#include <string>
+#include <vector>
+#include <algorithm>
 #include "sueldos.h"
 #include "Bitacora.h"
-#include <cstdlib> // Para la función rand()
-#include <ctime> // Para la función time()
 
 using namespace std;
 
@@ -22,11 +25,9 @@ void sueldos::menu() {
         cout << "\t\t\t-------------------------------" << endl;
         cout << "\t\t\t 1. Base de datos de empleados" << endl;
         cout << "\t\t\t 2. Generación de nóminas" << endl;
-        cout << "\t\t\t 3. Proceso de asignación de maestros" << endl;
-        cout << "\t\t\t 4. Ver información de los maestros" << endl;
-        cout << "\t\t\t 5. Retorno" << endl;
+        cout << "\t\t\t 3. Retorno" << endl;
         cout << "\t\t\t-------------------------------" << endl;
-        cout << "\t\t\tOpción a escoger:[1/2/3/4/5]" << endl;
+        cout << "\t\t\tOpción a escoger:[1/2/3]" << endl;
         cout << "\t\t\t-------------------------------" << endl;
         cout << "\t\t\tIngresa tu Opción: ";
         cin >> choice;
@@ -40,12 +41,6 @@ void sueldos::menu() {
                 generacionNomina(); // Llama a la función para la generación de nómina
                 break;
             case 3:
-                procesoAsignacionMaestros(); // Llama a la función para el proceso de asignación de maestros
-                break;
-            case 4:
-                verMaestros(); // Llama a la función para ver la información de los maestros
-                break;
-            case 5:
                 // Implementa la funcionalidad para "Retorno" aquí si es necesario
                 break;
             default:
@@ -53,7 +48,7 @@ void sueldos::menu() {
                 cin.ignore();
                 cin.get();
         }
-    } while (choice != 5);
+    } while (choice != 3);
 }
 
 void sueldos::menuEmpleados() {
@@ -98,66 +93,118 @@ void sueldos::agregarEmpleado() {
     Empleado empleado;
     srand(time(0)); // Inicializar el generador de números aleatorios
 
-    cout << "\n\tIngrese el nombre del empleado: ";
+    // Generar un código único para el empleado
+    int year = 24;
+    int numAleatorio = (rand() % 9998) + 1;
+    string idString = "9959-" + to_string(year) + "-" + to_string(numAleatorio);
+
+    cout << "\n\t-> Generando código del empleado: " << idString << endl;
+    empleado.id = idString;
+
+    cout << "\n\tIngrese el nombre completo del empleado: ";
     cin.ignore();
     getline(cin, empleado.nombre);
 
-    cout << "\tIngrese el puesto del empleado: ";
-    getline(cin, empleado.puesto);
+    cout << "\tIngrese el email del empleado: ";
+    getline(cin, empleado.email);
 
-    cout << "\tIngrese el salario del empleado: ";
-    cin >> empleado.salario;
+    int puesto;
+    cout << "\tIngrese el puesto del empleado (1. Secretaria, 2. Limpieza, 3. Maestro): ";
+    cin >> puesto;
 
-    // Generar un código único para el empleado
-    int codigoEmpleado = rand() % 10000; // Generar un número aleatorio entre 0 y 9999
+    switch (puesto) {
+        case 1:
+            empleado.puesto = "Secretaria";
+            empleado.salario = 3500;
+            break;
+        case 2:
+            empleado.puesto = "Limpieza";
+            empleado.salario = 3400;
+            break;
+        case 3:
+            empleado.puesto = "Maestro";
+            empleado.salario = 5000;
+            break;
+        default:
+            cout << "\tPuesto inválido, asignando puesto de Limpieza por defecto.\n";
+            empleado.puesto = "Limpieza";
+            empleado.salario = 3400;
+    }
+
+    cout << "\tIngrese el teléfono del empleado: ";
+    cin.ignore();
+    getline(cin, empleado.telefono);
 
     // Guardar la información en un archivo binario
     ofstream file("empleados.dat", ios::binary | ios::app);
-    size_t nombreSize = empleado.nombre.size();
-    size_t puestoSize = empleado.puesto.size();
-    file.write(reinterpret_cast<const char*>(&codigoEmpleado), sizeof(codigoEmpleado));
-    file.write(reinterpret_cast<const char*>(&nombreSize), sizeof(nombreSize));
-    file.write(empleado.nombre.c_str(), nombreSize);
-    file.write(reinterpret_cast<const char*>(&puestoSize), sizeof(puestoSize));
-    file.write(empleado.puesto.c_str(), puestoSize);
-    file.write(reinterpret_cast<const char*>(&empleado.salario), sizeof(empleado.salario));
-    file.close();
+    if (file.is_open()) {
+        file.write(empleado.id.c_str(), empleado.id.size());
+        file.put('\0');
+        file.write(empleado.nombre.c_str(), empleado.nombre.size());
+        file.put('\0');
+        file.write(empleado.email.c_str(), empleado.email.size());
+        file.put('\0');
+        file.write(empleado.puesto.c_str(), empleado.puesto.size());
+        file.put('\0');
+        file.write(reinterpret_cast<const char*>(&empleado.salario), sizeof(empleado.salario));
+        file.write(empleado.telefono.c_str(), empleado.telefono.size());
+        file.put('\0');
+        file.close();
+    } else {
+        cout << "\n\tNo se pudo abrir el archivo de empleados.\n";
+    }
 
     cout << "\n\t¡El empleado ha sido agregado con éxito!\n";
     system("pause");
 }
 
 void sueldos::eliminarEmpleado() {
-    int codigoEmpleado;
+    string codigoEmpleado;
     cout << "\n\tIngrese el código del empleado que desea eliminar: ";
     cin >> codigoEmpleado;
 
     ifstream archivo("empleados.dat", ios::binary);
     ofstream archivoTmp("empleados_tmp.dat", ios::binary);
 
-    size_t nombreSize, puestoSize;
     Empleado empleado;
-    int codigo;
     bool eliminado = false;
-
-    while (archivo.read(reinterpret_cast<char*>(&codigo), sizeof(codigo))) {
-        archivo.read(reinterpret_cast<char*>(&nombreSize), sizeof(nombreSize));
-        empleado.nombre.resize(nombreSize);
-        archivo.read(&empleado.nombre[0], nombreSize);
-        archivo.read(reinterpret_cast<char*>(&puestoSize), sizeof(puestoSize));
-        empleado.puesto.resize(puestoSize);
-        archivo.read(&empleado.puesto[0], puestoSize);
+    while (archivo) {
+        getline(archivo, empleado.id, '\0');
+        if (!archivo) break;
+        getline(archivo, empleado.nombre, '\0');
+        getline(archivo, empleado.email, '\0');
+        getline(archivo, empleado.puesto, '\0');
         archivo.read(reinterpret_cast<char*>(&empleado.salario), sizeof(empleado.salario));
+        getline(archivo, empleado.telefono, '\0');
 
-        if (codigo == codigoEmpleado) {
+        if (empleado.id == codigoEmpleado) {
             eliminado = true;
+            // Guardar los datos del empleado eliminado en otro archivo
+            ofstream archivoEliminados("empleados_eliminados.dat", ios::binary | ios::app);
+            archivoEliminados.write(empleado.id.c_str(), empleado.id.size());
+            archivoEliminados.put('\0');
+            archivoEliminados.write(empleado.nombre.c_str(), empleado.nombre.size());
+            archivoEliminados.put('\0');
+            archivoEliminados.write(empleado.email.c_str(), empleado.email.size());
+            archivoEliminados.put('\0');
+            archivoEliminados.write(empleado.puesto.c_str(), empleado.puesto.size());
+            archivoEliminados.put('\0');
+            archivoEliminados.write(reinterpret_cast<const char*>(&empleado.salario), sizeof(empleado.salario));
+            archivoEliminados.write(empleado.telefono.c_str(), empleado.telefono.size());
+            archivoEliminados.put('\0');
+            archivoEliminados.close();
         } else {
-            archivoTmp.write(reinterpret_cast<const char*>(&codigo), sizeof(codigo));
-            archivoTmp.write(reinterpret_cast<const char*>(&nombreSize), sizeof(nombreSize));
-            archivoTmp.write(empleado.nombre.c_str(), nombreSize);
-            archivoTmp.write(reinterpret_cast<const char*>(&puestoSize), sizeof(puestoSize));
-            archivoTmp.write(empleado.puesto.c_str(), puestoSize);
+            archivoTmp.write(empleado.id.c_str(), empleado.id.size());
+            archivoTmp.put('\0');
+            archivoTmp.write(empleado.nombre.c_str(), empleado.nombre.size());
+            archivoTmp.put('\0');
+            archivoTmp.write(empleado.email.c_str(), empleado.email.size());
+            archivoTmp.put('\0');
+            archivoTmp.write(empleado.puesto.c_str(), empleado.puesto.size());
+            archivoTmp.put('\0');
             archivoTmp.write(reinterpret_cast<const char*>(&empleado.salario), sizeof(empleado.salario));
+            archivoTmp.write(empleado.telefono.c_str(), empleado.telefono.size());
+            archivoTmp.put('\0');
         }
     }
 
@@ -170,7 +217,7 @@ void sueldos::eliminarEmpleado() {
     if (eliminado) {
         cout << "\n\t¡El empleado ha sido eliminado con éxito!\n";
     } else {
-        cout << "\n\tEste empleado no existe en la base de datos.\n";
+        cout << "\n\tNo se encontró un empleado con el código proporcionado.\n";
     }
 
     system("pause");
@@ -178,111 +225,108 @@ void sueldos::eliminarEmpleado() {
 
 void sueldos::verEmpleados() {
     ifstream archivo("empleados.dat", ios::binary);
-    if (!archivo) {
-        cout << "No hay empleados registrados." << endl;
+    if (!archivo.is_open()) {
+        cout << "\n\tNo se puede abrir el archivo de empleados.\n";
+        system("pause");
         return;
     }
 
-    Empleado empleado;
-    int codigo;
+    vector<Empleado> empleados;
 
-    cout << "\n-----------------Información de los empleados---------------------" << endl;
-    cout << "Código" << setw(10) << "Nombre" << setw(22) << "Puesto" << setw(12) << "Salario\n\n";
+    while (true) {
+        Empleado empleado;
 
-    size_t nombreSize, puestoSize;
-    while (archivo.read(reinterpret_cast<char*>(&codigo), sizeof(codigo))) {
-        archivo.read(reinterpret_cast<char*>(&nombreSize), sizeof(nombreSize));
-        empleado.nombre.resize(nombreSize);
-        archivo.read(&empleado.nombre[0], nombreSize);
-        archivo.read(reinterpret_cast<char*>(&puestoSize), sizeof(puestoSize));
-        empleado.puesto.resize(puestoSize);
-        archivo.read(&empleado.puesto[0], puestoSize);
+        getline(archivo, empleado.id, '\0');
+        if (archivo.eof()) break;
+        getline(archivo, empleado.nombre, '\0');
+        if (archivo.eof()) break;
+        getline(archivo, empleado.email, '\0');
+        if (archivo.eof()) break;
+        getline(archivo, empleado.puesto, '\0');
+        if (archivo.eof()) break;
         archivo.read(reinterpret_cast<char*>(&empleado.salario), sizeof(empleado.salario));
+        if (archivo.eof()) break;
+        getline(archivo, empleado.telefono, '\0');
+        if (archivo.eof()) break;
 
-        cout << codigo << setw(10) << empleado.nombre << setw(22) << empleado.puesto << setw(12) << empleado.salario << endl;
+        empleados.push_back(empleado);
     }
 
     archivo.close();
 
-    cout << "Presione Enter para continuar...";
+    // Ordenar empleados por id
+    sort(empleados.begin(), empleados.end(), [](const Empleado& a, const Empleado& b) {
+        return a.id < b.id;
+    });
+
+    cout << "\n\t-----------------------------\n";
+    cout << "\t| INFORMACIÓN DE EMPLEADOS |\n";
+    cout << "\t-----------------------------\n";
+
+    for (const auto& empleado : empleados) {
+        cout << "\n\tCódigo: " << empleado.id << endl;
+        cout << "\tNombre: " << empleado.nombre << endl;
+        cout << "\tEmail: " << empleado.email << endl;
+        cout << "\tPuesto: " << empleado.puesto << endl;
+        cout << "\tSalario: $" << fixed << setprecision(2) << empleado.salario << endl;
+        cout << "\tTeléfono: " << empleado.telefono << endl;
+        cout << "\t-----------------------------\n";
+    }
+
+    cout << "\n\tPresione cualquier tecla para regresar al menú anterior...";
     cin.ignore();
     cin.get();
 }
 
-void sueldos::procesoAsignacionMaestros() {
-    string nombre, especializacion, lugarImpartirClases;
-    cout << "\n\tIngrese su nombre: ";
-    cin.ignore();
-    getline(cin, nombre);
-    cout << "\tIngrese su especialización (Ingeniería o Licenciatura): ";
-    getline(cin, especializacion);
-    cout << "\tIngrese donde quiere impartir clases (Ingeniería o Licenciatura): ";
-    getline(cin, lugarImpartirClases);
-
-    // Guardar la información en un archivo binario
-    ofstream file("Maestros.dat", ios::binary | ios::app);
-    size_t nombreSize = nombre.size();
-    size_t especializacionSize = especializacion.size();
-    size_t lugarImpartirClasesSize = lugarImpartirClases.size();
-    file.write(reinterpret_cast<const char*>(&nombreSize), sizeof(nombreSize));
-    file.write(nombre.c_str(), nombreSize);
-    file.write(reinterpret_cast<const char*>(&especializacionSize), sizeof(especializacionSize));
-    file.write(especializacion.c_str(), especializacionSize);
-    file.write(reinterpret_cast<const char*>(&lugarImpartirClasesSize), sizeof(lugarImpartirClasesSize));
-    file.write(lugarImpartirClases.c_str(), lugarImpartirClasesSize);
-    file.close();
-
-    cout << "\n\t¡La información ha sido guardada con éxito!\n";
-    system("pause");
-}
-
-void sueldos::verMaestros() {
-    ifstream archivo("Maestros.dat", ios::binary);
-    if (!archivo) {
-        cout << "No hay maestros registrados." << endl;
-        return;
-    }
-
-    string nombre, especializacion, lugarImpartirClases;
-    size_t nombreSize, especializacionSize, lugarImpartirClasesSize;
-
-    cout << "\n-----------------Información de los maestros---------------------" << endl;
-    cout << setw(20) << "Nombre" << setw(25) << "Especialización" << setw(30) << "Lugar para impartir clases\n\n";
-
-    while (archivo.read(reinterpret_cast<char*>(&nombreSize), sizeof(nombreSize))) {
-        nombre.resize(nombreSize);
-        archivo.read(&nombre[0], nombreSize);
-        archivo.read(reinterpret_cast<char*>(&especializacionSize), sizeof(especializacionSize));
-        especializacion.resize(especializacionSize);
-        archivo.read(&especializacion[0], especializacionSize);
-        archivo.read(reinterpret_cast<char*>(&lugarImpartirClasesSize), sizeof(lugarImpartirClasesSize));
-        lugarImpartirClases.resize(lugarImpartirClasesSize);
-        archivo.read(&lugarImpartirClases[0], lugarImpartirClasesSize);
-
-        cout << setw(20) << nombre << setw(25) << especializacion << setw(30) << lugarImpartirClases << endl;
-    }
-
-    archivo.close();
-
-    cout << "Presione Enter para continuar...";
-    cin.ignore();
-    cin.get();
-}
 
 void sueldos::generacionNomina() {
-    string nombre, mesPago;
-    double salario;
+    string id, mesPago;
+    Empleado empleado;
+    bool empleadoEncontrado = false;
 
-    cout << "\n\tIngrese el nombre del empleado: ";
+    cout << "\n\tIngrese el ID o carnet del empleado: ";
     cin.ignore();
-    getline(cin, nombre);
-
-    cout << "\tIngrese el sueldo del empleado: ";
-    cin >> salario;
+    getline(cin, id);
 
     cout << "\tIngrese el mes de pago del empleado: ";
-    cin.ignore();
     getline(cin, mesPago);
+
+    // Buscar al empleado en el archivo
+    ifstream archivo("empleados.dat", ios::binary);
+    if (!archivo.is_open()) {
+        cout << "\n\tNo se puede abrir el archivo de empleados.\n";
+        system("pause");
+        return;
+    }
+
+    while (true) {
+        getline(archivo, empleado.id, '\0');
+        if (archivo.eof()) break;
+        getline(archivo, empleado.nombre, '\0');
+        if (archivo.eof()) break;
+        getline(archivo, empleado.email, '\0');
+        if (archivo.eof()) break;
+        getline(archivo, empleado.puesto, '\0');
+        if (archivo.eof()) break;
+        archivo.read(reinterpret_cast<char*>(&empleado.salario), sizeof(empleado.salario));
+        if (archivo.eof()) break;
+        getline(archivo, empleado.telefono, '\0');
+        if (archivo.eof()) break;
+
+        if (empleado.id == id) {
+            empleadoEncontrado = true;
+            break;
+        }
+    }
+    archivo.close();
+
+    if (!empleadoEncontrado) {
+        cout << "\n\tEmpleado no encontrado.\n";
+        system("pause");
+        return;
+    }
+
+    double salario = empleado.salario;
 
     // Calcular las deducciones
     double deduccionIGGS = salario * 0.055;
@@ -306,7 +350,8 @@ void sueldos::generacionNomina() {
     // Mostrar los resultados en una tabla
     cout << fixed << setprecision(2); // Establecer la precisión a dos decimales
     cout << "\n-------------------Detalle de Nómina-------------------\n";
-    cout << "Empleado: " << nombre << endl;
+    cout << "Empleado: " << empleado.nombre << endl;
+    cout << "ID: " << empleado.id << endl;
     cout << "Sueldo Bruto: Q" << salario << endl;
     cout << "--------------------------------------------------------\n";
     cout << "Deducciones:\n";
@@ -327,4 +372,3 @@ void sueldos::generacionNomina() {
     cout << "\n\t¡La nómina ha sido generada con éxito!\n";
     system("pause");
 }
-

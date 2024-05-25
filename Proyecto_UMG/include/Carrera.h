@@ -7,8 +7,9 @@
 #include<conio.h>
 #include<iomanip>
 
+
 using namespace std;
-//Elaborado por : Daniel Antonio Chacón Morataya  9959-22-1827
+//Elaborado por : Daniel Antonio Chacï¿½n Morataya  9959-22-1827
 struct Carrera {
     int codigo;
     char nombre[50];

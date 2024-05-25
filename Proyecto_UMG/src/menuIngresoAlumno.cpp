@@ -147,6 +147,13 @@ bool menuIngresoAlumno::VerificarCarnet()
         cout << "\n\t----- Bienvenido " << usuario << " -----" << endl;
         // Pausa la ejecución del programa hasta que el usuario presione una tecla
         system("pause");
+        //MRILYN JULEISY GARCIA LIMA 9959-23-17838
+        char nombre[50];
+                    cout << "Ingrese el nombre del estudiante: ";
+                    cin.ignore(); // Limpiar el buffer de entrada
+                    cin.getline(nombre, 50); // Leer el nombre del estudiante
+                    NotaCrud m;
+                    m.LeerNotasPorNombre(nombre); // Llama a la funcion para leer notas por nombre
         // Retorna true
         return true;
     }

@@ -1,4 +1,4 @@
-// Diana Mishel Loeiza //9959-23-3457 //reconstrucion para validar codigos alumnos 
+// Diana Mishel Loeiza //9959-23-3457 //reconstrucion para validar codigos alumnos
 // rangos de notas especificos
 //uso de archivos txt //notas.dat para almacenar
 #include "notas.h" // Inclusion del archivo de cabecera para las definiciones relacionadas con las notas
@@ -283,4 +283,38 @@ void NotaCrud::DesplegarNotas() {
     cin.ignore(); // Ignorar cualquier entrada adicional
     cin.get(); // Esperar a que el usuario presione Enter para continuar
 }
+//MRILYN JULEISY GARCIA LIMA
+void NotaCrud::LeerNotasPorNombre(const char* nombre) {
+    ifstream archivo("notas.dat", ios::binary); // Abrir el archivo para lectura en modo binario
+    if (!archivo) { // Si no se pudo abrir el archivo
+        cout << "No hay notas registradas." << endl; // Mensaje de error
+        return; // Salir de la función
+    }
 
+    notas nota; // Declarar una variable para almacenar la nota actual
+    bool encontrado = false; // Bandera para indicar si se encontró al estudiante
+    while (archivo.read(reinterpret_cast<char*>(&nota), sizeof(notas))) { // Leer cada registro de nota del archivo
+        if (strcmp(nota.nombreEstudiante, nombre) == 0) { // Comparar los nombres
+            // Mostrar los detalles de la nota
+            cout << "Codigo del estudiante: " << nota.codigoEstudiante << endl;
+            cout << "Nombre del estudiante: " << nota.nombreEstudiante << endl;
+            cout << "Nombre del curso: " << nota.nombreCurso << endl;
+            cout << "Nota Parcial 1: " << nota.np1 << endl;
+            cout << "Nota Parcial 2: " << nota.np2 << endl;
+            cout << "Zona de actividades: " << nota.za << endl;
+            cout << "Examen final: " << nota.ef << endl;
+            cout << "Nota final: " << nota.nf << endl; // Mostrar la nota final (NF)
+            cout << "-----------------------------" << endl; // Separador entre notas
+            encontrado = true; // Actualizar la bandera
+        }
+    }
+
+    if (!encontrado) { // Si no se encontró al estudiante
+        cout << "No se encontraron notas para el estudiante con el nombre proporcionado." << endl;
+    }
+
+    archivo.close(); // Cerrar el archivo
+    cout << "Presione Enter para continuar..."; // Mensaje para el usuario
+    cin.ignore(); // Ignorar cualquier entrada adicional
+    cin.get(); // Esperar a que el usuario presione Enter para continuar
+}

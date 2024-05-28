@@ -12,10 +12,14 @@
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
-
+#include"usuarios.h"
 
 using namespace std;
 
+<<<<<<< HEAD
+=======
+//Estructura del maestro
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
 struct Maestro {
 
     char id[20];       // Almacena la id de los maestros ingresado
@@ -23,26 +27,66 @@ struct Maestro {
     char Genero[10];   // Almacena el género del maestro ingresado
     char DPI[20];       // Almacena el DPI del maestro ingresado
     char direccion[100];  // Almacena la dirección del maestro ingresado
+<<<<<<< HEAD
     char nacionalidad[50];  // Almacena la nacionalidad del maestro ingresado
+=======
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
     char telefono[15];      // Almacena el número de teléfono del maestro ingresado
     char civil[20];         // Almacena el estado civil del maestro ingresado
     char fechanaci[20];     // Almacena la fecha de nacimiento del maestro ingresado
     char anoingre[10];      // Almacena el año de ingreso del maestro ingresado
 };
+<<<<<<< HEAD
+=======
+
+struct proceamaestros {
+
+    char id[20];
+    char Actas[20];          // Almacena las actas de los maestros
+    char Cuadernillos[50];   // Almacena los cuadernillos  del maestro ingresado
+    char Asistencia[10];     // Almacena la asistencia del maestro ingresado
+    char solvente[20];
+
+};
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
 
 //Creando la clase maestros
 class maestros
 {
     //Atributos privados de la clase maestros
     private:
-    string id, nombre, telefono, DPI, direccion, Genero, nacionalidad, civil, fechanaci, anoingre;
+    string id, nombre, telefono, DPI, direccion, Genero, civil, fechanaci, anoingre, Actas, Cuadernillos, Asistencia;
 
     //Atributos publicos de la clase maestros
     public:
 
+        string solvente;
         //Constructores
         maestros() {}
-        maestros(string id, string nombre, string telefono, string DPI, string direccion, string Genero, string nacionalidad, string civil, string fechanaci, string anoingre);
+        maestros(string Actas, string Cuadernillos, string Asistencia, string id, string nombre, string telefono, string DPI, string direccion, string Genero, string civil, string fechanaci, string anoingre, string solvente);
+
+        string setsolvente(string solvente);
+        //Obteniendo el año de ingreso
+        string getsolvente();
+
+        //Estableciendo las actas
+        string setActas(string Actas);
+
+        //obteniendo las actas
+        string getActas();
+
+        //Estableciendo los cuadernillos
+        string setCuadernillos(string Cuadernillos);
+
+        //obteniendo los cuadernillos
+        string getCuadernillos();
+
+        //Estableciendo la asistencia
+        string setAsistencia(string Asistencia);
+
+        //obteniendo la asistencia
+        string getAsistencia();
+
 
         //Estableciendo la id
         string setid(string id);
@@ -80,12 +124,6 @@ class maestros
         string getGenero();
 
 
-        //Estableciendo la nacionalidad
-        string setnacionalidad(string nacionalidad);
-        //Obteniendo la nacionalidad
-        string getnacionalidad();
-
-
         //Estableciendo el estado civil
         string setcivil(string civil);
         //Obteniendo el estado civil
@@ -111,10 +149,14 @@ class maestros
     void buscar(); //Funcion para poder buscar un maestro por medio de la id
     void borrar(); //Funcion para poder borrar algun maestro registrado
 
+<<<<<<< HEAD
 
     //Estructura del maestro
 
 };
 
+=======
+};
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
 
 #endif // MAESTROS_H

@@ -1,4 +1,5 @@
 //Creado por Jose Gallardo 9959-23-106
+<<<<<<< HEAD
 #include <iostream>
 #include <cstdlib>
 #include <conio.h>
@@ -15,46 +16,73 @@
 #include "jornada.h"
 #include "aulas.h"
 #include "secciones.h"
+=======
+
+//Incluyendo Librerias
+#include <iostream>
+#include <cstdlib>
+#include <conio.h>
+#include <unistd.h>
+
+//Incluyendo encabezados
+#include "Bitacora.h"
+#include "alumnos.h"
+#include "maestros.h"
+#include "Procesos.h"
+#include "usuarios.h"
+#include "Login.h"
+#include "Portada.h"
+
+
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
 
 using namespace std;
 
+//Funciones
 void menuGeneral();
 void catalogos();
 void reportes();
 void procesos();
 void ayuda();
 void seguridad();
+
+//Variable string
 string codigoPrograma="1";
-Bitacora Auditoria;
-string user, contrasena;
 
-int main()
-{
-        // Llamamos al objeto e ingresamos los parametros
-    Login ingreso(user, contrasena);
 
-    // Creamos un bool que verifique y despliegue el metodo VerificarUsuario
-    bool UsuarioCorrecto = ingreso.VerificarUsuario();
 
-    // Luego de ingresar con usuario y contraseña se nos despliega otro menu
-    if (UsuarioCorrecto)
-    {
-        menuGeneral();
-    }
+int main() {
+    cout << "                                              PROYECTO UMG " << endl;
+    Portada::dibujarPortada("Portada.txt.txt");
+    system("Pause");
 
-    return 0;
+    Login login; // Creación de un objeto Login
+
+// Validación del inicio de sesión
+if (login.validacion()) {
+    menuGeneral(); // Si la validación es exitosa, muestra el menú principal
+} else {
+    cout << "Intentelo nuevamente..." << endl; // Si la validación falla, muestra un mensaje de error
 }
 
+return 0; // Finaliza el programa
+}
+
+
+
+//Funcion menu general
 void menuGeneral()
 {
+    //Variable int
     int choice;
-
 
     do
     {
+        //Limpiando pantalla
         system("cls");
+        //Diseño del sistema
         cout << "\t\t\t-------------------------------" << endl;
-        cout << "\t\t\t|   SISTEMA DE GESTION UMG     |" << endl;
+        cout << "\t\t\t|   SISTEMA DE GESTION UMG     |"<< endl;
         cout << "\t\t\t-------------------------------" << endl;
         cout << "\t\t\t 1. Catalogos" << endl;
         cout << "\t\t\t 2. Procesos" << endl;
@@ -68,44 +96,79 @@ void menuGeneral()
         cout << "\t\t\tIngresa tu Opcion: ";
         cin >> choice;
 
+        //Opciones
         switch (choice)
         {
+        //Opcion 1
         case 1:
             catalogos();
             break;
+
+        //Opcion 1
         case 2:
-            procesos();
-            break;
+            {
+               Procesos proceso;
+               proceso.menuGenerar();
+               break;
+            }
+        //Opcion 3
         case 3:
             reportes();
             break;
+        //Opcion 4
         case 4:
             {
+<<<<<<< HEAD
                Bitacora Auditoria;
                Auditoria.visualizarBitacora();
             }
             break;
+=======
+                Bitacora bitacora;
+                bitacora.mostrarBitacora();
+                break;
+            }
+        //Opcion 5
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
         case 5:
+            //Funcion ayuda
             ayuda();
             break;
+
+        //Opcion 6
         case 6:
-                    Auditoria.ingresoBitacora(user,codigoPrograma,"LGO"); //llamada para registrar la bitacora de seguridad
+            {
+            //Implementacion de la bitacora
+            string usuarioActual = Login::getUsuarioActual();
+
+            // Crear una instancia de la clase Bitacora para registrar el ingreso
+            Bitacora bitacora;
+
+            // Registro del ingreso en la bitácora
+            bitacora.ingresoBitacora(usuarioActual, "2600", "LGO");
             exit(0);
+            }
+
         default:
             cout << "\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
             cin.ignore();
             cin.get();
         }
+    //Si es 6 sale del sistema
     } while (choice != 6);
 }
 
+//Funcion catalogos
 void catalogos()
 {
+    //Variable int
     int choice;
 
     do
     {
+        //Limpiando pantalla
         system("cls");
+        //Diseño del sistema de gestion UMG
         cout << "\t\t\t--------------------------------------------" << endl;
         cout << "\t\t\t|   SISTEMA DE GESTION UMG - CATALOGOS      |" << endl;
         cout << "\t\t\t--------------------------------------------" << endl;
@@ -131,20 +194,23 @@ void catalogos()
         {
         case 1:
         {
+            //Lammada al alumno menu
             alumnos alumno;
             alumno.menu();
         }
             break;
         case 2:
         {
+            //Lammada al maestro menu
             maestros maestro;
             maestro.menu();
         }
             break;
         case 3:
         {
+            //Lammada al usuario menu
             usuarios usuario;
-            usuario.menuUsuarios();
+            usuario.menu();
             break;
         }
         case 4:
@@ -178,6 +244,7 @@ void catalogos()
             // Implementación para Horarios
             break;
         case 12:
+            //Funcion menu general
             menuGeneral();
             break;
         default:
@@ -185,11 +252,13 @@ void catalogos()
             cin.ignore();
             cin.get();
         }
+    //Si es 12 retorna al menu anterior
     } while (choice != 12);
 }
 
 void procesos()
 {
+<<<<<<< HEAD
     int choice;
     do {
         system("cls");
@@ -226,6 +295,9 @@ void procesos()
             cin.get();
         }
     } while (choice != 3);
+=======
+    //Implementacion de procesos
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
 }
 
 void reportes()
@@ -241,5 +313,10 @@ void ayuda()
 void seguridad()
 {
     // Implementación de seguridad
+<<<<<<< HEAD
 
+=======
+                Bitacora bitacora;
+                bitacora.mostrarBitacora();
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
 }

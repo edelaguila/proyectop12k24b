@@ -1,45 +1,42 @@
+//victor omar gomez carrascosa 10733
+#include "login_catedratico.h"
 
-//Creado por Victor Samayoa 9959-23-3424
-
-#include "Login.h"
 #include<iostream>
 #include<fstream>
 #include<stdlib.h>
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
-#include "Bitacora.h"
 using namespace std;
 
-
-Login::Login(string usuario, string contrasena)//parametros de la clase
+login_catedratico::login_catedratico(string usuario, string contrasena)//parametros de la clase
 {
     this -> usuarios=usuarios;
     this -> contrasena=contrasena;
 }
 
-string Login::setUser(string usuarios)
+string login_catedratico::setUser(string usuarios)
 {
     this -> usuarios=usuarios;
 }
 
-string Login::getUser()
+string login_catedratico::getUser()
 {
     return this->usuarios;
 }
 
-string Login::setContrasena(string contrasena)
+string login_catedratico::setContrasena(string contrasena)
 {
     this -> contrasena=contrasena;
 }
 
-string Login::getContrasena()
+string login_catedratico::getContrasena()
 {
     return this->contrasena;
 }
 
 //primer despliegue de pantalla
-bool Login::VerificarUsuario()
+bool login_catedratico::VerificarUsuario()
 {
     string usuario,contrasena;
     int contador= 0; // contador de intentos
@@ -50,11 +47,11 @@ bool Login::VerificarUsuario()
     {
          system("cls");
     cout <<"\t\t\t+-----------------------------------+"<<endl;
-    cout <<"\t\t\t|       LOGIN                       |"<<endl;
+    cout <<"\t\t\t|       LONGIN CATEDRATICO          |"<<endl;
     cout <<"\t\t\t+-----------------------------------+"<<endl;
     cout <<"\t\t\t|Solo tienes permitido 3 intentos   |"<<endl;
     cout <<"\t\t\t+-----------------------------------+"<<endl;
-    cout <<"\t\t\tIngrese el nombre de usuario: ";
+    cout <<"\t\t\tIngrese el nombre del catedratico: ";
     cin >> usuario;
     cout <<"\t\t\tIngrese la contrasena: ";
     char caracter;
@@ -82,7 +79,7 @@ bool Login::VerificarUsuario()
 
     //abrira el archivo de User y contraseñas--------------------------
     ifstream fileU_P;
-    fileU_P.open("usuarios_y_contrasenas prueba.txt",ios::in);
+    fileU_P.open("UsuariosMaestros.txt",ios::in);
 
 
     //verificar si se abrio el archivo---------------------------
@@ -92,8 +89,6 @@ bool Login::VerificarUsuario()
         fileU_P.close();
         return false;
     }
-    string codigoPrograma="1000";
-    Bitacora Auditoria;
 
     //busca el usuario en el archivo---------------------------------
     string user,pass;
@@ -101,16 +96,15 @@ bool Login::VerificarUsuario()
     {
         if (user==usuario && pass==contrasena)
         {
-            Auditoria.ingresoBitacora(user,codigoPrograma,"LGI");
             encontrado=true;
 
-            //arregla bitacora-----------------------------------------
+            //arregla bitacora hecha por:-------------Pablo Palencia--9959-23-736---
             fstream file;
-            file.open("bitaA.txt", ios::app | ios::out);
+            file.open("bitaU.txt", ios::app | ios::out);
             //file <<std::left<<std::setw(15)<< user << "\n";
             file << std::left<<user<<"\n";
             file.close();
-            //-----------------------------------------------------------
+            //-------------------------------------------------------------------PR-
 
             break;
         }

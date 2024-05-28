@@ -1,6 +1,3 @@
-// Diana Mishel Loeiza //9959-23-3457 //reconstrucion para validar codigos alumnos
-// rangos de notas especificos
-//uso de archivos txt //notas.dat para almacenar
 #include "notas.h" // Inclusion del archivo de cabecera para las definiciones relacionadas con las notas
 #include "Bitacora.h" // Inclusion del archivo de cabecera para las definiciones relacionadas con la bitacora
 #include <fstream> // Inclusion de la biblioteca estandar de manejo de archivos
@@ -8,6 +5,8 @@
 #include <cstdlib> // Inclusion de la biblioteca estandar para funciones de utilidad
 #include <conio.h> // Inclusion de la biblioteca para funciones de entrada y salida en consola
 #include <cstdio> // para getchart ()
+
+#include <cstring>
 using namespace std; // Uso del espacio de nombres estandar
 
 // creado y Burificado por Diana Mishel Loeiza Ramìrez 9959/23/3457
@@ -283,7 +282,9 @@ void NotaCrud::DesplegarNotas() {
     cin.ignore(); // Ignorar cualquier entrada adicional
     cin.get(); // Esperar a que el usuario presione Enter para continuar
 }
-//MRILYN JULEISY GARCIA LIMA
+
+
+
 void NotaCrud::LeerNotasPorNombre(const char* nombre) {
     ifstream archivo("notas.dat", ios::binary); // Abrir el archivo para lectura en modo binario
     if (!archivo) { // Si no se pudo abrir el archivo

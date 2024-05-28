@@ -16,6 +16,19 @@
 
 using namespace std;
 
+struct Maestro {
+
+    char id[20];       // Almacena la id de los maestros ingresado
+    char nombre[50];   // Almacena el nombre del maestro ingresado
+    char Genero[10];   // Almacena el gï¿½nero del maestro ingresado
+    char DPI[20];       // Almacena el DPI del maestro ingresado
+    char direccion[100];  // Almacena la direcciï¿½n del maestro ingresado
+    char nacionalidad[50];  // Almacena la nacionalidad del maestro ingresado
+    char telefono[15];      // Almacena el nï¿½mero de telï¿½fono del maestro ingresado
+    char civil[20];         // Almacena el estado civil del maestro ingresado
+    char fechanaci[20];     // Almacena la fecha de nacimiento del maestro ingresado
+    char anoingre[10];      // Almacena el aï¿½o de ingreso del maestro ingresado
+};
 
 //Creando la clase maestros
 class maestros
@@ -85,9 +98,9 @@ class maestros
         string getfechanaci();
 
 
-        //Estableciendo el año de ingreso
+        //Estableciendo el aï¿½o de ingreso
         string setanoingre(string anoingre);
-        //Obteniendo el año de ingreso
+        //Obteniendo el aï¿½o de ingreso
         string getanoingre();
 
     //Funciones
@@ -100,19 +113,7 @@ class maestros
 
 
     //Estructura del maestro
-    struct Maestro {
 
-    char id[20];       // Almacena la id de los maestros ingresado
-    char nombre[50];   // Almacena el nombre del maestro ingresado
-    char Genero[10];   // Almacena el género del maestro ingresado
-    char DPI[20];       // Almacena el DPI del maestro ingresado
-    char direccion[100];  // Almacena la dirección del maestro ingresado
-    char nacionalidad[50];  // Almacena la nacionalidad del maestro ingresado
-    char telefono[15];      // Almacena el número de teléfono del maestro ingresado
-    char civil[20];         // Almacena el estado civil del maestro ingresado
-    char fechanaci[20];     // Almacena la fecha de nacimiento del maestro ingresado
-    char anoingre[10];      // Almacena el año de ingreso del maestro ingresado
-};
 };
 
 

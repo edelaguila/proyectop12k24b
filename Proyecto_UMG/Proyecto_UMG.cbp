@@ -43,15 +43,26 @@
 		<Unit filename="include/Carrera.h" />
 		<Unit filename="include/Cursoss.h" />
 		<Unit filename="include/Facultad.h" />
+<<<<<<< HEAD
 		<Unit filename="include/Login.h" />
 		<Unit filename="include/Login_Alumno.h" />
+=======
+		<Unit filename="include/Portada.h" />
+		<Unit filename="include/ProcesoMaestros.h" />
+		<Unit filename="include/Procesos.h" />
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
 		<Unit filename="include/alumnos.h" />
 		<Unit filename="include/aulas.h" />
 		<Unit filename="include/catalogo.h" />
 		<Unit filename="include/jornada.h" />
+<<<<<<< HEAD
 		<Unit filename="include/login_catedratico.h" />
+=======
+		<Unit filename="include/login.h" />
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
 		<Unit filename="include/maestros.h" />
 		<Unit filename="include/notas.h" />
+		<Unit filename="include/procealumnos.h" />
 		<Unit filename="include/secciones.h" />
 		<Unit filename="include/seguridad.h" />
 		<Unit filename="include/usualumnos.h" />
@@ -67,15 +78,26 @@
 		<Unit filename="src/Carrera.cpp" />
 		<Unit filename="src/Cursoss.cpp" />
 		<Unit filename="src/Facultad.cpp" />
+<<<<<<< HEAD
 		<Unit filename="src/Login.cpp" />
 		<Unit filename="src/Login_Alumno.cpp" />
+=======
+		<Unit filename="src/Portada.cpp" />
+		<Unit filename="src/ProcesoMaestros.cpp" />
+		<Unit filename="src/Procesos.cpp" />
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
 		<Unit filename="src/alumnos.cpp" />
 		<Unit filename="src/aulas.cpp" />
 		<Unit filename="src/catalogo.cpp" />
 		<Unit filename="src/jornada.cpp" />
+<<<<<<< HEAD
 		<Unit filename="src/login_catedratico.cpp" />
+=======
+		<Unit filename="src/login.cpp" />
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
 		<Unit filename="src/maestros.cpp" />
 		<Unit filename="src/notas.cpp" />
+		<Unit filename="src/procealumnos.cpp" />
 		<Unit filename="src/secciones.cpp" />
 		<Unit filename="src/seguridad.cpp" />
 		<Unit filename="src/usualumnos.cpp" />

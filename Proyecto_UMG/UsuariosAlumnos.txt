@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Sofixxx        xxxuwu         
 isauwu         1234           
 Isabel         Melendez       
@@ -6,3 +7,6 @@ sofi           7896
 daguilae       1234      
 daguilae       1234      
 mailo          1234      
+=======
+andy           99        
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6

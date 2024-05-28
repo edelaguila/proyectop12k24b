@@ -9,7 +9,8 @@
 #include<stdlib.h>// Incluye funciones para el manejo de memoria dinamica, control de procesos y conversiones de cadena.
 #include<cstdlib>// Incluye funciones para el control de procesos y conversiones de cadena.
 #include<conio.h>// Incluye funciones para el manejo de la consola.
-#include<iomanip>// Incluye funciones para formatear la salida.
+#include<iomanip>
+#include"usuarios.h"// Incluye funciones para formatear la salida.
 
 
 using namespace std;// Se utiliza el espacio de nombres estandar.

@@ -1,3 +1,4 @@
+//Encabezados de proteccion
 #ifndef JORNADA_H
 #define JORNADA_H
 //blibliotecas
@@ -5,6 +6,7 @@
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
+#include"usuarios.h"
 
 using namespace std;
 

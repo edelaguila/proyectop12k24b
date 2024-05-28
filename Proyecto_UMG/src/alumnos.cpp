@@ -1,4 +1,3 @@
-
 //creado por Oscar Morales 9959-23-3070
 //Incluyendo las librerias a utilizar
 #include<iostream>
@@ -9,18 +8,26 @@
 #include<iomanip>
 #include<string>
 
-//incluyendo el encabezado alumnos
+//incluyendo el encabezados
 #include "alumnos.h"
+#include"procealumnos.h"
 //Incluyendo el encabezado de bitacora
 #include "Bitacora.h"
+#include "Login.h"
 
 using namespace std;
 
 
 //Constructor alumnos y sus parametros
-alumnos::alumnos(string id, string nombre, string telefono, string DPI, string direccion, string Genero, string nacionalidad, string civil, string fechanaci, string anoingre)
+alumnos::alumnos(string dpi, string certiestudios, string fotoestatica, string titulo, string fotocedula, string copiadpi, string id, string nombre, string telefono, string DPI, string direccion, string Genero, string nacionalidad, string civil, string fechanaci, string anoingre, string solvente)
 {
     // Asignando los valores de los parámetros a los atributos del objeto
+    this->dpi = dpi;
+    this->certiestudios = certiestudios;
+    this->fotoestatica = fotoestatica;
+    this->titulo = titulo;
+    this->fotocedula = fotocedula;
+    this->copiadpi = copiadpi;
     this->id = id;
     this->nombre = nombre;
     this->telefono = telefono;
@@ -31,9 +38,88 @@ alumnos::alumnos(string id, string nombre, string telefono, string DPI, string d
     this->civil = civil;
     this->fechanaci = fechanaci;
     this->anoingre = anoingre;
+    this->solvente= solvente;
+
+}
+//Estableciendo el DPI del alumno
+string alumnos::setdpi(string dpi)
+{
+    this->dpi = dpi;
+    return dpi;
 }
 
-//Estableciendo la id del alumno
+//Obteniendo el DPI de los alumnos
+string alumnos::getdpi()
+{
+    return dpi;
+}
+
+//Estableciendo el certificado de estudios
+string alumnos::setcertiestudios(string certiestudios)
+{
+    this->certiestudios = certiestudios;
+    return certiestudios;
+}
+
+//Obteniendo el certificado de estudios de alumnos
+string alumnos::getcertiestudios()
+{
+    return certiestudios;
+}
+
+//Estableciendo la foto estatica de alumnos
+string alumnos::setfotoestatica(string fotoestatica)
+{
+    this->fotoestatica = fotoestatica;
+    return fotoestatica;
+}
+
+//Obteniendo la foto estatica
+string alumnos::getcfotoestatica()
+{
+    return fotoestatica;
+}
+
+//Estableciendo el titulo del alumno
+string alumnos::settitulo(string titulo)
+{
+    this->titulo = titulo;
+    return titulo;
+}
+
+//Obteniendo el titulo
+string alumnos::gettitulo()
+{
+    return titulo;
+}
+
+//Estableciendo la fotocedula
+string alumnos::setfotocedula(string fotocedula)
+{
+    this->fotocedula = fotocedula;
+    return fotocedula;
+}
+
+//Obteniendo la fotocedula
+string alumnos::gettfotocedula()
+{
+    return fotocedula;
+}
+
+//Estableciendo la copia dpi de los alumnos
+string alumnos::setcopiadpi(string copiadpi)
+{
+    this->copiadpi = copiadpi;
+    return copiadpi;
+}
+
+//Obteniendo la copia del dpi de los alumnos
+string alumnos::getcopiadpi()
+{
+    return copiadpi;
+}
+
+//Estableciendo la id de los alumnos
 string alumnos::setid(string id)
 {
     this->id = id;
@@ -159,24 +245,35 @@ string alumnos::setanoingre(string anoingre)
     return anoingre;
 }
 
-//Obteniendo el año de ingreso del alumno
+
 string alumnos::getanoingre()
 {
     return anoingre;
 }
 
+string alumnos::setsolvente(string solvente)
+{
+    this->solvente = solvente;
+    return solvente;
+}
+
+string alumnos::getsolvente()
+{
+    return solvente;
+}
+
 //Funcion menu donde muestra el sistema de gestion de alumnos
 void alumnos::menu()
 {
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
+    string usuarioActual = Login::getUsuarioActual();
 
-//Implementando la bitacora
-//Declarando variable string con el codigo programa
-string codigoPrograma="2322";
-Bitacora Auditoria;
-//Declarando 2 variables string con el codigo programa
-string user, contrasena;
-Auditoria.ingresoBitacora(user,codigoPrograma,"ALM");
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
+    Bitacora bitacora;
 
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2200", "ALM"); // Parámetros
 
     //Definiendo Variable int
     int opcion;
@@ -258,13 +355,15 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALM");
 void alumnos::insertar()
 {
 
-//Implementando la bitacora
-//Declarando variable string con el codigo programa
-string codigoPrograma="2350";
-Bitacora Auditoria;
-//Declarando 2 variables string con el codigo programa
-string user, contrasena;
-Auditoria.ingresoBitacora(user,codigoPrograma,"ALMI");
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
+    string usuarioActual = Login::getUsuarioActual();
+
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
+    Bitacora bitacora;
+
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2201", "ALMI"); // Parámetros
 
 
     //Limpiando pantalla
@@ -305,11 +404,14 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMI");
     //Mensaje para ingresar el DPI del alumno
     cout<<"       -> Ingrese el email del estudiante: ";
     cin.getline(alumno.DPI, 50);
+<<<<<<< HEAD
 
 
     //Mensaje para ingresar la nacionalidad del alumno
     cout<<"-> Ingrese la estatus del estudiante (solvente=1 | pendiente=0): ";
     cin.getline(alumno.nacionalidad, 100);
+=======
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
 
 
 
@@ -333,10 +435,15 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMI");
 //Funcion para desplegar los alumnos ya registrados
 void alumnos::desplegar()
 {
-string codigoPrograma="2370";
-Bitacora Auditoria;
-string user, contrasena;
-Auditoria.ingresoBitacora(user,codigoPrograma,"ALMD");
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
+    string usuarioActual = Login::getUsuarioActual();
+
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
+    Bitacora bitacora;
+
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2202", "ALMD"); // Parámetros
 
     //Limpiando pantalla
     system("cls");
@@ -348,25 +455,32 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMD");
     cout << "+---------------------------------------------------------------------------------+" << endl;
 
     //Abriendo un archivo binario llamado en modo de lectura binaria y se comprueba si la apertura fue exitosa
-    ifstream archivo("Alumnos.dat", ios::binary | ios::app);
-    if (!archivo) {
-
-        //Si no encuentra informacion muestra el siguiente mensaje
-        cout << "Error, no se encuentra informacion...";
+    ifstream archivo("ProcesoAlumnos.dat", ios::binary | ios::in);
+    ifstream archivo3("Alumnos.dat", ios::binary | ios::in);
+    if (!archivo || !archivo3) {
+            //Si no encuentra informacion muestra el siguiente mensaje
+        cout << "Error, no se encuentra informacion..." << endl;
         return;
     }
 
-
+    // instancia de la clase Alumno llamada alumno
     Alumno alumno;
+    // instancia de la clase Procealumnos llamada procealumnos
+    Procealumnos procealumnos;
 
     //Ciclo while para leer los datos del archivo binario  y los almacenan en un objeto alumno llamado alumno y repite este procedimiento hasta que se acaben los datos por leer
-    while (archivo.read(reinterpret_cast<char*>(&alumno), sizeof(Alumno))) {
+  while (archivo.read(reinterpret_cast<char*>(&procealumnos), sizeof(Procealumnos)) &&
+           archivo3.read(reinterpret_cast<char*>(&alumno), sizeof(Alumno))) {
 
         //Se muestra los detalles del estudiante
         cout << "                        Mostrando -> ID del estudiante: " << alumno.id << endl;
         cout << "                        Mostrando -> Nombre del estudiante: " << alumno.nombre << endl;
         cout << "                        Mostrando -> email del estudiante : " << alumno.DPI << endl;
+<<<<<<< HEAD
         cout << "                        Mostrando -> Estatus del estudiante (solvente=1 | pendiente=0): " << alumno.nacionalidad << endl;
+=======
+        cout << "                        Mostrando -> Estatus del estudiante (solvente=1 | pendiente=0): " << procealumnos.solvente << endl;
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
         cout << "                        Mostrando -> Direccion: " << alumno.direccion << endl;
         cout << "                        Mostrando -> Telefono: " << alumno.telefono << endl;
         cout << "+---------------------------------------------------------------------------------+" << endl;
@@ -379,14 +493,21 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMD");
     cin.get();
 }
 
+
 //Funcion para modificar los alumnos ya registrados
 void alumnos::modificar()
 {
-//Declarando 2 variables string con el codigo programa
-string codigoPrograma="2380";
-Bitacora Auditoria;
-string user, contrasena;
-Auditoria.ingresoBitacora(user,codigoPrograma,"ALMM");
+
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
+    string usuarioActual = Login::getUsuarioActual();
+
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
+    Bitacora bitacora;
+
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2203", "ALMM"); // Parámetros
+
 
     //Limpiando pantalla
 	system("cls");
@@ -427,8 +548,11 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMM");
             cin >> alumno.nombre;
             cout << "Ingrese el nuevo email del estudiante: ";
             cin >> alumno.DPI;
+<<<<<<< HEAD
             cout << "Ingrese el nuevo estatus del estudiante (solvente=1 | pendiente=0): ";
             cin >> alumno.nacionalidad;
+=======
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
             cout << "Ingrese la nueva direccion del estudiante: ";
             cin >> alumno.direccion;
             cout << "Ingrese el nuevo Telefono del estuantes: ";
@@ -459,10 +583,17 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"ALMM");
 //funcion para borrarr a las alumnos registradas
 void alumnos::borrar()
 {
-string codigoPrograma="2400";
-Bitacora Auditoria;
-string user, contrasena;
-Auditoria.ingresoBitacora(user,codigoPrograma,"ALMB");
+
+    //Implementacion de la bitacora
+    // Obtener el usuario actual que ha iniciado sesión
+    string usuarioActual = Login::getUsuarioActual();
+
+    // Crear una instancia de la clase Bitacora para registrar el ingreso
+    Bitacora bitacora;
+
+    // Registro del ingreso en la bitácora
+    bitacora.ingresoBitacora(usuarioActual, "2204", "ALMB"); // Parámetros
+
 
     //Limpia pantalla
 	system("cls");

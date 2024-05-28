@@ -65,26 +65,42 @@ Bitacora Auditoria;
     {
 	case 1:
         Ingresar();
+<<<<<<< HEAD
         //Se ejecuta la accion y se registra en la bitacora
         Auditoria.ingresoBitacora(users,codigoPrograma,"CJO"); //CJO = Create Jornada
+=======
+
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
         system("pause");
 		break;
     case 2:
         Modificar();
         //Se ejecuta la accion y se registra en la bitacora
+<<<<<<< HEAD
         Auditoria.ingresoBitacora(users,codigoPrograma,"UJO"); //UJO = Update Jornada
+=======
+
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
         system("pause");
 		break;
     case 3:
         Borrar();
+<<<<<<< HEAD
         //Se ejecuta la accion y se registra en la bitacora
         Auditoria.ingresoBitacora(users,codigoPrograma,"DJO"); //DJO = Delete Jornada
+=======
+
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
         system("pause");
 		break;
     case 4:
         Desplegar();
         //Se ejecuta la accion y se registra en la bitacora
+<<<<<<< HEAD
         Auditoria.ingresoBitacora(users,codigoPrograma,"RJO"); //RJO = Read Jornada
+=======
+
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
         system("pause");
 		break;
     case 5:

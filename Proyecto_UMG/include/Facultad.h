@@ -6,6 +6,7 @@
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
+#include"usuarios.h"
 //Elaborado por: Cristian David Sipac Ispache 9959-23-1567
 
 

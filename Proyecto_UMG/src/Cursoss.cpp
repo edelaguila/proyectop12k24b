@@ -66,26 +66,43 @@ Bitacora Auditoria;
     {
 	case 1:
         IngresarCa();
+<<<<<<< HEAD
         //Se ejecuta la accion y se registra en la bitacora, Pablo Palencia 9959-23-736
         Auditoria.ingresoBitacora(users,codigoPrograma,"CCU"); //CCU = Create Cursos
+=======
+        //Se ejecuta la accion y se registra en la bitacora
+
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
          system("pause");
 		break;
     case 2:
         ModificarCa();
          //Se ejecuta la accion y se registra en la bitacora
+<<<<<<< HEAD
         Auditoria.ingresoBitacora(users,codigoPrograma,"UCU"); //UCU = Update Cursos
+=======
+
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
          system("pause");
 		break;
     case 3:
         BorrarCa();
         //Se ejecuta la accion y se registra en la bitacora
+<<<<<<< HEAD
         Auditoria.ingresoBitacora(users,codigoPrograma,"DCU"); //DCU = Delete Cursos
+=======
+
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
          system("pause");
 		break;
     case 4:
         DesplegarCa();
         //Se ejecuta la accion y se registra en la bitacora
+<<<<<<< HEAD
         Auditoria.ingresoBitacora(users,codigoPrograma,"RCU"); //RCU = Read Cursos
+=======
+
+>>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
         system("pause");
 		break;
     case 5:

@@ -7,8 +7,7 @@
 #include "usuarios.h"
 #include "Login.h"
 #include "Bitacora.h"
-#include "notas.h"
-#include "loginNotas.h"
+
 #include "alumnos.h"
 #include "maestros.h"
 
@@ -100,14 +99,8 @@ void catalogos()
     {
         system("cls");
         cout << "\t\t\t--------------------------------------------" << endl;
-        cout << "\t\t\t|   SISTEMA DE maestro    |" << endl;
+        cout << "\t\t\t|   SISTEMA DE GESTION UMG - CATALOGOS      |" << endl;
         cout << "\t\t\t--------------------------------------------" << endl;
-       // cout <<"        ingresar nota de clase:";
-        //crear un archvo dat, pragramacion
-
-
-
-
         cout << "\t\t\t 1. Alumnos" << endl;
         cout << "\t\t\t 2. Maestros" << endl;
         cout << "\t\t\t 3. Usuarios del sistema" << endl;
@@ -115,7 +108,7 @@ void catalogos()
         cout << "\t\t\t 5. Facultades" << endl;
         cout << "\t\t\t 6. Cursos" << endl;
         cout << "\t\t\t 7. Jornadas" << endl;
-        cout << "\t\t\t 8. notas " << endl;
+        cout << "\t\t\t 8. Aulas" << endl;
         cout << "\t\t\t 9. Secciones" << endl;
         cout << "\t\t\t 10. Sedes" << endl;
         cout << "\t\t\t 11. Horarios" << endl;
@@ -129,13 +122,16 @@ void catalogos()
         switch (choice)
         {
         case 1:
-            // Implementación para Alumnos
-
-
+        {
+            alumnos alumno;
+            alumno.menu();
+        }
             break;
         case 2:
-            // Implementación para Maestros
-
+        {
+            maestros maestro;
+            maestro.menu();
+        }
             break;
         case 3:
         {
@@ -153,12 +149,10 @@ void catalogos()
             // Implementación para Cursos
             break;
         case 7:
-
+            // Implementación para Jornadas
             break;
         case 8:
             // Implementación para Aulas
-
-
             break;
         case 9:
             // Implementación para Secciones
@@ -183,8 +177,6 @@ void catalogos()
 void procesos()
 {
     // Implementación de procesos
-      loginNotas l;
-            l.menuGeneralNotas();
 }
 
 void reportes()

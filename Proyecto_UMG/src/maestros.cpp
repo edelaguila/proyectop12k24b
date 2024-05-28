@@ -9,9 +9,6 @@
 #include<conio.h>
 #include<iomanip>
 #include<string>
-#include <unistd.h>
-
-
 
 //incluyendo el encabezado maestros
 #include "maestros.h"
@@ -21,7 +18,7 @@ using namespace std;
 
 maestros::maestros(string id, string nombre, string telefono, string DPI, string direccion, string Genero, string nacionalidad, string civil, string fechanaci, string anoingre)
 {
-    // Asignando los valores de los parámetros a los atributos del objeto
+    // Asignando los valores de los parï¿½metros a los atributos del objeto
     this->id = id;
     this->nombre = nombre;
     this->telefono = telefono;
@@ -155,14 +152,14 @@ string maestros::getfechanaci()
 }
 
 
-//Estableciendo el año de ingreso del alumno
+//Estableciendo el aï¿½o de ingreso del alumno
 string maestros::setanoingre(string anoingre)
 {
     this->anoingre = anoingre;
     return anoingre;
 }
 
-//Obteniendo el año de ingreso del alumno
+//Obteniendo el aï¿½o de ingreso del alumno
 string maestros::getanoingre()
 {
     return anoingre;
@@ -188,7 +185,7 @@ string user, contrasena;
         //Limpiando pantalla
 		system("cls");
 
-		//Se muestra el diseño del sistema de gestion de maestros
+		//Se muestra el diseï¿½o del sistema de gestion de maestros
 		cout<<"+-----------------------------------------------+"<<endl;
 		cout<<"|  BIENVENIDO AL SISTEMA DE GESTION DE MAESTROS |"<<endl;
 		cout<<"+-----------------------------------------------+"<<endl;
@@ -203,7 +200,7 @@ string user, contrasena;
 		cout<<"+-----------------------------------------------+"<<endl;
 		cin>>opcion;
 
-        // Inicializando el generador de números aleatorios
+        // Inicializando el generador de nï¿½meros aleatorios
 		srand(getpid());
 
 		//declarando variable int con su valor 24
@@ -222,7 +219,7 @@ string user, contrasena;
 					insertar();
 
                     //Luego de ingresar un maestro mostrara el mensaje
-					cout<<" -> ¿Deseas ingresar a otro Maestros? (S/N): ";
+					cout<<" -> ï¿½Deseas ingresar a otro Maestros? (S/N): ";
 					cin>>continuar;
 
                 //Si la respuesta es s o S, insertara otro estudiante
@@ -275,12 +272,12 @@ Auditoria.ingresoBitacora(user,codigoPrograma,"MSTI");
     //Limpiando pantalla
     system("cls");
 
-    //Encabezado del diseño insertar estudiante
+    //Encabezado del diseï¿½o insertar estudiante
     cout<<"+---------------------------------------------------------+"<< endl;
     cout<<"|                Agregar detalles del Maestro          |"<< endl;
     cout<<"+---------------------------------------------------------+"<< endl;
 
-    //Encabezado del diseño insertar estudiante
+    //Encabezado del diseï¿½o insertar estudiante
     srand(time(NULL));
 
     //Constructor
@@ -446,7 +443,7 @@ string user, contrasena;
 
     //si no lo encuentra mostrara el siguiente mensaje
     if (!encontrado) {
-        cout << "No se encontró un maestro con el ID proporcionado." << endl;
+        cout << "No se encontrï¿½ un maestro con el ID proporcionado." << endl;
     }
 
     cout << "Presione Enter Para Continuar";

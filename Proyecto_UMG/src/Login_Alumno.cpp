@@ -1,19 +1,13 @@
 #include "Login_Alumno.h"
-#include<iostream> // Biblioteca estándar para la entrada y salida
+#include<iostream> // Biblioteca estï¿½ndar para la entrada y salida
 #include<fstream> // Biblioteca para manejo de archivos
-#include<stdlib.h> // Biblioteca estándar de funciones generales
-#include<cstdlib> // Biblioteca estándar
-#include<conio.h> // Biblioteca para la manipulación de la consola
-#include<iomanip> // Biblioteca para la manipulación de la entrada/salida formateada
-<<<<<<< HEAD
+#include<stdlib.h> // Biblioteca estï¿½ndar de funciones generales
+#include<cstdlib> // Biblioteca estï¿½ndar
+#include<conio.h> // Biblioteca para la manipulaciï¿½n de la consola
+#include<iomanip> // Biblioteca para la manipulaciï¿½n de la entrada/salida formateada
 
 using namespace std;
 
-
-=======
-using namespace std;
-
->>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 // Constructor de la clase Login_Alumno
 Login_Alumno::Login_Alumno(string usuario, string contrasena)//parametros de la clase
 {
@@ -21,31 +15,31 @@ Login_Alumno::Login_Alumno(string usuario, string contrasena)//parametros de la 
     this -> contrasena=contrasena;
 }
 
-// Método para establecer el nombre de usuario
+// Mï¿½todo para establecer el nombre de usuario
 string Login_Alumno::setUser(string usuarios)
 {
     this -> usuarios=usuarios;
 }
 
-// Método para obtener el nombre de usuario
+// Mï¿½todo para obtener el nombre de usuario
 string Login_Alumno::getUser()
 {
     return this->usuarios;
 }
 
-// Método para establecer la contraseña
+// Mï¿½todo para establecer la contraseï¿½a
 string Login_Alumno::setContrasena(string contrasena)
 {
     this -> contrasena=contrasena;
 }
 
-// Método para obtener la contraseña
+// Mï¿½todo para obtener la contraseï¿½a
 string Login_Alumno::getContrasena()
 {
     return this->contrasena;
 }
 
-// Método para verificar el usuario
+// Mï¿½todo para verificar el usuario
 bool Login_Alumno::VerificarUsuario()
 {
     string usuario,contrasena;
@@ -81,7 +75,7 @@ bool Login_Alumno::VerificarUsuario()
                 if(contrasena.length()>0)
                 {
                     cout<<"\b \b"; //elimina el ultimo asterisco en pantalla
-                    contrasena=contrasena.substr(0,contrasena.length()-1); // Elimina el último carácter de la contraseña
+                    contrasena=contrasena.substr(0,contrasena.length()-1); // Elimina el ï¿½ltimo carï¿½cter de la contraseï¿½a
                 }
             }
             caracter=getch(); //captura el siguiente caracter
@@ -100,7 +94,6 @@ bool Login_Alumno::VerificarUsuario()
     }
 
     //busca el usuario en el archivo---------------------------------
-<<<<<<< HEAD
     string users,pass;
     while (fileU_P>>users>>pass)
     {
@@ -112,14 +105,12 @@ bool Login_Alumno::VerificarUsuario()
             file.open("BitacoraLoA.txt", ios::app | ios::out);
             file <<left<<users<<"\n";
             file.close();
-=======
     string user,pass;
     while (fileU_P>>user>>pass)
     {
         if (user==usuario && pass==contrasena)
         {
             encontrado=true;
->>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
             break;
         }
     }
@@ -128,7 +119,7 @@ bool Login_Alumno::VerificarUsuario()
     //si no encuentra user y pass , el contador incrementara------------------------
     if(!encontrado)
     {
-        cout << "\n\n\t\t\tUSUARIO Y/O CONTRASEÑA INCORRECTOS" << endl;
+        cout << "\n\n\t\t\tUSUARIO Y/O CONTRASEï¿½A INCORRECTOS" << endl;
         cout << "\n\n\t\t\tPerdio un intento, Intente de nuevo\n" << endl;
         contador++;
         system("pause");

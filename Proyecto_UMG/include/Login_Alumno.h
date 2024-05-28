@@ -29,6 +29,7 @@ using namespace std;
 
 class Login_Alumno
 {
+
 public:
         Login_Alumno(string usuarios,string contrasena); // Constructor que inicializa las variables de usuario y contraseña
 >>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084

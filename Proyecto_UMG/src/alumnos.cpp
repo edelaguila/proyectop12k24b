@@ -246,7 +246,6 @@ string alumnos::setanoingre(string anoingre)
     return anoingre;
 }
 
-
 string alumnos::getanoingre()
 {
     return anoingre;

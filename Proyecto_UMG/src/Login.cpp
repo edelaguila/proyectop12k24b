@@ -1,3 +1,6 @@
+
+//creado por Victor Samayoa 9959-23-3424
+
 #include "Login.h"
 #include "Bitacora.h"
 #include "conio.h"
@@ -71,7 +74,6 @@ bool Login::validacion() {
           system("cls");
         while (archivo.read(reinterpret_cast<char*>(&usuario), sizeof(Usuarios))) {
             if (nom == usuario.nombre && pass == usuario.contra) {
-                // Establecer el usuario actual después de la validación exitosa
                 usuarioActual = nom;
                 string codigoPrograma = "2350";
                 Bitacora bitacora;

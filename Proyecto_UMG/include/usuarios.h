@@ -1,3 +1,6 @@
+
+//creado por Victor Samayoa 9959-23-3424
+
 //Encabezados de proteccion
 #ifndef USUARIOS_H
 #define USUARIOS_H

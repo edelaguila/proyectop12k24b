@@ -1,3 +1,6 @@
+
+//Creando por Andy Garcia 9959-23-1494
+
 //Encabezados de proteccion
 #ifndef PERSONAS_H
 #define PERSONAS_H

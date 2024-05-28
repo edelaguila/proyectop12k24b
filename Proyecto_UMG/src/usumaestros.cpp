@@ -1,3 +1,6 @@
+
+//Creado por Jose Gallardo 9959-23-106
+
 //Incluyendo librerias
 #include <iostream>
 #include <fstream>

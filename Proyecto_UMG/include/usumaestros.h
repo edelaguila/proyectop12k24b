@@ -1,3 +1,6 @@
+
+//Creando por Andre Gonzalez 9959-23-3117
+
 //Encabezados de proteccion
 #ifndef USUMAESTROS_H
 #define USUMAESTROS_H

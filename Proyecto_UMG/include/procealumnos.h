@@ -1,3 +1,6 @@
+
+//creado por Oscar Morales 9959-23-3070
+
 //Encabezados de proteccion
 #ifndef PROCEALUMNOS_H
 #define PROCEALUMNOS_H

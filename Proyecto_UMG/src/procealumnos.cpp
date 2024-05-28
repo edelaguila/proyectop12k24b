@@ -1,3 +1,6 @@
+
+//Creando por Andre Gonzalez 9959-23-3117
+
 //Incluyendo los encabezados procesoalumnos.h y bitacora.h
 #include "procealumnos.h"
 #include "Bitacora.h"

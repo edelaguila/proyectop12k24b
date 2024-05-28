@@ -1,3 +1,6 @@
+
+//Creando por Andy Garcia 9959-23-1494
+
 #include "Portada.h"
 #include <iostream>
 #include <fstream>

@@ -1,115 +1,111 @@
-//Creado por Victor Samayoa 9959-23-3424
-#include "Login.h"
-#include<iostream>
-#include<fstream>
-#include<stdlib.h>
-#include<cstdlib>
-#include<conio.h>
-#include<iomanip>
-#include "Bitacora.h"
+#include "Login_Alumno.h"
+#include<iostream> // Biblioteca estándar para la entrada y salida
+#include<fstream> // Biblioteca para manejo de archivos
+#include<stdlib.h> // Biblioteca estándar de funciones generales
+#include<cstdlib> // Biblioteca estándar
+#include<conio.h> // Biblioteca para la manipulación de la consola
+#include<iomanip> // Biblioteca para la manipulación de la entrada/salida formateada
+
 using namespace std;
 
 
-Login::Login(string usuario, string contrasena)//parametros de la clase
+// Constructor de la clase Login_Alumno
+Login_Alumno::Login_Alumno(string usuario, string contrasena)//parametros de la clase
 {
     this -> usuarios=usuarios;
     this -> contrasena=contrasena;
 }
 
-string Login::setUser(string usuarios)
+// Método para establecer el nombre de usuario
+string Login_Alumno::setUser(string usuarios)
 {
     this -> usuarios=usuarios;
 }
 
-string Login::getUser()
+// Método para obtener el nombre de usuario
+string Login_Alumno::getUser()
 {
     return this->usuarios;
 }
 
-string Login::setContrasena(string contrasena)
+// Método para establecer la contraseña
+string Login_Alumno::setContrasena(string contrasena)
 {
     this -> contrasena=contrasena;
 }
 
-string Login::getContrasena()
+// Método para obtener la contraseña
+string Login_Alumno::getContrasena()
 {
     return this->contrasena;
 }
 
-//primer despliegue de pantalla
-bool Login::VerificarUsuario()
+// Método para verificar el usuario
+bool Login_Alumno::VerificarUsuario()
 {
     string usuario,contrasena;
     int contador= 0; // contador de intentos
     bool encontrado =false; // indica si encontro user y contra
 
-    //el ciclo se repite mientras el numero de intentos sea menor a 3 o no se encuentre user valido
     while(contador<3 && !encontrado)
     {
          system("cls");
     cout <<"\t\t\t+-----------------------------------+"<<endl;
-    cout <<"\t\t\t|       LOGIN                       |"<<endl;
+    cout <<"\t\t\t|          LOGIN ALUMNOS            |"<<endl;
     cout <<"\t\t\t+-----------------------------------+"<<endl;
     cout <<"\t\t\t|Solo tienes permitido 3 intentos   |"<<endl;
     cout <<"\t\t\t+-----------------------------------+"<<endl;
-    cout <<"\t\t\tIngrese el nombre de usuario: ";
+    cout <<"\t\t\tIngrese el usuario: ";
     cin >> usuario;
     cout <<"\t\t\tIngrese la contrasena: ";
-    char caracter;
-    caracter = getch();
 
-    // ocultar a la hora de escribir la contraseña
+    //ocualta la contrasenia con caracteres
+    char caracter;
+    caracter = getch(); //obtiene el primer caracter
+
     contrasena="";
         while (caracter!=13)//ascci enter
         {
         if(caracter !=8)//ascci backs pace
             {
-                contrasena.push_back(caracter);
-                cout<<"*";
+                contrasena.push_back(caracter);//Regresa a su posicion
+                cout<<"*"; // Muestra el * en lugar del caracter
             }
         else
             {
                 if(contrasena.length()>0)
                 {
-                    cout<<"\b \b";
-                    contrasena=contrasena.substr(0,contrasena.length()-1);
+                    cout<<"\b \b"; //elimina el ultimo asterisco en pantalla
+                    contrasena=contrasena.substr(0,contrasena.length()-1); // Elimina el último carácter de la contraseña
                 }
             }
-            caracter=getch();
+            caracter=getch(); //captura el siguiente caracter
         }
 
-    //abrira el archivo de User y contraseñas--------------------------
+    //Ingresa el archivo que contiene los usuarios y contrasenas
     ifstream fileU_P;
-    fileU_P.open("usuarios_y_contrasenas prueba.txt",ios::in);
+    fileU_P.open("UsuariosAlumnos.txt",ios::in);
 
 
-    //verificar si se abrio el archivo---------------------------
     if (!fileU_P)
     {
         cout<<"\n\t\t\t No es posible abrir el archivo."<<endl;
         fileU_P.close();
         return false;
     }
-    string codigoPrograma="1000";
-    Bitacora Auditoria;
 
     //busca el usuario en el archivo---------------------------------
-    string user,pass;
-    while (fileU_P>>user>>pass)
+    string users,pass;
+    while (fileU_P>>users>>pass)
     {
-        if (user==usuario && pass==contrasena)
+        if (users==usuario && pass==contrasena)
         {
-            Auditoria.ingresoBitacora(user,codigoPrograma,"LGI");
             encontrado=true;
 
-            //arregla bitacora-----------------------------------------
             fstream file;
-            file.open("bitaA.txt", ios::app | ios::out);
-            //file <<std::left<<std::setw(15)<< user << "\n";
-            file << std::left<<user<<"\n";
+            file.open("BitacoraLoA.txt", ios::app | ios::out);
+            file <<left<<users<<"\n";
             file.close();
-            //-----------------------------------------------------------
-
             break;
         }
     }
@@ -125,7 +121,6 @@ bool Login::VerificarUsuario()
     }
 }
 
-    //Si encuentra a user y pass , se retornara un true
    if (encontrado)
     {
     	         system("cls");
@@ -137,15 +132,10 @@ bool Login::VerificarUsuario()
    else
     {
 	system("cls");
-    cout << "\n\n\t\t\tPERDIO LOS 3 INTENTOS" << endl;
+    cout << "\n\n\t\t\tPERDIO LOS 3 INTENTOS" << endl; //muestra un mensaje de error
      system("pause");
-     exit(0);
+     exit(0); //finaliza el programa
 
     return false;
     }
-
-
-
-
-
 }

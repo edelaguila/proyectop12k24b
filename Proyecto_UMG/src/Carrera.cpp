@@ -11,7 +11,7 @@
 #include<conio.h>
 #include<iomanip>
 using namespace std;
-//Carlos David calderón Ramírez      9959-23-848
+//Elaboracion de CRUD y Bitacora: Carlos David calderón Ramírez      9959-23-848
 //Comentado revisado y depurado por:  Evelyn Sofía Andrade Luna   9959-23-1224
 // menu CRUD de carreras
 
@@ -63,6 +63,27 @@ int choice;
 	}
     }while(choice!= 5);
 }
+
+//Función que valida si ya existe la carrera para evitar redundancia de datos
+ bool CarrerasCRUD::ValidarCA(int codigo){
+        fstream archivo("carreras.dat", ios::binary | ios::in | ios::out);
+        if (!archivo) {
+            return false;
+        }
+
+        Carrera carrera;
+        bool encontrada = false;
+        while (archivo.read(reinterpret_cast<char*>(&carrera), sizeof(Carrera))) {
+            if (carrera.codigo == codigo) {
+                encontrada = true;
+                break;
+            }
+        }
+
+        archivo.close();
+
+       return encontrada;
+}
 // aqui se agregan carreras que son almacenadas
 void CarrerasCRUD::IngresarCa() {
     string codigoPrograma="3000";
@@ -73,6 +94,11 @@ void CarrerasCRUD::IngresarCa() {
     cout << "Ingrese el codigo de la carrera: ";
     cin >> carrera.codigo;
     cin.ignore();
+    if (ValidarCA(carrera.codigo)){
+        system("cls");
+        cout << "El codigo de la carrera que desea crear ya existe!!" << endl << endl<< endl<< endl;
+        return;
+    }
 
     cout << "Ingrese el nombre de la carrera: ";
     cin.getline(carrera.nombre, 50);
@@ -218,3 +244,4 @@ void CarrerasCRUD::DesplegarCa() {
     cin.ignore();
     cin.get();
 }
+

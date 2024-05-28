@@ -8,6 +8,7 @@
 #include<iomanip>
 //Elaborado por: Cristian David Sipac Ispache 9959-23-1567
 
+
 using namespace std;
 
 struct Facultad {
@@ -22,6 +23,7 @@ public:
     void BorrarFa();
     void DesplegarFa();
     void Crudfacultad();
+    bool ValidarFA(int codigo);
 
 };
 

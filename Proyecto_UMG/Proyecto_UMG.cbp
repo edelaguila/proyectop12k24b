@@ -48,6 +48,7 @@
 		<Unit filename="include/Cursoss.h" />
 		<Unit filename="include/Facultad.h" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<Unit filename="include/Login.h" />
 		<Unit filename="include/Login_Alumno.h" />
 <<<<<<< HEAD
@@ -61,6 +62,15 @@
 		<Unit filename="include/alumnos.h" />
 		<Unit filename="include/aulas.h" />
 		<Unit filename="include/catalogo.h" />
+=======
+		<Unit filename="include/Horarios.h" />
+		<Unit filename="include/Inscripcion.h" />
+		<Unit filename="include/Login.h" />
+		<Unit filename="include/Sedes.h" />
+		<Unit filename="include/alumnos.h" />
+		<Unit filename="include/aulas.h" />
+		<Unit filename="include/colegiatura.h" />
+>>>>>>> 97fefe1885281a584bf5825baa3a652acea1822a
 		<Unit filename="include/jornada.h" />
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,6 +79,7 @@
 		<Unit filename="include/login.h" />
 >>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
 		<Unit filename="include/maestros.h" />
+<<<<<<< HEAD
 =======
 		<Unit filename="include/loginNotas.h" />
 		<Unit filename="include/maestros.h" />
@@ -76,11 +87,18 @@
 		<Unit filename="include/menuIngresoAlumno.h" />
 		<Unit filename="include/menuIngresoMaestro.h" />
 >>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
+=======
+		<Unit filename="include/matricula.h" />
+>>>>>>> 97fefe1885281a584bf5825baa3a652acea1822a
 		<Unit filename="include/notas.h" />
 		<Unit filename="include/procealumnos.h" />
 		<Unit filename="include/secciones.h" />
 		<Unit filename="include/seguridad.h" />
+<<<<<<< HEAD
 		<Unit filename="include/usualumnos.h" />
+=======
+		<Unit filename="include/sueldos.h" />
+>>>>>>> 97fefe1885281a584bf5825baa3a652acea1822a
 		<Unit filename="include/usuarios.h" />
 		<Unit filename="include/usumaestros.h" />
 		<Unit filename="main.cpp" />
@@ -98,6 +116,7 @@
 		<Unit filename="src/Cursoss.cpp" />
 		<Unit filename="src/Facultad.cpp" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<Unit filename="src/Login.cpp" />
 		<Unit filename="src/Login_Alumno.cpp" />
 <<<<<<< HEAD
@@ -111,6 +130,15 @@
 		<Unit filename="src/alumnos.cpp" />
 		<Unit filename="src/aulas.cpp" />
 		<Unit filename="src/catalogo.cpp" />
+=======
+		<Unit filename="src/Horarios.cpp" />
+		<Unit filename="src/Inscripcion.cpp" />
+		<Unit filename="src/Login.cpp" />
+		<Unit filename="src/Sedes.cpp" />
+		<Unit filename="src/alumnos.cpp" />
+		<Unit filename="src/aulas.cpp" />
+		<Unit filename="src/colegiatura.cpp" />
+>>>>>>> 97fefe1885281a584bf5825baa3a652acea1822a
 		<Unit filename="src/jornada.cpp" />
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -119,6 +147,7 @@
 		<Unit filename="src/login.cpp" />
 >>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
 		<Unit filename="src/maestros.cpp" />
+<<<<<<< HEAD
 =======
 		<Unit filename="src/loginNotas.cpp" />
 		<Unit filename="src/maestros.cpp" />
@@ -126,11 +155,18 @@
 		<Unit filename="src/menuIngresoAlumno.cpp" />
 		<Unit filename="src/menuIngresoMaestro.cpp" />
 >>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
+=======
+		<Unit filename="src/matricula.cpp" />
+>>>>>>> 97fefe1885281a584bf5825baa3a652acea1822a
 		<Unit filename="src/notas.cpp" />
 		<Unit filename="src/procealumnos.cpp" />
 		<Unit filename="src/secciones.cpp" />
 		<Unit filename="src/seguridad.cpp" />
+<<<<<<< HEAD
 		<Unit filename="src/usualumnos.cpp" />
+=======
+		<Unit filename="src/sueldos.cpp" />
+>>>>>>> 97fefe1885281a584bf5825baa3a652acea1822a
 		<Unit filename="src/usuarios.cpp" />
 		<Unit filename="src/usumaestros.cpp" />
 		<Extensions />

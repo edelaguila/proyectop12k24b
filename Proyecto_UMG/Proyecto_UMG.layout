@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<File name="src\Login.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="2811" topLine="78" />
@@ -17,10 +18,21 @@
 	<File name="src\jornada.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="2639" topLine="74" />
+=======
+	<File name="src\matricula.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="17515" topLine="402" />
 		</Cursor>
 	</File>
-	<File name="include\usuarios.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\matricula.h" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
+			<Cursor1 position="131" topLine="0" />
+>>>>>>> 97fefe1885281a584bf5825baa3a652acea1822a
+		</Cursor>
+	</File>
+	<File name="src\Sedes.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+<<<<<<< HEAD
 			<Cursor1 position="501" topLine="0" />
 		</Cursor>
 	</File>
@@ -498,6 +510,14 @@
 	<File name="src\Asignacion_Maestro_curso.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="3763" topLine="0" />
+=======
+			<Cursor1 position="13134" topLine="242" />
+		</Cursor>
+	</File>
+	<File name="include\Sedes.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="362" topLine="4" />
+>>>>>>> 97fefe1885281a584bf5825baa3a652acea1822a
 		</Cursor>
 	</File>
 	<File name="include\notas.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">

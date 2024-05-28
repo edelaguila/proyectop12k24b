@@ -8,7 +8,10 @@
 #include "jornada.h"
 #include "catalogo.h"
 #include "alumnos.h"
+<<<<<<< HEAD
 #include "Bitacora.h"
+=======
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 #include<iostream>
 #include<fstream>
 #include<stdlib.h>
@@ -18,11 +21,16 @@
 #include<iomanip>
 #include<string>
 
+<<<<<<< HEAD
 
 using namespace std;
 string users;
 Alumno alumno;
 catalogo Catalogo("curso1", "curso2");
+=======
+using namespace std;
+
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 AsigCursos_Alumnos::AsigCursos_Alumnos(string codigo_alumno, string nombre_Alumno, string nom_Alumno, string curso, string jornada, string aula, string seccion, string nacionalidad, string id)
 {
     this-> id = id;
@@ -114,6 +122,7 @@ string AsigCursos_Alumnos::getnacionalidad()
 
 void AsigCursos_Alumnos::Menu_alumno() {
     //variables de user y contraseña
+<<<<<<< HEAD
 
 
     fstream file;
@@ -142,6 +151,9 @@ void AsigCursos_Alumnos::Menu_alumno() {
     string user, contrasena;
 
      Bitacora Auditoria;
+=======
+    string user, contrasena;
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
     //llamamos al objeto e ingresamos los parametros
     Login_Alumno ingreso(user, contrasena);
 
@@ -151,9 +163,15 @@ void AsigCursos_Alumnos::Menu_alumno() {
     //luego de ingresar con usuario y contraseña se nos despliega otro menu
     if (UsuarioCorrecto) {
         int opcion;
+<<<<<<< HEAD
          if (validarCarnet()){
         do {
             system("cls");
+=======
+        do {
+            system("cls");
+
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
             cout << "\t\t\t+------------------------------------------+" << endl;
             cout << "\t\t\t|   BIENVENIDO A NUESTRO MENU DE ALUMNOS   |" << endl;
             cout << "\t\t\t+------------------------------------------+" << endl;
@@ -168,6 +186,7 @@ void AsigCursos_Alumnos::Menu_alumno() {
 
             switch (opcion) {
             case 1: {
+<<<<<<< HEAD
                 if (ValidaAsignacion(alumno.id))
                 {
                     cout << "\t\t\tAlumno ya cuenta con asignaciones..." << endl << endl << endl ;
@@ -178,12 +197,20 @@ void AsigCursos_Alumnos::Menu_alumno() {
                 asignacion_alumno(alumno.id);
                 }
                 Auditoria.ingresoBitacora(users,"3003","ACA");
+=======
+                validarCarnet();
+
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
                 break;
             }
 
             case 2:
+<<<<<<< HEAD
                 desplegarBoleta(alumno.id,alumno.nombre);
                 Auditoria.ingresoBitacora(users,"3003","DBO");
+=======
+                desplegarBoleta();
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
                 break;
 
             case 3:
@@ -194,12 +221,19 @@ void AsigCursos_Alumnos::Menu_alumno() {
                 break;
             }
         } while (opcion != 3);
+<<<<<<< HEAD
         }
 
     }
 }
 
 bool AsigCursos_Alumnos::validarCarnet() {
+=======
+    }
+}
+
+void AsigCursos_Alumnos::validarCarnet() {
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
     system("cls");
     fstream archivo;
     string idPersona;
@@ -209,15 +243,23 @@ bool AsigCursos_Alumnos::validarCarnet() {
     cout << "+                     BIENVENIDO A NUESTRA VALIDACION                             +" << endl;
     cout << "+---------------------------------------------------------------------------------+" << endl;
 
+<<<<<<< HEAD
     archivo.open("Alumnos.dat", ios::binary | ios::in); // Solo lectura
     if (!archivo) {
         cout << "Error, no se encuentra informacion..." << endl;
         return false;
+=======
+    archivo.open("Alumnos.dat", ios::binary | ios::in | ios::out); // Removed ios::app mode, as we are only reading here
+    if (!archivo) {
+        cout << "Error, no se encuentra informacion...";
+        return;
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
     }
 
     cout << "Ingrese su numero de carnet: ";
     cin >> idPersona;
 
+<<<<<<< HEAD
     while (archivo.read(reinterpret_cast<char*>(&alumno), sizeof(Alumno))) {
 
         if (alumno.id == idPersona) {
@@ -235,6 +277,31 @@ bool AsigCursos_Alumnos::validarCarnet() {
                 system("pause");
                 return false; // Salir de la función si no está solvente
             }
+=======
+    Alumno alumno;
+
+    while (archivo.read(reinterpret_cast<char*>(&alumno), sizeof(Alumno))) {
+        if (alumno.id == idPersona) {
+            encontrado = true;
+            cout << "Ingreso aceptado" << endl;
+
+            if ((bool)alumno.nacionalidad) {
+                archivo.seekp(-static_cast<int>(sizeof(Alumno)), ios::cur);
+                archivo.write(reinterpret_cast<char*>(&alumno), sizeof(Alumno));
+                archivo.close();
+                cout<<"Alumno Solvente!!"<<endl;
+                system("Pause");
+                asignacion_alumno();
+
+
+            } else {
+                cout << "El alumno no esta solvente. Regresando al menu anterior..." << endl;
+                system("pause");
+                archivo.close();
+                return;
+            }
+            break;
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
         }
     }
 
@@ -242,6 +309,7 @@ bool AsigCursos_Alumnos::validarCarnet() {
 
     if (!encontrado) {
         cout << "No se encontro un estudiante con el ID proporcionado." << endl;
+<<<<<<< HEAD
         system("pause");
             cout << "Presione Enter Para Continuar";
     cin.ignore();
@@ -425,10 +493,76 @@ void AsigCursos_Alumnos::asignacion_alumno(const char* carnet) {
     } else {
         cout << "Error al abrir el archivo para guardar las asignaciones." << endl;
     }
+=======
+    }
+
+    cout << "Presione Enter Para Continuar";
+    cin.ignore();
+    cin.get();
+}
+
+void AsigCursos_Alumnos::asignacion_alumno() {
+
+    system("cls");
+    Asig_al asig;
+
+    cout << "Ingrese su nombre completo: " << endl;
+    cin.ignore();
+    cin.getline(asig.nom_alumno, 100);
+    system("cls");
+
+    cout << "---------------BIENVENIDO-----------------" << endl;
+    cout << "--ELIJA LOS CURSOS A LOS QUE DESEA ASIGNARSE----" << endl;
+    catalogo Catalogo("curso1", "curso2");
+    Catalogo.insertar();
+    system("cls");
+
+    cout << "---------------BIENVENIDO-----------------" << endl;
+    cout << "--ELIJA LA JORNADA A LA QUE DESEA ASIGNARSE----" << endl;
+    system("pause");
+    JornadaCRUD jjornada;
+    jjornada.Desplegar();
+
+    cout << "Escriba la jornada que desea :" << endl;
+    cin.getline(asig.jornada, 50);
+
+    system("cls");
+
+    cout << "---------------BIENVENIDO-----------------" << endl;
+    cout << "--ELIJA EL AULA A LA QUE DESEA ASIGNARSE ----" << endl;
+    system("pause");
+    AulasCRUD Aaula;
+    Aaula.DesplegarAula();
+
+    cout << "Escriba el aula que desea :" << endl;
+    cin.getline(asig.aula, 100);
+
+    system("cls");
+
+    cout << "---------------BIENVENIDO-----------------" << endl;
+    cout << "--ELIJA LA SECCION A LA QUE DESEA ASIGNARSE ----" << endl;
+    system("pause");
+    SeccionesCrud sec;
+    sec.DesplegarSeccion();
+
+    cout << "Escriba la seccion que desea :" << endl;
+    cin.getline(asig.seccion, 100);
+
+    system("cls");
+
+    ofstream archivo("AsigCursos_Alumnos.dat", ios::binary | ios::app);
+    archivo.write(reinterpret_cast<const char*>(&asig), sizeof(Asig_al));
+    archivo.close();
+    cout << "Su asignacion ha sido procesada exitosamente!" << endl;
+    cout << "Estamos generando su boleta...!" << endl;
+
+    cout << "------------------------------------------------" << endl;
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 
     system("pause");
 }
 
+<<<<<<< HEAD
 
 void AsigCursos_Alumnos::desplegarBoleta(const char* carnet,string nombre) {
     system("cls");
@@ -438,10 +572,21 @@ void AsigCursos_Alumnos::desplegarBoleta(const char* carnet,string nombre) {
     cout << "+------------------------------------------------------------------------------------------+" << endl;
 
     ifstream archivo("AsigCursos_AlumnosENC.dat", ios::binary | ios::in);
+=======
+void AsigCursos_Alumnos::desplegarBoleta() {
+    system("cls");
+
+    cout << "+---------------------------------------------------------------------------------+" << endl;
+    cout << "+                            Tabla de Detalles del Estudiante                     +" << endl;
+    cout << "+---------------------------------------------------------------------------------+" << endl;
+
+    ifstream archivo("AsigCursos_Alumnos.dat", ios::binary | ios::app);
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
     if (!archivo) {
         cout << "Error, no se encuentra información...";
         return;
     }
+<<<<<<< HEAD
     string scarnet = carnet ;
     Asignacion asignacion;
 
@@ -464,6 +609,18 @@ void AsigCursos_Alumnos::desplegarBoleta(const char* carnet,string nombre) {
 
 
 
+=======
+
+    Asig_al asig;
+
+    while (archivo.read(reinterpret_cast<char*>(&asig), sizeof(Asig_al))) {
+        cout << "                      Mostrando -> Nombre del estudiante: " << asig.nom_alumno << endl;
+        cout << "                      Mostrando -> Jornada elegida: " << asig.jornada << endl;
+        cout << "                      Mostrando -> Aula elegida: " << asig.aula << endl;
+        cout << "                      Mostrando -> Seccion: " << asig.seccion << endl;
+
+        cout << "+---------------------------------------------------------------------------------+" << endl;
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
     }
     archivo.close();
     system("pause");
@@ -472,6 +629,7 @@ void AsigCursos_Alumnos::desplegarBoleta(const char* carnet,string nombre) {
     cin.ignore();
     cin.get();
 }
+<<<<<<< HEAD
 
 bool AsigCursos_Alumnos::ValidaAsignacion (const char* carnet)
 {
@@ -569,3 +727,5 @@ string AsigCursos_Alumnos::ObtenerAula(int codigo)
     return nombre;
 }
 
+=======
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084

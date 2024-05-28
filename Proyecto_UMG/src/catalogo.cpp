@@ -46,7 +46,11 @@ void catalogo::desplegar()
     // Verificar si el archivo se pudo abrir
     if (!fileDesplegar)
     {
+<<<<<<< HEAD
         cout << "\n\t\t\tNo hay informaciï¿½n..." << endl;
+=======
+        cout << "\n\t\t\tNo hay información..." << endl;
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
     }
     else
     {
@@ -56,9 +60,15 @@ void catalogo::desplegar()
         cout << "|               Curso                       |" << endl;
         cout << "|-------------------------------------------|" << endl;
         string line;
+<<<<<<< HEAD
         while (getline(fileDesplegar, line)) // Leer el archivo lï¿½nea por lï¿½nea
         {
             // Separar los datos de cada lï¿½nea utilizando el delimitador '|'
+=======
+        while (getline(fileDesplegar, line)) // Leer el archivo línea por línea
+        {
+            // Separar los datos de cada línea utilizando el delimitador '|'
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
             stringstream ss(line);
             string curso;
             getline(ss, curso, '|');
@@ -74,7 +84,11 @@ void catalogo::desplegar()
 
        if (total == 0)
         {
+<<<<<<< HEAD
             cout << "\n\t\t\tNo hay informaciï¿½n..." << endl; // Mostrar un mensaje si no hay datos en el archivo
+=======
+            cout << "\n\t\t\tNo hay información..." << endl; // Mostrar un mensaje si no hay datos en el archivo
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
         }
     }
 
@@ -105,7 +119,11 @@ void catalogo::catalogoCursos(string cursosD)
     }
 
 }
+<<<<<<< HEAD
 void catalogo::insertar(const char* carnet)
+=======
+void catalogo::insertar()
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 {
     system("cls");
     int opcion=0;
@@ -166,12 +184,17 @@ void catalogo::insertar(const char* carnet)
     for (const string &curso : cursosSeleccionados)
     {
 
+<<<<<<< HEAD
         fileIngresar << carnet << '|' << curso << '|'  << "\n";
+=======
+        fileIngresar << curso <<"\n";
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
     }
 
     // Cierre del archivo
     fileIngresar.close();
 
+<<<<<<< HEAD
     // Mensaje de ï¿½xito
     cout << "\t\t\tAsignado a sus cursos exitosamente." << endl;
 }
@@ -202,4 +225,10 @@ void catalogo::desplegarcursosalumno(string carnet)
 
 }
 
+=======
+    // Mensaje de éxito
+    cout << "\t\t\tAsignado a sus cursos exitosamente." << endl;
+}
+
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 

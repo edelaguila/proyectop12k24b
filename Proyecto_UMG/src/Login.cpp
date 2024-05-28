@@ -34,10 +34,53 @@ void Login::resetintentos() {
 bool Login::validacion() {
     system("cls");
 
+<<<<<<< HEAD
     fstream archivo;
     string nom;
     string pass;
     bool encontrado = false;
+=======
+    //el ciclo se repite mientras el numero de intentos sea menor a 3 o no se encuentre user valido
+    while(contador<3 && !encontrado)
+    {
+         system("cls");
+    cout <<"\t\t\t+-----------------------------------+"<<endl;
+    cout <<"\t\t\t|       LOGIN                       |"<<endl;
+    cout <<"\t\t\t+-----------------------------------+"<<endl;
+    cout <<"\t\t\t|Solo tienes permitido 3 intentos   |"<<endl;
+    cout <<"\t\t\t+-----------------------------------+"<<endl;
+    cout <<"\t\t\tIngrese el nombre de usuario: ";
+    cin >> usuario;
+
+
+    cout <<"\t\t\tIngrese la contrasena: ";
+    char caracter;
+    caracter = getch();
+
+    // ocultar a la hora de escribir la contraseña
+    contrasena="";
+        while (caracter!=13)//ascci enter
+        {
+        if(caracter !=8)//ascci backs pace
+            {
+                contrasena.push_back(caracter);
+                cout<<"*";
+            }
+        else
+            {
+                if(contrasena.length()>0)
+                {
+                    cout<<"\b \b";
+                    contrasena=contrasena.substr(0,contrasena.length()-1);
+                }
+            }
+            caracter=getch();
+        }
+
+    //abrira el archivo de User y contraseñas--------------------------
+    ifstream fileU_P;
+    fileU_P.open("usuarios_y_contrasenas prueba.txt",ios::in);
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 
 
     archivo.open("Usuario.dat", ios::binary | ios::in);

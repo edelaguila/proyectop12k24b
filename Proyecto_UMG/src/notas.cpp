@@ -1,26 +1,51 @@
-//Creado por Diana Mishel Loeiza Ramírez 9959-23-3457
-//proceso notas
-// implementacion de bitacora
-#include "notas.h" // Inclusión del archivo de cabecera para las definiciones relacionadas con las notas
-#include "Bitacora.h" // Inclusión del archivo de cabecera para las definiciones relacionadas con la bitácora
-#include <fstream> // Inclusión de la biblioteca estándar de manejo de archivos
-#include <iostream> // Inclusión de la biblioteca estándar de entrada/salida
-#include <cstdlib> // Inclusión de la biblioteca estándar para funciones de utilidad
-#include <conio.h> // Inclusión de la biblioteca para funciones de entrada y salida en consola
+#include "notas.h" // Inclusion del archivo de cabecera para las definiciones relacionadas con las notas
+#include "Bitacora.h" // Inclusion del archivo de cabecera para las definiciones relacionadas con la bitacora
+#include <fstream> // Inclusion de la biblioteca estandar de manejo de archivos
+#include <iostream> // Inclusion de la biblioteca estandar de entrada/salida
+#include <cstdlib> // Inclusion de la biblioteca estandar para funciones de utilidad
+#include <conio.h> // Inclusion de la biblioteca para funciones de entrada y salida en consola
+#include <cstdio> // para getchart ()
 
-using namespace std; // Uso del espacio de nombres estándar
+#include <cstring>
+using namespace std; // Uso del espacio de nombres estandar
 
-// Definición de la función para realizar operaciones CRUD en las notas
+// creado y Burificado por Diana Mishel Loeiza Ram�rez 9959/23/3457
+// funcionalidad al 100%
+// Definicion de la funcion para realizar operaciones CRUD en las notas
+
+
+// Implementaci�n de la funci�n validarAlumno
+bool NotaCrud::validarAlumno(int codigoEstudiante) {
+    ifstream archivo("codigos_estudiantes.txt"); // Abrir el archivo de texto
+    if (!archivo) { // Verificar si el archivo se abri� correctamente
+        cerr << "Error al abrir el archivo de c�digos de estudiantes." << endl;
+        return false; // Si hay un error al abrir el archivo, devolver falso
+    }
+
+    string codigo; // Variable para almacenar cada c�digo de estudiante le�do del archivo
+    while (getline(archivo, codigo)) { // Leer cada l�nea del archivo
+        // Convertir la cadena a un entero y comparar con el c�digo de estudiante dado
+        if (stoi(codigo) == codigoEstudiante) {
+            archivo.close(); // Cerrar el archivo
+            return true; // Devolver verdadero si se encuentra el c�digo
+        }
+    }
+
+    archivo.close(); // Cerrar el archivo
+    return false; // Devolver falso si el c�digo no se encuentra
+}
+
+
+
 
 void NotaCrud::CrudNota() {
-    string codigoPrograma = "5020"; // Código del programa
-    Bitacora Auditoria; // Objeto para gestionar la bitácora de auditoría
+    string codigoPrograma = "5020"; // Codigo del programa
+    Bitacora Auditoria; // Objeto para gestionar la bitacora de auditoria
     string user = "admin"; // Usuario actual del sistema
 
-    int opcion; // Variable para almacenar la opción seleccionada por el usuario
+    int opcion; // Variable para almacenar la opcion seleccionada por el usuario
 
-    // Menú principal de operaciones CRUD
-//bucle do-while de ejecucion
+    // Menu principal de operaciones CRUD
     do {
         system("cls"); // Limpia la pantalla
         // Mostrar opciones disponibles
@@ -31,18 +56,18 @@ void NotaCrud::CrudNota() {
         cout << "\t\t\t 2. Modificar Nota" << endl;
         cout << "\t\t\t 3. Borrar Nota" << endl;
         cout << "\t\t\t 4. Desplegar Notas" << endl;
-        cout << "\t\t\t 5. Regresar al Menú Anterior" << endl;
+        cout << "\t\t\t 5. Regresar al Menu Anterior" << endl;
         cout << "\t\t\t --------------------------------------------" << endl;
-        cout << "\t\t\t |   Opción a escoger:[1|2|3|4|5|]           |" << endl;
+        cout << "\t\t\t |   Opcion a escoger:[1|2|3|4|5|]           |" << endl;
         cout << "\t\t\t --------------------------------------------" << endl;
-        cout << "\t\t\tIngrese tu Opción: ";
+        cout << "\t\t\tIngrese tu Opcion: ";
 
-        cin >> opcion; // Leer la opción seleccionada por el usuario
+        cin >> opcion; // Leer la opcion seleccionada por el usuario
 
-        // Realizar la operación correspondiente según la opción seleccionada
-//lee opcion del usuario desde consola
+        // Realizar la operacion correspondiente segun la opcion seleccionada
         switch (opcion) {
             case 1:
+<<<<<<< HEAD
                 IngresarNota(); // Llama a la función para ingresar una nota
 
                 break;
@@ -57,108 +82,180 @@ void NotaCrud::CrudNota() {
             case 4:
                 DesplegarNotas(); // Llama a la función para desplegar todas las notas
  // Registra en la bitácora la acción de lectura de notas
+=======
+                IngresarNota(); // Llama a la funcion para ingresar una nota
+                Auditoria.ingresoBitacora(user, codigoPrograma, "CNO"); // Registra en la bitacora la accion de creacion de nota
+                break;
+            case 2:
+                ModificarNota(); // Llama a la funcion para modificar una nota
+                Auditoria.ingresoBitacora(user, codigoPrograma, "UNO"); // Registra en la bitacora la accion de modificacion de nota
+                break;
+            case 3:
+                BorrarNota(); // Llama a la funcion para borrar una nota
+                Auditoria.ingresoBitacora(user, codigoPrograma, "DNO"); // Registra en la bitacora la accion de eliminacion de nota
+                break;
+            case 4:
+                DesplegarNotas(); // Llama a la funcion para desplegar todas las notas
+                Auditoria.ingresoBitacora(user, codigoPrograma, "RNO"); // Registra en la bitacora la accion de lectura de notas
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
                 break;
             case 5:
-                break; // Salir del bucle y regresar al menú anterior
+                break; // Salir del bucle y regresar al menu anterior
             default:
-                cout << "\n\t\t\tOpción inválida. Por favor, prueba otra vez." << endl; // Mensaje de opción inválida
-                cin.ignore(); // Ignorar cualquier entrada no válida
+                cout << "\n\t\t\tOpcion invalida. Por favor, prueba otra vez." << endl; // Mensaje de opcion invalida
+                cin.ignore(); // Ignorar cualquier entrada no valida
                 cin.get(); // Esperar a que el usuario presione Enter para continuar
         }
     } while (opcion != 5); // Repetir el bucle hasta que el usuario elija salir
 }
 
-// Función para ingresar una nueva nota al sistema
+// Funcion para ingresar una nueva nota al sistema
 void NotaCrud::IngresarNota() {
-
     system("cls"); // Limpiar la pantalla
-    // imprime
     cout << "\n------------------------------------------------------------------------------------------------------------------------" << endl;
     cout << "\n-------------------------------------------------Agregar Nota--------------------------------------------" << endl;
     notas nota; // Declarar una variable para almacenar la nueva nota
-    cout << "Ingrese el código del estudiante: ";
-    cin >> nota.codigoEstudiante; // Leer el código del estudiante
-    cin.ignore(); // Ignorar el carácter de nueva línea en el buffer de entrada
+
+    // Solicitar y validar el c�digo del estudiante
+    int codigoEstudiante;
+    cout << "Ingrese el codigo del estudiante: ";
+    cin >> codigoEstudiante;
+    cin.ignore(); // Limpiar el buffer de entrada
+
+    if (!validarAlumno(codigoEstudiante)) {
+        cout << "El c�digo de estudiante no es v�lido." << endl;
+        system("pause");
+        return;
+    }
+
+    // El c�digo de estudiante es v�lido, continuar con la captura de la nota
+    nota.codigoEstudiante = codigoEstudiante;
 
     cout << "Ingrese el nombre del estudiante: ";
-    getline(cin, nota.nombreEstudiante); // Leer el nombre del estudiante
+    cin.getline(nota.nombreEstudiante,50); // Leer el nombre del estudiante
 
     cout << "Ingrese el nombre del curso: ";
-    getline(cin, nota.nombreCurso); // Leer el nombre del curso
+    cin.getline(nota.nombreCurso,50); // Leer el nombre del curso
 
-    cout << "Ingrese la nota: ";
-    cin >> nota.nota; // Leer la nota
+    // Pedir las notas parciales
+    cout << "Ingrese la nota de np1: "; //nota Parcial 1
+    cin >> nota.np1;
+    cout << "Ingrese la nota de np2: "; //nota Parcial 2
+    cin >> nota.np2;
+    cout << "Ingrese la nota de za: "; //zona actividades
+    cin >> nota.za;
+    cout << "Ingrese la nota de ef: ";//ingreso nota final
+    cin >> nota.ef;
 
-    ofstream archivo("notas.dat", ios::binary | ios::app); // Abrir el archivo para escribir en modo binario, en modo de añadir al final
+    // Calcular la nota final (NF)
+    nota.nf = nota.np1 + nota.np2 + nota.za + nota.ef;
+
+    ofstream archivo("notas.dat", ios::binary | ios::app); // Abrir el archivo para escribir en modo binario, en modo de a�adir al final
     archivo.write(reinterpret_cast<const char*>(&nota), sizeof(notas)); // Escribir la nota en el archivo
     archivo.close(); // Cerrar el archivo
 
-
-    cout << "Nota agregada exitosamente!" << endl; // Mensaje de éxito
+    cout << "Nota agregada exitosamente!" << endl; // Mensaje de exito
+    system("pause"); // Pausa el programa hasta que el usuario presione una tecla para continuar
 }
 
-// Función para modificar la nota de un estudiante
 void NotaCrud::ModificarNota() {
     int codigo;
-    cout << "Ingrese el código del estudiante cuya nota desea modificar: ";
-    cin >> codigo; // Leer el código del estudiante
-//abre el archivo
+    cout << "Ingrese el codigo del estudiante cuya nota desea modificar: ";
+    cin >> codigo; // Leer el codigo del estudiante
+
     fstream archivo("notas.dat", ios::binary | ios::in | ios::out); // Abrir el archivo para lectura y escritura en modo binario
     if (!archivo) { // Si no se pudo abrir el archivo
         cout << "No hay notas registradas." << endl; // Mensaje de error
-        return; // Salir de la función
+        return; // Salir de la funcion
     }
-//crea objeto "nota"
-    notas nota; // Declarar una variable para almacenar la nota actual
-    bool encontrada = false; // Bandera para indicar si se encontró la nota
-    while (archivo.read(reinterpret_cast<char*>(&nota), sizeof(notas))) { // Leer cada registro de nota del archivo
-        if (nota.codigoEstudiante == codigo) { // Si se encuentra la nota con el código ingresado
-            cout << "Ingrese la nueva nota para el estudiante: ";
-            cin >> nota.nota; // Leer la nueva nota
-//puntero
-            archivo.seekp(-static_cast<int>(sizeof(notas)), ios::cur); // Mover el puntero de escritura una posición antes del registro actual
-            archivo.write(reinterpret_cast<const char*>(&nota), sizeof(notas)); // Sobrescribir el registro actual con la nueva nota
 
-            encontrada = true; // Actualizar la bandera indicando que se encontró la nota
-            break; // Salir del bucle
+    notas nota; // Declarar una variable para almacenar la nota actual
+    bool encontrada = false; // Bandera para indicar si se encontro la nota
+    while (archivo.read(reinterpret_cast<char*>(&nota), sizeof(notas))) { // Leer cada registro de nota del archivo
+        if (nota.codigoEstudiante == codigo) { // Si se encuentra la nota con el codigo ingresado
+            encontrada = true; // Actualizar la bandera indicando que se encontro la nota
+
+            int opcion;
+            do {
+                system("cls"); // Limpiar la pantalla
+                cout << "Seleccione la nota que desea modificar:" << endl;
+                cout << "1. np1" << endl;
+                cout << "2. np2" << endl;
+                cout << "3. za" << endl;
+                cout << "4. ef" << endl;
+                cout << "5. Cancelar" << endl;
+                cout << "Ingrese su opcion: ";
+                cin >> opcion;
+
+                switch (opcion) {
+                    cout << "Ingrese la nueva nota np1: ";
+                        cin >> nota.np1;
+
+                            break;
+                    case 2:
+                        cout << "Ingrese la nueva nota np2: ";
+                        cin >> nota.np2;
+                        break;
+                    case 3:
+                        cout << "Ingrese la nueva nota za: ";
+                        cin >> nota.za;
+                        break;
+                    case 4:
+                        cout << "Ingrese la nueva nota ef: ";
+                        cin >> nota.ef;
+                        break;
+                    case 5:
+                        cout << "Modificaci�n cancelada." << endl;
+                        break;
+                    default:
+                        cout << "Opci�n no v�lida. Intente de nuevo." << endl;
+                }
+            } while (opcion < 1 || opcion > 5);
+            // Calcular la nota final (NF)
+            nota.nf = nota.np1 + nota.np2 + nota.za + nota.ef;
+            archivo.seekp(-static_cast<int>(sizeof(notas)), ios::cur); // Mover el puntero de escritura una posicion antes del registro actual
+            archivo.write(reinterpret_cast<const char*>(&nota), sizeof(notas)); // Sobrescribir el registro actual con la nueva nota
+            break; // Salir del bucle despu�s de modificar la nota
         }
     }
 
     archivo.close(); // Cerrar el archivo
 
-    if (!encontrada) { // Si la nota no se encontró
-        cout << "No se encontró la nota del estudiante con el código ingresado." << endl; // Mensaje de error
+    if (!encontrada) { // Si la nota no se encontro
+        cout << "No se encontro la nota del estudiante con el codigo ingresado." << endl; // Mensaje de error
     } else {
-        //si la nota fue encontrada ingresa mensaje
-        cout << "Nota modificada exitosamente!" << endl; // Mensaje de éxito
+        cout << "Nota modificada exitosamente!" << endl; // Mensaje de exito
+        system("pause"); // Pausa el programa hasta que el usuario presione una tecla para continuar
+
     }
 }
 
-// Función para borrar la nota de un estudiante
+
+// Funcion para borrar la nota de un estudiante
 void NotaCrud::BorrarNota() {
-    int codigo; // Variable para almacenar el código del estudiante cuya nota se desea eliminar
-    cout << "Ingrese el código del estudiante cuya nota desea eliminar: ";
-    cin >> codigo; // Leer el código del estudiante
+    int codigo; // Variable para almacenar el codigo del estudiante cuya nota se desea eliminar
+    cout << "Ingrese el codigo del estudiante cuya nota desea eliminar: ";
+    cin >> codigo; // Leer el codigo del estudiante
 
     ifstream archivo("notas.dat", ios::binary); // Abrir el archivo para lectura en modo binario
     if (!archivo) { // Si no se pudo abrir el archivo
         cout << "No hay notas registradas." << endl; // Mensaje de error
+        return; // Salir de la funcion
     }
-
 
     ofstream archivoTmp("notas_tmp.dat", ios::binary); // Abrir un archivo temporal para escribir en modo binario
     notas nota; // Declarar una variable para almacenar la nota actual
 
-    bool eliminada = false; // Bandera para indicar si se eliminó la nota
+    bool eliminada = false; // Bandera para indicar si se elimino la nota
 
     while (archivo.read(reinterpret_cast<char*>(&nota), sizeof(notas))) { // Leer cada registro de nota del archivo
-        if (nota.codigoEstudiante != codigo) { // Si el código del estudiante no coincide con el código ingresado
+        if (nota.codigoEstudiante != codigo) { // Si el codigo del estudiante no coincide con el codigo ingresado
             archivoTmp.write(reinterpret_cast<const char*>(&nota), sizeof(notas)); // Escribir la nota en el archivo temporal
         } else {
-            eliminada = true; // Actualizar la bandera indicando que se eliminó la nota
+            eliminada = true; // Actualizar la bandera indicando que se elimino la nota
         }
     }
-//
+
     archivo.close(); // Cerrar el archivo original
     archivoTmp.close(); // Cerrar el archivo temporal
 
@@ -166,30 +263,33 @@ void NotaCrud::BorrarNota() {
     rename("notas_tmp.dat", "notas.dat"); // Renombrar el archivo temporal como el archivo original
 
     if (eliminada) { // Si la nota fue eliminada
-
-        cout << "Nota eliminada exitosamente!" << endl; // Mensaje de éxito
+        cout << "Nota eliminada exitosamente!" << endl; // Mensaje de exito
+       cout << "Presione Enter para continuar...";
+        cin.ignore(); // Limpiar el buffer de entrada
+        cin.get(); // Esperar a que el usuario presione Enter para continuar
     } else {
-        cout << "No se encontró la nota del estudiante con el código ingresado." << endl; // Mensaje de error
+        cout << "No se encontro la nota del estudiante con el codigo ingresado." << endl; // Mensaje de error
+        system("pause"); // Pausa el programa hasta que el usuario presione una tecla para continuar
+
     }
 }
 
-// Función para desplegar todas las notas registradas en el sistema
+// Funcion para desplegar todas las notas registradas en el sistema
 void NotaCrud::DesplegarNotas() {
     system("cls"); // Limpiar la pantalla
     cout << "-----------------Despliegue de notas registradas---------------------" << endl; // Encabezado
     ifstream archivo("notas.dat", ios::binary); // Abrir el archivo para lectura en modo binario
     if (!archivo) { // Si no se pudo abrir el archivo
         cout << "No hay notas registradas." << endl; // Mensaje de error
-        return; // Salir de la función
+        return; // Salir de la funcion
     }
-
     notas nota; // Declarar una variable para almacenar la nota actual
     while (archivo.read(reinterpret_cast<char*>(&nota), sizeof(notas))) { // Leer cada registro de nota del archivo
         // Mostrar los detalles de la nota
-        cout << "Código del estudiante: " << nota.codigoEstudiante << endl;
+        cout << "Codigo del estudiante: " << nota.codigoEstudiante << endl;
         cout << "Nombre del estudiante: " << nota.nombreEstudiante << endl;
         cout << "Nombre del curso: " << nota.nombreCurso << endl;
-        cout << "Nota: " << nota.nota << endl;
+        cout << "Nota final: " << nota.nf << endl; // Mostrar la nota final (NF)
         cout << "-----------------------------" << endl; // Separador entre notas
     }
 
@@ -200,3 +300,39 @@ void NotaCrud::DesplegarNotas() {
     cin.get(); // Esperar a que el usuario presione Enter para continuar
 }
 
+
+
+void NotaCrud::LeerNotasPorNombre(const char* nombre) {
+    ifstream archivo("notas.dat", ios::binary); // Abrir el archivo para lectura en modo binario
+    if (!archivo) { // Si no se pudo abrir el archivo
+        cout << "No hay notas registradas." << endl; // Mensaje de error
+        return; // Salir de la funci�n
+    }
+
+    notas nota; // Declarar una variable para almacenar la nota actual
+    bool encontrado = false; // Bandera para indicar si se encontr� al estudiante
+    while (archivo.read(reinterpret_cast<char*>(&nota), sizeof(notas))) { // Leer cada registro de nota del archivo
+        if (strcmp(nota.nombreEstudiante, nombre) == 0) { // Comparar los nombres
+            // Mostrar los detalles de la nota
+            cout << "Codigo del estudiante: " << nota.codigoEstudiante << endl;
+            cout << "Nombre del estudiante: " << nota.nombreEstudiante << endl;
+            cout << "Nombre del curso: " << nota.nombreCurso << endl;
+            cout << "Nota Parcial 1: " << nota.np1 << endl;
+            cout << "Nota Parcial 2: " << nota.np2 << endl;
+            cout << "Zona de actividades: " << nota.za << endl;
+            cout << "Examen final: " << nota.ef << endl;
+            cout << "Nota final: " << nota.nf << endl; // Mostrar la nota final (NF)
+            cout << "-----------------------------" << endl; // Separador entre notas
+            encontrado = true; // Actualizar la bandera
+        }
+    }
+
+    if (!encontrado) { // Si no se encontr� al estudiante
+        cout << "No se encontraron notas para el estudiante con el nombre proporcionado." << endl;
+    }
+
+    archivo.close(); // Cerrar el archivo
+    cout << "Presione Enter para continuar..."; // Mensaje para el usuario
+    cin.ignore(); // Ignorar cualquier entrada adicional
+    cin.get(); // Esperar a que el usuario presione Enter para continuar
+}

@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 //Creando por Andy Garcia 9959-23-1494
+=======
+
+//Creando por Andy Garcia 9959-23-1494
+
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 //Encabezados de proteccion
 #ifndef ALUMNOS_H
 #define ALUMNOS_H
@@ -10,6 +16,7 @@
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
+<<<<<<< HEAD
 #include"usuarios.h"
 
 using namespace std;
@@ -27,20 +34,34 @@ char solvente[20]; // Almacena información sobre el estado de solvencia del usua
 
 };
 
+=======
+
+using namespace std;
+
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 //Creacion de la clase alumnos
 class alumnos
 {
     //Atributos privados de la clase alumnos
     private:
+<<<<<<< HEAD
     string id, nombre, telefono, DPI, direccion, Genero, nacionalidad, civil, fechanaci, anoingre,dpi , certiestudios, fotoestatica, titulo, fotocedula, copiadpi;
 
+=======
+    string id, nombre, telefono, DPI, direccion, Genero, nacionalidad, civil, fechanaci, anoingre;
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 
     //Atributos publicos de la clase alumnos
     public:
         //Creando los contructores
+<<<<<<< HEAD
         string solvente;
         alumnos() {}
         alumnos(string dpi, string certiestudios, string fotoestatica, string titulo, string fotocedula, string copiadpi, string id, string nombre, string telefono, string DPI, string direccion, string Genero, string nacionalidad, string civil, string fechanaci, string anoingre, string solvente);
+=======
+        alumnos() {}
+        alumnos(string id, string nombre, string telefono, string DPI, string direccion, string Genero, string nacionalidad, string civil, string fechanaci, string anoingre);
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 
         //Estableciendo la id
         string setid(string id);
@@ -100,6 +121,7 @@ class alumnos
         //Obteniendo el año de ingreso
         string getanoingre();
 
+<<<<<<< HEAD
         string setsolvente(string solvente);
         //Obteniendo el año de ingreso
         string getsolvente();
@@ -135,6 +157,8 @@ class alumnos
         string getcopiadpi();
 
 
+=======
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 
     //Funciones
     void menu(); //Funcion menu para poder mostar el menu de alumnos

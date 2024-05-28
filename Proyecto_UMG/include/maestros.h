@@ -12,6 +12,7 @@
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
+<<<<<<< HEAD
 #include"usuarios.h"
 
 using namespace std;
@@ -20,10 +21,17 @@ using namespace std;
 =======
 //Estructura del maestro
 >>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
+=======
+
+
+using namespace std;
+
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 struct Maestro {
 
     char id[20];       // Almacena la id de los maestros ingresado
     char nombre[50];   // Almacena el nombre del maestro ingresado
+<<<<<<< HEAD
     char Genero[10];   // Almacena el género del maestro ingresado
     char DPI[20];       // Almacena el DPI del maestro ingresado
     char direccion[100];  // Almacena la dirección del maestro ingresado
@@ -49,17 +57,33 @@ struct proceamaestros {
 
 };
 >>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
+=======
+    char Genero[10];   // Almacena el gï¿½nero del maestro ingresado
+    char DPI[20];       // Almacena el DPI del maestro ingresado
+    char direccion[100];  // Almacena la direcciï¿½n del maestro ingresado
+    char nacionalidad[50];  // Almacena la nacionalidad del maestro ingresado
+    char telefono[15];      // Almacena el nï¿½mero de telï¿½fono del maestro ingresado
+    char civil[20];         // Almacena el estado civil del maestro ingresado
+    char fechanaci[20];     // Almacena la fecha de nacimiento del maestro ingresado
+    char anoingre[10];      // Almacena el aï¿½o de ingreso del maestro ingresado
+};
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 
 //Creando la clase maestros
 class maestros
 {
     //Atributos privados de la clase maestros
     private:
+<<<<<<< HEAD
     string id, nombre, telefono, DPI, direccion, Genero, civil, fechanaci, anoingre, Actas, Cuadernillos, Asistencia;
+=======
+    string id, nombre, telefono, DPI, direccion, Genero, nacionalidad, civil, fechanaci, anoingre;
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 
     //Atributos publicos de la clase maestros
     public:
 
+<<<<<<< HEAD
         string solvente;
         //Constructores
         maestros() {}
@@ -87,6 +111,11 @@ class maestros
         //obteniendo la asistencia
         string getAsistencia();
 
+=======
+        //Constructores
+        maestros() {}
+        maestros(string id, string nombre, string telefono, string DPI, string direccion, string Genero, string nacionalidad, string civil, string fechanaci, string anoingre);
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 
         //Estableciendo la id
         string setid(string id);
@@ -124,6 +153,15 @@ class maestros
         string getGenero();
 
 
+<<<<<<< HEAD
+=======
+        //Estableciendo la nacionalidad
+        string setnacionalidad(string nacionalidad);
+        //Obteniendo la nacionalidad
+        string getnacionalidad();
+
+
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
         //Estableciendo el estado civil
         string setcivil(string civil);
         //Obteniendo el estado civil
@@ -136,9 +174,15 @@ class maestros
         string getfechanaci();
 
 
+<<<<<<< HEAD
         //Estableciendo el año de ingreso
         string setanoingre(string anoingre);
         //Obteniendo el año de ingreso
+=======
+        //Estableciendo el aï¿½o de ingreso
+        string setanoingre(string anoingre);
+        //Obteniendo el aï¿½o de ingreso
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
         string getanoingre();
 
     //Funciones
@@ -150,13 +194,19 @@ class maestros
     void borrar(); //Funcion para poder borrar algun maestro registrado
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 
     //Estructura del maestro
 
 };
 
+<<<<<<< HEAD
 =======
 };
 >>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
+=======
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 
 #endif // MAESTROS_H

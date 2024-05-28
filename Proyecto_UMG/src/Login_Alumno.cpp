@@ -5,10 +5,15 @@
 #include<cstdlib> // Biblioteca estándar
 #include<conio.h> // Biblioteca para la manipulación de la consola
 #include<iomanip> // Biblioteca para la manipulación de la entrada/salida formateada
+<<<<<<< HEAD
 
 using namespace std;
 
 
+=======
+using namespace std;
+
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 // Constructor de la clase Login_Alumno
 Login_Alumno::Login_Alumno(string usuario, string contrasena)//parametros de la clase
 {
@@ -95,6 +100,7 @@ bool Login_Alumno::VerificarUsuario()
     }
 
     //busca el usuario en el archivo---------------------------------
+<<<<<<< HEAD
     string users,pass;
     while (fileU_P>>users>>pass)
     {
@@ -106,6 +112,14 @@ bool Login_Alumno::VerificarUsuario()
             file.open("BitacoraLoA.txt", ios::app | ios::out);
             file <<left<<users<<"\n";
             file.close();
+=======
+    string user,pass;
+    while (fileU_P>>user>>pass)
+    {
+        if (user==usuario && pass==contrasena)
+        {
+            encontrado=true;
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
             break;
         }
     }

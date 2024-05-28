@@ -1,0 +1,4 @@
+juan 	1234	fisica	100		prgramacion	100 		contabilidad	100		metodologia	100 		logica	110 
+maria	1234	fisica	100		prgramacion	100 		contabilidad	100		metodologia	100 		logica	110 
+ana 	0000	fisica	100		prgramacion	100 		contabilidad	100		metodologia	100 		logica	110 	
+		

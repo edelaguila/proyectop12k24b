@@ -36,6 +36,9 @@
 
 >>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
 
+#include "alumnos.h"
+#include "maestros.h"
+
 using namespace std;
 
 //Funciones
@@ -194,14 +197,20 @@ void catalogos()
         {
         case 1:
         {
+<<<<<<< HEAD
             //Lammada al alumno menu
+=======
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
             alumnos alumno;
             alumno.menu();
         }
             break;
         case 2:
         {
+<<<<<<< HEAD
             //Lammada al maestro menu
+=======
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
             maestros maestro;
             maestro.menu();
         }

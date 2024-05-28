@@ -9,10 +9,17 @@
 #include<conio.h>
 #include<iomanip>
 #include<string>
+<<<<<<< HEAD
+=======
+#include <unistd.h>
+
+
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 
 //incluyendo el encabezado maestros
 #include "maestros.h"
 #include "Bitacora.h"
+<<<<<<< HEAD
 #include "Login.h"
 #include "ProcesoMaestros.h"
 using namespace std;
@@ -25,11 +32,21 @@ maestros::maestros(string anoingre, string Actas, string Cuadernillos, string As
     this->Actas = Actas;
     this->Cuadernillos = Cuadernillos;
     this->Asistencia = Asistencia;
+=======
+using namespace std;
+//Constructor maestros y sus parametros
+
+maestros::maestros(string id, string nombre, string telefono, string DPI, string direccion, string Genero, string nacionalidad, string civil, string fechanaci, string anoingre)
+{
+    // Asignando los valores de los parámetros a los atributos del objeto
+    this->id = id;
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
     this->nombre = nombre;
     this->telefono = telefono;
     this->DPI = DPI;
     this->direccion = direccion;
     this->Genero = Genero;
+<<<<<<< HEAD
     this->civil = civil;
     this->fechanaci = fechanaci;
     this->anoingre = anoingre;
@@ -75,6 +92,12 @@ string maestros::setAsistencia(string Asistencia)
 string maestros::getAsistencia()
 {
     return Asistencia;
+=======
+    this->nacionalidad = nacionalidad;
+    this->civil = civil;
+    this->fechanaci = fechanaci;
+    this->anoingre = anoingre;
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 }
 
 //Estableciendo la id del maestro
@@ -90,6 +113,10 @@ string maestros::getid()
     return id;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 //Estableciendo el nombre del maestro
 string maestros::setnombre(string nombre)
 {
@@ -157,6 +184,22 @@ string maestros::getGenero()
     return Genero;
 }
 
+<<<<<<< HEAD
+=======
+//Estableciendo la nacionalidad del maestro
+string maestros::setnacionalidad(string nacionalidad)
+{
+    this->nacionalidad = nacionalidad;
+    return nacionalidad;
+}
+
+//Obteniendo la nacionalidad del maestro
+string maestros::getnacionalidad()
+{
+    return nacionalidad;
+}
+
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 //Estableciendo el estado civil del maestro
 string maestros::setcivil(string civil)
 {
@@ -197,6 +240,7 @@ string maestros::getanoingre()
     return anoingre;
 }
 
+<<<<<<< HEAD
 string maestros::setsolvente(string solvente)
 {
     this->solvente = solvente;
@@ -220,6 +264,18 @@ void maestros::menu()
 
     // Registro del ingreso en la bitácora
     bitacora.ingresoBitacora(usuarioActual, "2300", "MSM"); // Parámetros
+=======
+//Funcion menu donde muestra el sistema de gestion de alumnos
+void maestros::menu()
+{
+//Implementando la bitacora
+string codigoPrograma="2533";
+
+Bitacora Auditoria;
+//Declarando variable string con el codigo programa
+string user, contrasena;
+            Auditoria.ingresoBitacora(user,codigoPrograma,"MST");
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 
     //Definiendo Variable int
     int opcion;
@@ -310,6 +366,7 @@ void maestros::menu()
 //Funcion para insertar un maestro
 void maestros::insertar()
 {
+<<<<<<< HEAD
     //Implementacion de la bitacora
     // Obtener el usuario actual que ha iniciado sesión
     string usuarioActual = Login::getUsuarioActual();
@@ -320,12 +377,22 @@ void maestros::insertar()
     // Registro del ingreso en la bitácora
     bitacora.ingresoBitacora(usuarioActual, "2301", "MSMI"); // Parámetros
 
+=======
+string codigoPrograma="2534";
+Bitacora Auditoria;
+string user, contrasena;
+Auditoria.ingresoBitacora(user,codigoPrograma,"MSTI");
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
     //Limpiando pantalla
     system("cls");
 
     //Encabezado del diseño insertar estudiante
     cout<<"+---------------------------------------------------------+"<< endl;
+<<<<<<< HEAD
     cout<<"|                Agregar detalles del Maestro             |"<< endl;
+=======
+    cout<<"|                Agregar detalles del Maestro          |"<< endl;
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
     cout<<"+---------------------------------------------------------+"<< endl;
 
     //Encabezado del diseño insertar estudiante
@@ -359,6 +426,13 @@ void maestros::insertar()
     cout<<"       -> Ingrese el email del maestro: ";
     cin.getline(maestro.DPI, 20);
 
+<<<<<<< HEAD
+=======
+    //Mensaje para ingresar la estatus del maestro
+    cout<<"       -> Ingrese la estatus del maestro: ";
+    cin.getline(maestro.nacionalidad, 100);
+
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
     //Mensaje para ingresar la direccion del maestro
     cout<<"       -> Ingrese la direccion del maestro: ";
     cin.getline(maestro.direccion, 50);
@@ -378,6 +452,7 @@ void maestros::insertar()
 //Funcion para desplegar los alumnos ya registrados
 void maestros::desplegar()
 {
+<<<<<<< HEAD
     //Implementacion de la bitacora
     // Obtener el usuario actual que ha iniciado sesión
     string usuarioActual = Login::getUsuarioActual();
@@ -388,6 +463,12 @@ void maestros::desplegar()
     // Registro del ingreso en la bitácora
     bitacora.ingresoBitacora(usuarioActual, "2302", "MSMD"); // Parámetros
 
+=======
+    string codigoPrograma="2612";
+ Bitacora Auditoria;
+string user, contrasena;
+            Auditoria.ingresoBitacora(user,codigoPrograma,"MSTD");
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
     //Limpiando pantalla
 	system("cls");
 
@@ -397,25 +478,39 @@ void maestros::desplegar()
     cout << "+---------------------------------------------------------------------------------+" << endl;
 
     //Mostrando el encabezado de la tabla de detalles del estudiante
+<<<<<<< HEAD
     ifstream archivo("ProcesoMaestros.dat", ios::binary | ios::in);
     ifstream archivo3("Maestros.dat", ios::binary | ios::in);
     if (!archivo || !archivo3) {
+=======
+    ifstream archivo("Maestros.dat", ios::binary | ios::app);
+    if (!archivo) {
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
             //Si no encuentra informacion muestra el siguiente mensaje
         cout << "Error, no se encuentra informacion...";
         return;
     }
     Maestro maestro;
 
+<<<<<<< HEAD
     proceamaestros maestros;
 
     //Ciclo while para leer los datos del archivo binario  y los almacenan en un objeto alumno llamado alumno y repite este procedimiento hasta que se acaben los datos por leer
     while (archivo.read(reinterpret_cast<char*>(&maestros), sizeof(proceamaestros)) &&
            archivo3.read(reinterpret_cast<char*>(&maestro), sizeof(Maestro))) {
+=======
+    //Ciclo while para leer los datos del archivo binario  y los almacenan en un objeto alumno llamado alumno y repite este procedimiento hasta que se acaben los datos por leer
+    while (archivo.read(reinterpret_cast<char*>(&maestro), sizeof(Maestro))) {
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
         //Se muestra los detalles del estudiante
         cout << "                        Mostrando -> Codigo del Maestro: " << maestro.id << endl;
         cout << "                        Mostrando -> Nombre del Maestro: " << maestro.nombre << endl;
         cout << "                        Mostrando -> Email del maestro : " << maestro.DPI << endl;
+<<<<<<< HEAD
         cout << "                        Mostrando -> Estatus del estudiante (solvente=1 | pendiente=0): " << maestros.solvente << endl;
+=======
+        cout << "                        Mostrando -> Estatus del maestro: " << maestro.nacionalidad << endl;
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
         cout << "                        Mostrando -> Direccion: " << maestro.direccion << endl;
         cout << "                        Mostrando -> Telefono: " << maestro.telefono << endl;
         cout << "+---------------------------------------------------------------------------------+" << endl;
@@ -431,6 +526,7 @@ void maestros::desplegar()
 //Funcion para modificar los maestros ya registrados
 void maestros::modificar()
 {
+<<<<<<< HEAD
     //Implementacion de la bitacora
     // Obtener el usuario actual que ha iniciado sesión
     string usuarioActual = Login::getUsuarioActual();
@@ -441,6 +537,12 @@ void maestros::modificar()
     // Registro del ingreso en la bitácora
     bitacora.ingresoBitacora(usuarioActual, "2303", "MSMM"); // Parámetros
 
+=======
+    string codigoPrograma="2789";
+ Bitacora Auditoria;
+string user, contrasena;
+            Auditoria.ingresoBitacora(user,codigoPrograma,"MSTM");
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
     //Limpiando pantalla
 	system("cls");
 	//Declarando variables tipo fstream y string
@@ -449,6 +551,10 @@ void maestros::modificar()
     //Variable bool con valor false
     bool encontrado = false;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
     cout << "+---------------------------------------------------------------------------------+" << endl;
     cout << "+                       Modificar Detalles del maestros                           +" << endl;
     cout << "+---------------------------------------------------------------------------------+" << endl;
@@ -485,6 +591,11 @@ void maestros::modificar()
             cin >> maestro.nombre;
             cout << "Ingrese el nuevo email del Maestro: ";
             cin >> maestro.DPI;
+<<<<<<< HEAD
+=======
+            cout << "Ingrese el nuevo estatus del Maestro: ";
+            cin >> maestro.nacionalidad;
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
             cout << "Ingrese la nueva direccion del Maestro: ";
             cin >> maestro.direccion;
             cout << "Ingrese el nuevo Telefono del Maestro: ";
@@ -514,6 +625,7 @@ void maestros::modificar()
 //funcion para borrarr a las maestros registradas
 void maestros::borrar()
 {
+<<<<<<< HEAD
     //Implementacion de la bitacora
     // Obtener el usuario actual que ha iniciado sesión
     string usuarioActual = Login::getUsuarioActual();
@@ -524,6 +636,12 @@ void maestros::borrar()
     // Registro del ingreso en la bitácora
     bitacora.ingresoBitacora(usuarioActual, "2204", "MSMB"); // Parámetros
 
+=======
+    string codigoPrograma="2802";
+ Bitacora Auditoria;
+string user, contrasena;
+            Auditoria.ingresoBitacora(user,codigoPrograma,"MSTB");
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
     //Limpia pantalla
     system("cls");
 
@@ -562,7 +680,10 @@ void maestros::borrar()
             // Lee cada registro del archivo y busca el usuario proporcionado por el usuario
             if(maestro.id != idPersona)
             {
+<<<<<<< HEAD
                 // Escribe  nuevos detalles del estudiante en el archivo
+=======
+>>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
                 archivo2.write(reinterpret_cast<const char*>(&maestro), sizeof(Maestro));
             }
             else

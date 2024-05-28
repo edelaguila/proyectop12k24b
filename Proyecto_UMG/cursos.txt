@@ -1,4 +1,4 @@
--------Cursos disponibles Para usted---------------
+-------Cursos disponibles Para usted-----------------
 
 --------------------------------------------------------
 | No  |Codigo del curso |       Cursos Disponibles      | 

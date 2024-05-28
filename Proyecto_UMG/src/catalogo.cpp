@@ -6,7 +6,7 @@
 #include<conio.h>
 #include<iomanip>
 #include <vector>
-
+//Archivo de implementacion del catalogo
 using namespace std;
 
 catalogo::catalogo(string curso2, string curso)
@@ -46,11 +46,7 @@ void catalogo::desplegar()
     // Verificar si el archivo se pudo abrir
     if (!fileDesplegar)
     {
-<<<<<<< HEAD
         cout << "\n\t\t\tNo hay informaciï¿½n..." << endl;
-=======
-        cout << "\n\t\t\tNo hay información..." << endl;
->>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
     }
     else
     {
@@ -60,15 +56,9 @@ void catalogo::desplegar()
         cout << "|               Curso                       |" << endl;
         cout << "|-------------------------------------------|" << endl;
         string line;
-<<<<<<< HEAD
         while (getline(fileDesplegar, line)) // Leer el archivo lï¿½nea por lï¿½nea
         {
             // Separar los datos de cada lï¿½nea utilizando el delimitador '|'
-=======
-        while (getline(fileDesplegar, line)) // Leer el archivo línea por línea
-        {
-            // Separar los datos de cada línea utilizando el delimitador '|'
->>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
             stringstream ss(line);
             string curso;
             getline(ss, curso, '|');
@@ -84,11 +74,7 @@ void catalogo::desplegar()
 
        if (total == 0)
         {
-<<<<<<< HEAD
             cout << "\n\t\t\tNo hay informaciï¿½n..." << endl; // Mostrar un mensaje si no hay datos en el archivo
-=======
-            cout << "\n\t\t\tNo hay información..." << endl; // Mostrar un mensaje si no hay datos en el archivo
->>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
         }
     }
 
@@ -119,11 +105,7 @@ void catalogo::catalogoCursos(string cursosD)
     }
 
 }
-<<<<<<< HEAD
-void catalogo::insertar(const char* carnet)
-=======
 void catalogo::insertar()
->>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 {
     system("cls");
     int opcion=0;
@@ -184,51 +166,14 @@ void catalogo::insertar()
     for (const string &curso : cursosSeleccionados)
     {
 
-<<<<<<< HEAD
-        fileIngresar << carnet << '|' << curso << '|'  << "\n";
-=======
         fileIngresar << curso <<"\n";
->>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
     }
 
     // Cierre del archivo
     fileIngresar.close();
 
-<<<<<<< HEAD
     // Mensaje de ï¿½xito
     cout << "\t\t\tAsignado a sus cursos exitosamente." << endl;
 }
 
-void catalogo::desplegarcursosalumno(string carnet)
-{
-    string id, curso;
-    ifstream fileOri("catalogos.txt");
-
-    if (!fileOri)
-    {
-        cout << "\n\t\t\tNo hay informacion.." << endl;
-        return;
-    }
-      string line;
-      cout << "CURSOS ASIGNADOS: " << endl << endl ;
-      while (getline(fileOri, line)) // Leer el archivo lï¿½nea por lï¿½nea
-        {
-            stringstream ss(line);
-            string curso;
-            getline(ss, id, '|');
-            getline(ss, curso, '|');
-            if (id==carnet)
-                cout <<  "                      " << curso << endl ;
-
-        }
-        cout << "+-----------------------------------------------------------------------------------------+" << endl;
-
-}
-
-=======
-    // Mensaje de éxito
-    cout << "\t\t\tAsignado a sus cursos exitosamente." << endl;
-}
-
->>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
 

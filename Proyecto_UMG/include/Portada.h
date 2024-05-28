@@ -1,3 +1,6 @@
+//Creando por Andy Garcia 9959-23-1494
+
+
 #ifndef PORTADA_H
 #define PORTADA_H
 

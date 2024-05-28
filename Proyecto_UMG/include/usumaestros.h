@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifndef USUMAESTROS_H
 #define USUMAESTROS_H
 #include <iostream>
@@ -9,6 +10,11 @@ class usumaestros
 {
     public:
 =======
+=======
+
+//Creando por Andre Gonzalez 9959-23-3117
+
+>>>>>>> 072e17b1dc8951d8bbdd0f785786818f2bb0f86b
 //Encabezados de proteccion
 #ifndef USUMAESTROS_H
 #define USUMAESTROS_H

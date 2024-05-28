@@ -1,3 +1,6 @@
+
+//Creado por Jose Gallardo 9959-23-106
+
 #include <iostream>
 #include <fstream>
 #include <iomanip>

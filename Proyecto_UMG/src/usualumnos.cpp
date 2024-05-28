@@ -1,3 +1,6 @@
+
+//Creado por Oscar Morales 9959-23-3070
+
 #include <iostream>
 <<<<<<< HEAD
 #include <fstream> //Libreria necesaria para la creacion, lectura y manejo de archivos

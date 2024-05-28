@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <iostream>
 #include <fstream> //Libreria necesaria para la creacion, lectura y manejo de archivos
 #include <iomanip> //Libreria necesaria para el comando setw()
@@ -9,6 +10,11 @@ class usumaestros
 {
     public:
 =======
+=======
+
+//Creado por Jose Gallardo 9959-23-106
+
+>>>>>>> 072e17b1dc8951d8bbdd0f785786818f2bb0f86b
 //Incluyendo librerias
 #include <iostream>
 #include <fstream>

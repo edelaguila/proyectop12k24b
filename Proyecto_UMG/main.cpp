@@ -1,3 +1,4 @@
+
 //Creado por Jose Gallardo 9959-23-106
 <<<<<<< HEAD
 #include <iostream>
@@ -59,14 +60,15 @@ int main() {
     Portada::dibujarPortada("Portada.txt.txt");
     system("Pause");
 
-    Login login; // Creación de un objeto Login
+    Login login;
 
-// Validación del inicio de sesión
-if (login.validacion()) {
-    menuGeneral(); // Si la validación es exitosa, muestra el menú principal
-} else {
-    cout << "Intentelo nuevamente..." << endl; // Si la validación falla, muestra un mensaje de error
-}
+    if (login.validacion())
+    {
+        menuGeneral();
+    } else
+    {
+    cout << "Intentelo nuevamente..." << endl;
+    }
 
 return 0; // Finaliza el programa
 }

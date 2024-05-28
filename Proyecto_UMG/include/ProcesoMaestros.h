@@ -1,3 +1,6 @@
+
+//Creado por Jose Gallardo 9959-23-106
+
 //Encabezados de proteccion
 #ifndef PROCESOMAESTROS_H
 #define PROCESOMAESTROS_H

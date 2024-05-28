@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifndef PERSONAS_H
 #define PERSONAS_H
 #include <iostream>
@@ -9,6 +10,11 @@ class usualumnos
 {
     public:
 =======
+=======
+
+//Creando por Andy Garcia 9959-23-1494
+
+>>>>>>> 072e17b1dc8951d8bbdd0f785786818f2bb0f86b
 //Encabezados de proteccion
 #ifndef PERSONAS_H
 #define PERSONAS_H

@@ -271,10 +271,13 @@ string alumnos::setanoingre(string anoingre)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 //Obteniendo el año de ingreso del alumno
 >>>>>>> 1a8b285e44e22ebebc8e610ca110e2ec22da6084
+=======
+>>>>>>> 072e17b1dc8951d8bbdd0f785786818f2bb0f86b
 string alumnos::getanoingre()
 {
     return anoingre;

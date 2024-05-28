@@ -528,10 +528,14 @@
 	<iomanip>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 1715978840 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\alumnos.cpp
 =======
 1716612065 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\alumnos.cpp
 >>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
+=======
+1716673240 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\alumnos.cpp
+>>>>>>> 072e17b1dc8951d8bbdd0f785786818f2bb0f86b
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -602,13 +606,17 @@
 	"usuarios.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 1715974930 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\usuarios.h
 =======
 1716612065 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\usuarios.h
 >>>>>>> ca05d99806224de811dc8563d2fc77f0fe4bf8d6
+=======
+1716908439 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\usuarios.h
+>>>>>>> 072e17b1dc8951d8bbdd0f785786818f2bb0f86b
 	<iostream>
 
-1716612065 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\login.h
+1716908480 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\login.h
 	<iostream>
 	<fstream>
 	<cstdlib>
@@ -4071,7 +4079,7 @@
 1716612065 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\portada.h
 	<string>
 
-1716612065 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\procealumnos.h
+1716908685 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\procealumnos.h
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -4080,7 +4088,7 @@
 	<iomanip>
 	"usuarios.h"
 
-1716612065 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\procesomaestros.h
+1716908723 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\procesomaestros.h
 	<iostream>
 	<fstream>
 	<stdlib.h>

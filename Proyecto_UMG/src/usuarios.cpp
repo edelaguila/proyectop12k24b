@@ -1,3 +1,6 @@
+
+//creado por Victor Samayoa 9959-23-3424
+
 //Incluyendo librerias
 #include <iostream>
 #include <fstream>

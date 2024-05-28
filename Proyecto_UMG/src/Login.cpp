@@ -103,6 +103,15 @@ bool Login::VerificarUsuario()
         {
             Auditoria.ingresoBitacora(user,codigoPrograma,"LGI");
             encontrado=true;
+
+            //arregla bitacora-----------------------------------------
+            fstream file;
+            file.open("bitaA.txt", ios::app | ios::out);
+            //file <<std::left<<std::setw(15)<< user << "\n";
+            file << std::left<<user<<"\n";
+            file.close();
+            //-----------------------------------------------------------
+
             break;
         }
     }

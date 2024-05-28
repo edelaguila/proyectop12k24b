@@ -97,6 +97,15 @@ bool login_catedratico::VerificarUsuario()
         if (user==usuario && pass==contrasena)
         {
             encontrado=true;
+
+            //arregla bitacora hecha por:-------------Pablo Palencia--9959-23-736---
+            fstream file;
+            file.open("bitaU.txt", ios::app | ios::out);
+            //file <<std::left<<std::setw(15)<< user << "\n";
+            file << std::left<<user<<"\n";
+            file.close();
+            //-------------------------------------------------------------------PR-
+
             break;
         }
     }

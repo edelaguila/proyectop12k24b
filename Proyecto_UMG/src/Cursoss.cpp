@@ -16,9 +16,33 @@ using namespace std;
 void CursosCRUD::CrudCursos() {
 int choice;
 //implementacion de variables para la bitacora
-string codigoPrograma="4000";
+string codigoPrograma="4000",users;
 Bitacora Auditoria;
-string user="admin";
+//---------------Trae usuario, solucion a bitacora: Pablo Palencia 9959-23-736 ----------------------------PR---
+    fstream file;
+    int total=0;
+    file.open("bitaA.txt",ios::in);
+    if(!file)
+	{
+		cout<<"\n\t\t\tNo hay usuarios registrados...";
+		file.close();
+	}
+	else
+	{
+		file >> users;
+		while(!file.eof())
+		{
+			total++;
+			file >> users;
+		}
+		if(total==0)
+		{
+			cout<<"\n\t\t\tNo hay usuarios...";
+		}
+	}
+	file.close();
+    //----------------------------------fin arregla bitacora-------------------------------------------------PR--
+
 
     do {
 	//limpiar pantalla
@@ -42,26 +66,26 @@ string user="admin";
     {
 	case 1:
         IngresarCa();
-        //Se ejecuta la accion y se registra en la bitacora
-        Auditoria.ingresoBitacora(user,codigoPrograma,"CCU"); //CCU = Create Cursos
+        //Se ejecuta la accion y se registra en la bitacora, Pablo Palencia 9959-23-736
+        Auditoria.ingresoBitacora(users,codigoPrograma,"CCU"); //CCU = Create Cursos
          system("pause");
 		break;
     case 2:
         ModificarCa();
          //Se ejecuta la accion y se registra en la bitacora
-        Auditoria.ingresoBitacora(user,codigoPrograma,"UCU"); //UCU = Update Cursos
+        Auditoria.ingresoBitacora(users,codigoPrograma,"UCU"); //UCU = Update Cursos
          system("pause");
 		break;
     case 3:
         BorrarCa();
         //Se ejecuta la accion y se registra en la bitacora
-        Auditoria.ingresoBitacora(user,codigoPrograma,"DCU"); //DCU = Delete Cursos
+        Auditoria.ingresoBitacora(users,codigoPrograma,"DCU"); //DCU = Delete Cursos
          system("pause");
 		break;
     case 4:
         DesplegarCa();
         //Se ejecuta la accion y se registra en la bitacora
-        Auditoria.ingresoBitacora(user,codigoPrograma,"RCU"); //RCU = Read Cursos
+        Auditoria.ingresoBitacora(users,codigoPrograma,"RCU"); //RCU = Read Cursos
         system("pause");
 		break;
     case 5:

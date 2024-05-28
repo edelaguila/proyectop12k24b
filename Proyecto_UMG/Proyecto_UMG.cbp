@@ -34,37 +34,53 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+<<<<<<< HEAD
 		<Unit filename="include/Asignacion_Maestro_curso.h" />
+=======
+		<Unit filename="include/AsigCursos_Alumnos.h" />
+>>>>>>> 6c4e79c6301827fd7fca70a7f96b721428ebac08
 		<Unit filename="include/Bitacora.h" />
 		<Unit filename="include/Carrera.h" />
 		<Unit filename="include/Cursoss.h" />
 		<Unit filename="include/Facultad.h" />
 		<Unit filename="include/Login.h" />
+		<Unit filename="include/Login_Alumno.h" />
 		<Unit filename="include/alumnos.h" />
 		<Unit filename="include/aulas.h" />
+		<Unit filename="include/catalogo.h" />
 		<Unit filename="include/jornada.h" />
 		<Unit filename="include/login_catedratico.h" />
 		<Unit filename="include/maestros.h" />
 		<Unit filename="include/notas.h" />
 		<Unit filename="include/secciones.h" />
 		<Unit filename="include/seguridad.h" />
+		<Unit filename="include/usualumnos.h" />
 		<Unit filename="include/usuarios.h" />
+		<Unit filename="include/usumaestros.h" />
 		<Unit filename="main.cpp" />
+<<<<<<< HEAD
 		<Unit filename="src/Asignacion_Maestro_curso.cpp" />
+=======
+		<Unit filename="src/AsigCursos_Alumnos.cpp" />
+>>>>>>> 6c4e79c6301827fd7fca70a7f96b721428ebac08
 		<Unit filename="src/Bitacora.cpp" />
 		<Unit filename="src/Carrera.cpp" />
 		<Unit filename="src/Cursoss.cpp" />
 		<Unit filename="src/Facultad.cpp" />
 		<Unit filename="src/Login.cpp" />
+		<Unit filename="src/Login_Alumno.cpp" />
 		<Unit filename="src/alumnos.cpp" />
 		<Unit filename="src/aulas.cpp" />
+		<Unit filename="src/catalogo.cpp" />
 		<Unit filename="src/jornada.cpp" />
 		<Unit filename="src/login_catedratico.cpp" />
 		<Unit filename="src/maestros.cpp" />
 		<Unit filename="src/notas.cpp" />
 		<Unit filename="src/secciones.cpp" />
 		<Unit filename="src/seguridad.cpp" />
+		<Unit filename="src/usualumnos.cpp" />
 		<Unit filename="src/usuarios.cpp" />
+		<Unit filename="src/usumaestros.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
